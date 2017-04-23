@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8F82593-E2EA-4721-99CC-CCAA43AB6036}</ProjectGuid>
+    <ProjectGuid>{30A689B2-B656-4963-8192-257F8CF38B3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChoiceSosyalHizmet.Entity</RootNamespace>
-    <AssemblyName>ChoiceSosyalHizmet.Entity</AssemblyName>
+    <RootNamespace>ChoiceSosyalHizmet.DAL</RootNamespace>
+    <AssemblyName>ChoiceSosyalHizmet.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,8 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Model\" />
+    <Folder Include="Repos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
