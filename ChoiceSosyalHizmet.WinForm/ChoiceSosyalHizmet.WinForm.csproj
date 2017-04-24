@@ -128,5 +128,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChoiceSosyalHizmet.DAL\ChoiceSosyalHizmet.DAL.csproj">
+      <Project>{30a689b2-b656-4963-8192-257f8cf38b3e}</Project>
+      <Name>ChoiceSosyalHizmet.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
