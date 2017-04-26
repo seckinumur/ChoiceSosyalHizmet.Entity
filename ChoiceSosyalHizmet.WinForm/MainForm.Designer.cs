@@ -32,86 +32,82 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
+            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.SEDRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit4 = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit4 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit5 = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCards5 = new ns1.BunifuCards();
-            this.bunifuThinButton25 = new ns1.BunifuThinButton2();
-            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.BtnGuncelle = new ns1.BunifuThinButton2();
+            this.BtnTemizle = new ns1.BunifuThinButton2();
+            this.BtnKaydet = new ns1.BunifuThinButton2();
+            this.SEDNot = new System.Windows.Forms.RichTextBox();
             this.bunifuCards3 = new ns1.BunifuCards();
-            this.comboBoxEdit8 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CboxMa = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label27 = new System.Windows.Forms.Label();
             this.bunifuCards4 = new ns1.BunifuCards();
-            this.materialSingleLineTextField6 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField5 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtANo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtYBS = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateEdit8 = new DevExpress.XtraEditors.DateEdit();
+            this.DateOBi = new DevExpress.XtraEditors.DateEdit();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateEdit7 = new DevExpress.XtraEditors.DateEdit();
-            this.materialRadioButton3 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.DateOB = new DevExpress.XtraEditors.DateEdit();
+            this.RB2 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RB1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RBT = new MaterialSkin.Controls.MaterialRadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateEdit6 = new DevExpress.XtraEditors.DateEdit();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.DateBT = new DevExpress.XtraEditors.DateEdit();
+            this.CboxDurum = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new ns1.BunifuCards();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CboxYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.dateEdit12 = new DevExpress.XtraEditors.DateEdit();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DateDY = new DevExpress.XtraEditors.DateEdit();
+            this.TxtTcY = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtAdY = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new ns1.BunifuCards();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.CBoxN = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dateEdit5 = new DevExpress.XtraEditors.DateEdit();
-            this.bunifuTileButton1 = new ns1.BunifuTileButton();
-            this.materialSingleLineTextField4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DateDogumT = new DevExpress.XtraEditors.DateEdit();
+            this.BtnKisibul = new ns1.BunifuTileButton();
+            this.TxtAdres = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtTel = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtTc = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtBasvuranAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label1 = new System.Windows.Forms.Label();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
-            this.bunifuCards6 = new ns1.BunifuCards();
-            this.bunifuThinButton23 = new ns1.BunifuThinButton2();
-            this.bunifuThinButton24 = new ns1.BunifuThinButton2();
-            this.bunifuThinButton26 = new ns1.BunifuThinButton2();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.bunifuCards6 = new ns1.BunifuCards();
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
+            this.bunifuThinButton23 = new ns1.BunifuThinButton2();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.bunifuCards7 = new ns1.BunifuCards();
             this.comboBoxEdit6 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
@@ -134,12 +130,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.bunifuCards9 = new ns1.BunifuCards();
-            this.comboBoxEdit5 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.dateEdit14 = new DevExpress.XtraEditors.DateEdit();
-            this.materialSingleLineTextField13 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField14 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label22 = new System.Windows.Forms.Label();
             this.bunifuCards10 = new ns1.BunifuCards();
             this.label29 = new System.Windows.Forms.Label();
@@ -155,10 +151,10 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton12 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit16 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit6 = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton13 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit17 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit7 = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton14 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -171,18 +167,18 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
@@ -190,27 +186,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuCards5.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxMa.Properties)).BeginInit();
             this.bunifuCards4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit8.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOBi.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOBi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOB.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateBT.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateBT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxDurum.Properties)).BeginInit();
             this.bunifuCards2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit12.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxYD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDY.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDY.Properties)).BeginInit();
             this.bunifuCards1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CBoxN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDogumT.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDogumT.Properties)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
-            this.bunifuCards6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.bunifuCards6.SuspendLayout();
             this.bunifuCards7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit9.Properties.CalendarTimeProperties)).BeginInit();
@@ -224,18 +220,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).BeginInit();
             this.bunifuCards9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit14.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
             this.bunifuCards10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit15.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit15.Properties)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit16.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit17.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit17.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
@@ -247,10 +243,11 @@
             this.xtraTabControl1.Appearance.Options.UseFont = true;
             this.xtraTabControl1.AppearancePage.Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.xtraTabControl1.AppearancePage.Header.Options.UseFont = true;
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 70);
+            this.xtraTabControl1.Location = new System.Drawing.Point(8, 75);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1256, 638);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1269, 643);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -263,123 +260,20 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.materialRaisedButton6);
+            this.xtraTabPage1.Controls.Add(this.materialRaisedButton1);
             this.xtraTabPage1.Controls.Add(this.pictureBox1);
-            this.xtraTabPage1.Controls.Add(this.materialRaisedButton3);
-            this.xtraTabPage1.Controls.Add(this.labelControl2);
-            this.xtraTabPage1.Controls.Add(this.dateEdit3);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton2);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Controls.Add(this.dateEdit1);
-            this.xtraTabPage1.Controls.Add(this.materialRaisedButton1);
-            this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.Controls.Add(this.materialRaisedButton3);
+            this.xtraTabPage1.Controls.Add(this.labelControl2);
+            this.xtraTabPage1.Controls.Add(this.dateEdit3);
+            this.xtraTabPage1.Controls.Add(this.materialRaisedButton6);
+            this.xtraTabPage1.Controls.Add(this.SEDRaporGrid);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage1.Text = "SED Rapor";
-            // 
-            // materialRaisedButton6
-            // 
-            this.materialRaisedButton6.AutoSize = true;
-            this.materialRaisedButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Icon = null;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(632, 553);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(105, 36);
-            this.materialRaisedButton6.TabIndex = 12;
-            this.materialRaisedButton6.Text = "Özel Arama";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1143, 549);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // materialRaisedButton3
-            // 
-            this.materialRaisedButton3.AutoSize = true;
-            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(743, 553);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(135, 36);
-            this.materialRaisedButton3.TabIndex = 10;
-            this.materialRaisedButton3.Text = "Sayfayı Temizle";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(237, 560);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(79, 19);
-            this.labelControl2.TabIndex = 9;
-            this.labelControl2.Text = "Bu Tarihe";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
-            // 
-            // dateEdit3
-            // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(322, 557);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit3.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit3.TabIndex = 8;
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.AutoSize = true;
-            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(447, 553);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(179, 36);
-            this.materialRaisedButton2.TabIndex = 7;
-            this.materialRaisedButton2.Text = "Tarih Aralığını Sırala";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(10, 560);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(96, 19);
-            this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Bu Tarihten";
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(112, 557);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit1.TabIndex = 4;
             // 
             // materialRaisedButton1
             // 
@@ -387,49 +281,171 @@
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(884, 553);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(627, 562);
+            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(235, 36);
-            this.materialRaisedButton1.TabIndex = 3;
-            this.materialRaisedButton1.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton1.Size = new System.Drawing.Size(105, 36);
+            this.materialRaisedButton1.TabIndex = 31;
+            this.materialRaisedButton1.Text = "Özel Arama";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             // 
-            // gridControl1
+            // pictureBox1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1244, 544);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1126, 555);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.AutoSize = true;
+            this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Icon = null;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(740, 562);
+            this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(135, 36);
+            this.materialRaisedButton2.TabIndex = 29;
+            this.materialRaisedButton2.Text = "Sayfayı Temizle";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(229, 569);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(79, 19);
+            this.labelControl1.TabIndex = 28;
+            this.labelControl1.Text = "Bu Tarihe";
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(316, 566);
+            this.dateEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit1.TabIndex = 27;
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.AutoSize = true;
+            this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.Icon = null;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(440, 562);
+            this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(179, 36);
+            this.materialRaisedButton3.TabIndex = 26;
+            this.materialRaisedButton3.Text = "Tarih Aralığını Sırala";
+            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(3, 569);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(96, 19);
+            this.labelControl2.TabIndex = 25;
+            this.labelControl2.Text = "Bu Tarihten";
+            // 
+            // dateEdit3
+            // 
+            this.dateEdit3.EditValue = null;
+            this.dateEdit3.Location = new System.Drawing.Point(107, 566);
+            this.dateEdit3.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit3.Name = "dateEdit3";
+            this.dateEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit3.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit3.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit3.TabIndex = 24;
+            // 
+            // materialRaisedButton6
+            // 
+            this.materialRaisedButton6.AutoSize = true;
+            this.materialRaisedButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton6.Depth = 0;
+            this.materialRaisedButton6.Icon = null;
+            this.materialRaisedButton6.Location = new System.Drawing.Point(883, 562);
+            this.materialRaisedButton6.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton6.Name = "materialRaisedButton6";
+            this.materialRaisedButton6.Primary = true;
+            this.materialRaisedButton6.Size = new System.Drawing.Size(235, 36);
+            this.materialRaisedButton6.TabIndex = 23;
+            this.materialRaisedButton6.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            // 
+            // SEDRaporGrid
+            // 
+            this.SEDRaporGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.SEDRaporGrid.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.SEDRaporGrid.Location = new System.Drawing.Point(4, 4);
+            this.SEDRaporGrid.MainView = this.gridView1;
+            this.SEDRaporGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.SEDRaporGrid.Name = "SEDRaporGrid";
+            this.SEDRaporGrid.Size = new System.Drawing.Size(1254, 543);
+            this.SEDRaporGrid.TabIndex = 0;
+            this.SEDRaporGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
+            this.gridView1.GridControl = this.SEDRaporGrid;
             this.gridView1.GroupPanelText = "Choice SHM SED  Arama Motoru V.0.7 ";
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindDelay = 100;
+            this.gridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
             this.gridView1.OptionsFind.FindNullPrompt = "TC Kimlik No yada Hasta İsmi Arayın...";
+            this.gridView1.OptionsFind.SearchInPreview = true;
             this.gridView1.OptionsFind.ShowFindButton = false;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton7);
-            this.xtraTabPage2.Controls.Add(this.pictureBox2);
+            this.xtraTabPage2.Controls.Add(this.pictureBox6);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton8);
             this.xtraTabPage2.Controls.Add(this.labelControl3);
-            this.xtraTabPage2.Controls.Add(this.dateEdit2);
+            this.xtraTabPage2.Controls.Add(this.dateEdit4);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton9);
             this.xtraTabPage2.Controls.Add(this.labelControl4);
-            this.xtraTabPage2.Controls.Add(this.dateEdit4);
+            this.xtraTabPage2.Controls.Add(this.dateEdit5);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton10);
             this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage2.Text = "EBH Rapor";
             // 
             // materialRaisedButton7
@@ -438,24 +454,26 @@
             this.materialRaisedButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton7.Depth = 0;
             this.materialRaisedButton7.Icon = null;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(632, 553);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(629, 565);
+            this.materialRaisedButton7.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton7.Name = "materialRaisedButton7";
             this.materialRaisedButton7.Primary = true;
             this.materialRaisedButton7.Size = new System.Drawing.Size(105, 36);
-            this.materialRaisedButton7.TabIndex = 22;
+            this.materialRaisedButton7.TabIndex = 40;
             this.materialRaisedButton7.Text = "Özel Arama";
             this.materialRaisedButton7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // pictureBox6
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1143, 549);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 47);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1128, 558);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(132, 43);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 39;
+            this.pictureBox6.TabStop = false;
             // 
             // materialRaisedButton8
             // 
@@ -463,12 +481,13 @@
             this.materialRaisedButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton8.Depth = 0;
             this.materialRaisedButton8.Icon = null;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(743, 553);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(742, 565);
+            this.materialRaisedButton8.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton8.Name = "materialRaisedButton8";
             this.materialRaisedButton8.Primary = true;
             this.materialRaisedButton8.Size = new System.Drawing.Size(135, 36);
-            this.materialRaisedButton8.TabIndex = 20;
+            this.materialRaisedButton8.TabIndex = 38;
             this.materialRaisedButton8.Text = "Sayfayı Temizle";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
             // 
@@ -476,55 +495,18 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(237, 560);
+            this.labelControl3.Location = new System.Drawing.Point(231, 572);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 19);
-            this.labelControl3.TabIndex = 19;
+            this.labelControl3.TabIndex = 37;
             this.labelControl3.Text = "Bu Tarihe";
-            // 
-            // dateEdit2
-            // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(322, 557);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit2.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit2.TabIndex = 18;
-            // 
-            // materialRaisedButton9
-            // 
-            this.materialRaisedButton9.AutoSize = true;
-            this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Icon = null;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(447, 553);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(179, 36);
-            this.materialRaisedButton9.TabIndex = 17;
-            this.materialRaisedButton9.Text = "Tarih Aralığını Sırala";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(10, 560);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(96, 19);
-            this.labelControl4.TabIndex = 16;
-            this.labelControl4.Text = "Bu Tarihten";
             // 
             // dateEdit4
             // 
             this.dateEdit4.EditValue = null;
-            this.dateEdit4.Location = new System.Drawing.Point(112, 557);
+            this.dateEdit4.Location = new System.Drawing.Point(318, 569);
+            this.dateEdit4.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit4.Name = "dateEdit4";
             this.dateEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit4.Properties.Appearance.Options.UseFont = true;
@@ -532,8 +514,50 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit4.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit4.TabIndex = 15;
+            this.dateEdit4.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit4.TabIndex = 36;
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.AutoSize = true;
+            this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Icon = null;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(442, 565);
+            this.materialRaisedButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(179, 36);
+            this.materialRaisedButton9.TabIndex = 35;
+            this.materialRaisedButton9.Text = "Tarih Aralığını Sırala";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(5, 572);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(96, 19);
+            this.labelControl4.TabIndex = 34;
+            this.labelControl4.Text = "Bu Tarihten";
+            // 
+            // dateEdit5
+            // 
+            this.dateEdit5.EditValue = null;
+            this.dateEdit5.Location = new System.Drawing.Point(109, 569);
+            this.dateEdit5.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit5.Name = "dateEdit5";
+            this.dateEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit5.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit5.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit5.TabIndex = 33;
             // 
             // materialRaisedButton10
             // 
@@ -541,21 +565,24 @@
             this.materialRaisedButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton10.Depth = 0;
             this.materialRaisedButton10.Icon = null;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(884, 553);
+            this.materialRaisedButton10.Location = new System.Drawing.Point(885, 565);
+            this.materialRaisedButton10.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton10.Name = "materialRaisedButton10";
             this.materialRaisedButton10.Primary = true;
             this.materialRaisedButton10.Size = new System.Drawing.Size(235, 36);
-            this.materialRaisedButton10.TabIndex = 14;
+            this.materialRaisedButton10.TabIndex = 32;
             this.materialRaisedButton10.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
             // 
             // gridControl2
             // 
-            this.gridControl2.Location = new System.Drawing.Point(3, 3);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl2.Location = new System.Drawing.Point(4, 4);
             this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(1244, 544);
+            this.gridControl2.Size = new System.Drawing.Size(1254, 546);
             this.gridControl2.TabIndex = 13;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -572,44 +599,24 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.label12);
-            this.xtraTabPage3.Controls.Add(this.label11);
             this.xtraTabPage3.Controls.Add(this.pictureBox4);
             this.xtraTabPage3.Controls.Add(this.pictureBox3);
             this.xtraTabPage3.Controls.Add(this.bunifuCards5);
             this.xtraTabPage3.Controls.Add(this.bunifuCards3);
             this.xtraTabPage3.Controls.Add(this.bunifuCards2);
             this.xtraTabPage3.Controls.Add(this.bunifuCards1);
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage3.Text = "SED Evrak Girişi";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(969, 569);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(254, 14);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Data Ver. V.1.0.9 Sqlite Security System";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(837, 549);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(386, 14);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "©2017 Choice Data Management System Powered By Sqlite™";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(837, 388);
+            this.pictureBox4.Location = new System.Drawing.Point(940, 337);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(398, 147);
+            this.pictureBox4.Size = new System.Drawing.Size(318, 108);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -617,9 +624,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm;
-            this.pictureBox3.Location = new System.Drawing.Point(837, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(940, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(398, 366);
+            this.pictureBox3.Size = new System.Drawing.Size(318, 317);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -630,105 +638,110 @@
             this.bunifuCards5.BorderRadius = 5;
             this.bunifuCards5.BottomSahddow = false;
             this.bunifuCards5.color = System.Drawing.Color.DarkMagenta;
-            this.bunifuCards5.Controls.Add(this.bunifuThinButton25);
-            this.bunifuCards5.Controls.Add(this.bunifuThinButton22);
-            this.bunifuCards5.Controls.Add(this.bunifuThinButton21);
-            this.bunifuCards5.Controls.Add(this.richTextBox1);
+            this.bunifuCards5.Controls.Add(this.BtnGuncelle);
+            this.bunifuCards5.Controls.Add(this.BtnTemizle);
+            this.bunifuCards5.Controls.Add(this.BtnKaydet);
+            this.bunifuCards5.Controls.Add(this.SEDNot);
             this.bunifuCards5.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards5.LeftSahddow = false;
-            this.bunifuCards5.Location = new System.Drawing.Point(11, 467);
+            this.bunifuCards5.Location = new System.Drawing.Point(15, 474);
+            this.bunifuCards5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards5.Name = "bunifuCards5";
             this.bunifuCards5.RightSahddow = false;
             this.bunifuCards5.ShadowDepth = 20;
-            this.bunifuCards5.Size = new System.Drawing.Size(820, 129);
+            this.bunifuCards5.Size = new System.Drawing.Size(918, 159);
             this.bunifuCards5.TabIndex = 15;
             // 
-            // bunifuThinButton25
+            // BtnGuncelle
             // 
-            this.bunifuThinButton25.ActiveBorderThickness = 1;
-            this.bunifuThinButton25.ActiveCornerRadius = 20;
-            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
-            this.bunifuThinButton25.ButtonText = "GÜNCELLE";
-            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.IdleBorderThickness = 1;
-            this.bunifuThinButton25.IdleCornerRadius = 20;
-            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.Crimson;
-            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.Crimson;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(531, 14);
-            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton25.Name = "bunifuThinButton25";
-            this.bunifuThinButton25.Size = new System.Drawing.Size(133, 56);
-            this.bunifuThinButton25.TabIndex = 18;
-            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnGuncelle.ActiveBorderThickness = 1;
+            this.BtnGuncelle.ActiveCornerRadius = 20;
+            this.BtnGuncelle.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BtnGuncelle.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnGuncelle.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnGuncelle.BackColor = System.Drawing.Color.White;
+            this.BtnGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.BackgroundImage")));
+            this.BtnGuncelle.ButtonText = "GÜNCELLE";
+            this.BtnGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuncelle.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnGuncelle.IdleBorderThickness = 1;
+            this.BtnGuncelle.IdleCornerRadius = 20;
+            this.BtnGuncelle.IdleFillColor = System.Drawing.Color.White;
+            this.BtnGuncelle.IdleForecolor = System.Drawing.Color.Crimson;
+            this.BtnGuncelle.IdleLineColor = System.Drawing.Color.Crimson;
+            this.BtnGuncelle.Location = new System.Drawing.Point(584, 16);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.Size = new System.Drawing.Size(161, 57);
+            this.BtnGuncelle.TabIndex = 18;
+            this.BtnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // bunifuThinButton22
+            // BtnTemizle
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "TEMİZLE";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Orange;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Orange;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(531, 70);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(276, 50);
-            this.bunifuThinButton22.TabIndex = 17;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnTemizle.ActiveBorderThickness = 1;
+            this.BtnTemizle.ActiveCornerRadius = 20;
+            this.BtnTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.BackColor = System.Drawing.Color.White;
+            this.BtnTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.BackgroundImage")));
+            this.BtnTemizle.ButtonText = "TEMİZLE";
+            this.BtnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTemizle.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.IdleBorderThickness = 1;
+            this.BtnTemizle.IdleCornerRadius = 20;
+            this.BtnTemizle.IdleFillColor = System.Drawing.Color.White;
+            this.BtnTemizle.IdleForecolor = System.Drawing.Color.Orange;
+            this.BtnTemizle.IdleLineColor = System.Drawing.Color.Orange;
+            this.BtnTemizle.Location = new System.Drawing.Point(584, 73);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.Size = new System.Drawing.Size(333, 51);
+            this.BtnTemizle.TabIndex = 17;
+            this.BtnTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
             // 
-            // bunifuThinButton21
+            // BtnKaydet
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "KAYDET";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(674, 14);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(133, 56);
-            this.bunifuThinButton21.TabIndex = 16;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnKaydet.ActiveBorderThickness = 1;
+            this.BtnKaydet.ActiveCornerRadius = 20;
+            this.BtnKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.BackColor = System.Drawing.Color.White;
+            this.BtnKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.BackgroundImage")));
+            this.BtnKaydet.ButtonText = "KAYDET";
+            this.BtnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKaydet.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.IdleBorderThickness = 1;
+            this.BtnKaydet.IdleCornerRadius = 20;
+            this.BtnKaydet.IdleFillColor = System.Drawing.Color.White;
+            this.BtnKaydet.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.Location = new System.Drawing.Point(753, 16);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(161, 57);
+            this.BtnKaydet.TabIndex = 16;
+            this.BtnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
-            // richTextBox1
+            // SEDNot
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.OliveDrab;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 14);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(511, 106);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.SEDNot.BackColor = System.Drawing.Color.OliveDrab;
+            this.SEDNot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SEDNot.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.SEDNot.ForeColor = System.Drawing.Color.White;
+            this.SEDNot.Location = new System.Drawing.Point(8, 15);
+            this.SEDNot.Margin = new System.Windows.Forms.Padding(4);
+            this.SEDNot.Name = "SEDNot";
+            this.SEDNot.Size = new System.Drawing.Size(565, 107);
+            this.SEDNot.TabIndex = 1;
+            this.SEDNot.Text = "";
             // 
             // bunifuCards3
             // 
@@ -736,32 +749,34 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = false;
             this.bunifuCards3.color = System.Drawing.Color.SlateGray;
-            this.bunifuCards3.Controls.Add(this.comboBoxEdit8);
+            this.bunifuCards3.Controls.Add(this.CboxMa);
             this.bunifuCards3.Controls.Add(this.label27);
             this.bunifuCards3.Controls.Add(this.bunifuCards4);
             this.bunifuCards3.Controls.Add(this.label8);
-            this.bunifuCards3.Controls.Add(this.dateEdit6);
-            this.bunifuCards3.Controls.Add(this.comboBoxEdit3);
+            this.bunifuCards3.Controls.Add(this.DateBT);
+            this.bunifuCards3.Controls.Add(this.CboxDurum);
             this.bunifuCards3.Controls.Add(this.label5);
             this.bunifuCards3.Controls.Add(this.label6);
             this.bunifuCards3.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(424, 10);
+            this.bunifuCards3.Location = new System.Drawing.Point(565, 12);
+            this.bunifuCards3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = false;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(407, 419);
+            this.bunifuCards3.Size = new System.Drawing.Size(368, 516);
             this.bunifuCards3.TabIndex = 11;
             // 
-            // comboBoxEdit8
+            // CboxMa
             // 
-            this.comboBoxEdit8.Location = new System.Drawing.Point(175, 89);
-            this.comboBoxEdit8.Name = "comboBoxEdit8";
-            this.comboBoxEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBoxEdit8.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CboxMa.Location = new System.Drawing.Point(181, 96);
+            this.CboxMa.Margin = new System.Windows.Forms.Padding(4);
+            this.CboxMa.Name = "CboxMa";
+            this.CboxMa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.CboxMa.Properties.Appearance.Options.UseFont = true;
+            this.CboxMa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit8.Properties.Items.AddRange(new object[] {
+            this.CboxMa.Properties.Items.AddRange(new object[] {
             "GÖLBAŞI",
             "KALA",
             "KIŞLA",
@@ -903,14 +918,15 @@
             "BAŞKÖY",
             "ŞEHİT",
             "KIZLARSARAYI"});
-            this.comboBoxEdit8.Size = new System.Drawing.Size(143, 26);
-            this.comboBoxEdit8.TabIndex = 19;
+            this.CboxMa.Size = new System.Drawing.Size(154, 26);
+            this.CboxMa.TabIndex = 19;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label27.Location = new System.Drawing.Point(8, 89);
+            this.label27.Location = new System.Drawing.Point(11, 96);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(118, 23);
             this.label27.TabIndex = 18;
@@ -922,204 +938,216 @@
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = false;
             this.bunifuCards4.color = System.Drawing.Color.Blue;
-            this.bunifuCards4.Controls.Add(this.materialSingleLineTextField6);
-            this.bunifuCards4.Controls.Add(this.materialSingleLineTextField5);
+            this.bunifuCards4.Controls.Add(this.TxtANo);
+            this.bunifuCards4.Controls.Add(this.TxtYBS);
             this.bunifuCards4.Controls.Add(this.label10);
-            this.bunifuCards4.Controls.Add(this.dateEdit8);
+            this.bunifuCards4.Controls.Add(this.DateOBi);
             this.bunifuCards4.Controls.Add(this.label9);
-            this.bunifuCards4.Controls.Add(this.dateEdit7);
-            this.bunifuCards4.Controls.Add(this.materialRadioButton3);
-            this.bunifuCards4.Controls.Add(this.materialRadioButton2);
-            this.bunifuCards4.Controls.Add(this.materialRadioButton1);
+            this.bunifuCards4.Controls.Add(this.DateOB);
+            this.bunifuCards4.Controls.Add(this.RB2);
+            this.bunifuCards4.Controls.Add(this.RB1);
+            this.bunifuCards4.Controls.Add(this.RBT);
             this.bunifuCards4.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards4.LeftSahddow = false;
-            this.bunifuCards4.Location = new System.Drawing.Point(12, 168);
+            this.bunifuCards4.Location = new System.Drawing.Point(1, 164);
+            this.bunifuCards4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards4.Name = "bunifuCards4";
             this.bunifuCards4.RightSahddow = false;
             this.bunifuCards4.ShadowDepth = 20;
-            this.bunifuCards4.Size = new System.Drawing.Size(385, 207);
+            this.bunifuCards4.Size = new System.Drawing.Size(366, 255);
             this.bunifuCards4.TabIndex = 12;
             // 
-            // materialSingleLineTextField6
+            // TxtANo
             // 
-            this.materialSingleLineTextField6.Depth = 0;
-            this.materialSingleLineTextField6.Hint = "Arşiv No";
-            this.materialSingleLineTextField6.Location = new System.Drawing.Point(12, 164);
-            this.materialSingleLineTextField6.MaxLength = 32767;
-            this.materialSingleLineTextField6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField6.Name = "materialSingleLineTextField6";
-            this.materialSingleLineTextField6.PasswordChar = '\0';
-            this.materialSingleLineTextField6.SelectedText = "";
-            this.materialSingleLineTextField6.SelectionLength = 0;
-            this.materialSingleLineTextField6.SelectionStart = 0;
-            this.materialSingleLineTextField6.Size = new System.Drawing.Size(306, 23);
-            this.materialSingleLineTextField6.TabIndex = 23;
-            this.materialSingleLineTextField6.TabStop = false;
-            this.materialSingleLineTextField6.UseSystemPasswordChar = false;
+            this.TxtANo.Depth = 0;
+            this.TxtANo.Hint = "Arşiv No";
+            this.TxtANo.Location = new System.Drawing.Point(15, 161);
+            this.TxtANo.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtANo.MaxLength = 32767;
+            this.TxtANo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtANo.Name = "TxtANo";
+            this.TxtANo.PasswordChar = '\0';
+            this.TxtANo.SelectedText = "";
+            this.TxtANo.SelectionLength = 0;
+            this.TxtANo.SelectionStart = 0;
+            this.TxtANo.Size = new System.Drawing.Size(319, 23);
+            this.TxtANo.TabIndex = 23;
+            this.TxtANo.TabStop = false;
+            this.TxtANo.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField5
+            // TxtYBS
             // 
-            this.materialSingleLineTextField5.Depth = 0;
-            this.materialSingleLineTextField5.Hint = "YBS No";
-            this.materialSingleLineTextField5.Location = new System.Drawing.Point(12, 129);
-            this.materialSingleLineTextField5.MaxLength = 32767;
-            this.materialSingleLineTextField5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField5.Name = "materialSingleLineTextField5";
-            this.materialSingleLineTextField5.PasswordChar = '\0';
-            this.materialSingleLineTextField5.SelectedText = "";
-            this.materialSingleLineTextField5.SelectionLength = 0;
-            this.materialSingleLineTextField5.SelectionStart = 0;
-            this.materialSingleLineTextField5.Size = new System.Drawing.Size(306, 23);
-            this.materialSingleLineTextField5.TabIndex = 22;
-            this.materialSingleLineTextField5.TabStop = false;
-            this.materialSingleLineTextField5.UseSystemPasswordChar = false;
+            this.TxtYBS.Depth = 0;
+            this.TxtYBS.Hint = "YBS No";
+            this.TxtYBS.Location = new System.Drawing.Point(16, 130);
+            this.TxtYBS.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtYBS.MaxLength = 32767;
+            this.TxtYBS.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtYBS.Name = "TxtYBS";
+            this.TxtYBS.PasswordChar = '\0';
+            this.TxtYBS.SelectedText = "";
+            this.TxtYBS.SelectionLength = 0;
+            this.TxtYBS.SelectionStart = 0;
+            this.TxtYBS.Size = new System.Drawing.Size(318, 23);
+            this.TxtYBS.TabIndex = 22;
+            this.TxtYBS.TabStop = false;
+            this.TxtYBS.UseSystemPasswordChar = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label10.Location = new System.Drawing.Point(8, 92);
+            this.label10.Location = new System.Drawing.Point(12, 89);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 23);
             this.label10.TabIndex = 21;
             this.label10.Text = "Ödeme Bitiş:";
             // 
-            // dateEdit8
+            // DateOBi
             // 
-            this.dateEdit8.EditValue = null;
-            this.dateEdit8.Location = new System.Drawing.Point(175, 89);
-            this.dateEdit8.Name = "dateEdit8";
-            this.dateEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit8.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateOBi.EditValue = null;
+            this.DateOBi.Location = new System.Drawing.Point(180, 86);
+            this.DateOBi.Margin = new System.Windows.Forms.Padding(4);
+            this.DateOBi.Name = "DateOBi";
+            this.DateOBi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DateOBi.Properties.Appearance.Options.UseFont = true;
+            this.DateOBi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit8.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateOBi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit8.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit8.TabIndex = 20;
+            this.DateOBi.Size = new System.Drawing.Size(121, 26);
+            this.DateOBi.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label9.Location = new System.Drawing.Point(8, 57);
+            this.label9.Location = new System.Drawing.Point(11, 52);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 23);
             this.label9.TabIndex = 19;
             this.label9.Text = "Ödeme Başlangıç:";
             // 
-            // dateEdit7
+            // DateOB
             // 
-            this.dateEdit7.EditValue = null;
-            this.dateEdit7.Location = new System.Drawing.Point(175, 54);
-            this.dateEdit7.Name = "dateEdit7";
-            this.dateEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit7.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateOB.EditValue = null;
+            this.DateOB.Location = new System.Drawing.Point(180, 52);
+            this.DateOB.Margin = new System.Windows.Forms.Padding(4);
+            this.DateOB.Name = "DateOB";
+            this.DateOB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DateOB.Properties.Appearance.Options.UseFont = true;
+            this.DateOB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateOB.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit7.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit7.TabIndex = 18;
+            this.DateOB.Size = new System.Drawing.Size(121, 26);
+            this.DateOB.TabIndex = 18;
             // 
-            // materialRadioButton3
+            // RB2
             // 
-            this.materialRadioButton3.AutoSize = true;
-            this.materialRadioButton3.Depth = 0;
-            this.materialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton3.Location = new System.Drawing.Point(236, 11);
-            this.materialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton3.Name = "materialRadioButton3";
-            this.materialRadioButton3.Ripple = true;
-            this.materialRadioButton3.Size = new System.Drawing.Size(70, 30);
-            this.materialRadioButton3.TabIndex = 14;
-            this.materialRadioButton3.Text = "2 Yıllık";
-            this.materialRadioButton3.UseVisualStyleBackColor = true;
+            this.RB2.AutoSize = true;
+            this.RB2.Depth = 0;
+            this.RB2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RB2.Location = new System.Drawing.Point(264, 12);
+            this.RB2.Margin = new System.Windows.Forms.Padding(0);
+            this.RB2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB2.Name = "RB2";
+            this.RB2.Ripple = true;
+            this.RB2.Size = new System.Drawing.Size(70, 30);
+            this.RB2.TabIndex = 14;
+            this.RB2.Text = "2 Yıllık";
+            this.RB2.UseVisualStyleBackColor = true;
+            this.RB2.CheckedChanged += new System.EventHandler(this.RB2_CheckedChanged);
             // 
-            // materialRadioButton2
+            // RB1
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(144, 10);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(70, 30);
-            this.materialRadioButton2.TabIndex = 13;
-            this.materialRadioButton2.Text = "1 Yıllık";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.RB1.AutoSize = true;
+            this.RB1.Depth = 0;
+            this.RB1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RB1.Location = new System.Drawing.Point(157, 12);
+            this.RB1.Margin = new System.Windows.Forms.Padding(0);
+            this.RB1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RB1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RB1.Name = "RB1";
+            this.RB1.Ripple = true;
+            this.RB1.Size = new System.Drawing.Size(70, 30);
+            this.RB1.TabIndex = 13;
+            this.RB1.Text = "1 Yıllık";
+            this.RB1.UseVisualStyleBackColor = true;
+            this.RB1.CheckedChanged += new System.EventHandler(this.RB1_CheckedChanged);
             // 
-            // materialRadioButton1
+            // RBT
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Checked = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(12, 10);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(102, 30);
-            this.materialRadioButton1.TabIndex = 12;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Tek Seferlik";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.RBT.AutoSize = true;
+            this.RBT.Depth = 0;
+            this.RBT.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RBT.Location = new System.Drawing.Point(16, 12);
+            this.RBT.Margin = new System.Windows.Forms.Padding(0);
+            this.RBT.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RBT.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RBT.Name = "RBT";
+            this.RBT.Ripple = true;
+            this.RBT.Size = new System.Drawing.Size(102, 30);
+            this.RBT.TabIndex = 12;
+            this.RBT.Text = "Tek Seferlik";
+            this.RBT.UseVisualStyleBackColor = true;
+            this.RBT.CheckedChanged += new System.EventHandler(this.RBT_CheckedChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label8.Location = new System.Drawing.Point(8, 127);
+            this.label8.Location = new System.Drawing.Point(11, 130);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(137, 23);
             this.label8.TabIndex = 11;
             this.label8.Text = "Başvuru Tarihi:";
             // 
-            // dateEdit6
+            // DateBT
             // 
-            this.dateEdit6.EditValue = null;
-            this.dateEdit6.Location = new System.Drawing.Point(175, 127);
-            this.dateEdit6.Name = "dateEdit6";
-            this.dateEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit6.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateBT.EditValue = null;
+            this.DateBT.Location = new System.Drawing.Point(181, 127);
+            this.DateBT.Margin = new System.Windows.Forms.Padding(4);
+            this.DateBT.Name = "DateBT";
+            this.DateBT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DateBT.Properties.Appearance.Options.UseFont = true;
+            this.DateBT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateBT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit6.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit6.TabIndex = 10;
+            this.DateBT.Size = new System.Drawing.Size(121, 26);
+            this.DateBT.TabIndex = 10;
             // 
-            // comboBoxEdit3
+            // CboxDurum
             // 
-            this.comboBoxEdit3.Location = new System.Drawing.Point(175, 50);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CboxDurum.Location = new System.Drawing.Point(181, 62);
+            this.CboxDurum.Margin = new System.Windows.Forms.Padding(4);
+            this.CboxDurum.Name = "CboxDurum";
+            this.CboxDurum.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.CboxDurum.Properties.Appearance.Options.UseFont = true;
+            this.CboxDurum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Properties.Items.AddRange(new object[] {
+            this.CboxDurum.Properties.Items.AddRange(new object[] {
             "ONAYLI",
             "RED",
             "İPTAL",
             "VEFAT",
             "DENETİM",
             "SONLANAN"});
-            this.comboBoxEdit3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit3.Size = new System.Drawing.Size(143, 26);
-            this.comboBoxEdit3.TabIndex = 1;
+            this.CboxDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.CboxDurum.Size = new System.Drawing.Size(121, 26);
+            this.CboxDurum.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(8, 50);
+            this.label5.Location = new System.Drawing.Point(11, 62);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 23);
             this.label5.TabIndex = 7;
@@ -1129,7 +1157,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label6.Location = new System.Drawing.Point(142, 16);
+            this.label6.Location = new System.Drawing.Point(103, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 23);
             this.label6.TabIndex = 3;
@@ -1141,31 +1170,33 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = false;
             this.bunifuCards2.color = System.Drawing.Color.DarkOliveGreen;
-            this.bunifuCards2.Controls.Add(this.comboBoxEdit2);
+            this.bunifuCards2.Controls.Add(this.CboxYD);
             this.bunifuCards2.Controls.Add(this.label3);
             this.bunifuCards2.Controls.Add(this.label23);
-            this.bunifuCards2.Controls.Add(this.dateEdit12);
-            this.bunifuCards2.Controls.Add(this.materialSingleLineTextField7);
-            this.bunifuCards2.Controls.Add(this.materialSingleLineTextField8);
+            this.bunifuCards2.Controls.Add(this.DateDY);
+            this.bunifuCards2.Controls.Add(this.TxtTcY);
+            this.bunifuCards2.Controls.Add(this.TxtAdY);
             this.bunifuCards2.Controls.Add(this.label4);
             this.bunifuCards2.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(11, 274);
+            this.bunifuCards2.Location = new System.Drawing.Point(15, 319);
+            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = false;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(407, 187);
+            this.bunifuCards2.Size = new System.Drawing.Size(543, 230);
             this.bunifuCards2.TabIndex = 11;
             // 
-            // comboBoxEdit2
+            // CboxYD
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(170, 151);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBoxEdit2.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CboxYD.Location = new System.Drawing.Point(164, 121);
+            this.CboxYD.Margin = new System.Windows.Forms.Padding(4);
+            this.CboxYD.Name = "CboxYD";
+            this.CboxYD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.CboxYD.Properties.Appearance.Options.UseFont = true;
+            this.CboxYD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Properties.Items.AddRange(new object[] {
+            this.CboxYD.Properties.Items.AddRange(new object[] {
             "BABASI",
             "ANNESİ",
             "KARDEŞİ",
@@ -1176,15 +1207,16 @@
             "DEDESİ",
             "NENESİ",
             "DİĞER"});
-            this.comboBoxEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(131, 26);
-            this.comboBoxEdit2.TabIndex = 26;
+            this.CboxYD.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.CboxYD.Size = new System.Drawing.Size(121, 26);
+            this.CboxYD.TabIndex = 26;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label3.Location = new System.Drawing.Point(3, 151);
+            this.label3.Location = new System.Drawing.Point(4, 121);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 23);
             this.label3.TabIndex = 27;
@@ -1194,66 +1226,71 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label23.Location = new System.Drawing.Point(3, 114);
+            this.label23.Location = new System.Drawing.Point(243, 86);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(131, 23);
             this.label23.TabIndex = 25;
             this.label23.Text = "Doğum Tarihi:";
             // 
-            // dateEdit12
+            // DateDY
             // 
-            this.dateEdit12.EditValue = null;
-            this.dateEdit12.Location = new System.Drawing.Point(170, 114);
-            this.dateEdit12.Name = "dateEdit12";
-            this.dateEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit12.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateDY.EditValue = null;
+            this.DateDY.Location = new System.Drawing.Point(382, 83);
+            this.DateDY.Margin = new System.Windows.Forms.Padding(4);
+            this.DateDY.Name = "DateDY";
+            this.DateDY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DateDY.Properties.Appearance.Options.UseFont = true;
+            this.DateDY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit12.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateDY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit12.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit12.TabIndex = 24;
+            this.DateDY.Size = new System.Drawing.Size(121, 26);
+            this.DateDY.TabIndex = 24;
             // 
-            // materialSingleLineTextField7
+            // TxtTcY
             // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Hint = "T.C Kimlik No";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(7, 78);
-            this.materialSingleLineTextField7.MaxLength = 32767;
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField7.TabIndex = 4;
-            this.materialSingleLineTextField7.TabStop = false;
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
+            this.TxtTcY.Depth = 0;
+            this.TxtTcY.Hint = "T.C Kimlik No";
+            this.TxtTcY.Location = new System.Drawing.Point(4, 85);
+            this.TxtTcY.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtTcY.MaxLength = 32767;
+            this.TxtTcY.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtTcY.Name = "TxtTcY";
+            this.TxtTcY.PasswordChar = '\0';
+            this.TxtTcY.SelectedText = "";
+            this.TxtTcY.SelectionLength = 0;
+            this.TxtTcY.SelectionStart = 0;
+            this.TxtTcY.Size = new System.Drawing.Size(231, 23);
+            this.TxtTcY.TabIndex = 4;
+            this.TxtTcY.TabStop = false;
+            this.TxtTcY.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField8
+            // TxtAdY
             // 
-            this.materialSingleLineTextField8.Depth = 0;
-            this.materialSingleLineTextField8.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.materialSingleLineTextField8.Hint = "Adı Soyadı";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(7, 39);
-            this.materialSingleLineTextField8.MaxLength = 32767;
-            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
-            this.materialSingleLineTextField8.PasswordChar = '\0';
-            this.materialSingleLineTextField8.SelectedText = "";
-            this.materialSingleLineTextField8.SelectionLength = 0;
-            this.materialSingleLineTextField8.SelectionStart = 0;
-            this.materialSingleLineTextField8.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField8.TabIndex = 2;
-            this.materialSingleLineTextField8.TabStop = false;
-            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
+            this.TxtAdY.Depth = 0;
+            this.TxtAdY.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.TxtAdY.Hint = "Adı Soyadı";
+            this.TxtAdY.Location = new System.Drawing.Point(8, 45);
+            this.TxtAdY.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtAdY.MaxLength = 32767;
+            this.TxtAdY.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtAdY.Name = "TxtAdY";
+            this.TxtAdY.PasswordChar = '\0';
+            this.TxtAdY.SelectedText = "";
+            this.TxtAdY.SelectionLength = 0;
+            this.TxtAdY.SelectionStart = 0;
+            this.TxtAdY.Size = new System.Drawing.Size(340, 23);
+            this.TxtAdY.TabIndex = 2;
+            this.TxtAdY.TabStop = false;
+            this.TxtAdY.UseSystemPasswordChar = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(103, 14);
+            this.label4.Location = new System.Drawing.Point(165, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(191, 23);
             this.label4.TabIndex = 3;
@@ -1265,50 +1302,52 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = false;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
-            this.bunifuCards1.Controls.Add(this.comboBoxEdit1);
+            this.bunifuCards1.Controls.Add(this.CBoxN);
             this.bunifuCards1.Controls.Add(this.label2);
             this.bunifuCards1.Controls.Add(this.label18);
-            this.bunifuCards1.Controls.Add(this.dateEdit5);
-            this.bunifuCards1.Controls.Add(this.bunifuTileButton1);
-            this.bunifuCards1.Controls.Add(this.materialSingleLineTextField4);
-            this.bunifuCards1.Controls.Add(this.materialSingleLineTextField3);
-            this.bunifuCards1.Controls.Add(this.materialSingleLineTextField2);
-            this.bunifuCards1.Controls.Add(this.materialSingleLineTextField1);
+            this.bunifuCards1.Controls.Add(this.DateDogumT);
+            this.bunifuCards1.Controls.Add(this.BtnKisibul);
+            this.bunifuCards1.Controls.Add(this.TxtAdres);
+            this.bunifuCards1.Controls.Add(this.TxtTel);
+            this.bunifuCards1.Controls.Add(this.TxtTc);
+            this.bunifuCards1.Controls.Add(this.TxtBasvuranAd);
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(11, 10);
+            this.bunifuCards1.Location = new System.Drawing.Point(15, 12);
+            this.bunifuCards1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = false;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(407, 275);
+            this.bunifuCards1.Size = new System.Drawing.Size(543, 317);
             this.bunifuCards1.TabIndex = 9;
-            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
-            // comboBoxEdit1
+            // CBoxN
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(176, 232);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.CBoxN.Location = new System.Drawing.Point(164, 274);
+            this.CBoxN.Margin = new System.Windows.Forms.Padding(4);
+            this.CBoxN.Name = "CBoxN";
+            this.CBoxN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.CBoxN.Properties.Appearance.Options.UseFont = true;
+            this.CBoxN.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.CBoxN.Properties.Items.AddRange(new object[] {
             "BOŞANMA",
             "CEZAEVİ",
             "HASTA",
             "EŞİ VEFAT ETMİŞ",
             "KMÇ",
             "DİĞER"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(178, 26);
-            this.comboBoxEdit1.TabIndex = 22;
+            this.CBoxN.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.CBoxN.Size = new System.Drawing.Size(163, 26);
+            this.CBoxN.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(8, 232);
+            this.label2.Location = new System.Drawing.Point(11, 274);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 23);
             this.label2.TabIndex = 23;
@@ -1318,119 +1357,126 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label18.Location = new System.Drawing.Point(9, 199);
+            this.label18.Location = new System.Drawing.Point(12, 245);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(131, 23);
             this.label18.TabIndex = 21;
             this.label18.Text = "Doğum Tarihi:";
             // 
-            // dateEdit5
+            // DateDogumT
             // 
-            this.dateEdit5.EditValue = null;
-            this.dateEdit5.Location = new System.Drawing.Point(176, 199);
-            this.dateEdit5.Name = "dateEdit5";
-            this.dateEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit5.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateDogumT.EditValue = null;
+            this.DateDogumT.Location = new System.Drawing.Point(164, 245);
+            this.DateDogumT.Margin = new System.Windows.Forms.Padding(4);
+            this.DateDogumT.Name = "DateDogumT";
+            this.DateDogumT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DateDogumT.Properties.Appearance.Options.UseFont = true;
+            this.DateDogumT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DateDogumT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit5.TabIndex = 20;
+            this.DateDogumT.Size = new System.Drawing.Size(121, 26);
+            this.DateDogumT.TabIndex = 20;
             // 
-            // bunifuTileButton1
+            // BtnKisibul
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 20;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "Kişi Bul";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(276, 45);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(120, 108);
-            this.bunifuTileButton1.TabIndex = 10;
+            this.BtnKisibul.BackColor = System.Drawing.Color.SeaGreen;
+            this.BtnKisibul.color = System.Drawing.Color.SeaGreen;
+            this.BtnKisibul.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.BtnKisibul.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnKisibul.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.BtnKisibul.ForeColor = System.Drawing.Color.White;
+            this.BtnKisibul.Image = ((System.Drawing.Image)(resources.GetObject("BtnKisibul.Image")));
+            this.BtnKisibul.ImagePosition = 20;
+            this.BtnKisibul.ImageZoom = 50;
+            this.BtnKisibul.LabelPosition = 41;
+            this.BtnKisibul.LabelText = "Kişi Bul";
+            this.BtnKisibul.Location = new System.Drawing.Point(368, 55);
+            this.BtnKisibul.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.BtnKisibul.Name = "BtnKisibul";
+            this.BtnKisibul.Size = new System.Drawing.Size(160, 133);
+            this.BtnKisibul.TabIndex = 10;
             // 
-            // materialSingleLineTextField4
+            // TxtAdres
             // 
-            this.materialSingleLineTextField4.Depth = 0;
-            this.materialSingleLineTextField4.Hint = "Adres";
-            this.materialSingleLineTextField4.Location = new System.Drawing.Point(12, 168);
-            this.materialSingleLineTextField4.MaxLength = 32767;
-            this.materialSingleLineTextField4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField4.Name = "materialSingleLineTextField4";
-            this.materialSingleLineTextField4.PasswordChar = '\0';
-            this.materialSingleLineTextField4.SelectedText = "";
-            this.materialSingleLineTextField4.SelectionLength = 0;
-            this.materialSingleLineTextField4.SelectionStart = 0;
-            this.materialSingleLineTextField4.Size = new System.Drawing.Size(384, 23);
-            this.materialSingleLineTextField4.TabIndex = 6;
-            this.materialSingleLineTextField4.TabStop = false;
-            this.materialSingleLineTextField4.UseSystemPasswordChar = false;
+            this.TxtAdres.Depth = 0;
+            this.TxtAdres.Hint = "Adres";
+            this.TxtAdres.Location = new System.Drawing.Point(16, 207);
+            this.TxtAdres.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtAdres.MaxLength = 32767;
+            this.TxtAdres.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtAdres.Name = "TxtAdres";
+            this.TxtAdres.PasswordChar = '\0';
+            this.TxtAdres.SelectedText = "";
+            this.TxtAdres.SelectionLength = 0;
+            this.TxtAdres.SelectionStart = 0;
+            this.TxtAdres.Size = new System.Drawing.Size(512, 23);
+            this.TxtAdres.TabIndex = 6;
+            this.TxtAdres.TabStop = false;
+            this.TxtAdres.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField3
+            // TxtTel
             // 
-            this.materialSingleLineTextField3.Depth = 0;
-            this.materialSingleLineTextField3.Hint = "Telefon No";
-            this.materialSingleLineTextField3.Location = new System.Drawing.Point(12, 130);
-            this.materialSingleLineTextField3.MaxLength = 32767;
-            this.materialSingleLineTextField3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField3.Name = "materialSingleLineTextField3";
-            this.materialSingleLineTextField3.PasswordChar = '\0';
-            this.materialSingleLineTextField3.SelectedText = "";
-            this.materialSingleLineTextField3.SelectionLength = 0;
-            this.materialSingleLineTextField3.SelectionStart = 0;
-            this.materialSingleLineTextField3.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField3.TabIndex = 5;
-            this.materialSingleLineTextField3.TabStop = false;
-            this.materialSingleLineTextField3.UseSystemPasswordChar = false;
+            this.TxtTel.Depth = 0;
+            this.TxtTel.Hint = "Telefon No";
+            this.TxtTel.Location = new System.Drawing.Point(16, 160);
+            this.TxtTel.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtTel.MaxLength = 32767;
+            this.TxtTel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtTel.Name = "TxtTel";
+            this.TxtTel.PasswordChar = '\0';
+            this.TxtTel.SelectedText = "";
+            this.TxtTel.SelectionLength = 0;
+            this.TxtTel.SelectionStart = 0;
+            this.TxtTel.Size = new System.Drawing.Size(340, 23);
+            this.TxtTel.TabIndex = 5;
+            this.TxtTel.TabStop = false;
+            this.TxtTel.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // TxtTc
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "T.C Kimlik No";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(12, 92);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField2.TabIndex = 4;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.TxtTc.Depth = 0;
+            this.TxtTc.Hint = "T.C Kimlik No";
+            this.TxtTc.Location = new System.Drawing.Point(16, 113);
+            this.TxtTc.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtTc.MaxLength = 32767;
+            this.TxtTc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtTc.Name = "TxtTc";
+            this.TxtTc.PasswordChar = '\0';
+            this.TxtTc.SelectedText = "";
+            this.TxtTc.SelectionLength = 0;
+            this.TxtTc.SelectionStart = 0;
+            this.TxtTc.Size = new System.Drawing.Size(340, 23);
+            this.TxtTc.TabIndex = 4;
+            this.TxtTc.TabStop = false;
+            this.TxtTc.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // TxtBasvuranAd
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.materialSingleLineTextField1.Hint = "Adı Soyadı";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(12, 53);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField1.TabIndex = 2;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.TxtBasvuranAd.Depth = 0;
+            this.TxtBasvuranAd.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.TxtBasvuranAd.Hint = "Adı Soyadı";
+            this.TxtBasvuranAd.Location = new System.Drawing.Point(16, 65);
+            this.TxtBasvuranAd.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtBasvuranAd.MaxLength = 32767;
+            this.TxtBasvuranAd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtBasvuranAd.Name = "TxtBasvuranAd";
+            this.TxtBasvuranAd.PasswordChar = '\0';
+            this.TxtBasvuranAd.SelectedText = "";
+            this.TxtBasvuranAd.SelectionLength = 0;
+            this.TxtBasvuranAd.SelectionStart = 0;
+            this.TxtBasvuranAd.Size = new System.Drawing.Size(340, 23);
+            this.TxtBasvuranAd.TabIndex = 2;
+            this.TxtBasvuranAd.TabStop = false;
+            this.TxtBasvuranAd.UseSystemPasswordChar = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label1.Location = new System.Drawing.Point(120, 16);
+            this.label1.Location = new System.Drawing.Point(181, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 23);
             this.label1.TabIndex = 3;
@@ -1438,17 +1484,38 @@
             // 
             // xtraTabPage4
             // 
-            this.xtraTabPage4.Controls.Add(this.bunifuCards6);
-            this.xtraTabPage4.Controls.Add(this.label13);
-            this.xtraTabPage4.Controls.Add(this.label14);
+            this.xtraTabPage4.Controls.Add(this.pictureBox2);
             this.xtraTabPage4.Controls.Add(this.pictureBox5);
-            this.xtraTabPage4.Controls.Add(this.pictureBox6);
+            this.xtraTabPage4.Controls.Add(this.bunifuCards6);
             this.xtraTabPage4.Controls.Add(this.bunifuCards7);
             this.xtraTabPage4.Controls.Add(this.bunifuCards9);
             this.xtraTabPage4.Controls.Add(this.bunifuCards10);
+            this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage4.Text = "EBH Evrak Girişi";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(940, 337);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(318, 108);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm;
+            this.pictureBox5.Location = new System.Drawing.Point(940, 12);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(318, 317);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 24;
+            this.pictureBox5.TabStop = false;
             // 
             // bunifuCards6
             // 
@@ -1456,18 +1523,69 @@
             this.bunifuCards6.BorderRadius = 5;
             this.bunifuCards6.BottomSahddow = false;
             this.bunifuCards6.color = System.Drawing.Color.DarkMagenta;
+            this.bunifuCards6.Controls.Add(this.bunifuThinButton21);
+            this.bunifuCards6.Controls.Add(this.bunifuThinButton22);
             this.bunifuCards6.Controls.Add(this.bunifuThinButton23);
-            this.bunifuCards6.Controls.Add(this.bunifuThinButton24);
-            this.bunifuCards6.Controls.Add(this.bunifuThinButton26);
-            this.bunifuCards6.Controls.Add(this.richTextBox2);
+            this.bunifuCards6.Controls.Add(this.richTextBox1);
             this.bunifuCards6.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(11, 467);
+            this.bunifuCards6.Location = new System.Drawing.Point(12, 476);
+            this.bunifuCards6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = false;
             this.bunifuCards6.ShadowDepth = 20;
-            this.bunifuCards6.Size = new System.Drawing.Size(820, 129);
-            this.bunifuCards6.TabIndex = 28;
+            this.bunifuCards6.Size = new System.Drawing.Size(918, 133);
+            this.bunifuCards6.TabIndex = 23;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "GÜNCELLE";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Crimson;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Crimson;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(584, 16);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(161, 57);
+            this.bunifuThinButton21.TabIndex = 18;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "TEMİZLE";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Orange;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Orange;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(584, 73);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(333, 51);
+            this.bunifuThinButton22.TabIndex = 17;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuThinButton23
             // 
@@ -1478,123 +1596,34 @@
             this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton23.BackColor = System.Drawing.Color.White;
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "GÜNCELLE";
+            this.bunifuThinButton23.ButtonText = "KAYDET";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton23.IdleBorderThickness = 1;
             this.bunifuThinButton23.IdleCornerRadius = 20;
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Crimson;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Crimson;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(531, 14);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(753, 16);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(133, 56);
-            this.bunifuThinButton23.TabIndex = 18;
+            this.bunifuThinButton23.Size = new System.Drawing.Size(161, 57);
+            this.bunifuThinButton23.TabIndex = 16;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuThinButton24
+            // richTextBox1
             // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "TEMİZLE";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.Orange;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Orange;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(531, 70);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(276, 50);
-            this.bunifuThinButton24.TabIndex = 17;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuThinButton26
-            // 
-            this.bunifuThinButton26.ActiveBorderThickness = 1;
-            this.bunifuThinButton26.ActiveCornerRadius = 20;
-            this.bunifuThinButton26.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
-            this.bunifuThinButton26.ButtonText = "KAYDET";
-            this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton26.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.IdleBorderThickness = 1;
-            this.bunifuThinButton26.IdleCornerRadius = 20;
-            this.bunifuThinButton26.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton26.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton26.Location = new System.Drawing.Point(674, 14);
-            this.bunifuThinButton26.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton26.Name = "bunifuThinButton26";
-            this.bunifuThinButton26.Size = new System.Drawing.Size(133, 56);
-            this.bunifuThinButton26.TabIndex = 16;
-            this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.OliveDrab;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.richTextBox2.ForeColor = System.Drawing.Color.White;
-            this.richTextBox2.Location = new System.Drawing.Point(12, 14);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(511, 106);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(969, 569);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(254, 14);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Data Ver. V.1.0.9 Sqlite Security System";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(837, 549);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(386, 14);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "©2017 Choice Data Management System Powered By Sqlite™";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(837, 388);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(398, 147);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 25;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm;
-            this.pictureBox6.Location = new System.Drawing.Point(837, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(398, 366);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 24;
-            this.pictureBox6.TabStop = false;
+            this.richTextBox1.BackColor = System.Drawing.Color.OliveDrab;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(8, 15);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(565, 107);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
             // bunifuCards7
             // 
@@ -1624,16 +1653,18 @@
             this.bunifuCards7.Controls.Add(this.bunifuSeparator1);
             this.bunifuCards7.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards7.LeftSahddow = false;
-            this.bunifuCards7.Location = new System.Drawing.Point(424, 10);
+            this.bunifuCards7.Location = new System.Drawing.Point(565, 12);
+            this.bunifuCards7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards7.Name = "bunifuCards7";
             this.bunifuCards7.RightSahddow = false;
             this.bunifuCards7.ShadowDepth = 20;
-            this.bunifuCards7.Size = new System.Drawing.Size(407, 419);
+            this.bunifuCards7.Size = new System.Drawing.Size(369, 516);
             this.bunifuCards7.TabIndex = 21;
             // 
             // comboBoxEdit6
             // 
-            this.comboBoxEdit6.Location = new System.Drawing.Point(175, 87);
+            this.comboBoxEdit6.Location = new System.Drawing.Point(175, 93);
+            this.comboBoxEdit6.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEdit6.Name = "comboBoxEdit6";
             this.comboBoxEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.comboBoxEdit6.Properties.Appearance.Options.UseFont = true;
@@ -1781,14 +1812,15 @@
             "BAŞKÖY",
             "ŞEHİT",
             "KIZLARSARAYI"});
-            this.comboBoxEdit6.Size = new System.Drawing.Size(143, 26);
+            this.comboBoxEdit6.Size = new System.Drawing.Size(149, 26);
             this.comboBoxEdit6.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label7.Location = new System.Drawing.Point(8, 87);
+            this.label7.Location = new System.Drawing.Point(11, 96);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 23);
             this.label7.TabIndex = 25;
@@ -1798,7 +1830,8 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label25.Location = new System.Drawing.Point(8, 375);
+            this.label25.Location = new System.Drawing.Point(10, 398);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(103, 23);
             this.label25.TabIndex = 24;
@@ -1807,7 +1840,8 @@
             // dateEdit9
             // 
             this.dateEdit9.EditValue = null;
-            this.dateEdit9.Location = new System.Drawing.Point(175, 372);
+            this.dateEdit9.Location = new System.Drawing.Point(159, 392);
+            this.dateEdit9.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit9.Name = "dateEdit9";
             this.dateEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit9.Properties.Appearance.Options.UseFont = true;
@@ -1815,14 +1849,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit9.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit9.Size = new System.Drawing.Size(143, 26);
+            this.dateEdit9.Size = new System.Drawing.Size(137, 26);
             this.dateEdit9.TabIndex = 23;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label26.Location = new System.Drawing.Point(8, 340);
+            this.label26.Location = new System.Drawing.Point(10, 365);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(148, 23);
             this.label26.TabIndex = 22;
@@ -1831,7 +1866,8 @@
             // dateEdit13
             // 
             this.dateEdit13.EditValue = null;
-            this.dateEdit13.Location = new System.Drawing.Point(175, 337);
+            this.dateEdit13.Location = new System.Drawing.Point(159, 362);
+            this.dateEdit13.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit13.Name = "dateEdit13";
             this.dateEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit13.Properties.Appearance.Options.UseFont = true;
@@ -1839,12 +1875,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit13.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit13.Size = new System.Drawing.Size(143, 26);
+            this.dateEdit13.Size = new System.Drawing.Size(137, 26);
             this.dateEdit13.TabIndex = 21;
             // 
             // comboBoxEdit7
             // 
-            this.comboBoxEdit7.Location = new System.Drawing.Point(131, 292);
+            this.comboBoxEdit7.Enabled = false;
+            this.comboBoxEdit7.Location = new System.Drawing.Point(132, 328);
+            this.comboBoxEdit7.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEdit7.Name = "comboBoxEdit7";
             this.comboBoxEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.comboBoxEdit7.Properties.Appearance.Options.UseFont = true;
@@ -1857,14 +1895,16 @@
             "3 YIL",
             "4 YIL",
             "5 YIL"});
-            this.comboBoxEdit7.Size = new System.Drawing.Size(89, 26);
+            this.comboBoxEdit7.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit7.Size = new System.Drawing.Size(121, 26);
             this.comboBoxEdit7.TabIndex = 20;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label15.Location = new System.Drawing.Point(8, 292);
+            this.label15.Location = new System.Drawing.Point(11, 328);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 23);
             this.label15.TabIndex = 18;
@@ -1874,7 +1914,8 @@
             // 
             this.materialSingleLineTextField10.Depth = 0;
             this.materialSingleLineTextField10.Hint = "Arşiv No";
-            this.materialSingleLineTextField10.Location = new System.Drawing.Point(12, 238);
+            this.materialSingleLineTextField10.Location = new System.Drawing.Point(15, 227);
+            this.materialSingleLineTextField10.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField10.MaxLength = 32767;
             this.materialSingleLineTextField10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField10.Name = "materialSingleLineTextField10";
@@ -1882,7 +1923,7 @@
             this.materialSingleLineTextField10.SelectedText = "";
             this.materialSingleLineTextField10.SelectionLength = 0;
             this.materialSingleLineTextField10.SelectionStart = 0;
-            this.materialSingleLineTextField10.Size = new System.Drawing.Size(306, 23);
+            this.materialSingleLineTextField10.Size = new System.Drawing.Size(309, 23);
             this.materialSingleLineTextField10.TabIndex = 17;
             this.materialSingleLineTextField10.TabStop = false;
             this.materialSingleLineTextField10.UseSystemPasswordChar = false;
@@ -1892,7 +1933,7 @@
             this.materialRadioButton4.AutoSize = true;
             this.materialRadioButton4.Depth = 0;
             this.materialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton4.Location = new System.Drawing.Point(312, 291);
+            this.materialRadioButton4.Location = new System.Drawing.Point(204, 283);
             this.materialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1907,7 +1948,8 @@
             // 
             this.materialSingleLineTextField11.Depth = 0;
             this.materialSingleLineTextField11.Hint = "YBS No";
-            this.materialSingleLineTextField11.Location = new System.Drawing.Point(12, 203);
+            this.materialSingleLineTextField11.Location = new System.Drawing.Point(15, 196);
+            this.materialSingleLineTextField11.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField11.MaxLength = 32767;
             this.materialSingleLineTextField11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField11.Name = "materialSingleLineTextField11";
@@ -1915,7 +1957,7 @@
             this.materialSingleLineTextField11.SelectedText = "";
             this.materialSingleLineTextField11.SelectionLength = 0;
             this.materialSingleLineTextField11.SelectionStart = 0;
-            this.materialSingleLineTextField11.Size = new System.Drawing.Size(306, 23);
+            this.materialSingleLineTextField11.Size = new System.Drawing.Size(309, 23);
             this.materialSingleLineTextField11.TabIndex = 16;
             this.materialSingleLineTextField11.TabStop = false;
             this.materialSingleLineTextField11.UseSystemPasswordChar = false;
@@ -1926,7 +1968,7 @@
             this.materialRadioButton6.Checked = true;
             this.materialRadioButton6.Depth = 0;
             this.materialRadioButton6.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton6.Location = new System.Drawing.Point(236, 290);
+            this.materialRadioButton6.Location = new System.Drawing.Point(123, 282);
             this.materialRadioButton6.Margin = new System.Windows.Forms.Padding(0);
             this.materialRadioButton6.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialRadioButton6.MouseState = MaterialSkin.MouseState.HOVER;
@@ -1942,7 +1984,8 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label16.Location = new System.Drawing.Point(8, 161);
+            this.label16.Location = new System.Drawing.Point(11, 162);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(130, 23);
             this.label16.TabIndex = 13;
@@ -1951,7 +1994,8 @@
             // dateEdit10
             // 
             this.dateEdit10.EditValue = null;
-            this.dateEdit10.Location = new System.Drawing.Point(175, 161);
+            this.dateEdit10.Location = new System.Drawing.Point(175, 162);
+            this.dateEdit10.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit10.Name = "dateEdit10";
             this.dateEdit10.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit10.Properties.Appearance.Options.UseFont = true;
@@ -1959,14 +2003,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit10.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit10.Size = new System.Drawing.Size(143, 26);
+            this.dateEdit10.Size = new System.Drawing.Size(121, 26);
             this.dateEdit10.TabIndex = 12;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label17.Location = new System.Drawing.Point(8, 126);
+            this.label17.Location = new System.Drawing.Point(11, 127);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(137, 23);
             this.label17.TabIndex = 11;
@@ -1975,7 +2020,8 @@
             // dateEdit11
             // 
             this.dateEdit11.EditValue = null;
-            this.dateEdit11.Location = new System.Drawing.Point(175, 126);
+            this.dateEdit11.Location = new System.Drawing.Point(175, 127);
+            this.dateEdit11.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit11.Name = "dateEdit11";
             this.dateEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit11.Properties.Appearance.Options.UseFont = true;
@@ -1983,12 +2029,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit11.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit11.Size = new System.Drawing.Size(143, 26);
+            this.dateEdit11.Size = new System.Drawing.Size(121, 26);
             this.dateEdit11.TabIndex = 10;
             // 
             // comboBoxEdit4
             // 
-            this.comboBoxEdit4.Location = new System.Drawing.Point(175, 50);
+            this.comboBoxEdit4.Location = new System.Drawing.Point(175, 59);
+            this.comboBoxEdit4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEdit4.Name = "comboBoxEdit4";
             this.comboBoxEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.comboBoxEdit4.Properties.Appearance.Options.UseFont = true;
@@ -2002,14 +2049,15 @@
             "DENETİM",
             "NAKİL EDİLDİ"});
             this.comboBoxEdit4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit4.Size = new System.Drawing.Size(143, 26);
+            this.comboBoxEdit4.Size = new System.Drawing.Size(121, 26);
             this.comboBoxEdit4.TabIndex = 1;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label19.Location = new System.Drawing.Point(8, 50);
+            this.label19.Location = new System.Drawing.Point(11, 62);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(75, 23);
             this.label19.TabIndex = 7;
@@ -2019,7 +2067,8 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label20.Location = new System.Drawing.Point(142, 16);
+            this.label20.Location = new System.Drawing.Point(113, 20);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(125, 23);
             this.label20.TabIndex = 3;
@@ -2029,11 +2078,11 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 2;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(9, 254);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuSeparator1.LineThickness = 32;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(15, 246);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(392, 35);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(353, 43);
             this.bunifuSeparator1.TabIndex = 19;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -2044,31 +2093,33 @@
             this.bunifuCards9.BorderRadius = 5;
             this.bunifuCards9.BottomSahddow = false;
             this.bunifuCards9.color = System.Drawing.Color.DarkOliveGreen;
-            this.bunifuCards9.Controls.Add(this.comboBoxEdit5);
-            this.bunifuCards9.Controls.Add(this.label21);
-            this.bunifuCards9.Controls.Add(this.label28);
-            this.bunifuCards9.Controls.Add(this.dateEdit14);
-            this.bunifuCards9.Controls.Add(this.materialSingleLineTextField13);
-            this.bunifuCards9.Controls.Add(this.materialSingleLineTextField14);
+            this.bunifuCards9.Controls.Add(this.comboBoxEdit1);
+            this.bunifuCards9.Controls.Add(this.label11);
+            this.bunifuCards9.Controls.Add(this.label12);
+            this.bunifuCards9.Controls.Add(this.dateEdit2);
+            this.bunifuCards9.Controls.Add(this.materialSingleLineTextField1);
+            this.bunifuCards9.Controls.Add(this.materialSingleLineTextField2);
             this.bunifuCards9.Controls.Add(this.label22);
             this.bunifuCards9.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards9.LeftSahddow = false;
-            this.bunifuCards9.Location = new System.Drawing.Point(11, 268);
+            this.bunifuCards9.Location = new System.Drawing.Point(15, 293);
+            this.bunifuCards9.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards9.Name = "bunifuCards9";
             this.bunifuCards9.RightSahddow = false;
             this.bunifuCards9.ShadowDepth = 20;
-            this.bunifuCards9.Size = new System.Drawing.Size(407, 193);
+            this.bunifuCards9.Size = new System.Drawing.Size(543, 238);
             this.bunifuCards9.TabIndex = 22;
             // 
-            // comboBoxEdit5
+            // comboBoxEdit1
             // 
-            this.comboBoxEdit5.Location = new System.Drawing.Point(175, 157);
-            this.comboBoxEdit5.Name = "comboBoxEdit5";
-            this.comboBoxEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBoxEdit5.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboBoxEdit1.Location = new System.Drawing.Point(171, 124);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit5.Properties.Items.AddRange(new object[] {
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
             "BABASI",
             "ANNESİ",
             "KARDEŞİ",
@@ -2079,84 +2130,90 @@
             "DEDESİ",
             "NENESİ",
             "DİĞER"});
-            this.comboBoxEdit5.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit5.Size = new System.Drawing.Size(131, 26);
-            this.comboBoxEdit5.TabIndex = 30;
+            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxEdit1.TabIndex = 32;
             // 
-            // label21
+            // label11
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label21.Location = new System.Drawing.Point(8, 157);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(154, 23);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "Yakınlık Durumu:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label11.Location = new System.Drawing.Point(11, 124);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 23);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Yakınlık Durumu:";
             // 
-            // label28
+            // label12
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label28.Location = new System.Drawing.Point(8, 120);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(131, 23);
-            this.label28.TabIndex = 29;
-            this.label28.Text = "Doğum Tarihi:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label12.Location = new System.Drawing.Point(250, 89);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(131, 23);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Doğum Tarihi:";
             // 
-            // dateEdit14
+            // dateEdit2
             // 
-            this.dateEdit14.EditValue = null;
-            this.dateEdit14.Location = new System.Drawing.Point(175, 120);
-            this.dateEdit14.Name = "dateEdit14";
-            this.dateEdit14.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit14.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(389, 89);
+            this.dateEdit2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit2.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit14.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit14.Size = new System.Drawing.Size(143, 26);
-            this.dateEdit14.TabIndex = 28;
+            this.dateEdit2.Size = new System.Drawing.Size(121, 26);
+            this.dateEdit2.TabIndex = 30;
             // 
-            // materialSingleLineTextField13
+            // materialSingleLineTextField1
             // 
-            this.materialSingleLineTextField13.Depth = 0;
-            this.materialSingleLineTextField13.Hint = "T.C Kimlik No";
-            this.materialSingleLineTextField13.Location = new System.Drawing.Point(12, 85);
-            this.materialSingleLineTextField13.MaxLength = 32767;
-            this.materialSingleLineTextField13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField13.Name = "materialSingleLineTextField13";
-            this.materialSingleLineTextField13.PasswordChar = '\0';
-            this.materialSingleLineTextField13.SelectedText = "";
-            this.materialSingleLineTextField13.SelectionLength = 0;
-            this.materialSingleLineTextField13.SelectionStart = 0;
-            this.materialSingleLineTextField13.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField13.TabIndex = 4;
-            this.materialSingleLineTextField13.TabStop = false;
-            this.materialSingleLineTextField13.UseSystemPasswordChar = false;
+            this.materialSingleLineTextField1.Depth = 0;
+            this.materialSingleLineTextField1.Hint = "T.C Kimlik No";
+            this.materialSingleLineTextField1.Location = new System.Drawing.Point(11, 88);
+            this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextField1.MaxLength = 32767;
+            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
+            this.materialSingleLineTextField1.PasswordChar = '\0';
+            this.materialSingleLineTextField1.SelectedText = "";
+            this.materialSingleLineTextField1.SelectionLength = 0;
+            this.materialSingleLineTextField1.SelectionStart = 0;
+            this.materialSingleLineTextField1.Size = new System.Drawing.Size(231, 23);
+            this.materialSingleLineTextField1.TabIndex = 29;
+            this.materialSingleLineTextField1.TabStop = false;
+            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField14
+            // materialSingleLineTextField2
             // 
-            this.materialSingleLineTextField14.Depth = 0;
-            this.materialSingleLineTextField14.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.materialSingleLineTextField14.Hint = "Adı Soyadı";
-            this.materialSingleLineTextField14.Location = new System.Drawing.Point(12, 46);
-            this.materialSingleLineTextField14.MaxLength = 32767;
-            this.materialSingleLineTextField14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField14.Name = "materialSingleLineTextField14";
-            this.materialSingleLineTextField14.PasswordChar = '\0';
-            this.materialSingleLineTextField14.SelectedText = "";
-            this.materialSingleLineTextField14.SelectionLength = 0;
-            this.materialSingleLineTextField14.SelectionStart = 0;
-            this.materialSingleLineTextField14.Size = new System.Drawing.Size(255, 23);
-            this.materialSingleLineTextField14.TabIndex = 2;
-            this.materialSingleLineTextField14.TabStop = false;
-            this.materialSingleLineTextField14.UseSystemPasswordChar = false;
+            this.materialSingleLineTextField2.Depth = 0;
+            this.materialSingleLineTextField2.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.materialSingleLineTextField2.Hint = "Adı Soyadı";
+            this.materialSingleLineTextField2.Location = new System.Drawing.Point(15, 48);
+            this.materialSingleLineTextField2.Margin = new System.Windows.Forms.Padding(4);
+            this.materialSingleLineTextField2.MaxLength = 32767;
+            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
+            this.materialSingleLineTextField2.PasswordChar = '\0';
+            this.materialSingleLineTextField2.SelectedText = "";
+            this.materialSingleLineTextField2.SelectionLength = 0;
+            this.materialSingleLineTextField2.SelectionStart = 0;
+            this.materialSingleLineTextField2.Size = new System.Drawing.Size(340, 23);
+            this.materialSingleLineTextField2.TabIndex = 28;
+            this.materialSingleLineTextField2.TabStop = false;
+            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label22.Location = new System.Drawing.Point(120, 17);
+            this.label22.Location = new System.Drawing.Point(160, 21);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(122, 23);
             this.label22.TabIndex = 3;
@@ -2178,18 +2235,20 @@
             this.bunifuCards10.Controls.Add(this.label24);
             this.bunifuCards10.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards10.LeftSahddow = false;
-            this.bunifuCards10.Location = new System.Drawing.Point(11, 10);
+            this.bunifuCards10.Location = new System.Drawing.Point(15, 12);
+            this.bunifuCards10.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCards10.Name = "bunifuCards10";
             this.bunifuCards10.RightSahddow = false;
             this.bunifuCards10.ShadowDepth = 20;
-            this.bunifuCards10.Size = new System.Drawing.Size(407, 272);
+            this.bunifuCards10.Size = new System.Drawing.Size(543, 335);
             this.bunifuCards10.TabIndex = 20;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label29.Location = new System.Drawing.Point(8, 200);
+            this.label29.Location = new System.Drawing.Point(11, 246);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(131, 23);
             this.label29.TabIndex = 23;
@@ -2198,7 +2257,8 @@
             // dateEdit15
             // 
             this.dateEdit15.EditValue = null;
-            this.dateEdit15.Location = new System.Drawing.Point(175, 200);
+            this.dateEdit15.Location = new System.Drawing.Point(150, 246);
+            this.dateEdit15.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit15.Name = "dateEdit15";
             this.dateEdit15.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit15.Properties.Appearance.Options.UseFont = true;
@@ -2206,7 +2266,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit15.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit15.Size = new System.Drawing.Size(143, 26);
+            this.dateEdit15.Size = new System.Drawing.Size(121, 26);
             this.dateEdit15.TabIndex = 22;
             // 
             // bunifuTileButton2
@@ -2222,17 +2282,18 @@
             this.bunifuTileButton2.ImageZoom = 50;
             this.bunifuTileButton2.LabelPosition = 41;
             this.bunifuTileButton2.LabelText = "Kişi Bul";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(276, 45);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuTileButton2.Location = new System.Drawing.Point(368, 55);
+            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(120, 108);
+            this.bunifuTileButton2.Size = new System.Drawing.Size(160, 133);
             this.bunifuTileButton2.TabIndex = 10;
             // 
             // materialSingleLineTextField15
             // 
             this.materialSingleLineTextField15.Depth = 0;
             this.materialSingleLineTextField15.Hint = "Adres";
-            this.materialSingleLineTextField15.Location = new System.Drawing.Point(12, 168);
+            this.materialSingleLineTextField15.Location = new System.Drawing.Point(16, 207);
+            this.materialSingleLineTextField15.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField15.MaxLength = 32767;
             this.materialSingleLineTextField15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField15.Name = "materialSingleLineTextField15";
@@ -2240,7 +2301,7 @@
             this.materialSingleLineTextField15.SelectedText = "";
             this.materialSingleLineTextField15.SelectionLength = 0;
             this.materialSingleLineTextField15.SelectionStart = 0;
-            this.materialSingleLineTextField15.Size = new System.Drawing.Size(384, 23);
+            this.materialSingleLineTextField15.Size = new System.Drawing.Size(512, 23);
             this.materialSingleLineTextField15.TabIndex = 6;
             this.materialSingleLineTextField15.TabStop = false;
             this.materialSingleLineTextField15.UseSystemPasswordChar = false;
@@ -2249,7 +2310,8 @@
             // 
             this.materialSingleLineTextField16.Depth = 0;
             this.materialSingleLineTextField16.Hint = "Telefon No";
-            this.materialSingleLineTextField16.Location = new System.Drawing.Point(12, 130);
+            this.materialSingleLineTextField16.Location = new System.Drawing.Point(16, 160);
+            this.materialSingleLineTextField16.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField16.MaxLength = 32767;
             this.materialSingleLineTextField16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField16.Name = "materialSingleLineTextField16";
@@ -2257,7 +2319,7 @@
             this.materialSingleLineTextField16.SelectedText = "";
             this.materialSingleLineTextField16.SelectionLength = 0;
             this.materialSingleLineTextField16.SelectionStart = 0;
-            this.materialSingleLineTextField16.Size = new System.Drawing.Size(255, 23);
+            this.materialSingleLineTextField16.Size = new System.Drawing.Size(340, 23);
             this.materialSingleLineTextField16.TabIndex = 5;
             this.materialSingleLineTextField16.TabStop = false;
             this.materialSingleLineTextField16.UseSystemPasswordChar = false;
@@ -2266,7 +2328,8 @@
             // 
             this.materialSingleLineTextField17.Depth = 0;
             this.materialSingleLineTextField17.Hint = "T.C Kimlik No";
-            this.materialSingleLineTextField17.Location = new System.Drawing.Point(12, 92);
+            this.materialSingleLineTextField17.Location = new System.Drawing.Point(16, 113);
+            this.materialSingleLineTextField17.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField17.MaxLength = 32767;
             this.materialSingleLineTextField17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField17.Name = "materialSingleLineTextField17";
@@ -2274,7 +2337,7 @@
             this.materialSingleLineTextField17.SelectedText = "";
             this.materialSingleLineTextField17.SelectionLength = 0;
             this.materialSingleLineTextField17.SelectionStart = 0;
-            this.materialSingleLineTextField17.Size = new System.Drawing.Size(255, 23);
+            this.materialSingleLineTextField17.Size = new System.Drawing.Size(340, 23);
             this.materialSingleLineTextField17.TabIndex = 4;
             this.materialSingleLineTextField17.TabStop = false;
             this.materialSingleLineTextField17.UseSystemPasswordChar = false;
@@ -2284,7 +2347,8 @@
             this.materialSingleLineTextField18.Depth = 0;
             this.materialSingleLineTextField18.Font = new System.Drawing.Font("Tahoma", 12F);
             this.materialSingleLineTextField18.Hint = "Adı Soyadı";
-            this.materialSingleLineTextField18.Location = new System.Drawing.Point(12, 53);
+            this.materialSingleLineTextField18.Location = new System.Drawing.Point(16, 65);
+            this.materialSingleLineTextField18.Margin = new System.Windows.Forms.Padding(4);
             this.materialSingleLineTextField18.MaxLength = 32767;
             this.materialSingleLineTextField18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField18.Name = "materialSingleLineTextField18";
@@ -2292,7 +2356,7 @@
             this.materialSingleLineTextField18.SelectedText = "";
             this.materialSingleLineTextField18.SelectionLength = 0;
             this.materialSingleLineTextField18.SelectionStart = 0;
-            this.materialSingleLineTextField18.Size = new System.Drawing.Size(255, 23);
+            this.materialSingleLineTextField18.Size = new System.Drawing.Size(340, 23);
             this.materialSingleLineTextField18.TabIndex = 2;
             this.materialSingleLineTextField18.TabStop = false;
             this.materialSingleLineTextField18.UseSystemPasswordChar = false;
@@ -2301,7 +2365,8 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label24.Location = new System.Drawing.Point(120, 16);
+            this.label24.Location = new System.Drawing.Point(160, 20);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(130, 23);
             this.label24.TabIndex = 3;
@@ -2313,14 +2378,15 @@
             this.xtraTabPage5.Controls.Add(this.pictureBox7);
             this.xtraTabPage5.Controls.Add(this.materialRaisedButton12);
             this.xtraTabPage5.Controls.Add(this.labelControl5);
-            this.xtraTabPage5.Controls.Add(this.dateEdit16);
+            this.xtraTabPage5.Controls.Add(this.dateEdit6);
             this.xtraTabPage5.Controls.Add(this.materialRaisedButton13);
             this.xtraTabPage5.Controls.Add(this.labelControl6);
-            this.xtraTabPage5.Controls.Add(this.dateEdit17);
+            this.xtraTabPage5.Controls.Add(this.dateEdit7);
             this.xtraTabPage5.Controls.Add(this.materialRaisedButton14);
             this.xtraTabPage5.Controls.Add(this.gridControl3);
+            this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage5.Text = "Evrak Zimmet Rapor";
             // 
             // materialRaisedButton11
@@ -2329,23 +2395,25 @@
             this.materialRaisedButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton11.Depth = 0;
             this.materialRaisedButton11.Icon = null;
-            this.materialRaisedButton11.Location = new System.Drawing.Point(632, 553);
+            this.materialRaisedButton11.Location = new System.Drawing.Point(629, 564);
+            this.materialRaisedButton11.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton11.Name = "materialRaisedButton11";
             this.materialRaisedButton11.Primary = true;
             this.materialRaisedButton11.Size = new System.Drawing.Size(105, 36);
-            this.materialRaisedButton11.TabIndex = 21;
+            this.materialRaisedButton11.TabIndex = 40;
             this.materialRaisedButton11.Text = "Özel Arama";
             this.materialRaisedButton11.UseVisualStyleBackColor = true;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1143, 549);
+            this.pictureBox7.Location = new System.Drawing.Point(1128, 557);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(104, 47);
+            this.pictureBox7.Size = new System.Drawing.Size(132, 43);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabIndex = 39;
             this.pictureBox7.TabStop = false;
             // 
             // materialRaisedButton12
@@ -2354,12 +2422,13 @@
             this.materialRaisedButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton12.Depth = 0;
             this.materialRaisedButton12.Icon = null;
-            this.materialRaisedButton12.Location = new System.Drawing.Point(743, 553);
+            this.materialRaisedButton12.Location = new System.Drawing.Point(742, 564);
+            this.materialRaisedButton12.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton12.Name = "materialRaisedButton12";
             this.materialRaisedButton12.Primary = true;
             this.materialRaisedButton12.Size = new System.Drawing.Size(135, 36);
-            this.materialRaisedButton12.TabIndex = 19;
+            this.materialRaisedButton12.TabIndex = 38;
             this.materialRaisedButton12.Text = "Sayfayı Temizle";
             this.materialRaisedButton12.UseVisualStyleBackColor = true;
             // 
@@ -2367,25 +2436,27 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(237, 560);
+            this.labelControl5.Location = new System.Drawing.Point(231, 571);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(79, 19);
-            this.labelControl5.TabIndex = 18;
+            this.labelControl5.TabIndex = 37;
             this.labelControl5.Text = "Bu Tarihe";
             // 
-            // dateEdit16
+            // dateEdit6
             // 
-            this.dateEdit16.EditValue = null;
-            this.dateEdit16.Location = new System.Drawing.Point(322, 557);
-            this.dateEdit16.Name = "dateEdit16";
-            this.dateEdit16.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit16.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit6.EditValue = null;
+            this.dateEdit6.Location = new System.Drawing.Point(318, 568);
+            this.dateEdit6.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit6.Name = "dateEdit6";
+            this.dateEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit6.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit16.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit16.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit16.TabIndex = 17;
+            this.dateEdit6.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit6.TabIndex = 36;
             // 
             // materialRaisedButton13
             // 
@@ -2393,12 +2464,13 @@
             this.materialRaisedButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton13.Depth = 0;
             this.materialRaisedButton13.Icon = null;
-            this.materialRaisedButton13.Location = new System.Drawing.Point(447, 553);
+            this.materialRaisedButton13.Location = new System.Drawing.Point(442, 564);
+            this.materialRaisedButton13.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton13.Name = "materialRaisedButton13";
             this.materialRaisedButton13.Primary = true;
             this.materialRaisedButton13.Size = new System.Drawing.Size(179, 36);
-            this.materialRaisedButton13.TabIndex = 16;
+            this.materialRaisedButton13.TabIndex = 35;
             this.materialRaisedButton13.Text = "Tarih Aralığını Sırala";
             this.materialRaisedButton13.UseVisualStyleBackColor = true;
             // 
@@ -2406,25 +2478,27 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(10, 560);
+            this.labelControl6.Location = new System.Drawing.Point(5, 571);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(96, 19);
-            this.labelControl6.TabIndex = 15;
+            this.labelControl6.TabIndex = 34;
             this.labelControl6.Text = "Bu Tarihten";
             // 
-            // dateEdit17
+            // dateEdit7
             // 
-            this.dateEdit17.EditValue = null;
-            this.dateEdit17.Location = new System.Drawing.Point(112, 557);
-            this.dateEdit17.Name = "dateEdit17";
-            this.dateEdit17.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit17.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit7.EditValue = null;
+            this.dateEdit7.Location = new System.Drawing.Point(109, 568);
+            this.dateEdit7.Margin = new System.Windows.Forms.Padding(4);
+            this.dateEdit7.Name = "dateEdit7";
+            this.dateEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.dateEdit7.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit17.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEdit7.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit17.Size = new System.Drawing.Size(119, 26);
-            this.dateEdit17.TabIndex = 14;
+            this.dateEdit7.Size = new System.Drawing.Size(116, 26);
+            this.dateEdit7.TabIndex = 33;
             // 
             // materialRaisedButton14
             // 
@@ -2432,21 +2506,24 @@
             this.materialRaisedButton14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton14.Depth = 0;
             this.materialRaisedButton14.Icon = null;
-            this.materialRaisedButton14.Location = new System.Drawing.Point(884, 553);
+            this.materialRaisedButton14.Location = new System.Drawing.Point(885, 564);
+            this.materialRaisedButton14.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton14.Name = "materialRaisedButton14";
             this.materialRaisedButton14.Primary = true;
             this.materialRaisedButton14.Size = new System.Drawing.Size(235, 36);
-            this.materialRaisedButton14.TabIndex = 13;
+            this.materialRaisedButton14.TabIndex = 32;
             this.materialRaisedButton14.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
             // 
             // gridControl3
             // 
-            this.gridControl3.Location = new System.Drawing.Point(3, 3);
+            this.gridControl3.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl3.Location = new System.Drawing.Point(4, 4);
             this.gridControl3.MainView = this.gridView3;
+            this.gridControl3.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1244, 544);
+            this.gridControl3.Size = new System.Drawing.Size(1255, 552);
             this.gridControl3.TabIndex = 1;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -2463,14 +2540,16 @@
             // 
             // xtraTabPage6
             // 
+            this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage6.Text = "Personel İşlemleri";
             // 
             // xtraTabPage7
             // 
+            this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(1250, 599);
+            this.xtraTabPage7.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage7.Text = "Ayarlar";
             // 
             // toastNotificationsManager1
@@ -2486,7 +2565,8 @@
             this.materialRaisedButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton4.Depth = 0;
             this.materialRaisedButton4.Icon = null;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(1203, 25);
+            this.materialRaisedButton4.Location = new System.Drawing.Point(1604, 31);
+            this.materialRaisedButton4.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton4.Name = "materialRaisedButton4";
             this.materialRaisedButton4.Primary = true;
@@ -2501,7 +2581,8 @@
             this.materialRaisedButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton5.Depth = 0;
             this.materialRaisedButton5.Icon = null;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(1108, 25);
+            this.materialRaisedButton5.Location = new System.Drawing.Point(1477, 31);
+            this.materialRaisedButton5.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton5.Name = "materialRaisedButton5";
             this.materialRaisedButton5.Primary = true;
@@ -2512,14 +2593,16 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.materialRaisedButton5);
             this.Controls.Add(this.materialRaisedButton4);
             this.Controls.Add(this.xtraTabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
@@ -2532,53 +2615,51 @@
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
-            this.xtraTabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bunifuCards5.ResumeLayout(false);
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxMa.Properties)).EndInit();
             this.bunifuCards4.ResumeLayout(false);
             this.bunifuCards4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit8.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOBi.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOBi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOB.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateOB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateBT.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateBT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxDurum.Properties)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit12.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CboxYD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDY.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDY.Properties)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CBoxN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDogumT.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateDogumT.Properties)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
-            this.xtraTabPage4.PerformLayout();
-            this.bunifuCards6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.bunifuCards6.ResumeLayout(false);
             this.bunifuCards7.ResumeLayout(false);
             this.bunifuCards7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit6.Properties)).EndInit();
@@ -2594,9 +2675,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit4.Properties)).EndInit();
             this.bunifuCards9.ResumeLayout(false);
             this.bunifuCards9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit14.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
             this.bunifuCards10.ResumeLayout(false);
             this.bunifuCards10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit15.Properties.CalendarTimeProperties)).EndInit();
@@ -2604,10 +2685,10 @@
             this.xtraTabPage5.ResumeLayout(false);
             this.xtraTabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit16.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit17.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit17.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
@@ -2622,65 +2703,41 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl SEDRaporGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.DateEdit dateEdit4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton10;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtTc;
         private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtBasvuranAd;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtAdres;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtTel;
         private ns1.BunifuCards bunifuCards1;
-        private ns1.BunifuTileButton bunifuTileButton1;
+        private ns1.BunifuTileButton BtnKisibul;
         private ns1.BunifuCards bunifuCards2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtTcY;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtAdY;
         private System.Windows.Forms.Label label4;
         private ns1.BunifuCards bunifuCards3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
+        private DevExpress.XtraEditors.ComboBoxEdit CboxDurum;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private ns1.BunifuCards bunifuCards4;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton3;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialRadioButton RB2;
+        private MaterialSkin.Controls.MaterialRadioButton RB1;
+        private MaterialSkin.Controls.MaterialRadioButton RBT;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.DateEdit dateEdit6;
+        private DevExpress.XtraEditors.DateEdit DateBT;
         private ns1.BunifuCards bunifuCards5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox SEDNot;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private ns1.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private ns1.BunifuThinButton2 BtnKaydet;
         private ns1.BunifuCards bunifuCards7;
         private System.Windows.Forms.Label label25;
         private DevExpress.XtraEditors.DateEdit dateEdit9;
@@ -2701,8 +2758,6 @@
         private System.Windows.Forms.Label label20;
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuCards bunifuCards9;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField13;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField14;
         private System.Windows.Forms.Label label22;
         private ns1.BunifuCards bunifuCards10;
         private ns1.BunifuTileButton bunifuTileButton2;
@@ -2711,49 +2766,71 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField17;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField18;
         private System.Windows.Forms.Label label24;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit8;
+        private DevExpress.XtraEditors.ComboBoxEdit CboxMa;
         private System.Windows.Forms.Label label27;
-        private ns1.BunifuThinButton2 bunifuThinButton25;
-        private ns1.BunifuThinButton2 bunifuThinButton22;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField6;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField5;
+        private ns1.BunifuThinButton2 BtnGuncelle;
+        private ns1.BunifuThinButton2 BtnTemizle;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtANo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtYBS;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.DateEdit dateEdit8;
+        private DevExpress.XtraEditors.DateEdit DateOBi;
         private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.DateEdit dateEdit7;
+        private DevExpress.XtraEditors.DateEdit DateOB;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit6;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit CboxYD;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label23;
-        private DevExpress.XtraEditors.DateEdit dateEdit12;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.DateEdit DateDY;
+        private DevExpress.XtraEditors.ComboBoxEdit CBoxN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label18;
-        private DevExpress.XtraEditors.DateEdit dateEdit5;
-        private ns1.BunifuCards bunifuCards6;
-        private ns1.BunifuThinButton2 bunifuThinButton23;
-        private ns1.BunifuThinButton2 bunifuThinButton24;
-        private ns1.BunifuThinButton2 bunifuThinButton26;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label28;
-        private DevExpress.XtraEditors.DateEdit dateEdit14;
+        private DevExpress.XtraEditors.DateEdit DateDogumT;
         private System.Windows.Forms.Label label29;
         private DevExpress.XtraEditors.DateEdit dateEdit15;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton11;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton12;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.DateEdit dateEdit16;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton13;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.DateEdit dateEdit17;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton14;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.DateEdit dateEdit3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private ns1.BunifuCards bunifuCards6;
+        private ns1.BunifuThinButton2 bunifuThinButton21;
+        private ns1.BunifuThinButton2 bunifuThinButton22;
+        private ns1.BunifuThinButton2 bunifuThinButton23;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.DateEdit dateEdit4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.DateEdit dateEdit5;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton10;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton11;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton12;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.DateEdit dateEdit6;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton13;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.DateEdit dateEdit7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton14;
     }
 }

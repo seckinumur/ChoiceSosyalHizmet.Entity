@@ -53,8 +53,11 @@
     <Compile Include="Repos\KullanicilarRepo.cs" />
     <Compile Include="Repos\PersonelRepo.cs" />
     <Compile Include="Repos\SEDRepo.cs" />
+    <Compile Include="VM\VMEBH.cs" />
     <Compile Include="VM\VMKullanicilar.cs" />
     <Compile Include="VM\VMPersonel.cs" />
+    <Compile Include="VM\VMSED.cs" />
+    <Compile Include="VM\VMSEDRapor.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -16,7 +16,7 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GirisForm());
+            Application.Run(new MainForm());
         }
     }
 }
