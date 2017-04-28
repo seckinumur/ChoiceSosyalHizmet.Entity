@@ -54,6 +54,7 @@
     <Compile Include="Repos\PersonelRepo.cs" />
     <Compile Include="Repos\SEDRepo.cs" />
     <Compile Include="VM\VMEBH.cs" />
+    <Compile Include="VM\VMEBHRapor.cs" />
     <Compile Include="VM\VMKullanicilar.cs" />
     <Compile Include="VM\VMPersonel.cs" />
     <Compile Include="VM\VMSED.cs" />

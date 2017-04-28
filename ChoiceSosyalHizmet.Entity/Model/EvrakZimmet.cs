@@ -17,7 +17,5 @@ namespace ChoiceSosyalHizmet.Entity.Model
         public string ZimmettenCikisTarihi { get; set; }
 
         public virtual Personel Personel { get; set; }
-        public virtual BasvuraninBilgileri BasvuraninBilgileri { get; set; }
-        public virtual EngelliBilgileri EngelliBilgileri { get; set; }
     }
 }

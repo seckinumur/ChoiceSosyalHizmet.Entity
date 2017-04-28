@@ -20,5 +20,6 @@ namespace ChoiceSosyalHizmet.Entity.Model
         public string YBSNo { get; set; }
         public string ArsivNo { get; set; }
         public string DosyaTarihi { get; set; }
+        public string Not { get; set; }
     }
 }
