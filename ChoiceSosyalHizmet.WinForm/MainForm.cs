@@ -77,10 +77,12 @@ namespace ChoiceSosyalHizmet.WinForm
             toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
            
                 SEDRaporGrid.DataSource = SEDRepo.RaporListe();
-                EBHRaporGrid.DataSource = EBHRepo.TumRaporListe();
+                EBHRaporGrid.DataSource = EBHRepo.RaporListe();
                 PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
                 EvrakGrid.DataSource = ZimmetSEDRepo.ZimmetListele();
                 EvrakZimmetEBHGrid.DataSource = ZimmetEBHRepo.ZimmetListele();
+                gridView1.GroupPanelText= "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: "+ gridView1.RowCount.ToString();
+            gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView2.RowCount.ToString();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) // MainForm Kapatılırsa Uygulamadan Çıkma
@@ -477,7 +479,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
         }
 
-        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        private void materialRaisedButton10_Click(object sender, EventArgs e) // EBH Excell Yazdırma
         {
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "Microsoft Excel Engine|*.xlxs";
@@ -487,6 +489,42 @@ namespace ChoiceSosyalHizmet.WinForm
             {
                 EBHRaporGrid.ExportToXlsx(save.FileName);
             }
+        }
+
+        private void materialRaisedButton3_Click(object sender, EventArgs e) //SED Tarih Ararlığı Sıralama
+        {
+            if(Tarih1SED.Text == "" && Tarih2SED.Text == "")
+            {
+                MessageBox.Show("Sıralanacak Tarhleri Eksiksiz Girin!");
+            }
+            else
+            {
+                SEDRaporGrid.DataSource= SEDRepo.RaporTarih(Tarih1SED.DateTime.ToShortDateString(), Tarih2SED.DateTime.ToShortDateString());
+            }
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e) //SED Grid Temizleme
+        {
+            SEDRaporGrid.DataSource = SEDRepo.RaporListe();
+            Tarih1SED.Text = "";
+            Tarih2SED.Text = "";
+        }
+
+        private void materialRaisedButton9_Click(object sender, EventArgs e)
+        {
+            if (Tarih1EBH.Text == "" && Tarih2EBH.Text == "")
+            {
+                MessageBox.Show("Sıralanacak Tarhleri Eksiksiz Girin!");
+            }
+            else
+            {
+                EBHRaporGrid.DataSource = EBHRepo.RaporTarih(Tarih1EBH.DateTime.ToShortDateString(), Tarih2EBH.DateTime.ToShortDateString());
+            }
+        }
+
+        private void materialRaisedButton8_Click(object sender, EventArgs e)
+        {
+            EBHRaporGrid.DataSource = EBHRepo.RaporListe();
         }
     }
 }

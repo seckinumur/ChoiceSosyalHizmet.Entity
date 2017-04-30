@@ -36,10 +36,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.Tarih2SED = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
+            this.Tarih1SED = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SEDRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,10 +48,10 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit4 = new DevExpress.XtraEditors.DateEdit();
+            this.Tarih2EBH = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit5 = new DevExpress.XtraEditors.DateEdit();
+            this.Tarih1EBH = new DevExpress.XtraEditors.DateEdit();
             this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.EBHRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -178,18 +178,18 @@
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
@@ -283,10 +283,10 @@
             this.xtraTabPage1.Controls.Add(this.pictureBox1);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton2);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
-            this.xtraTabPage1.Controls.Add(this.dateEdit1);
+            this.xtraTabPage1.Controls.Add(this.Tarih2SED);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton3);
             this.xtraTabPage1.Controls.Add(this.labelControl2);
-            this.xtraTabPage1.Controls.Add(this.dateEdit3);
+            this.xtraTabPage1.Controls.Add(this.Tarih1SED);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton6);
             this.xtraTabPage1.Controls.Add(this.SEDRaporGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(4);
@@ -336,6 +336,7 @@
             this.materialRaisedButton2.TabIndex = 29;
             this.materialRaisedButton2.Text = "Sayfayı Temizle";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // labelControl1
             // 
@@ -348,20 +349,20 @@
             this.labelControl1.TabIndex = 28;
             this.labelControl1.Text = "Bu Tarihe";
             // 
-            // dateEdit1
+            // Tarih2SED
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(316, 566);
-            this.dateEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih2SED.EditValue = null;
+            this.Tarih2SED.Location = new System.Drawing.Point(316, 566);
+            this.Tarih2SED.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih2SED.Name = "Tarih2SED";
+            this.Tarih2SED.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih2SED.Properties.Appearance.Options.UseFont = true;
+            this.Tarih2SED.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih2SED.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(116, 26);
-            this.dateEdit1.TabIndex = 27;
+            this.Tarih2SED.Size = new System.Drawing.Size(116, 26);
+            this.Tarih2SED.TabIndex = 27;
             // 
             // materialRaisedButton3
             // 
@@ -378,6 +379,7 @@
             this.materialRaisedButton3.TabIndex = 26;
             this.materialRaisedButton3.Text = "Tarih Aralığını Sırala";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
             // labelControl2
             // 
@@ -390,20 +392,20 @@
             this.labelControl2.TabIndex = 25;
             this.labelControl2.Text = "Bu Tarihten";
             // 
-            // dateEdit3
+            // Tarih1SED
             // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(107, 566);
-            this.dateEdit3.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit3.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih1SED.EditValue = null;
+            this.Tarih1SED.Location = new System.Drawing.Point(107, 566);
+            this.Tarih1SED.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih1SED.Name = "Tarih1SED";
+            this.Tarih1SED.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih1SED.Properties.Appearance.Options.UseFont = true;
+            this.Tarih1SED.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih1SED.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Size = new System.Drawing.Size(116, 26);
-            this.dateEdit3.TabIndex = 24;
+            this.Tarih1SED.Size = new System.Drawing.Size(116, 26);
+            this.Tarih1SED.TabIndex = 24;
             // 
             // materialRaisedButton6
             // 
@@ -447,7 +449,7 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindDelay = 100;
             this.gridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
-            this.gridView1.OptionsFind.FindNullPrompt = "TC Kimlik No yada Hasta İsmi Arayın...";
+            this.gridView1.OptionsFind.FindNullPrompt = "Her Hangi Bir Şey Arayın...";
             this.gridView1.OptionsFind.SearchInPreview = true;
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
@@ -458,10 +460,10 @@
             this.xtraTabPage2.Controls.Add(this.pictureBox6);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton8);
             this.xtraTabPage2.Controls.Add(this.labelControl3);
-            this.xtraTabPage2.Controls.Add(this.dateEdit4);
+            this.xtraTabPage2.Controls.Add(this.Tarih2EBH);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton9);
             this.xtraTabPage2.Controls.Add(this.labelControl4);
-            this.xtraTabPage2.Controls.Add(this.dateEdit5);
+            this.xtraTabPage2.Controls.Add(this.Tarih1EBH);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton10);
             this.xtraTabPage2.Controls.Add(this.EBHRaporGrid);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
@@ -511,6 +513,7 @@
             this.materialRaisedButton8.TabIndex = 38;
             this.materialRaisedButton8.Text = "Sayfayı Temizle";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
             // labelControl3
             // 
@@ -523,20 +526,20 @@
             this.labelControl3.TabIndex = 37;
             this.labelControl3.Text = "Bu Tarihe";
             // 
-            // dateEdit4
+            // Tarih2EBH
             // 
-            this.dateEdit4.EditValue = null;
-            this.dateEdit4.Location = new System.Drawing.Point(318, 569);
-            this.dateEdit4.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEdit4.Name = "dateEdit4";
-            this.dateEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit4.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih2EBH.EditValue = null;
+            this.Tarih2EBH.Location = new System.Drawing.Point(318, 569);
+            this.Tarih2EBH.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih2EBH.Name = "Tarih2EBH";
+            this.Tarih2EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih2EBH.Properties.Appearance.Options.UseFont = true;
+            this.Tarih2EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit4.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih2EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit4.Size = new System.Drawing.Size(116, 26);
-            this.dateEdit4.TabIndex = 36;
+            this.Tarih2EBH.Size = new System.Drawing.Size(116, 26);
+            this.Tarih2EBH.TabIndex = 36;
             // 
             // materialRaisedButton9
             // 
@@ -553,6 +556,7 @@
             this.materialRaisedButton9.TabIndex = 35;
             this.materialRaisedButton9.Text = "Tarih Aralığını Sırala";
             this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
             // 
             // labelControl4
             // 
@@ -565,20 +569,20 @@
             this.labelControl4.TabIndex = 34;
             this.labelControl4.Text = "Bu Tarihten";
             // 
-            // dateEdit5
+            // Tarih1EBH
             // 
-            this.dateEdit5.EditValue = null;
-            this.dateEdit5.Location = new System.Drawing.Point(109, 569);
-            this.dateEdit5.Margin = new System.Windows.Forms.Padding(4);
-            this.dateEdit5.Name = "dateEdit5";
-            this.dateEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.dateEdit5.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih1EBH.EditValue = null;
+            this.Tarih1EBH.Location = new System.Drawing.Point(109, 569);
+            this.Tarih1EBH.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih1EBH.Name = "Tarih1EBH";
+            this.Tarih1EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih1EBH.Properties.Appearance.Options.UseFont = true;
+            this.Tarih1EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.Tarih1EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit5.Size = new System.Drawing.Size(116, 26);
-            this.dateEdit5.TabIndex = 33;
+            this.Tarih1EBH.Size = new System.Drawing.Size(116, 26);
+            this.Tarih1EBH.TabIndex = 33;
             // 
             // materialRaisedButton10
             // 
@@ -617,7 +621,7 @@
             this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindDelay = 100;
-            this.gridView2.OptionsFind.FindNullPrompt = "TC Kimlik No yada Hasta İsmi Arayın...";
+            this.gridView2.OptionsFind.FindNullPrompt = "Her Hangi Bir Şey Arayın...";
             this.gridView2.OptionsFind.SearchInPreview = true;
             this.gridView2.OptionsFind.ShowFindButton = false;
             this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
@@ -1890,7 +1894,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 56706;
+            this.bunifuSeparator1.LineThickness = 65535;
             this.bunifuSeparator1.Location = new System.Drawing.Point(15, 239);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -2761,19 +2765,19 @@
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
@@ -2948,10 +2952,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit Tarih2SED;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
+        private DevExpress.XtraEditors.DateEdit Tarih1SED;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -2969,10 +2973,10 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.DateEdit dateEdit4;
+        private DevExpress.XtraEditors.DateEdit Tarih2EBH;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.DateEdit dateEdit5;
+        private DevExpress.XtraEditors.DateEdit Tarih1EBH;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton10;
         private System.Windows.Forms.PictureBox pictureBox7;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton14;

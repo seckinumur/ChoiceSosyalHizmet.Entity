@@ -170,7 +170,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 }
             }
         }
-        public static List<VMEBHRapor> TumRaporListe()
+        public static List<VMEBHRapor> RaporListe()
         {
             using (DBSosyal db = new DBSosyal())
             {
@@ -197,11 +197,12 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YakınlıkDurumu=a.BakiciBilgileri.YakinlikDurumu,
                     YBSNo=a.EBHDosyaBilgileri.YBSNo,
                     DosyaKayıtTarihi=a.EBHDosyaBilgileri.DosyaTarihi,
+                    Not = a.EBHDosyaBilgileri.Not
                 }).ToList();
                 return Bul;
             }
         }
-        public static List<VMEBH> RaporListe()
+        public static List<VMEBH> TumRaporListe()
         {
             using (DBSosyal db = new DBSosyal())
             {
@@ -233,6 +234,55 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YBSNo = a.EBHDosyaBilgileri.YBSNo
                 }).ToList();
                 return Bul;
+            }
+        }
+        public static List<VMEBHRapor> RaporTarih(string al1, string al2)
+        {
+            DateTime ilktarih = Convert.ToDateTime(al1);
+            DateTime sontarih = Convert.ToDateTime(al2);
+            List<VMEBHRapor> Yeni = new List<VMEBHRapor>();
+            using (DBSosyal db = new DBSosyal())
+            {
+                for (int i = 0; i <= (sontarih - ilktarih).Days; i++)
+                {
+                    string tarih = ilktarih.AddDays(i).ToShortDateString();
+                    try
+                    {
+                        var a = db.EngelliBilgileri.Where(p => p.EBHDosyaBilgileri.BasvuruTarihi == tarih).FirstOrDefault();
+
+                        VMEBHRapor eklemece = new VMEBHRapor()
+                        {
+                            EngelliAdıSoyadı = a.AdiSoyadi,
+                            EngelliAdres = a.Adres,
+                            ArşivNo = a.EBHDosyaBilgileri.ArsivNo,
+                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileri.AdiSoyadi,
+                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileri.DogumTarihi,
+                            BakıcıBilgileriTC = a.BakiciBilgileri.TC,
+                            BaşlangıcTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
+                            BaşvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
+                            BitişTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                            EngelliDoğumTarihi = a.DogumTarihi,
+                            ID = a.EngelliBilgileriID,
+                            Durum = a.EBHDosyaBilgileri.Durum,
+                            mahalleKöy = a.EBHDosyaBilgileri.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.EBHDosyaBilgileri.OdemeBaslangici,
+                            RaporSüresi = a.EBHDosyaBilgileri.RaporSuresi,
+                            RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                            EngelliTC = a.TC,
+                            EngelliTelefon = a.Telefon,
+                            YakınlıkDurumu = a.BakiciBilgileri.YakinlikDurumu,
+                            YBSNo = a.EBHDosyaBilgileri.YBSNo,
+                            DosyaKayıtTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
+                            Not=a.EBHDosyaBilgileri.Not
+                        };
+                        Yeni.Add(eklemece);
+                    }
+                    catch
+                    {
+                    }
+
+                }
+                return Yeni;
             }
         }
         public static VMEBH EBHBul(string Id)

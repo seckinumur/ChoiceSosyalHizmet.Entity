@@ -53,7 +53,7 @@ namespace ChoiceSosyalHizmet.WinForm
             {
                 RDE2.Checked = true;
             }
-            
+
             try
             {
                 var zimmet = ZimmetEBHRepo.ZimmetBul(al.EngelliBilgileriID);
@@ -100,7 +100,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 {
                     VMEBH Kyd = new VMEBH()
                     {
-                        EngelliBilgileriID= idalma,
+                        EngelliBilgileriID = idalma,
                         AdiSoyadi = EbhAd.Text,
                         Adres = EbhAdres.Text,
                         ArsivNo = EbhARN.Text,

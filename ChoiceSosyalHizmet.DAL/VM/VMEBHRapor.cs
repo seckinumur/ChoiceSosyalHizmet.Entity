@@ -31,5 +31,6 @@ namespace ChoiceSosyalHizmet.DAL.VM
         public string YBSNo { get; set; }
         public string ArşivNo { get; set; }
         public string DosyaKayıtTarihi { get; set; }
+        public string Not { get; set; }
     }
 }

@@ -195,7 +195,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YardimAlaninDogumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
                     YardimAlaninTC = a.YardimAlaninBilgileri.TC,
                     YBSNo = a.SEDDosyaBilgileri.YBSNo,
-                    not= a.SEDDosyaBilgileri.Not
+                    not = a.SEDDosyaBilgileri.Not
                 }).ToList();
                 return Bul;
             }
@@ -226,11 +226,60 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
                     YardımAlanınTC = a.YardimAlaninBilgileri.TC,
                     YBSNo = a.SEDDosyaBilgileri.YBSNo,
-                    Not=a.SEDDosyaBilgileri.Not
+                    Not = a.SEDDosyaBilgileri.Not
                 }).ToList();
                 return Bul;
             }
         }
+        public static List<VMSEDRapor> RaporTarih(string al1, string al2)
+        {
+            DateTime ilktarih = Convert.ToDateTime(al1);
+            DateTime sontarih = Convert.ToDateTime(al2);
+            List<VMSEDRapor> Yeni = new List<VMSEDRapor>();
+            using (DBSosyal db = new DBSosyal())
+            {
+                for (int i = 0; i <= (sontarih - ilktarih).Days; i++)
+                {
+                    string tarih = ilktarih.AddDays(i).ToShortDateString();
+                    try
+                    {
+                        var a = db.BasvuraninBilgileri.Where(p => p.SEDDosyaBilgileri.BasvuruTarihi == tarih).FirstOrDefault();
+
+                        VMSEDRapor eklemece = new VMSEDRapor()
+                        {
+                            DosyaKayıtTarihi = a.SEDDosyaBilgileri.DosyaTarihi,
+                            ID = a.BasvuraninBilgileriID,
+                            BaşvuranınAdıSoyadı = a.AdiSoyadi,
+                            BaşvuranınAdres = a.Adres,
+                            ArşivNo = a.SEDDosyaBilgileri.ArsivNo,
+                            BaşvuruNedeni = a.BasvuruNedeni,
+                            BaşvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
+                            BaşvuranınDoğumTarihi = a.DogumTarihi,
+                            Durum = a.SEDDosyaBilgileri.Durum,
+                            mahalleKöy = a.SEDDosyaBilgileri.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.SEDDosyaBilgileri.OdemeBaslangici,
+                            ÖdemeBitişi = a.SEDDosyaBilgileri.OdemeBitisi,
+                            ÖdemeSüresi = a.SEDDosyaBilgileri.OdemeSuresi,
+                            BaşvuranınTC = a.TC,
+                            BaşvuranınTelefon = a.Telefon,
+                            YakınlıkDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
+                            YardımAlanınAdıSoyadı = a.YardimAlaninBilgileri.AdiSoyadi,
+                            YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
+                            YardımAlanınTC = a.YardimAlaninBilgileri.TC,
+                            YBSNo = a.SEDDosyaBilgileri.YBSNo,
+                            Not = a.SEDDosyaBilgileri.Not
+                        };
+                        Yeni.Add(eklemece);
+                    }
+                    catch
+                    {
+                    }
+
+                }
+                return Yeni;
+            }
+        }
+            
         public static VMSED SEDBul(string Id)
         {
             int id = int.Parse(Id);
@@ -260,7 +309,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YardimAlaninDogumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
                     YardimAlaninTC = a.YardimAlaninBilgileri.TC,
                     YBSNo = a.SEDDosyaBilgileri.YBSNo,
-                    not=a.SEDDosyaBilgileri.Not
+                    not = a.SEDDosyaBilgileri.Not
                 }).FirstOrDefault();
                 return Bul;
             }
@@ -270,7 +319,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             int id = int.Parse(Id);
             using (DBSosyal db = new DBSosyal())
             {
-              var bul=  db.SEDDosyaTakip.Where(p => p.BasvuraninBilgileriID == id).Select(a => new VMDosyaTakip
+                var bul = db.SEDDosyaTakip.Where(p => p.BasvuraninBilgileriID == id).Select(a => new VMDosyaTakip
                 {
                     Durum = a.Durum,
                     ID = a.SEDDosyaTakipID,
