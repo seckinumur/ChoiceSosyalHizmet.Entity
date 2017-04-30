@@ -1,4 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.Repos;
+using ChoiceSosyalHizmet.DAL.VM;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,14 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             InitializeComponent();
         }
-        public MainForm AnaEkran = (MainForm)Application.OpenForms["MainForm"];
+        public MainForm Anaekran1 = (MainForm)Application.OpenForms["MainForm"];
         private bool kontrol;
-        private void SEDRaporFormu_Load(object sender, EventArgs e)
+        private bool zimmetkontrol;
+        public void SEDRaporFormu_Load(object sender, EventArgs e)
         {
-           var al = SEDRepo.SEDBul(idtut.Text);
+            ZAT.Text = "";
+            ZCT.Text = "";
+            var al = SEDRepo.SEDBul(idtut.Text);
            TxtBasvuranAd.Text = al.AdiSoyadi;
            TxtAdres.Text = al.Adres;
            TxtANo.Text = al.ArsivNo;
@@ -54,6 +58,21 @@ namespace ChoiceSosyalHizmet.WinForm
             TxtYBS.Text = al.YBSNo;
             SEDNot.Text = al.not;
             kontrol = true;
+            try
+            {
+                var zimmet = ZimmetSEDRepo.ZimmetBul(al.BasvuraninBilgileriID);
+                zimmetbuton.Text = "ZİMMETİ KALDIR";
+                zimmetname.Text = zimmet.PersonelAdı;
+                ZAT.Text = zimmet.ZimmeteAlişTarihi;
+                ZCT.Text = zimmet.ZimmettenÇıkışTarihi;
+                PersonelIDsi.Text = zimmet.ID.ToString();
+            }
+            catch
+            {
+                zimmetname.Text = "ZİMMET YOK"; 
+                zimmetbuton.Text = "ZİMMETLE";  
+                zimmetkontrol = true;
+            }
         }
 
         private void RBT_CheckedChanged(object sender, EventArgs e)
@@ -94,7 +113,102 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void SEDRaporFormu_FormClosed(object sender, FormClosedEventArgs e) //Form Kapanınca Ana Ekrana Geri Dönücek.
         {
-            AnaEkran.Visible = true;
+            Anaekran1.Visible = true;
+            Anaekran1.MainForm_Load(sender, e);
+        }
+
+        private void zimmetbuton_Click(object sender, EventArgs e)
+        {
+            if (zimmetkontrol == true)
+            {
+                PersonelListesiForm ac = new PersonelListesiForm();
+                ac.zimmetkontrol = false;
+                ac.ID = int.Parse(idtut.Text);
+                ac.Show();
+                zimmetkontrol = false;
+            }
+            else
+            {
+                    ZimmetSEDRepo.ZimmetKaldır(PersonelIDsi.Text);
+                    MessageBox.Show("Evrak Zimmeti Kaldırıldı!");
+                    SEDRaporFormu_Load(sender, e);
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e) //Sed güncelleme
+        {
+            DialogResult Uyari = new DialogResult();
+            Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
+            if (Uyari == DialogResult.Yes)
+            {
+                string ChekDt, sonuc;
+                if (RBT.Checked == true)
+                {
+                    ChekDt = RBT.Text;
+                }
+                else if (RB1.Checked == true)
+                {
+                    ChekDt = RB1.Text;
+                }
+                else if (RB2.Checked == true)
+                {
+                    ChekDt = RB2.Text;
+                }
+                else
+                {
+                    return;
+                }
+                try
+                {
+                    int id = int.Parse(idtut.Text);
+                    VMSED Kyd = new VMSED()
+                    {
+                        BasvuraninBilgileriID= id,
+                        AdiSoyadi = TxtBasvuranAd.Text,
+                        Adres = TxtAdres.Text,
+                        ArsivNo = TxtANo.Text,
+                        BasvuruNedeni = CBoxN.SelectedItem.ToString(),
+                        BasvuruTarihi = DateBT.DateTime.ToShortDateString(),
+                        DogumTarihi = DateDogumT.DateTime.ToShortDateString(),
+                        DosyaTarihi = DateTime.Now.ToShortDateString(),
+                        Durum = CboxDurum.SelectedItem.ToString(),
+                        mahalleKoy = CboxMa.SelectedItem.ToString(),
+                        OdemeBaslangici = DateOB.DateTime.ToShortDateString(),
+                        OdemeBitisi = DateOBi.DateTime.ToShortDateString(),
+                        OdemeSuresi = ChekDt,
+                        Tarih = DateTime.Now.ToShortDateString(),
+                        TC = TxtTc.Text,
+                        Telefon = TxtTel.Text,
+                        YakinlikDurumu = CboxYD.SelectedItem.ToString(),
+                        YardimAlaninAdiSoyadi = TxtAdY.Text,
+                        YardimAlaninDogumTarihi = DateDY.DateTime.ToShortDateString(),
+                        YardimAlaninTC = TxtTcY.Text,
+                        YBSNo = TxtYBS.Text,
+                        not = SEDNot.Text
+                    };
+
+                    sonuc = SEDRepo.Guncelle(Kyd);
+                    MessageBox.Show(sonuc);
+                    SEDRaporFormu_Load(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Tüm Alanlar Doldurulmadan Güncelleme Yapılamaz!");
+                }
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(SEDRepo.Sil(idtut.Text));
+            this.Close();
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            DosyaGecmisiForm ac = new DosyaGecmisiForm();
+            ac.ID = idtut.Text;
+            ac.Show();
         }
     }
 }

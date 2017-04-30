@@ -53,12 +53,16 @@
     <Compile Include="Repos\KullanicilarRepo.cs" />
     <Compile Include="Repos\PersonelRepo.cs" />
     <Compile Include="Repos\SEDRepo.cs" />
+    <Compile Include="Repos\ZimmetEBHRepo.cs" />
+    <Compile Include="Repos\ZimmetSEDRepo.cs" />
+    <Compile Include="VM\VMDosyaTakip.cs" />
     <Compile Include="VM\VMEBH.cs" />
     <Compile Include="VM\VMEBHRapor.cs" />
     <Compile Include="VM\VMKullanicilar.cs" />
     <Compile Include="VM\VMPersonel.cs" />
     <Compile Include="VM\VMSED.cs" />
     <Compile Include="VM\VMSEDRapor.cs" />
+    <Compile Include="VM\VMZimmetList.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

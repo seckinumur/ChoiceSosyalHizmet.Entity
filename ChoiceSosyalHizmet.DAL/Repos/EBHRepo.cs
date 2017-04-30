@@ -88,7 +88,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBSosyal db = new DBSosyal())
             {
-                bool Bak = db.EngelliBilgileri.Any(p => p.TC == Al.TC);
+                bool Bak = db.EngelliBilgileri.Any(p => p.EngelliBilgileriID == Al.EngelliBilgileriID);
                 if (Bak == false)
                 {
                     return "Bu Kayıt Sistemde Bulunamadı! Önce Sisteme Ekleyin";
@@ -131,30 +131,43 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 }
             }
         }
-        public static void Sil(VMEBH Al)
+        public static string Sil(string Al)
         {
+            int id = int.Parse(Al);
             using (DBSosyal db = new DBSosyal())
             {
-                var Bul = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == Al.EngelliBilgileriID);
-                db.BakiciBilgileri.Remove(Bul.BakiciBilgileri);
-                db.EBHDosyaBilgileri.Remove(Bul.EBHDosyaBilgileri);
-                db.EngelliBilgileri.Remove(Bul);
+                bool Bak = db.EngelliBilgileri.Any(p => p.EngelliBilgileriID == id);
+                if (Bak == false)
+                {
+                    return "Bu Kayıt Sistemde Bulunamadı! Sistemde Kayıtlı Olmayan Silinemez!";
+                }
+                else
+                {
+                    var Bul = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
+                    var Bul2 = db.EBHDosyaBilgileri.FirstOrDefault(p => p.EBHDosyaBilgileriID == Bul.EBHDosyaBilgileriID);
+                    var Bul3 = db.BakiciBilgileri.FirstOrDefault(p => p.BakiciBilgileriID == Bul.BakiciBilgileriID);
 
-                var BBI = db.EBHDosyaTakip.Where(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID).ToList();
+                    db.EBHDosyaBilgileri.Remove(Bul2);
+                    db.BakiciBilgileri.Remove(Bul3);
 
-                foreach (var item in BBI)
-                {
-                    db.EBHDosyaTakip.Remove(item);
+                    var BBI = db.EBHDosyaTakip.Where(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID).ToList();
+
+                    foreach (var item in BBI)
+                    {
+                        db.EBHDosyaTakip.Remove(item);
+                    }
+                    try
+                    {
+                        var EZ = db.EvrakZimmetEBH.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EBHDosyaBilgileriID);
+                        db.EvrakZimmetEBH.Remove(EZ);
+                    }
+                    catch
+                    {
+                    }
+                    db.EngelliBilgileri.Remove(Bul);
+                    db.SaveChanges();
+                    return "Kayıt Başarıyla Silindi!";
                 }
-                try
-                {
-                    var EZ = db.EvrakZimmet.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID);
-                    db.EvrakZimmet.Remove(EZ);
-                }
-                catch
-                {
-                }
-                db.SaveChanges();
             }
         }
         public static List<VMEBHRapor> TumRaporListe()
@@ -222,8 +235,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 return Bul;
             }
         }
-        public static VMEBH EBHBul(int id)
+        public static VMEBH EBHBul(string Id)
         {
+            int id = int.Parse(Id);
             using (DBSosyal db = new DBSosyal())
             {
                 var Bul = db.EngelliBilgileri.Where(p => p.EngelliBilgileriID == id).Select(a => new VMEBH
@@ -254,6 +268,20 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YBSNo = a.EBHDosyaBilgileri.YBSNo
                 }).FirstOrDefault();
                 return Bul;
+            }
+        }
+        public static List<VMDosyaTakip> DosyaTakipBul(string Id)
+        {
+            int id = int.Parse(Id);
+            using (DBSosyal db = new DBSosyal())
+            {
+                var bul = db.EBHDosyaTakip.Where(p => p.EngelliBilgileriID == id).Select(a => new VMDosyaTakip
+                {
+                    Durum = a.Durum,
+                    ID = a.EBHDosyaTakipID,
+                    Tarih = a.Tarih
+                }).ToList();
+                return bul;
             }
         }
     }

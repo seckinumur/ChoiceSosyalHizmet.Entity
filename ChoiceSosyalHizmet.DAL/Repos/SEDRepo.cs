@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChoiceSosyalHizmet.DAL.Repos
 {
-  public class SEDRepo
+    public class SEDRepo
     {
         public static string Kaydet(VMSED Al)
         {
@@ -87,7 +87,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBSosyal db = new DBSosyal())
             {
-                bool Bak = db.BasvuraninBilgileri.Any(p => p.TC == Al.TC);
+                bool Bak = db.BasvuraninBilgileri.Any(p => p.BasvuraninBilgileriID == Al.BasvuraninBilgileriID);
                 if (Bak == false)
                 {
                     return "Bu Kayıt Sistemde Bulunamadı! Önce Sisteme Ekleyin";
@@ -114,7 +114,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     Bul.DogumTarihi = Al.DogumTarihi;
                     Bul.TC = Al.TC;
                     Bul.Telefon = Al.Telefon;
-
+                    Bul.SEDDosyaBilgileri.Not = Al.not;
                     SEDDosyaTakip SDT = new SEDDosyaTakip()
                     {
                         BasvuraninBilgileriID = Bul.BasvuraninBilgileriID,
@@ -128,21 +128,24 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 }
             }
         }
-        public static string Sil(VMSED Al)
+        public static string Sil(string Al)
         {
+            int id = int.Parse(Al);
             using (DBSosyal db = new DBSosyal())
             {
-                bool Bak = db.BasvuraninBilgileri.Any(p => p.BasvuraninBilgileriID == Al.BasvuraninBilgileriID);
+                bool Bak = db.BasvuraninBilgileri.Any(p => p.BasvuraninBilgileriID == id);
                 if (Bak == false)
                 {
                     return "Bu Kayıt Sistemde Bulunamadı! Sistemde Kayıtlı Olmayan Silinemez!";
                 }
                 else
                 {
-                    var Bul = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == Al.BasvuraninBilgileriID);
-                    db.YardimAlaninBilgileri.Remove(Bul.YardimAlaninBilgileri);
-                    db.SEDDosyaBilgileri.Remove(Bul.SEDDosyaBilgileri);
-                    db.BasvuraninBilgileri.Remove(Bul);
+                    var Bul = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
+                    var Bul2 = db.SEDDosyaBilgileri.FirstOrDefault(p => p.SEDDosyaBilgileriID == Bul.SEDDosyaBilgileriID);
+                    var Bul3 = db.YardimAlaninBilgileri.FirstOrDefault(p => p.YardimAlaninBilgileriID == Bul.YardimAlaninBilgileriID);
+
+                    db.SEDDosyaBilgileri.Remove(Bul2);
+                    db.YardimAlaninBilgileri.Remove(Bul3);
 
                     var BBI = db.SEDDosyaTakip.Where(p => p.BasvuraninBilgileriID == Bul.BasvuraninBilgileriID).ToList();
 
@@ -152,12 +155,13 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     }
                     try
                     {
-                        var EZ = db.EvrakZimmet.FirstOrDefault(p => p.BasvuraninBilgileriID == Bul.BasvuraninBilgileriID);
-                        db.EvrakZimmet.Remove(EZ);
+                        var EZ = db.EvrakZimmetSED.FirstOrDefault(p => p.BasvuraninBilgileriID == Bul.BasvuraninBilgileriID);
+                        db.EvrakZimmetSED.Remove(EZ);
                     }
                     catch
                     {
                     }
+                    db.BasvuraninBilgileri.Remove(Bul);
                     db.SaveChanges();
                     return "Kayıt Başarıyla Silindi!";
                 }
@@ -167,69 +171,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBSosyal db = new DBSosyal())
             {
-                var Bul = db.BasvuraninBilgileri.Select(a=> new VMSED {
-                    AdiSoyadi=a.AdiSoyadi,
-                    Adres= a.Adres,
-                    ArsivNo= a.SEDDosyaBilgileri.ArsivNo,
-                    BasvuraninBilgileriID= a.BasvuraninBilgileriID,
-                    BasvuruNedeni= a.BasvuruNedeni,
-                    BasvuruTarihi= a.SEDDosyaBilgileri.BasvuruTarihi,
-                    DogumTarihi=a.DogumTarihi,
-                    DosyaTarihi= a.SEDDosyaBilgileri.DosyaTarihi,
-                    Durum=a.SEDDosyaBilgileri.Durum,
-                    mahalleKoy = a.SEDDosyaBilgileri.MahalleKoy,
-                    OdemeBaslangici= a.SEDDosyaBilgileri.OdemeBaslangici,
-                    OdemeBitisi= a.SEDDosyaBilgileri.OdemeBitisi,
-                    OdemeSuresi= a.SEDDosyaBilgileri.OdemeSuresi,
-                    SEDDosyaBilgileriID= a.SEDDosyaBilgileriID,
-                    TC=a.TC,
-                    Telefon=a.Telefon,
-                    YakinlikDurumu=a.YardimAlaninBilgileri.YakinlikDurumu,
-                    YardimAlaninAdiSoyadi=a.YardimAlaninBilgileri.AdiSoyadi,
-                    YardimAlaninBilgileriID=a.YardimAlaninBilgileriID,
-                    YardimAlaninDogumTarihi=a.YardimAlaninBilgileri.DogumTarihi,
-                    YardimAlaninTC=a.YardimAlaninBilgileri.TC,
-                    YBSNo=a.SEDDosyaBilgileri.YBSNo
-                }).ToList();
-                return Bul;
-            }
-        }
-        public static List<VMSEDRapor> RaporListe()
-        {
-            using (DBSosyal db = new DBSosyal())
-            {
-                var Bul = db.BasvuraninBilgileri.Select(a => new VMSEDRapor
-                {
-                    DosyaKayıtTarihi=a.SEDDosyaBilgileri.DosyaTarihi,
-                    ID=a.BasvuraninBilgileriID,
-                    BaşvuranınAdıSoyadı = a.AdiSoyadi,
-                    BaşvuranınAdres = a.Adres,
-                    ArşivNo = a.SEDDosyaBilgileri.ArsivNo,
-                    BaşvuruNedeni = a.BasvuruNedeni,
-                    BaşvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
-                    BaşvuranınDoğumTarihi = a.DogumTarihi,
-                    Durum = a.SEDDosyaBilgileri.Durum,
-                    mahalleKöy = a.SEDDosyaBilgileri.MahalleKoy,
-                    ÖdemeBaşlangıcı = a.SEDDosyaBilgileri.OdemeBaslangici,
-                    ÖdemeBitişi = a.SEDDosyaBilgileri.OdemeBitisi,
-                    ÖdemeSüresi = a.SEDDosyaBilgileri.OdemeSuresi,
-                    BaşvuranınTC = a.TC,
-                    BaşvuranınTelefon = a.Telefon,
-                    YakınlıkDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
-                    YardımAlanınAdıSoyadı = a.YardimAlaninBilgileri.AdiSoyadi,
-                    YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
-                    YardımAlanınTC = a.YardimAlaninBilgileri.TC,
-                    YBSNo = a.SEDDosyaBilgileri.YBSNo
-                }).ToList();
-                return Bul;
-            }
-        }
-        public static VMSED SEDBul(string Id)
-        {
-            int id = int.Parse(Id);
-            using (DBSosyal db = new DBSosyal())
-            {
-                var Bul = db.BasvuraninBilgileri.Where(p=> p.BasvuraninBilgileriID==id).Select(a => new VMSED
+                var Bul = db.BasvuraninBilgileri.Select(a => new VMSED
                 {
                     AdiSoyadi = a.AdiSoyadi,
                     Adres = a.Adres,
@@ -252,9 +194,89 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YardimAlaninBilgileriID = a.YardimAlaninBilgileriID,
                     YardimAlaninDogumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
                     YardimAlaninTC = a.YardimAlaninBilgileri.TC,
-                    YBSNo = a.SEDDosyaBilgileri.YBSNo
+                    YBSNo = a.SEDDosyaBilgileri.YBSNo,
+                    not= a.SEDDosyaBilgileri.Not
+                }).ToList();
+                return Bul;
+            }
+        }
+        public static List<VMSEDRapor> RaporListe()
+        {
+            using (DBSosyal db = new DBSosyal())
+            {
+                var Bul = db.BasvuraninBilgileri.Select(a => new VMSEDRapor
+                {
+                    DosyaKayıtTarihi = a.SEDDosyaBilgileri.DosyaTarihi,
+                    ID = a.BasvuraninBilgileriID,
+                    BaşvuranınAdıSoyadı = a.AdiSoyadi,
+                    BaşvuranınAdres = a.Adres,
+                    ArşivNo = a.SEDDosyaBilgileri.ArsivNo,
+                    BaşvuruNedeni = a.BasvuruNedeni,
+                    BaşvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
+                    BaşvuranınDoğumTarihi = a.DogumTarihi,
+                    Durum = a.SEDDosyaBilgileri.Durum,
+                    mahalleKöy = a.SEDDosyaBilgileri.MahalleKoy,
+                    ÖdemeBaşlangıcı = a.SEDDosyaBilgileri.OdemeBaslangici,
+                    ÖdemeBitişi = a.SEDDosyaBilgileri.OdemeBitisi,
+                    ÖdemeSüresi = a.SEDDosyaBilgileri.OdemeSuresi,
+                    BaşvuranınTC = a.TC,
+                    BaşvuranınTelefon = a.Telefon,
+                    YakınlıkDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
+                    YardımAlanınAdıSoyadı = a.YardimAlaninBilgileri.AdiSoyadi,
+                    YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
+                    YardımAlanınTC = a.YardimAlaninBilgileri.TC,
+                    YBSNo = a.SEDDosyaBilgileri.YBSNo,
+                    Not=a.SEDDosyaBilgileri.Not
+                }).ToList();
+                return Bul;
+            }
+        }
+        public static VMSED SEDBul(string Id)
+        {
+            int id = int.Parse(Id);
+            using (DBSosyal db = new DBSosyal())
+            {
+                var Bul = db.BasvuraninBilgileri.Where(p => p.BasvuraninBilgileriID == id).Select(a => new VMSED
+                {
+                    AdiSoyadi = a.AdiSoyadi,
+                    Adres = a.Adres,
+                    ArsivNo = a.SEDDosyaBilgileri.ArsivNo,
+                    BasvuraninBilgileriID = a.BasvuraninBilgileriID,
+                    BasvuruNedeni = a.BasvuruNedeni,
+                    BasvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
+                    DogumTarihi = a.DogumTarihi,
+                    DosyaTarihi = a.SEDDosyaBilgileri.DosyaTarihi,
+                    Durum = a.SEDDosyaBilgileri.Durum,
+                    mahalleKoy = a.SEDDosyaBilgileri.MahalleKoy,
+                    OdemeBaslangici = a.SEDDosyaBilgileri.OdemeBaslangici,
+                    OdemeBitisi = a.SEDDosyaBilgileri.OdemeBitisi,
+                    OdemeSuresi = a.SEDDosyaBilgileri.OdemeSuresi,
+                    SEDDosyaBilgileriID = a.SEDDosyaBilgileriID,
+                    TC = a.TC,
+                    Telefon = a.Telefon,
+                    YakinlikDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
+                    YardimAlaninAdiSoyadi = a.YardimAlaninBilgileri.AdiSoyadi,
+                    YardimAlaninBilgileriID = a.YardimAlaninBilgileriID,
+                    YardimAlaninDogumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
+                    YardimAlaninTC = a.YardimAlaninBilgileri.TC,
+                    YBSNo = a.SEDDosyaBilgileri.YBSNo,
+                    not=a.SEDDosyaBilgileri.Not
                 }).FirstOrDefault();
                 return Bul;
+            }
+        }
+        public static List<VMDosyaTakip> DosyaTakipBul(string Id)
+        {
+            int id = int.Parse(Id);
+            using (DBSosyal db = new DBSosyal())
+            {
+              var bul=  db.SEDDosyaTakip.Where(p => p.BasvuraninBilgileriID == id).Select(a => new VMDosyaTakip
+                {
+                    Durum = a.Durum,
+                    ID = a.SEDDosyaTakipID,
+                    Tarih = a.Tarih
+                }).ToList();
+                return bul;
             }
         }
     }

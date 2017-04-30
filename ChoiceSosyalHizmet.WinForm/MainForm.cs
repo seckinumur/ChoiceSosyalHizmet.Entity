@@ -72,12 +72,15 @@ namespace ChoiceSosyalHizmet.WinForm
             EbhYBS.Clear();
         }
 
-        private void MainForm_Load(object sender, EventArgs e) // MainForm Load İşlemi
+        public void MainForm_Load(object sender, EventArgs e) // MainForm Load İşlemi
         {
             toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
-            SEDRaporGrid.DataSource = SEDRepo.RaporListe();
-            EBHRaporGrid.DataSource = EBHRepo.TumRaporListe();
-            PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+           
+                SEDRaporGrid.DataSource = SEDRepo.RaporListe();
+                EBHRaporGrid.DataSource = EBHRepo.TumRaporListe();
+                PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+                EvrakGrid.DataSource = ZimmetSEDRepo.ZimmetListele();
+                EvrakZimmetEBHGrid.DataSource = ZimmetEBHRepo.ZimmetListele();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) // MainForm Kapatılırsa Uygulamadan Çıkma
@@ -184,69 +187,10 @@ namespace ChoiceSosyalHizmet.WinForm
         private void RBT_CheckedChanged(object sender, EventArgs e) // SED Radio Buton Tek Seferlik Kontrolü
         {
             DateOBi.Enabled = false;
+            DateOBi.Text = "";
         }
 
-        private void BtnGuncelle_Click(object sender, EventArgs e) //SED Güncelle Butonu
-        {
-            DialogResult Uyari = new DialogResult();
-            Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
-            if (Uyari == DialogResult.Yes)
-            {
-                string ChekDt, sonuc;
-                if (RBT.Checked == true)
-                {
-                    ChekDt = RBT.Text;
-                }
-                else if (RB1.Checked == true)
-                {
-                    ChekDt = RB1.Text;
-                }
-                else if (RB2.Checked == true)
-                {
-                    ChekDt = RB2.Text;
-                }
-                else
-                {
-                    return;
-                }
-                try
-                {
-                    VMSED Kyd = new VMSED()
-                    {
-                        AdiSoyadi = TxtBasvuranAd.Text,
-                        Adres = TxtAdres.Text,
-                        ArsivNo = TxtANo.Text,
-                        BasvuruNedeni = CBoxN.SelectedItem.ToString(),
-                        BasvuruTarihi = DateBT.SelectedText,
-                        DogumTarihi = DateDogumT.SelectedText,
-                        DosyaTarihi = DateTime.Now.ToShortDateString(),
-                        Durum = CboxDurum.SelectedItem.ToString(),
-                        mahalleKoy = CboxMa.SelectedText,
-                        OdemeBaslangici = DateOB.SelectedText,
-                        OdemeBitisi = DateOBi.SelectedText,
-                        OdemeSuresi = ChekDt,
-                        Tarih = DateTime.Now.ToShortDateString(),
-                        TC = TxtTc.Text,
-                        Telefon = TxtTel.Text,
-                        YakinlikDurumu = CboxYD.SelectedItem.ToString(),
-                        YardimAlaninAdiSoyadi = TxtAdY.Text,
-                        YardimAlaninDogumTarihi = DateDY.SelectedText,
-                        YardimAlaninTC = TxtTcY.Text,
-                        YBSNo = TxtYBS.Text,
-                        not = SEDNot.Text
-                    };
-
-                    sonuc = SEDRepo.Guncelle(Kyd);
-                    MessageBox.Show(sonuc);
-                    SEDRaporGrid.DataSource = SEDRepo.RaporListe();
-                    SEDButonTemizle();
-                }
-                catch
-                {
-                    MessageBox.Show("Tüm Alanlar Doldurulmadan Güncelleme Yapılamaz!");
-                }
-            }
-        }
+        
 
         private void BtnTemizle_Click(object sender, EventArgs e) // SED Temizle Butonu
         {
@@ -267,8 +211,8 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void EbhKaydet_Click(object sender, EventArgs e) //EBH Kaydet Butonu
         {
-            string ChekDt, baslangict, bitistt = "", Sonuc,RaporSuresi="";
-            if (RDE.Checked == true && EbhBTT.Text !="")
+            string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
+            if (RDE.Checked == true && EbhBTT.Text != "")
             {
                 ChekDt = RDE.Text;
                 baslangict = EbhBTT.Text;
@@ -342,12 +286,14 @@ namespace ChoiceSosyalHizmet.WinForm
             {
                 EbhRSU.Enabled = false;
                 EbhBTTT.Enabled = false;
+                EbhBTTT.Text = "";
+                EbhRSU.SelectedIndex = -1;
             }
         }
         private bool ac;
         private void EbhRSU_SelectedIndexChanged(object sender, EventArgs e) //EBH Rapor Tipi Seçimi
         {
-            if (EbhBTT.Text == ""&& ac==false)
+            if (EbhBTT.Text == "" && ac == false)
             {
                 ac = true;
                 MessageBox.Show("Önce Başlangıç Tarihi Seçin");
@@ -361,31 +307,37 @@ namespace ChoiceSosyalHizmet.WinForm
                     {
                         bitistar = Baslangictarihi.AddMonths(6);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                     else if (EbhRSU.SelectedItem.ToString() == "1 YIL")
                     {
                         bitistar = Baslangictarihi.AddYears(1);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                     else if (EbhRSU.SelectedItem.ToString() == "2 YIL")
                     {
                         bitistar = Baslangictarihi.AddYears(2);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                     else if (EbhRSU.SelectedItem.ToString() == "3 YIL")
                     {
                         bitistar = Baslangictarihi.AddYears(3);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                     else if (EbhRSU.SelectedItem.ToString() == "4 YIL")
                     {
                         bitistar = Baslangictarihi.AddYears(4);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                     else if (EbhRSU.SelectedItem.ToString() == "5 YIL")
                     {
                         bitistar = Baslangictarihi.AddYears(5);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
                     }
                 }
                 catch
@@ -401,77 +353,6 @@ namespace ChoiceSosyalHizmet.WinForm
             EBHButonTemizle();
         }
 
-        private void EbhGuncelle_Click(object sender, EventArgs e) //EBH Güncelle Butonu
-        {
-            DialogResult Uyari = new DialogResult();
-            Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
-            if (Uyari == DialogResult.Yes)
-            {
-                string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
-                if (RDE.Checked == true && EbhBTT.Text != "")
-                {
-                    ChekDt = RDE.Text;
-                    baslangict = EbhBTT.Text;
-                }
-                else if (RDE2.Checked == true && EbhBTT.Text != "")
-                {
-                    ChekDt = RDE2.Text;
-                    baslangict = EbhBTT.Text;
-                    bitistt = EbhBTTT.Text;
-                    RaporSuresi = EbhRSU.SelectedItem.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Rapor Bilgileri Boş Bırakılamaz!");
-                    return;
-                }
-                try
-                {
-                    VMEBH Kyd = new VMEBH()
-                    {
-                        AdiSoyadi = EbhAd.Text,
-                        Adres = EbhAdres.Text,
-                        ArsivNo = EbhARN.Text,
-                        BasvuruTarihi = EbhBTA.SelectedText,
-                        DogumTarihi = EbhDT.SelectedText,
-                        DosyaTarihi = DateTime.Now.ToShortDateString(),
-                        Durum = EbhDurum.SelectedItem.ToString(),
-                        mahalleKoy = EbhMK.SelectedText,
-                        OdemeBaslangici = EbhOBT.SelectedText,
-                        Tarih = DateTime.Now.ToShortDateString(),
-                        TC = EbhTC.Text,
-                        Telefon = EbhTel.Text,
-                        YakinlikDurumu = EbhBYD.SelectedItem.ToString(),
-                        YBSNo = EbhYBS.Text,
-                        Not = richTextBox1.Text,
-                        BakiciBilgileriAdiSoyadi = EbhBad.Text,
-                        BakiciBilgileriDogumTarihi = EbhBDT.SelectedText,
-                        BakiciBilgileriTC = EbhBtc.Text,
-                        BaslangicTarihi = baslangict,
-                        BitisTarihi = bitistt,
-                        RaporSuresi = RaporSuresi,
-                        RaporTipi = ChekDt,
-                    };
-                    Sonuc = EBHRepo.Guncelle(Kyd);
-                    if (Sonuc != "Kayıt Başarıyla Güncellendi!")
-                    {
-                        MessageBox.Show(Sonuc);
-                        return;
-                    }
-                    else
-                    {
-                        MessageBox.Show(Sonuc);
-                        EBHButonTemizle();
-                        EBHRaporGrid.DataSource = EBHRepo.TumRaporListe();
-                    }
-                }
-                catch
-                {
-                    Sonuc = "Tüm Alanlar Doldurulmadan Güncelleme Yapılamaz!";
-                }
-            }
-        }
-        
         private void gridView1_DoubleClick(object sender, EventArgs e) //SED Rapor Detay Tıklama
         {
             try
@@ -485,19 +366,127 @@ namespace ChoiceSosyalHizmet.WinForm
             catch
             {
             }
-            
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        private void materialFlatButton1_Click(object sender, EventArgs e) // Personel Kaydetme
         {
-            VMPersonel per = new VMPersonel()
+            if (Perad.Text != "" && Pertc.Text != "")
             {
-                AdiSoyadi = Perad.Text,
-                TC = Pertc.Text
-            };
-            MessageBox.Show( PersonelRepo.PersonelEkle(per));
-            Perad.Clear();
-            Pertc.Clear();
+                try
+                {
+                    VMPersonel per = new VMPersonel()
+                    {
+                        AdiSoyadi = Perad.Text,
+                        TC = Pertc.Text
+                    };
+                    MessageBox.Show(PersonelRepo.PersonelEkle(per));
+                    Perad.Clear();
+                    Pertc.Clear();
+                    PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+                }
+                catch
+                {
+                    MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tüm Alanları Dolsurun");
+            }
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e) //Personel Güncelleme
+        {
+            try
+            {
+                if (personelidalma.Text == "")
+                {
+                    MessageBox.Show("Güncellenecek Personeli Seçin!");
+                }
+                else
+                {
+                    VMPersonel gnc = new VMPersonel()
+                    {
+                        AdiSoyadi = Perad.Text,
+                        TC = Pertc.Text,
+                        PersonelID = int.Parse(personelidalma.Text)
+                    };
+                    MessageBox.Show(PersonelRepo.PersonelGuncelle(gnc));
+                    Perad.Clear();
+                    Pertc.Clear();
+                    PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+        }
+
+        private void gridView4_DoubleClick(object sender, EventArgs e) //personel grid çift tıklama seçim
+        {
+            try
+            {
+                string ID = gridView4.GetRowCellValue(gridView4.FocusedRowHandle, "PersonelID").ToString();
+                var a = PersonelRepo.PersonelBul(ID);
+                Perad.Text = a.AdiSoyadi;
+                Pertc.Text = a.TC;
+                personelidalma.Text = a.PersonelID.ToString();
+                materialFlatButton2.Enabled = true;
+            }
+            catch
+            {
+            }
+        }
+
+        private void materialFlatButton3_Click(object sender, EventArgs e) // PErsonel Silme
+        {
+            try
+            {
+                if (personelidalma.Text == "")
+                {
+                    MessageBox.Show("Silinecek Personeli Seçin!");
+                }
+                else
+                {
+                    MessageBox.Show(PersonelRepo.PersonelSil(personelidalma.Text));
+                    PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+                    Perad.Clear();
+                    Pertc.Clear();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+
+        }
+
+        private void gridView2_DoubleClick(object sender, EventArgs e) //EBH Grid Çift Tıklama
+        {
+            try
+            {
+                string ID = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID").ToString();
+                EBHRaporFormu ac = new EBHRaporFormu();
+                ac.idtut.Text = ID;
+                ac.Show();
+                this.Hide();
+            }
+            catch
+            {
+            }
+        }
+
+        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Microsoft Excel Engine|*.xlxs";
+            save.OverwritePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                EBHRaporGrid.ExportToXlsx(save.FileName);
+            }
         }
     }
 }

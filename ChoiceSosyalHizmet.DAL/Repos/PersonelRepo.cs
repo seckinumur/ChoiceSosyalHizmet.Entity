@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace ChoiceSosyalHizmet.DAL.Repos
 {
-   public class PersonelRepo
+    public class PersonelRepo
     {
-        public static string PersonelEkle (VMPersonel personel)
+        public static string PersonelEkle(VMPersonel personel)
         {
-            using(DBSosyal db = new DBSosyal())
+            using (DBSosyal db = new DBSosyal())
             {
                 bool varmi = db.Personel.Any(p => p.TC == personel.TC);
-                if(varmi== true)
+                if (varmi == true)
                 {
                     return "Bu Personel Daha Önce Kaydedilmiş";
                 }
@@ -34,30 +34,48 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 }
             }
         }
-        public static void PersonelGuncelle(VMPersonel personel)
+        public static string PersonelGuncelle(VMPersonel personel)
         {
             using (DBSosyal db = new DBSosyal())
             {
-                var Bul = db.Personel.FirstOrDefault(p => p.PersonelID == personel.PersonelID);
-                Bul.AdiSoyadi = personel.AdiSoyadi;
-                Bul.TC = personel.TC;
-                db.SaveChanges();
+                try
+                {
+                    var Bul = db.Personel.FirstOrDefault(p => p.PersonelID == personel.PersonelID);
+                    Bul.AdiSoyadi = personel.AdiSoyadi;
+                    Bul.TC = personel.TC;
+                    db.SaveChanges();
+                    return "Bu Personel Başarıyla Güncelleştirildi!";
+                }
+                catch
+                {
+                    return "Önce Personeli Kaydetmelisiniz!";
+                }
+
             }
         }
-        public static void PersonelSil(VMPersonel personel)
+        public static string PersonelSil(string ID)
         {
+            int id = int.Parse(ID);
             using (DBSosyal db = new DBSosyal())
             {
-                var Bul = db.Personel.FirstOrDefault(p => p.PersonelID == personel.PersonelID);
-                db.Personel.Remove(Bul);
-                db.SaveChanges();
+                try
+                {
+                    var Bul = db.Personel.FirstOrDefault(p => p.PersonelID == id);
+                    db.Personel.Remove(Bul);
+                    db.SaveChanges();
+                    return "Başarıyla Silindi!";
+                }
+                catch
+                {
+                    return "Silme Başarısız!";
+                }
             }
         }
         public static List<VMPersonel> PersonelRaporla()
         {
             using (DBSosyal db = new DBSosyal())
             {
-                var Bul = db.Personel.Select(p=> new VMPersonel
+                var Bul = db.Personel.Select(p => new VMPersonel
                 {
                     AdiSoyadi = p.AdiSoyadi,
                     TC = p.TC,
@@ -66,5 +84,20 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 return Bul;
             }
         }
+        public static VMPersonel PersonelBul(string ID)
+        {
+            int id = int.Parse(ID);
+            using (DBSosyal db = new DBSosyal())
+            {
+                var Bul = db.Personel.Where(p => p.PersonelID == id).Select(a => new VMPersonel
+                {
+                    AdiSoyadi = a.AdiSoyadi,
+                    PersonelID = a.PersonelID,
+                    TC = a.TC
+                }).FirstOrDefault();
+                return Bul;
+            }
+        }
     }
 }
+

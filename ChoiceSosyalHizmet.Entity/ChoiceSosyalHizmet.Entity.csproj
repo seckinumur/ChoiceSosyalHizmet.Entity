@@ -59,7 +59,8 @@
     <Compile Include="Model\EBHDosyaBilgileri.cs" />
     <Compile Include="Model\EBHDosyaTakip.cs" />
     <Compile Include="Model\EngelliBilgileri.cs" />
-    <Compile Include="Model\EvrakZimmet.cs" />
+    <Compile Include="Model\EvrakZimmetEBH.cs" />
+    <Compile Include="Model\EvrakZimmetSED.cs" />
     <Compile Include="Model\Kullanicilar.cs" />
     <Compile Include="Model\MahalleKoy.cs" />
     <Compile Include="Model\Personel.cs" />
