@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DosyaGecmisiForm));
             this.EvrakGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -83,6 +84,7 @@
             this.ClientSize = new System.Drawing.Size(677, 522);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.EvrakGrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DosyaGecmisiForm";
             this.Text = "Dosya Geçmişi";
             this.Load += new System.EventHandler(this.DosyaGecmisiForm_Load);

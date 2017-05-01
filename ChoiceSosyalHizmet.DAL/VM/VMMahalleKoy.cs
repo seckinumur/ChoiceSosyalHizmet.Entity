@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChoiceSosyalHizmet.DAL.VM
 {
-  public class VMKullanicilar
+   public class VMMahalleKoy
     {
-        public int KullanicilarID { get; set; }
-        public string KullaniciAdi { get; set; }
-        public string Sifre { get; set; }
+        public int MahalleKoyID { get; set; }
+        public string Isim { get; set; }
     }
 }

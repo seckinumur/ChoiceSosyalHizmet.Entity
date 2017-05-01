@@ -11,6 +11,5 @@ namespace ChoiceSosyalHizmet.Entity.Model
         public int KullanicilarID { get; set; }
         public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
-        public bool Admin { get; set; }
     }
 }

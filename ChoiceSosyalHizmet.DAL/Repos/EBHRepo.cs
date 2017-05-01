@@ -49,6 +49,18 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         Not = Al.Not
                     };
 
+                    bool varmi = db.MahalleKoy.Any(p => p.Isim == Al.mahalleKoy);
+                    if (varmi != true)
+                    {
+                        MahalleKoy Ekle = new MahalleKoy()
+                        {
+                            Isim = Al.mahalleKoy
+                        };
+
+                        db.MahalleKoy.Add(Ekle);
+                        db.SaveChanges();
+                    }
+
                     db.EBHDosyaBilgileri.Add(SDB);
                     db.SaveChanges();
 

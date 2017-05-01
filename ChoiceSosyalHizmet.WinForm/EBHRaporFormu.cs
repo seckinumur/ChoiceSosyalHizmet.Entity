@@ -69,6 +69,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetbuton.Text = "ZİMMETLE";
                 zimmetkontrol = true;
             }
+            DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolEBH(idtut.Text);
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -252,6 +253,12 @@ namespace ChoiceSosyalHizmet.WinForm
             ac.ID = idtut.Text;
             ac.kontrol = true;
             ac.Show();
+        }
+
+        private void DenetimYapBtn_Click(object sender, EventArgs e)
+        {
+            DenetimRepo.DenetimYapEBH(idtut.Text);
+            EBHRaporFormu_Load(sender, e);
         }
     }
 }

@@ -73,6 +73,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetbuton.Text = "ZİMMETLE";  
                 zimmetkontrol = true;
             }
+            DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolSED(idtut.Text);
         }
 
         private void RBT_CheckedChanged(object sender, EventArgs e)
@@ -209,6 +210,12 @@ namespace ChoiceSosyalHizmet.WinForm
             DosyaGecmisiForm ac = new DosyaGecmisiForm();
             ac.ID = idtut.Text;
             ac.Show();
+        }
+
+        private void DenetimYapBtn_Click(object sender, EventArgs e)
+        {
+            DenetimRepo.DenetimYapSED(idtut.Text);
+            SEDRaporFormu_Load(sender, e);
         }
     }
 }

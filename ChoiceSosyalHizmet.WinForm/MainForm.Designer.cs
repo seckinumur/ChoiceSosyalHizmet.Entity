@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.materialRaisedButton12 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Tarih2SED = new DevExpress.XtraEditors.DateEdit();
@@ -44,8 +44,8 @@
             this.SEDRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.Tarih2EBH = new DevExpress.XtraEditors.DateEdit();
@@ -59,8 +59,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCards5 = new ns1.BunifuCards();
-            this.BtnTemizle = new ns1.BunifuThinButton2();
-            this.BtnKaydet = new ns1.BunifuThinButton2();
             this.SEDNot = new System.Windows.Forms.RichTextBox();
             this.bunifuCards3 = new ns1.BunifuCards();
             this.bunifuCards4 = new ns1.BunifuCards();
@@ -79,6 +77,8 @@
             this.CboxDurum = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.BtnTemizle = new ns1.BunifuThinButton2();
+            this.BtnKaydet = new ns1.BunifuThinButton2();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.CboxYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,8 +103,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuCards6 = new ns1.BunifuCards();
-            this.EbhTemizle = new ns1.BunifuThinButton2();
-            this.EbhKaydet = new ns1.BunifuThinButton2();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.bunifuCards7 = new ns1.BunifuCards();
             this.label13 = new System.Windows.Forms.Label();
@@ -126,6 +124,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.EbhTemizle = new ns1.BunifuThinButton2();
+            this.EbhKaydet = new ns1.BunifuThinButton2();
             this.bunifuCards9 = new ns1.BunifuCards();
             this.EbhBYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label11 = new System.Windows.Forms.Label();
@@ -171,13 +171,30 @@
             this.Perad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label31 = new System.Windows.Forms.Label();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bunifuCards12 = new ns1.BunifuCards();
+            this.materialFlatButton10 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton12 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.SifreKullanici = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.KullaniciAdi = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label32 = new System.Windows.Forms.Label();
+            this.bunifuCards11 = new ns1.BunifuCards();
+            this.MahalleIDAlma = new System.Windows.Forms.Label();
+            this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.label21 = new System.Windows.Forms.Label();
+            this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton8 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.MahalleKoyText = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.label28 = new System.Windows.Forms.Label();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties.CalendarTimeProperties)).BeginInit();
@@ -185,7 +202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).BeginInit();
@@ -252,6 +268,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PersonelGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.bunifuCards8.SuspendLayout();
+            this.xtraTabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
+            this.bunifuCards12.SuspendLayout();
+            this.bunifuCards11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -279,8 +302,8 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.materialRaisedButton12);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton1);
-            this.xtraTabPage1.Controls.Add(this.pictureBox1);
             this.xtraTabPage1.Controls.Add(this.materialRaisedButton2);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Controls.Add(this.Tarih2SED);
@@ -294,32 +317,39 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage1.Text = "SED Rapor";
             // 
+            // materialRaisedButton12
+            // 
+            this.materialRaisedButton12.AutoSize = true;
+            this.materialRaisedButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton12.Depth = 0;
+            this.materialRaisedButton12.Icon = null;
+            this.materialRaisedButton12.Location = new System.Drawing.Point(620, 562);
+            this.materialRaisedButton12.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton12.Name = "materialRaisedButton12";
+            this.materialRaisedButton12.Primary = true;
+            this.materialRaisedButton12.Size = new System.Drawing.Size(194, 36);
+            this.materialRaisedButton12.TabIndex = 42;
+            this.materialRaisedButton12.Text = "Denetime Gidilmeyenler";
+            this.materialRaisedButton12.UseVisualStyleBackColor = true;
+            this.materialRaisedButton12.Click += new System.EventHandler(this.materialRaisedButton12_Click);
+            // 
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.AutoSize = true;
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(627, 562);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(822, 562);
             this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(105, 36);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(223, 36);
             this.materialRaisedButton1.TabIndex = 31;
-            this.materialRaisedButton1.Text = "Özel Arama";
+            this.materialRaisedButton1.Text = "Bitiş Tarihine 1 Ay Kalanlar";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1126, 555);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialRaisedButton2
             // 
@@ -327,14 +357,14 @@
             this.materialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Icon = null;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(740, 562);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(1053, 562);
             this.materialRaisedButton2.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(135, 36);
+            this.materialRaisedButton2.Size = new System.Drawing.Size(76, 36);
             this.materialRaisedButton2.TabIndex = 29;
-            this.materialRaisedButton2.Text = "Sayfayı Temizle";
+            this.materialRaisedButton2.Text = "Temizle";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
@@ -370,14 +400,14 @@
             this.materialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Icon = null;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(440, 562);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(453, 562);
             this.materialRaisedButton3.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(179, 36);
+            this.materialRaisedButton3.Size = new System.Drawing.Size(159, 36);
             this.materialRaisedButton3.TabIndex = 26;
-            this.materialRaisedButton3.Text = "Tarih Aralığını Sırala";
+            this.materialRaisedButton3.Text = "Tarih\'e Göre Sırala";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
             this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
@@ -413,14 +443,14 @@
             this.materialRaisedButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton6.Depth = 0;
             this.materialRaisedButton6.Icon = null;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(883, 562);
+            this.materialRaisedButton6.Location = new System.Drawing.Point(1137, 562);
             this.materialRaisedButton6.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton6.Name = "materialRaisedButton6";
             this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(235, 36);
+            this.materialRaisedButton6.Size = new System.Drawing.Size(119, 36);
             this.materialRaisedButton6.TabIndex = 23;
-            this.materialRaisedButton6.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton6.Text = "EXCEL\'e Aktar";
             this.materialRaisedButton6.UseVisualStyleBackColor = true;
             this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
@@ -456,8 +486,8 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton11);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton7);
-            this.xtraTabPage2.Controls.Add(this.pictureBox6);
             this.xtraTabPage2.Controls.Add(this.materialRaisedButton8);
             this.xtraTabPage2.Controls.Add(this.labelControl3);
             this.xtraTabPage2.Controls.Add(this.Tarih2EBH);
@@ -471,32 +501,39 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage2.Text = "EBH Rapor";
             // 
+            // materialRaisedButton11
+            // 
+            this.materialRaisedButton11.AutoSize = true;
+            this.materialRaisedButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton11.Depth = 0;
+            this.materialRaisedButton11.Icon = null;
+            this.materialRaisedButton11.Location = new System.Drawing.Point(620, 565);
+            this.materialRaisedButton11.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton11.Name = "materialRaisedButton11";
+            this.materialRaisedButton11.Primary = true;
+            this.materialRaisedButton11.Size = new System.Drawing.Size(194, 36);
+            this.materialRaisedButton11.TabIndex = 41;
+            this.materialRaisedButton11.Text = "Denetime Gidilmeyenler";
+            this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
+            // 
             // materialRaisedButton7
             // 
             this.materialRaisedButton7.AutoSize = true;
             this.materialRaisedButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton7.Depth = 0;
             this.materialRaisedButton7.Icon = null;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(629, 565);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(822, 565);
             this.materialRaisedButton7.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton7.Name = "materialRaisedButton7";
             this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(105, 36);
+            this.materialRaisedButton7.Size = new System.Drawing.Size(223, 36);
             this.materialRaisedButton7.TabIndex = 40;
-            this.materialRaisedButton7.Text = "Özel Arama";
+            this.materialRaisedButton7.Text = "Bitiş Tarihine 3 Ay Kalanlar";
             this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1128, 558);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(132, 43);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 39;
-            this.pictureBox6.TabStop = false;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
             // 
             // materialRaisedButton8
             // 
@@ -504,14 +541,14 @@
             this.materialRaisedButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton8.Depth = 0;
             this.materialRaisedButton8.Icon = null;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(742, 565);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(1053, 565);
             this.materialRaisedButton8.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton8.Name = "materialRaisedButton8";
             this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(135, 36);
+            this.materialRaisedButton8.Size = new System.Drawing.Size(76, 36);
             this.materialRaisedButton8.TabIndex = 38;
-            this.materialRaisedButton8.Text = "Sayfayı Temizle";
+            this.materialRaisedButton8.Text = "Temizle";
             this.materialRaisedButton8.UseVisualStyleBackColor = true;
             this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
             // 
@@ -547,14 +584,14 @@
             this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton9.Depth = 0;
             this.materialRaisedButton9.Icon = null;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(442, 565);
+            this.materialRaisedButton9.Location = new System.Drawing.Point(453, 565);
             this.materialRaisedButton9.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton9.Name = "materialRaisedButton9";
             this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(179, 36);
+            this.materialRaisedButton9.Size = new System.Drawing.Size(159, 36);
             this.materialRaisedButton9.TabIndex = 35;
-            this.materialRaisedButton9.Text = "Tarih Aralığını Sırala";
+            this.materialRaisedButton9.Text = "Tarih\'e Göre Sırala";
             this.materialRaisedButton9.UseVisualStyleBackColor = true;
             this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
             // 
@@ -590,14 +627,14 @@
             this.materialRaisedButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton10.Depth = 0;
             this.materialRaisedButton10.Icon = null;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(885, 565);
+            this.materialRaisedButton10.Location = new System.Drawing.Point(1137, 565);
             this.materialRaisedButton10.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton10.Name = "materialRaisedButton10";
             this.materialRaisedButton10.Primary = true;
-            this.materialRaisedButton10.Size = new System.Drawing.Size(235, 36);
+            this.materialRaisedButton10.Size = new System.Drawing.Size(119, 36);
             this.materialRaisedButton10.TabIndex = 32;
-            this.materialRaisedButton10.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton10.Text = "EXCEL\'e Aktar";
             this.materialRaisedButton10.UseVisualStyleBackColor = true;
             this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
             // 
@@ -632,6 +669,8 @@
             this.xtraTabPage3.Controls.Add(this.pictureBox3);
             this.xtraTabPage3.Controls.Add(this.bunifuCards5);
             this.xtraTabPage3.Controls.Add(this.bunifuCards3);
+            this.xtraTabPage3.Controls.Add(this.BtnTemizle);
+            this.xtraTabPage3.Controls.Add(this.BtnKaydet);
             this.xtraTabPage3.Controls.Add(this.bunifuCards2);
             this.xtraTabPage3.Controls.Add(this.bunifuCards1);
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(4);
@@ -667,8 +706,6 @@
             this.bunifuCards5.BorderRadius = 5;
             this.bunifuCards5.BottomSahddow = false;
             this.bunifuCards5.color = System.Drawing.Color.DarkMagenta;
-            this.bunifuCards5.Controls.Add(this.BtnTemizle);
-            this.bunifuCards5.Controls.Add(this.BtnKaydet);
             this.bunifuCards5.Controls.Add(this.SEDNot);
             this.bunifuCards5.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards5.LeftSahddow = false;
@@ -680,58 +717,6 @@
             this.bunifuCards5.Size = new System.Drawing.Size(918, 159);
             this.bunifuCards5.TabIndex = 15;
             // 
-            // BtnTemizle
-            // 
-            this.BtnTemizle.ActiveBorderThickness = 1;
-            this.BtnTemizle.ActiveCornerRadius = 20;
-            this.BtnTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.BtnTemizle.ActiveForecolor = System.Drawing.Color.White;
-            this.BtnTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnTemizle.BackColor = System.Drawing.Color.White;
-            this.BtnTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.BackgroundImage")));
-            this.BtnTemizle.ButtonText = "TEMİZLE";
-            this.BtnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTemizle.ForeColor = System.Drawing.Color.SeaGreen;
-            this.BtnTemizle.IdleBorderThickness = 1;
-            this.BtnTemizle.IdleCornerRadius = 20;
-            this.BtnTemizle.IdleFillColor = System.Drawing.Color.White;
-            this.BtnTemizle.IdleForecolor = System.Drawing.Color.Orange;
-            this.BtnTemizle.IdleLineColor = System.Drawing.Color.Orange;
-            this.BtnTemizle.Location = new System.Drawing.Point(584, 73);
-            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.BtnTemizle.Name = "BtnTemizle";
-            this.BtnTemizle.Size = new System.Drawing.Size(333, 51);
-            this.BtnTemizle.TabIndex = 17;
-            this.BtnTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
-            // 
-            // BtnKaydet
-            // 
-            this.BtnKaydet.ActiveBorderThickness = 1;
-            this.BtnKaydet.ActiveCornerRadius = 20;
-            this.BtnKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.ActiveForecolor = System.Drawing.Color.White;
-            this.BtnKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.BackColor = System.Drawing.Color.White;
-            this.BtnKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.BackgroundImage")));
-            this.BtnKaydet.ButtonText = "KAYDET";
-            this.BtnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnKaydet.ForeColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.IdleBorderThickness = 1;
-            this.BtnKaydet.IdleCornerRadius = 20;
-            this.BtnKaydet.IdleFillColor = System.Drawing.Color.White;
-            this.BtnKaydet.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.Location = new System.Drawing.Point(584, 16);
-            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(330, 57);
-            this.BtnKaydet.TabIndex = 16;
-            this.BtnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
-            // 
             // SEDNot
             // 
             this.SEDNot.BackColor = System.Drawing.Color.OliveDrab;
@@ -741,7 +726,7 @@
             this.SEDNot.Location = new System.Drawing.Point(8, 15);
             this.SEDNot.Margin = new System.Windows.Forms.Padding(4);
             this.SEDNot.Name = "SEDNot";
-            this.SEDNot.Size = new System.Drawing.Size(565, 107);
+            this.SEDNot.Size = new System.Drawing.Size(906, 107);
             this.SEDNot.TabIndex = 1;
             this.SEDNot.Text = "";
             // 
@@ -1011,6 +996,58 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Dosya Bilgileri";
             // 
+            // BtnTemizle
+            // 
+            this.BtnTemizle.ActiveBorderThickness = 1;
+            this.BtnTemizle.ActiveCornerRadius = 20;
+            this.BtnTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.BackColor = System.Drawing.Color.Transparent;
+            this.BtnTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.BackgroundImage")));
+            this.BtnTemizle.ButtonText = "TEMİZLE";
+            this.BtnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTemizle.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnTemizle.IdleBorderThickness = 1;
+            this.BtnTemizle.IdleCornerRadius = 20;
+            this.BtnTemizle.IdleFillColor = System.Drawing.Color.White;
+            this.BtnTemizle.IdleForecolor = System.Drawing.Color.Orange;
+            this.BtnTemizle.IdleLineColor = System.Drawing.Color.Orange;
+            this.BtnTemizle.Location = new System.Drawing.Point(944, 545);
+            this.BtnTemizle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnTemizle.Name = "BtnTemizle";
+            this.BtnTemizle.Size = new System.Drawing.Size(314, 51);
+            this.BtnTemizle.TabIndex = 17;
+            this.BtnTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnTemizle.Click += new System.EventHandler(this.BtnTemizle_Click);
+            // 
+            // BtnKaydet
+            // 
+            this.BtnKaydet.ActiveBorderThickness = 1;
+            this.BtnKaydet.ActiveCornerRadius = 20;
+            this.BtnKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.ActiveForecolor = System.Drawing.Color.White;
+            this.BtnKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.BackColor = System.Drawing.Color.Transparent;
+            this.BtnKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.BackgroundImage")));
+            this.BtnKaydet.ButtonText = "KAYDET";
+            this.BtnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnKaydet.ForeColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.IdleBorderThickness = 1;
+            this.BtnKaydet.IdleCornerRadius = 20;
+            this.BtnKaydet.IdleFillColor = System.Drawing.Color.White;
+            this.BtnKaydet.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.BtnKaydet.Location = new System.Drawing.Point(944, 488);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(311, 57);
+            this.BtnKaydet.TabIndex = 16;
+            this.BtnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
+            // 
             // bunifuCards2
             // 
             this.bunifuCards2.BackColor = System.Drawing.Color.White;
@@ -1180,147 +1217,147 @@
             this.CboxMa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CboxMa.Properties.Items.AddRange(new object[] {
-            "GÖLBAŞI",
-            "KALA",
-            "KIŞLA",
-            "TEKKE",
-            "YENİ",
-            "ALAKONAK",
-            "AKÇATAŞ",
-            "ALTINBAŞAK",
-            "AYAKLI",
-            "BURÇ",
-            "BEĞRÜK",
-            "BÜYÜKBARDACIK",
-            "BALLICA",
-            "BOZCA",
-            "BAKIMLI",
-            "BAŞARAN",
-            "ÇAMURLU",
-            "DEDE",
-            "DİNÇKÖK",
-            "DEMİRCİ",
-            "ELĞÜN",
-            "EKİNDÖVER",
-            "ESKİKALE",
-            "ESER",
-            "EYYÜPNEBİ",
-            "ELBEĞENDİ",
-            "MALTA",
-            "EŞKİN",
-            "EVCİMEN",
-            "GÜZLEK",
-            "GÖZELİ",
-            "GERMEN",
-            "GÖLCÜK",
-            "GÖMÜLLÜ",
-            "GÜLERYÜZ",
-            "IŞILDAR",
-            "KURTULMUŞ",
-            "KARINCA",
-            "KADIKÖY",
-            "KIRBALI",
-            "KONAKYERİ",
-            "KINALITEPE",
-            "BUÜYÜK GÖRÜMLÜ",
-            "NERGİZLİ",
-            "OĞLAKÇI",
-            "TANYELİ",
-            "YÜCELER",
-            "YOLBİLEN",
-            "YEŞİLALIÇ",
-            "YOLLARBAŞI",
-            "YABAN",
-            "ATATÜRK",
-            "BAHÇELİEVLER",
-            "AZADİ",
-            "ŞARKPINAR",
-            "BÜYÜKMUTLU",
-            "GÜRPINAR",
             "ABALAR",
-            "KAVURGA",
-            "TUNÇBİLEK",
-            "YUKARIBAĞ",
-            "SÖZERİ",
-            "YILDIZ",
-            "AKKESE",
-            "KARATAŞ",
-            "KIRKGÖZ",
-            "KARAKUZU",
-            "TOKLU",
             "ADAKÖYÜ",
-            "YARPUZ",
-            "PINARLAR",
-            "KUCAK",
-            "SATICIK",
-            "CUMHURİYET",
-            "HÜRRİYET",
-            "ÖZAL",
-            "ŞIRNAK",
-            "YENİŞEHİR",
-            "KOLAĞASI",
-            "TÜKELİ",
-            "MEHMETÇİK",
+            "AKÇATAŞ",
+            "AKKESE",
+            "ALAKONAK",
+            "ALTINBAŞAK",
+            "ANIT",
+            "ARISU",
+            "ARITIR",
             "ASLANBABA",
-            "TEPEDÜZÜ",
-            "GÖZLER",
-            "GÖNÜLLÜ",
-            "KARGALI",
-            "ÖVÜNCÜK",
-            "YAYIK",
-            "TAŞÖNÜ",
-            "YAĞIZLAR",
-            "SAĞIRTAŞ",
-            "KERVANSARAY",
-            "GÖKTEPE",
-            "KÜÇÜKMUTLU",
             "AŞAĞITINAZ",
-            "ÇİFTEKUYU",
-            "KUMÇEŞME",
+            "ATATÜRK",
+            "AYAKLI",
+            "AZADİ",
+            "BAHÇELİEVLER",
+            "BAKIMLI",
+            "BALLICA",
+            "BAŞARAN",
+            "BAŞKÖY",
+            "BEĞRÜK",
+            "BİNEKLİ",
+            "BOZCA",
+            "BURÇ",
+            "BUÜYÜK GÖRÜMLÜ",
+            "BÜYÜKBARDACIK",
+            "BÜYÜKÇAVUŞ",
+            "BÜYÜKMUTLU",
+            "CUMHURİYET",
+            "ÇALICIK",
+            "ÇAMURLU",
             "ÇİFTÇİLER",
+            "ÇİFTEKUYU",
+            "ÇOKRAN",
+            "DEDE",
+            "DEFTERDAR",
+            "DEĞİM",
+            "DEMİRCİ",
             "DİKİLİ",
             "DİNÇER",
-            "ÜÇGÜL",
-            "YAZGÜNEŞİ",
-            "KEMERLİ",
-            "BİNEKLİ",
-            "TAŞKAYA",
-            "YAŞİLDURAK",
-            "ŞAHİNLİ",
-            "DEFTERDAR",
-            "ARISU",
-            "İNCİRLİ",
-            "ÇOKRAN",
-            "KEÇELİ",
-            "SÜLEYMANİYE",
-            "ENGELLİ",
-            "KOŞULLU",
-            "SELAHATTİN-İ EYYÜBİ",
-            "DEĞİM",
-            "GÜLTEPE",
-            "GÖĞERLİ",
-            "SAYOBA",
-            "REYHANLI",
-            "ULAKLI",
-            "KÜÇÜKTOPÇA",
-            "EMİROĞLU",
-            "ARITIR",
-            "SAMANLI",
+            "DİNÇKÖK",
             "EKİNCİLER",
+            "EKİNDÖVER",
+            "ELBEĞENDİ",
+            "ELĞÜN",
+            "EMİROĞLU",
+            "ENGELLİ",
+            "ESER",
+            "ESKİKALE",
+            "EŞKİN",
+            "EVCİMEN",
+            "EYYÜPNEBİ",
+            "GERMEN",
+            "GÖĞERLİ",
+            "GÖKTEPE",
+            "GÖLBAŞI",
+            "GÖLCÜK",
+            "GÖMÜLLÜ",
+            "GÖNÜLLÜ",
+            "GÖZELİ",
+            "GÖZLER",
+            "GÜLERYÜZ",
+            "GÜLTEPE",
+            "GÜRPINAR",
+            "GÜZLEK",
+            "HÜRRİYET",
+            "IŞILDAR",
+            "İNCİRLİ",
+            "KADIKÖY",
+            "KALA",
+            "KARAKUZU",
+            "KARATAŞ",
+            "KARATEPE",
+            "KARGALI",
+            "KARINCA",
+            "KAVURGA",
+            "KEÇELİ",
+            "KEMERLİ",
+            "KERVANSARAY",
+            "KINALITEPE",
+            "KIRBALI",
+            "KIRKGÖZ",
+            "KIŞLA",
+            "KIZLARSARAYI",
+            "KOLAĞASI",
+            "KONAKYERİ",
+            "KOŞULLU",
+            "KUCAK",
+            "KUMÇEŞME",
+            "KURTULMUŞ",
+            "KÜÇÜKMUTLU",
+            "KÜÇÜKTOPÇA",
+            "MALTA",
+            "MEHMETÇİK",
+            "NERGİZLİ",
+            "OĞLAKÇI",
+            "ÖVÜNCÜK",
+            "ÖZAL",
+            "PINARLAR",
+            "REYHANLI",
+            "SAĞIRTAŞ",
+            "SAKALAR",
+            "SAMANLI",
             "SARIBAL",
-            "TEKNELİ",
-            "UĞURLU",
+            "SATICIK",
+            "SAYOBA",
+            "SELAHATTİN-İ EYYÜBİ",
             "SEPETLİ",
-            "BÜYÜKÇAVUŞ",
+            "SÖZERİ",
+            "SÜLEYMANİYE",
+            "ŞAHİNLİ",
+            "ŞARKPINAR",
+            "ŞEHİT",
+            "ŞIRNAK",
+            "TANYELİ",
+            "TAŞKAYA",
+            "TAŞÖNÜ",
+            "TEKKE",
+            "TEKNELİ",
+            "TEPEDÜZÜ",
+            "TOKLU",
+            "TUNÇBİLEK",
+            "TÜKELİ",
+            "UĞURLU",
+            "ULAKLI",
+            "ÜÇGÜL",
+            "YABAN",
+            "YAĞIZLAR",
+            "YARPUZ",
+            "YAŞİLDURAK",
+            "YAYIK",
+            "YAZGÜNEŞİ",
+            "YENİ",
+            "YENİŞEHİR",
+            "YEŞİLALIÇ",
+            "YILDIZ",
+            "YOLBİLEN",
+            "YOLLARBAŞI",
+            "YUKARIBAĞ",
             "YUKARIŞÖLENLİ",
             "YUKARUDİLİMLİ",
-            "ÇALICIK",
-            "KARATEPE",
-            "SAKALAR",
-            "ANIT",
-            "BAŞKÖY",
-            "ŞEHİT",
-            "KIZLARSARAYI"});
+            "YÜCELER"});
             this.CboxMa.Size = new System.Drawing.Size(154, 26);
             this.CboxMa.TabIndex = 19;
             // 
@@ -1482,6 +1519,8 @@
             this.xtraTabPage4.Controls.Add(this.pictureBox5);
             this.xtraTabPage4.Controls.Add(this.bunifuCards6);
             this.xtraTabPage4.Controls.Add(this.bunifuCards7);
+            this.xtraTabPage4.Controls.Add(this.EbhTemizle);
+            this.xtraTabPage4.Controls.Add(this.EbhKaydet);
             this.xtraTabPage4.Controls.Add(this.bunifuCards9);
             this.xtraTabPage4.Controls.Add(this.bunifuCards10);
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(4);
@@ -1517,8 +1556,6 @@
             this.bunifuCards6.BorderRadius = 5;
             this.bunifuCards6.BottomSahddow = false;
             this.bunifuCards6.color = System.Drawing.Color.DarkMagenta;
-            this.bunifuCards6.Controls.Add(this.EbhTemizle);
-            this.bunifuCards6.Controls.Add(this.EbhKaydet);
             this.bunifuCards6.Controls.Add(this.richTextBox1);
             this.bunifuCards6.Font = new System.Drawing.Font("Tahoma", 10F);
             this.bunifuCards6.LeftSahddow = false;
@@ -1530,58 +1567,6 @@
             this.bunifuCards6.Size = new System.Drawing.Size(918, 133);
             this.bunifuCards6.TabIndex = 23;
             // 
-            // EbhTemizle
-            // 
-            this.EbhTemizle.ActiveBorderThickness = 1;
-            this.EbhTemizle.ActiveCornerRadius = 20;
-            this.EbhTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.EbhTemizle.ActiveForecolor = System.Drawing.Color.White;
-            this.EbhTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhTemizle.BackColor = System.Drawing.Color.White;
-            this.EbhTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhTemizle.BackgroundImage")));
-            this.EbhTemizle.ButtonText = "TEMİZLE";
-            this.EbhTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EbhTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EbhTemizle.ForeColor = System.Drawing.Color.SeaGreen;
-            this.EbhTemizle.IdleBorderThickness = 1;
-            this.EbhTemizle.IdleCornerRadius = 20;
-            this.EbhTemizle.IdleFillColor = System.Drawing.Color.White;
-            this.EbhTemizle.IdleForecolor = System.Drawing.Color.Orange;
-            this.EbhTemizle.IdleLineColor = System.Drawing.Color.Orange;
-            this.EbhTemizle.Location = new System.Drawing.Point(584, 73);
-            this.EbhTemizle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.EbhTemizle.Name = "EbhTemizle";
-            this.EbhTemizle.Size = new System.Drawing.Size(333, 51);
-            this.EbhTemizle.TabIndex = 17;
-            this.EbhTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.EbhTemizle.Click += new System.EventHandler(this.EbhTemizle_Click);
-            // 
-            // EbhKaydet
-            // 
-            this.EbhKaydet.ActiveBorderThickness = 1;
-            this.EbhKaydet.ActiveCornerRadius = 20;
-            this.EbhKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.ActiveForecolor = System.Drawing.Color.White;
-            this.EbhKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.BackColor = System.Drawing.Color.White;
-            this.EbhKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhKaydet.BackgroundImage")));
-            this.EbhKaydet.ButtonText = "KAYDET";
-            this.EbhKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EbhKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EbhKaydet.ForeColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.IdleBorderThickness = 1;
-            this.EbhKaydet.IdleCornerRadius = 20;
-            this.EbhKaydet.IdleFillColor = System.Drawing.Color.White;
-            this.EbhKaydet.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.Location = new System.Drawing.Point(584, 16);
-            this.EbhKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.EbhKaydet.Name = "EbhKaydet";
-            this.EbhKaydet.Size = new System.Drawing.Size(330, 57);
-            this.EbhKaydet.TabIndex = 16;
-            this.EbhKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.EbhKaydet.Click += new System.EventHandler(this.EbhKaydet_Click);
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.OliveDrab;
@@ -1591,7 +1576,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(8, 15);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 107);
+            this.richTextBox1.Size = new System.Drawing.Size(913, 107);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -1627,7 +1612,7 @@
             this.bunifuCards7.Name = "bunifuCards7";
             this.bunifuCards7.RightSahddow = false;
             this.bunifuCards7.ShadowDepth = 20;
-            this.bunifuCards7.Size = new System.Drawing.Size(369, 516);
+            this.bunifuCards7.Size = new System.Drawing.Size(367, 516);
             this.bunifuCards7.TabIndex = 21;
             // 
             // label13
@@ -1902,6 +1887,58 @@
             this.bunifuSeparator1.TabIndex = 19;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
+            // 
+            // EbhTemizle
+            // 
+            this.EbhTemizle.ActiveBorderThickness = 1;
+            this.EbhTemizle.ActiveCornerRadius = 20;
+            this.EbhTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.EbhTemizle.ActiveForecolor = System.Drawing.Color.White;
+            this.EbhTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.EbhTemizle.BackColor = System.Drawing.Color.Transparent;
+            this.EbhTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhTemizle.BackgroundImage")));
+            this.EbhTemizle.ButtonText = "TEMİZLE";
+            this.EbhTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EbhTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EbhTemizle.ForeColor = System.Drawing.Color.SeaGreen;
+            this.EbhTemizle.IdleBorderThickness = 1;
+            this.EbhTemizle.IdleCornerRadius = 20;
+            this.EbhTemizle.IdleFillColor = System.Drawing.Color.White;
+            this.EbhTemizle.IdleForecolor = System.Drawing.Color.Orange;
+            this.EbhTemizle.IdleLineColor = System.Drawing.Color.Orange;
+            this.EbhTemizle.Location = new System.Drawing.Point(944, 548);
+            this.EbhTemizle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.EbhTemizle.Name = "EbhTemizle";
+            this.EbhTemizle.Size = new System.Drawing.Size(312, 51);
+            this.EbhTemizle.TabIndex = 17;
+            this.EbhTemizle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EbhTemizle.Click += new System.EventHandler(this.EbhTemizle_Click);
+            // 
+            // EbhKaydet
+            // 
+            this.EbhKaydet.ActiveBorderThickness = 1;
+            this.EbhKaydet.ActiveCornerRadius = 20;
+            this.EbhKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.EbhKaydet.ActiveForecolor = System.Drawing.Color.White;
+            this.EbhKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.EbhKaydet.BackColor = System.Drawing.Color.Transparent;
+            this.EbhKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhKaydet.BackgroundImage")));
+            this.EbhKaydet.ButtonText = "KAYDET";
+            this.EbhKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EbhKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EbhKaydet.ForeColor = System.Drawing.Color.SeaGreen;
+            this.EbhKaydet.IdleBorderThickness = 1;
+            this.EbhKaydet.IdleCornerRadius = 20;
+            this.EbhKaydet.IdleFillColor = System.Drawing.Color.White;
+            this.EbhKaydet.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.EbhKaydet.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.EbhKaydet.Location = new System.Drawing.Point(944, 491);
+            this.EbhKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.EbhKaydet.Name = "EbhKaydet";
+            this.EbhKaydet.Size = new System.Drawing.Size(312, 57);
+            this.EbhKaydet.TabIndex = 16;
+            this.EbhKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EbhKaydet.Click += new System.EventHandler(this.EbhKaydet_Click);
             // 
             // bunifuCards9
             // 
@@ -2371,6 +2408,7 @@
             this.materialRaisedButton14.TabIndex = 32;
             this.materialRaisedButton14.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
+            this.materialRaisedButton14.Click += new System.EventHandler(this.materialRaisedButton14_Click);
             // 
             // EvrakGrid
             // 
@@ -2431,6 +2469,7 @@
             this.materialRaisedButton18.TabIndex = 41;
             this.materialRaisedButton18.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
             this.materialRaisedButton18.UseVisualStyleBackColor = true;
+            this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
             // 
             // EvrakZimmetEBHGrid
             // 
@@ -2697,17 +2736,328 @@
             // 
             // xtraTabPage7
             // 
+            this.xtraTabPage7.Controls.Add(this.gridControl2);
+            this.xtraTabPage7.Controls.Add(this.bunifuCards12);
+            this.xtraTabPage7.Controls.Add(this.bunifuCards11);
+            this.xtraTabPage7.Controls.Add(this.gridControl1);
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.xtraTabPage7.Name = "xtraTabPage7";
             this.xtraTabPage7.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage7.Text = "Ayarlar";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gridControl2.Location = new System.Drawing.Point(974, 2);
+            this.gridControl2.MainView = this.gridView7;
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(285, 596);
+            this.gridControl2.TabIndex = 16;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView7});
+            // 
+            // gridView7
+            // 
+            this.gridView7.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView7.Appearance.Row.Options.UseFont = true;
+            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView7.GridControl = this.gridControl2;
+            this.gridView7.GroupPanelText = "Choice Admin Kontrol V.1.1";
+            this.gridView7.Name = "gridView7";
+            this.gridView7.OptionsBehavior.Editable = false;
+            this.gridView7.OptionsFind.AlwaysVisible = true;
+            this.gridView7.OptionsFind.FindDelay = 100;
+            this.gridView7.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView7.OptionsFind.FindNullPrompt = "Arayın...";
+            this.gridView7.OptionsFind.SearchInPreview = true;
+            this.gridView7.OptionsFind.ShowFindButton = false;
+            this.gridView7.DoubleClick += new System.EventHandler(this.gridView7_DoubleClick);
+            // 
+            // bunifuCards12
+            // 
+            this.bunifuCards12.BackColor = System.Drawing.Color.White;
+            this.bunifuCards12.BorderRadius = 5;
+            this.bunifuCards12.BottomSahddow = false;
+            this.bunifuCards12.color = System.Drawing.Color.Tomato;
+            this.bunifuCards12.Controls.Add(this.materialFlatButton10);
+            this.bunifuCards12.Controls.Add(this.materialFlatButton12);
+            this.bunifuCards12.Controls.Add(this.SifreKullanici);
+            this.bunifuCards12.Controls.Add(this.KullaniciAdi);
+            this.bunifuCards12.Controls.Add(this.label32);
+            this.bunifuCards12.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.bunifuCards12.LeftSahddow = false;
+            this.bunifuCards12.Location = new System.Drawing.Point(640, 4);
+            this.bunifuCards12.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards12.Name = "bunifuCards12";
+            this.bunifuCards12.RightSahddow = false;
+            this.bunifuCards12.ShadowDepth = 20;
+            this.bunifuCards12.Size = new System.Drawing.Size(334, 293);
+            this.bunifuCards12.TabIndex = 15;
+            // 
+            // materialFlatButton10
+            // 
+            this.materialFlatButton10.AutoSize = true;
+            this.materialFlatButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton10.Depth = 0;
+            this.materialFlatButton10.Icon = null;
+            this.materialFlatButton10.Location = new System.Drawing.Point(193, 165);
+            this.materialFlatButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton10.Name = "materialFlatButton10";
+            this.materialFlatButton10.Primary = false;
+            this.materialFlatButton10.Size = new System.Drawing.Size(112, 36);
+            this.materialFlatButton10.TabIndex = 19;
+            this.materialFlatButton10.Text = "Kullanıcı Sil";
+            this.materialFlatButton10.UseVisualStyleBackColor = true;
+            this.materialFlatButton10.Click += new System.EventHandler(this.materialFlatButton10_Click);
+            // 
+            // materialFlatButton12
+            // 
+            this.materialFlatButton12.AutoSize = true;
+            this.materialFlatButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton12.Depth = 0;
+            this.materialFlatButton12.Icon = null;
+            this.materialFlatButton12.Location = new System.Drawing.Point(17, 165);
+            this.materialFlatButton12.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton12.Name = "materialFlatButton12";
+            this.materialFlatButton12.Primary = false;
+            this.materialFlatButton12.Size = new System.Drawing.Size(124, 36);
+            this.materialFlatButton12.TabIndex = 17;
+            this.materialFlatButton12.Text = "Kullanıcı Ekle";
+            this.materialFlatButton12.UseVisualStyleBackColor = true;
+            this.materialFlatButton12.Click += new System.EventHandler(this.materialFlatButton12_Click);
+            // 
+            // SifreKullanici
+            // 
+            this.SifreKullanici.Depth = 0;
+            this.SifreKullanici.Hint = "Şifre";
+            this.SifreKullanici.Location = new System.Drawing.Point(17, 123);
+            this.SifreKullanici.Margin = new System.Windows.Forms.Padding(4);
+            this.SifreKullanici.MaxLength = 32767;
+            this.SifreKullanici.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SifreKullanici.Name = "SifreKullanici";
+            this.SifreKullanici.PasswordChar = '\0';
+            this.SifreKullanici.SelectedText = "";
+            this.SifreKullanici.SelectionLength = 0;
+            this.SifreKullanici.SelectionStart = 0;
+            this.SifreKullanici.Size = new System.Drawing.Size(292, 23);
+            this.SifreKullanici.TabIndex = 16;
+            this.SifreKullanici.TabStop = false;
+            this.SifreKullanici.UseSystemPasswordChar = false;
+            // 
+            // KullaniciAdi
+            // 
+            this.KullaniciAdi.Depth = 0;
+            this.KullaniciAdi.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.KullaniciAdi.Hint = "Kullanıcı Adı";
+            this.KullaniciAdi.Location = new System.Drawing.Point(17, 75);
+            this.KullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.KullaniciAdi.MaxLength = 32767;
+            this.KullaniciAdi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.KullaniciAdi.Name = "KullaniciAdi";
+            this.KullaniciAdi.PasswordChar = '\0';
+            this.KullaniciAdi.SelectedText = "";
+            this.KullaniciAdi.SelectionLength = 0;
+            this.KullaniciAdi.SelectionStart = 0;
+            this.KullaniciAdi.Size = new System.Drawing.Size(292, 23);
+            this.KullaniciAdi.TabIndex = 14;
+            this.KullaniciAdi.TabStop = false;
+            this.KullaniciAdi.UseSystemPasswordChar = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label32.Location = new System.Drawing.Point(103, 30);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(118, 23);
+            this.label32.TabIndex = 15;
+            this.label32.Text = "Kullanıcı Ekle";
+            // 
+            // bunifuCards11
+            // 
+            this.bunifuCards11.BackColor = System.Drawing.Color.White;
+            this.bunifuCards11.BorderRadius = 5;
+            this.bunifuCards11.BottomSahddow = false;
+            this.bunifuCards11.color = System.Drawing.Color.Tomato;
+            this.bunifuCards11.Controls.Add(this.MahalleIDAlma);
+            this.bunifuCards11.Controls.Add(this.materialFlatButton6);
+            this.bunifuCards11.Controls.Add(this.label21);
+            this.bunifuCards11.Controls.Add(this.materialFlatButton5);
+            this.bunifuCards11.Controls.Add(this.materialFlatButton7);
+            this.bunifuCards11.Controls.Add(this.materialFlatButton8);
+            this.bunifuCards11.Controls.Add(this.MahalleKoyText);
+            this.bunifuCards11.Controls.Add(this.label28);
+            this.bunifuCards11.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.bunifuCards11.LeftSahddow = false;
+            this.bunifuCards11.Location = new System.Drawing.Point(306, 4);
+            this.bunifuCards11.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards11.Name = "bunifuCards11";
+            this.bunifuCards11.RightSahddow = false;
+            this.bunifuCards11.ShadowDepth = 20;
+            this.bunifuCards11.Size = new System.Drawing.Size(326, 216);
+            this.bunifuCards11.TabIndex = 14;
+            // 
+            // MahalleIDAlma
+            // 
+            this.MahalleIDAlma.AutoSize = true;
+            this.MahalleIDAlma.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.MahalleIDAlma.Location = new System.Drawing.Point(208, 7);
+            this.MahalleIDAlma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MahalleIDAlma.Name = "MahalleIDAlma";
+            this.MahalleIDAlma.Size = new System.Drawing.Size(0, 23);
+            this.MahalleIDAlma.TabIndex = 22;
+            this.MahalleIDAlma.Visible = false;
+            // 
+            // materialFlatButton6
+            // 
+            this.materialFlatButton6.AutoSize = true;
+            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton6.Depth = 0;
+            this.materialFlatButton6.Icon = null;
+            this.materialFlatButton6.Location = new System.Drawing.Point(233, 118);
+            this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton6.Name = "materialFlatButton6";
+            this.materialFlatButton6.Primary = false;
+            this.materialFlatButton6.Size = new System.Drawing.Size(41, 36);
+            this.materialFlatButton6.TabIndex = 19;
+            this.materialFlatButton6.Text = "SİL";
+            this.materialFlatButton6.UseVisualStyleBackColor = true;
+            this.materialFlatButton6.Click += new System.EventHandler(this.materialFlatButton6_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label21.Location = new System.Drawing.Point(28, 270);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 23);
+            this.label21.TabIndex = 21;
+            this.label21.Visible = false;
+            // 
+            // materialFlatButton5
+            // 
+            this.materialFlatButton5.AutoSize = true;
+            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.Depth = 0;
+            this.materialFlatButton5.Icon = null;
+            this.materialFlatButton5.Location = new System.Drawing.Point(233, 166);
+            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton5.Name = "materialFlatButton5";
+            this.materialFlatButton5.Primary = false;
+            this.materialFlatButton5.Size = new System.Drawing.Size(76, 36);
+            this.materialFlatButton5.TabIndex = 20;
+            this.materialFlatButton5.Text = "TEMİZLE";
+            this.materialFlatButton5.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton7
+            // 
+            this.materialFlatButton7.AutoSize = true;
+            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.Depth = 0;
+            this.materialFlatButton7.Enabled = false;
+            this.materialFlatButton7.Icon = null;
+            this.materialFlatButton7.Location = new System.Drawing.Point(17, 157);
+            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton7.Name = "materialFlatButton7";
+            this.materialFlatButton7.Primary = false;
+            this.materialFlatButton7.Size = new System.Drawing.Size(186, 36);
+            this.materialFlatButton7.TabIndex = 18;
+            this.materialFlatButton7.Text = "Mahalle/Köy Güncelle";
+            this.materialFlatButton7.UseVisualStyleBackColor = true;
+            this.materialFlatButton7.Click += new System.EventHandler(this.materialFlatButton7_Click);
+            // 
+            // materialFlatButton8
+            // 
+            this.materialFlatButton8.AutoSize = true;
+            this.materialFlatButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton8.Depth = 0;
+            this.materialFlatButton8.Icon = null;
+            this.materialFlatButton8.Location = new System.Drawing.Point(17, 120);
+            this.materialFlatButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton8.Name = "materialFlatButton8";
+            this.materialFlatButton8.Primary = false;
+            this.materialFlatButton8.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton8.TabIndex = 17;
+            this.materialFlatButton8.Text = "Mahalle/Köy Ekle";
+            this.materialFlatButton8.UseVisualStyleBackColor = true;
+            this.materialFlatButton8.Click += new System.EventHandler(this.materialFlatButton8_Click);
+            // 
+            // MahalleKoyText
+            // 
+            this.MahalleKoyText.Depth = 0;
+            this.MahalleKoyText.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.MahalleKoyText.Hint = "Mahalle/Köy Adı";
+            this.MahalleKoyText.Location = new System.Drawing.Point(17, 75);
+            this.MahalleKoyText.Margin = new System.Windows.Forms.Padding(4);
+            this.MahalleKoyText.MaxLength = 32767;
+            this.MahalleKoyText.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MahalleKoyText.Name = "MahalleKoyText";
+            this.MahalleKoyText.PasswordChar = '\0';
+            this.MahalleKoyText.SelectedText = "";
+            this.MahalleKoyText.SelectionLength = 0;
+            this.MahalleKoyText.SelectionStart = 0;
+            this.MahalleKoyText.Size = new System.Drawing.Size(292, 23);
+            this.MahalleKoyText.TabIndex = 14;
+            this.MahalleKoyText.TabStop = false;
+            this.MahalleKoyText.UseSystemPasswordChar = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label28.Location = new System.Drawing.Point(103, 30);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(114, 23);
+            this.label28.TabIndex = 15;
+            this.label28.Text = "Mahalle Ekle";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl1.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gridControl1.Location = new System.Drawing.Point(4, 2);
+            this.gridControl1.MainView = this.gridView6;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(297, 596);
+            this.gridControl1.TabIndex = 13;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView6});
+            // 
+            // gridView6
+            // 
+            this.gridView6.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView6.Appearance.Row.Options.UseFont = true;
+            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView6.GridControl = this.gridControl1;
+            this.gridView6.GroupPanelText = "Choice Mahalle/Köy  Arama Motoru V.0.7 ";
+            this.gridView6.Name = "gridView6";
+            this.gridView6.OptionsBehavior.Editable = false;
+            this.gridView6.OptionsFind.AlwaysVisible = true;
+            this.gridView6.OptionsFind.FindDelay = 100;
+            this.gridView6.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridView6.OptionsFind.FindNullPrompt = "Mahalle İsmi Arayın...";
+            this.gridView6.OptionsFind.SearchInPreview = true;
+            this.gridView6.OptionsFind.ShowFindButton = false;
+            this.gridView6.DoubleClick += new System.EventHandler(this.gridView6_DoubleClick);
             // 
             // toastNotificationsManager1
             // 
             this.toastNotificationsManager1.ApplicationId = "46f089bf-4bf0-4b5d-b062-89c8ae88fcc0";
             this.toastNotificationsManager1.ApplicationName = "ChoiceSosyalHizmet.WinForm";
             this.toastNotificationsManager1.Notifications.AddRange(new DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties[] {
-            new DevExpress.XtraBars.ToastNotifications.ToastNotification("9c0a99d9-93dd-4141-844f-82aa26c0cf9a", global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm, "Choice SHM ETO V.1.4", "Alpha Uyarısı!", "©2017 Choice Corp. www.seckinumur.com", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.ImageAndText04)});
+            new DevExpress.XtraBars.ToastNotifications.ToastNotification("9c0a99d9-93dd-4141-844f-82aa26c0cf9a", global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm, "Choice SHM ETO V.1.4", "Beta Uyarısı!", "©2017 Choice Corp. www.seckinumur.com", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.ImageAndText04)});
             // 
             // materialRaisedButton4
             // 
@@ -2725,29 +3075,12 @@
             this.materialRaisedButton4.Text = "Uyarı 0";
             this.materialRaisedButton4.UseVisualStyleBackColor = true;
             // 
-            // materialRaisedButton5
-            // 
-            this.materialRaisedButton5.AutoSize = true;
-            this.materialRaisedButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Icon = null;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(1477, 31);
-            this.materialRaisedButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(89, 36);
-            this.materialRaisedButton5.TabIndex = 13;
-            this.materialRaisedButton5.Text = "Bildirim 0";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.materialRaisedButton5);
             this.Controls.Add(this.materialRaisedButton4);
             this.Controls.Add(this.xtraTabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -2764,7 +3097,6 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2SED.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties.CalendarTimeProperties)).EndInit();
@@ -2773,7 +3105,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).EndInit();
@@ -2850,6 +3181,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.bunifuCards8.ResumeLayout(false);
             this.bunifuCards8.PerformLayout();
+            this.xtraTabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
+            this.bunifuCards12.ResumeLayout(false);
+            this.bunifuCards12.PerformLayout();
+            this.bunifuCards11.ResumeLayout(false);
+            this.bunifuCards11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2868,7 +3208,6 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
         private DevExpress.XtraGrid.GridControl EBHRaporGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtTc;
@@ -2949,7 +3288,6 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage6;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage7;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit Tarih2SED;
@@ -2970,7 +3308,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField EbhBtc;
         private MaterialSkin.Controls.MaterialSingleLineTextField EbhBad;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.DateEdit Tarih2EBH;
@@ -3002,5 +3339,26 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton18;
         private DevExpress.XtraGrid.GridControl EvrakZimmetEBHGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+        private ns1.BunifuCards bunifuCards11;
+        private System.Windows.Forms.Label label21;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton8;
+        private MaterialSkin.Controls.MaterialSingleLineTextField MahalleKoyText;
+        private System.Windows.Forms.Label label28;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+        private System.Windows.Forms.Label MahalleIDAlma;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton11;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton12;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
+        private ns1.BunifuCards bunifuCards12;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton10;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton12;
+        private MaterialSkin.Controls.MaterialSingleLineTextField SifreKullanici;
+        private MaterialSkin.Controls.MaterialSingleLineTextField KullaniciAdi;
+        private System.Windows.Forms.Label label32;
     }
 }

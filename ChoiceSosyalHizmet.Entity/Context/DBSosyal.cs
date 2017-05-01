@@ -21,11 +21,10 @@ namespace ChoiceSosyalHizmet.Entity.Context
         public virtual DbSet<SEDDosyaTakip> SEDDosyaTakip { get; set; }
         public virtual DbSet<Kullanicilar> Kullanicilar { get; set; }
         public virtual DbSet<Personel> Personel { get; set; }
-        public virtual DbSet<Bildirim> Bildirim { get; set; }
-        public virtual DbSet<Uyari> Uyari { get; set; }
         public virtual DbSet<EvrakZimmetSED> EvrakZimmetSED { get; set; }
         public virtual DbSet<EvrakZimmetEBH> EvrakZimmetEBH { get; set; }
         public virtual DbSet<MahalleKoy> MahalleKoy { get; set; }
-        public virtual DbSet<Ayarlar> Ayarlar { get; set; }
+        public virtual DbSet<DenetimSED> DenetimSED { get; set; }
+        public virtual DbSet<DenetimEBH> DenetimEBH { get; set; }
     }
 }

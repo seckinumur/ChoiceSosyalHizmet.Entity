@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>first-aid-kit.ico</ApplicationIcon>
+    <ApplicationIcon>shm.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
@@ -160,18 +160,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="first-aid-kit.ico" />
     <Content Include="Pic\Aspb.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pic\choice corporation.png" />
-    <Content Include="Pic\first-aid-kit.ico" />
     <Content Include="Pic\shm.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="shm.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChoiceSosyalHizmet.DAL\ChoiceSosyalHizmet.DAL.csproj">
@@ -179,5 +180,6 @@
       <Name>ChoiceSosyalHizmet.DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

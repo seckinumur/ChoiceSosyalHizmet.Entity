@@ -75,6 +75,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.SEDNot = new System.Windows.Forms.RichTextBox();
             this.bunifuCards4 = new ns1.BunifuCards();
+            this.DenetimYapBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.label24 = new System.Windows.Forms.Label();
             this.ZCT = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label23 = new System.Windows.Forms.Label();
@@ -942,6 +943,7 @@
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = false;
             this.bunifuCards4.color = System.Drawing.Color.SlateGray;
+            this.bunifuCards4.Controls.Add(this.DenetimYapBtn);
             this.bunifuCards4.Controls.Add(this.label24);
             this.bunifuCards4.Controls.Add(this.ZCT);
             this.bunifuCards4.Controls.Add(this.label23);
@@ -961,6 +963,24 @@
             this.bunifuCards4.ShadowDepth = 20;
             this.bunifuCards4.Size = new System.Drawing.Size(515, 117);
             this.bunifuCards4.TabIndex = 25;
+            // 
+            // DenetimYapBtn
+            // 
+            this.DenetimYapBtn.AutoSize = true;
+            this.DenetimYapBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DenetimYapBtn.Depth = 0;
+            this.DenetimYapBtn.Icon = null;
+            this.DenetimYapBtn.Location = new System.Drawing.Point(265, 75);
+            this.DenetimYapBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.DenetimYapBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DenetimYapBtn.Name = "DenetimYapBtn";
+            this.DenetimYapBtn.Primary = false;
+            this.DenetimYapBtn.Size = new System.Drawing.Size(109, 36);
+            this.DenetimYapBtn.TabIndex = 45;
+            this.DenetimYapBtn.Text = "Denetim Yap";
+            this.DenetimYapBtn.UseVisualStyleBackColor = true;
+            this.DenetimYapBtn.Visible = false;
+            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
             // 
             // label24
             // 
@@ -1028,7 +1048,7 @@
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(174, 75);
+            this.materialFlatButton2.Location = new System.Drawing.Point(128, 75);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -1045,7 +1065,7 @@
             this.zimmetbuton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.zimmetbuton.Depth = 0;
             this.zimmetbuton.Icon = null;
-            this.zimmetbuton.Location = new System.Drawing.Point(17, 75);
+            this.zimmetbuton.Location = new System.Drawing.Point(11, 75);
             this.zimmetbuton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.zimmetbuton.MouseState = MaterialSkin.MouseState.HOVER;
             this.zimmetbuton.Name = "zimmetbuton";
@@ -1242,5 +1262,6 @@
         private System.Windows.Forms.Label label23;
         public MaterialSkin.Controls.MaterialSingleLineTextField ZAT;
         private System.Windows.Forms.Label PersonelIDsi;
+        private MaterialSkin.Controls.MaterialFlatButton DenetimYapBtn;
     }
 }

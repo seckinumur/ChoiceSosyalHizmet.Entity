@@ -71,18 +71,30 @@ namespace ChoiceSosyalHizmet.WinForm
             EbhBTTT.Text = "";
             EbhYBS.Clear();
         }
+       
 
         public void MainForm_Load(object sender, EventArgs e) // MainForm Load İşlemi
         {
             toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
-           
-                SEDRaporGrid.DataSource = SEDRepo.RaporListe();
-                EBHRaporGrid.DataSource = EBHRepo.RaporListe();
-                PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
-                EvrakGrid.DataSource = ZimmetSEDRepo.ZimmetListele();
-                EvrakZimmetEBHGrid.DataSource = ZimmetEBHRepo.ZimmetListele();
-                gridView1.GroupPanelText= "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: "+ gridView1.RowCount.ToString();
+
+            SEDRaporGrid.DataSource = SEDRepo.RaporListe();
+            EBHRaporGrid.DataSource = EBHRepo.RaporListe();
+            PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
+            EvrakGrid.DataSource = ZimmetSEDRepo.ZimmetListele();
+            EvrakZimmetEBHGrid.DataSource = ZimmetEBHRepo.ZimmetListele();
+            gridControl1.DataSource = MahalleKoyRepo.MaahalleKoyRaporla();
+            gridControl2.DataSource = KullanicilarRepo.KullaniciListele();
+            DenetimRepo.DenetimSEDAI();
+            DenetimRepo.DenetimEBHAI();
+            gridView1.GroupPanelText = "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView1.RowCount.ToString();
             gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView2.RowCount.ToString();
+            var almahalle = MahalleKoyRepo.MahalleKarsila();
+            foreach (var a in almahalle)
+            {
+                CboxMa.Properties.Items.Add(a);
+                EbhMK.Properties.Items.Add(a);
+            }
+            
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) // MainForm Kapatılırsa Uygulamadan Çıkma
@@ -122,7 +134,7 @@ namespace ChoiceSosyalHizmet.WinForm
                     DogumTarihi = DateDogumT.SelectedText,
                     DosyaTarihi = DateTime.Now.ToShortDateString(),
                     Durum = CboxDurum.SelectedItem.ToString(),
-                    mahalleKoy = CboxMa.SelectedText,
+                    mahalleKoy = CboxMa.Text,
                     OdemeBaslangici = DateOB.SelectedText,
                     OdemeBitisi = DateOBi.Text,
                     OdemeSuresi = ChekDt,
@@ -192,7 +204,7 @@ namespace ChoiceSosyalHizmet.WinForm
             DateOBi.Text = "";
         }
 
-        
+
 
         private void BtnTemizle_Click(object sender, EventArgs e) // SED Temizle Butonu
         {
@@ -242,7 +254,7 @@ namespace ChoiceSosyalHizmet.WinForm
                     DogumTarihi = EbhDT.SelectedText,
                     DosyaTarihi = DateTime.Now.ToShortDateString(),
                     Durum = EbhDurum.SelectedItem.ToString(),
-                    mahalleKoy = EbhMK.SelectedText,
+                    mahalleKoy = EbhMK.Text,
                     OdemeBaslangici = EbhOBT.SelectedText,
                     Tarih = DateTime.Now.ToShortDateString(),
                     TC = EbhTC.Text,
@@ -268,7 +280,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 {
                     MessageBox.Show(Sonuc);
                     EBHButonTemizle();
-                    EBHRaporGrid.DataSource = EBHRepo.TumRaporListe();
+                    EBHRaporGrid.DataSource = EBHRepo.RaporListe();
                 }
             }
             catch
@@ -493,13 +505,13 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void materialRaisedButton3_Click(object sender, EventArgs e) //SED Tarih Ararlığı Sıralama
         {
-            if(Tarih1SED.Text == "" && Tarih2SED.Text == "")
+            if (Tarih1SED.Text == "" && Tarih2SED.Text == "")
             {
                 MessageBox.Show("Sıralanacak Tarhleri Eksiksiz Girin!");
             }
             else
             {
-                SEDRaporGrid.DataSource= SEDRepo.RaporTarih(Tarih1SED.DateTime.ToShortDateString(), Tarih2SED.DateTime.ToShortDateString());
+                SEDRaporGrid.DataSource = SEDRepo.RaporTarih(Tarih1SED.DateTime.ToShortDateString(), Tarih2SED.DateTime.ToShortDateString());
             }
         }
 
@@ -510,7 +522,7 @@ namespace ChoiceSosyalHizmet.WinForm
             Tarih2SED.Text = "";
         }
 
-        private void materialRaisedButton9_Click(object sender, EventArgs e)
+        private void materialRaisedButton9_Click(object sender, EventArgs e) //EBH grid tarih sırala
         {
             if (Tarih1EBH.Text == "" && Tarih2EBH.Text == "")
             {
@@ -525,6 +537,204 @@ namespace ChoiceSosyalHizmet.WinForm
         private void materialRaisedButton8_Click(object sender, EventArgs e)
         {
             EBHRaporGrid.DataSource = EBHRepo.RaporListe();
+        }
+
+        private void materialRaisedButton14_Click(object sender, EventArgs e) // Evrakzimmet sed excell aktar
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Microsoft Excel Engine|*.xlxs";
+            save.OverwritePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                EvrakGrid.ExportToXlsx(save.FileName);
+            }
+        }
+
+        private void materialRaisedButton18_Click(object sender, EventArgs e) //evrak zimmet EBH excell aktar
+        {
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "Microsoft Excel Engine|*.xlxs";
+            save.OverwritePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                EvrakZimmetEBHGrid.ExportToXlsx(save.FileName);
+            }
+        }
+
+        private void materialFlatButton8_Click(object sender, EventArgs e) //Mahalle köy Ekle
+        {
+            if (MahalleKoyText.Text != "")
+            {
+                try
+                {
+                    VMMahalleKoy per = new VMMahalleKoy()
+                    {
+                        Isim = MahalleKoyText.Text
+                    };
+                    MessageBox.Show(MahalleKoyRepo.MahalleKoyEkle(per));
+                    MahalleKoyText.Clear();
+                    gridControl1.DataSource = MahalleKoyRepo.MaahalleKoyRaporla();
+                }
+                catch
+                {
+                    MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tüm Alanları Dolsurun");
+            }
+        }
+
+        private void materialFlatButton7_Click(object sender, EventArgs e) //mahalle köy güncelle
+        {
+            try
+            {
+                if (MahalleIDAlma.Text == "")
+                {
+                    MessageBox.Show("Güncellenecek Mahalle/Köy Seçin!");
+                }
+                else
+                {
+                    VMMahalleKoy gnc = new VMMahalleKoy()
+                    {
+                        Isim = MahalleKoyText.Text,
+                        MahalleKoyID = int.Parse(MahalleIDAlma.Text)
+                    };
+                    MessageBox.Show(MahalleKoyRepo.MahalleKoyGuncelle(gnc));
+                    gridControl1.DataSource = MahalleKoyRepo.MaahalleKoyRaporla();
+                    MahalleIDAlma.Text = "";
+                    MahalleKoyText.Clear();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+        }
+
+        private void materialFlatButton6_Click(object sender, EventArgs e) // Mahalle Köy Silme
+        {
+            try
+            {
+                if (MahalleIDAlma.Text == "")
+                {
+                    MessageBox.Show("Silinecek Mahalle/Köy Seçin!");
+                }
+                else
+                {
+                    MessageBox.Show(MahalleKoyRepo.MahalleKoySil(MahalleIDAlma.Text));
+                    gridControl1.DataSource = MahalleKoyRepo.MaahalleKoyRaporla();
+                    MahalleIDAlma.Text = "";
+                    MahalleKoyText.Clear();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+        }
+
+        private void gridView6_DoubleClick(object sender, EventArgs e) //Mahalle Köy girid çift tıklama
+        {
+            try
+            {
+                string ID = gridView6.GetRowCellValue(gridView6.FocusedRowHandle, "MahalleKoyID").ToString();
+                var a = MahalleKoyRepo.MahalleKoyBul(ID);
+                MahalleIDAlma.Text = a.Isim;
+                MahalleIDAlma.Text = a.MahalleKoyID.ToString();
+                materialFlatButton7.Enabled = true;
+            }
+            catch
+            {
+            }
+        }
+
+        private void materialRaisedButton12_Click(object sender, EventArgs e) //Sed Denetime Gidilmeyenleri Sırala
+        {
+            SEDRaporGrid.DataSource = DenetimRepo.DenetimGidilmemisSED();
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e) //Sed Bitiş Tarihi 1 Ay Kala
+        {
+            SEDRaporGrid.DataSource = DenetimRepo.BitisTarihiSED();
+        }
+
+        private void materialRaisedButton11_Click(object sender, EventArgs e) //Ebh Denetime Gidilmeyenleri Sırala
+        {
+            EBHRaporGrid.DataSource = DenetimRepo.DenetimGidilmemisEBH();
+        }
+
+        private void materialRaisedButton7_Click(object sender, EventArgs e) // Ebh bitişine 3 ay kalanları sırala
+        {
+            EBHRaporGrid.DataSource = DenetimRepo.BitisTarihiEBH();
+        }
+
+        private void materialFlatButton12_Click(object sender, EventArgs e) //Kullanici Ekle
+        {
+            if(KullaniciAdi.Text=="" && SifreKullanici.Text == "")
+            {
+                MessageBox.Show("Boş Olmaz");
+            }
+            else
+            {
+                try
+                {
+                    VMKullanicilar ekle = new VMKullanicilar()
+                    {
+                        KullaniciAdi = KullaniciAdi.Text,
+                        Sifre = SifreKullanici.Text
+                    };
+                    MessageBox.Show(KullanicilarRepo.KullaniciEkle(ekle));
+                }
+                catch
+                {
+                    MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                }
+            }
+        }
+
+        private void gridView7_DoubleClick(object sender, EventArgs e) //Kullanıcılar girid
+        {
+            try
+            {
+                string ID = gridView7.GetRowCellValue(gridView7.FocusedRowHandle, "KullanicilarID").ToString();
+                var bu = KullanicilarRepo.KullaniciBul(ID);
+                KullaniciAdi.Text = bu.KullaniciAdi;
+                SifreKullanici.Text = bu.Sifre;
+            }
+            catch
+            {
+                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+        }
+
+        private void materialFlatButton10_Click(object sender, EventArgs e) // Kullanıcı Sil
+        {
+            try
+            {
+                if (KullaniciAdi.Text == "" && SifreKullanici.Text == "")
+                {
+                    MessageBox.Show("Silinecek Kullanıcıyı Yazın");
+                }
+                else
+                {
+                    VMKullanicilar sil = new VMKullanicilar()
+                    {
+                        KullaniciAdi = KullaniciAdi.Text,
+                        Sifre = SifreKullanici.Text
+                    };
+                    MessageBox.Show(KullanicilarRepo.KullaniciSil(sil));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+            }
+            
         }
     }
 }

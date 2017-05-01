@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EBHRaporFormu));
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.EbhBtc = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -83,6 +84,7 @@
             this.EbhAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuCards4 = new ns1.BunifuCards();
+            this.DenetimYapBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.EbhBYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.EbhBDT = new DevExpress.XtraEditors.DateEdit();
@@ -605,7 +607,7 @@
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(175, 78);
+            this.materialFlatButton2.Location = new System.Drawing.Point(118, 78);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -622,7 +624,7 @@
             this.zimmetbuton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.zimmetbuton.Depth = 0;
             this.zimmetbuton.Icon = null;
-            this.zimmetbuton.Location = new System.Drawing.Point(8, 78);
+            this.zimmetbuton.Location = new System.Drawing.Point(17, 78);
             this.zimmetbuton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.zimmetbuton.MouseState = MaterialSkin.MouseState.HOVER;
             this.zimmetbuton.Name = "zimmetbuton";
@@ -1054,6 +1056,7 @@
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = false;
             this.bunifuCards4.color = System.Drawing.Color.SlateGray;
+            this.bunifuCards4.Controls.Add(this.DenetimYapBtn);
             this.bunifuCards4.Controls.Add(this.label24);
             this.bunifuCards4.Controls.Add(this.ZCT);
             this.bunifuCards4.Controls.Add(this.label23);
@@ -1073,6 +1076,24 @@
             this.bunifuCards4.ShadowDepth = 20;
             this.bunifuCards4.Size = new System.Drawing.Size(515, 117);
             this.bunifuCards4.TabIndex = 44;
+            // 
+            // DenetimYapBtn
+            // 
+            this.DenetimYapBtn.AutoSize = true;
+            this.DenetimYapBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DenetimYapBtn.Depth = 0;
+            this.DenetimYapBtn.Icon = null;
+            this.DenetimYapBtn.Location = new System.Drawing.Point(266, 78);
+            this.DenetimYapBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.DenetimYapBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DenetimYapBtn.Name = "DenetimYapBtn";
+            this.DenetimYapBtn.Primary = false;
+            this.DenetimYapBtn.Size = new System.Drawing.Size(109, 36);
+            this.DenetimYapBtn.TabIndex = 46;
+            this.DenetimYapBtn.Text = "Denetim Yap";
+            this.DenetimYapBtn.UseVisualStyleBackColor = true;
+            this.DenetimYapBtn.Visible = false;
+            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
             // 
             // EbhBYD
             // 
@@ -1163,6 +1184,7 @@
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.bunifuCards2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimizeBox = false;
@@ -1262,5 +1284,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit EbhRSU;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label PersonelIDsi;
+        private MaterialSkin.Controls.MaterialFlatButton DenetimYapBtn;
     }
 }

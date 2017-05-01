@@ -49,7 +49,19 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 
                     db.SEDDosyaBilgileri.Add(SDB);
                     db.SaveChanges();
+                    
+                    bool varmi = db.MahalleKoy.Any(p => p.Isim == Al.mahalleKoy);
+                    if (varmi != true)
+                    {
+                        MahalleKoy Ekle = new MahalleKoy()
+                        {
+                            Isim = Al.mahalleKoy
+                        };
 
+                        db.MahalleKoy.Add(Ekle);
+                        db.SaveChanges();
+                    }
+                    
                     var YABBul = db.YardimAlaninBilgileri.FirstOrDefault(p => p.TC == Al.YardimAlaninTC);
                     var SDBBul = db.SEDDosyaBilgileri.FirstOrDefault(p => p.ArsivNo == Al.ArsivNo);
 
@@ -279,7 +291,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 return Yeni;
             }
         }
-            
+
         public static VMSED SEDBul(string Id)
         {
             int id = int.Parse(Id);

@@ -52,10 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\DBSosyal.cs" />
-    <Compile Include="Model\Ayarlar.cs" />
     <Compile Include="Model\BakiciBilgileri.cs" />
     <Compile Include="Model\BasvuraninBilgileri.cs" />
-    <Compile Include="Model\Bildirim.cs" />
+    <Compile Include="Model\DenetimEBH.cs" />
+    <Compile Include="Model\DenetimSED.cs" />
     <Compile Include="Model\EBHDosyaBilgileri.cs" />
     <Compile Include="Model\EBHDosyaTakip.cs" />
     <Compile Include="Model\EngelliBilgileri.cs" />
@@ -66,13 +66,14 @@
     <Compile Include="Model\Personel.cs" />
     <Compile Include="Model\SEDDosyaBilgileri.cs" />
     <Compile Include="Model\SEDDosyaTakip.cs" />
-    <Compile Include="Model\Uyari.cs" />
     <Compile Include="Model\YardimAlaninBilgileri.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

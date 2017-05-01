@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using ChoiceSosyalHizmet.DAL.Repos;
+using ChoiceSosyalHizmet.DAL.VM;
 
 namespace ChoiceSosyalHizmet.WinForm
 {
@@ -20,19 +22,18 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void BtnGiris_Click(object sender, EventArgs e)
         {
-            if (TxtKullaniciAdi.Text == "demo")
+            VMKullanicilar al = new VMKullanicilar()
             {
-                if (TxtParola.Text == "1234")
-                {
+                KullaniciAdi = TxtKullaniciAdi.Text,
+                Sifre = TxtParola.Text
+            };
+            bool gir= KullanicilarRepo.SistemeGiris(al);
+            if (gir==true)
+            {
                     MainForm ac = new MainForm();
                     ac.Show();
                     this.Hide();
-                }
-                else
-                {
-                    TxtParola.Clear();
-                    TxtParola.Hint = "Yanlış Parola!";
-                }
+                
             }
             else
             {
@@ -52,6 +53,11 @@ namespace ChoiceSosyalHizmet.WinForm
             {
                 TxtParola.Clear();
             }
+        }
+
+        private void GirisForm_Load(object sender, EventArgs e)
+        {
+            KullanicilarRepo.veritabanisorgulama();
         }
     }
 }

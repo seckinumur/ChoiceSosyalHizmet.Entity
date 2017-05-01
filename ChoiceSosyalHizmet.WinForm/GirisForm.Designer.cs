@@ -47,12 +47,12 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(6, 161);
+            this.materialLabel2.Location = new System.Drawing.Point(70, 163);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(418, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(288, 19);
             this.materialLabel2.TabIndex = 3;
-            this.materialLabel2.Text = "©2017 Choice AI V.0.8 Security Systems. Powered By Sqlite™";
+            this.materialLabel2.Text = "©2017 Choice AI V.0.8 Security Systems. ";
             // 
             // TxtKullaniciAdi
             // 
@@ -169,6 +169,7 @@
             this.Name = "GirisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choice SHM V.1.4 Sisteme Giriş";
+            this.Load += new System.EventHandler(this.GirisForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
