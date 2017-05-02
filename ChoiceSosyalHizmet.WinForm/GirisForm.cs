@@ -30,9 +30,10 @@ namespace ChoiceSosyalHizmet.WinForm
             bool gir= KullanicilarRepo.SistemeGiris(al);
             if (gir==true)
             {
-                    MainForm ac = new MainForm();
-                    ac.Show();
-                    this.Hide();
+                this.Hide();
+                MainForm ac = new MainForm();
+                ac.Show();
+                    
                 
             }
             else
@@ -58,6 +59,22 @@ namespace ChoiceSosyalHizmet.WinForm
         private void GirisForm_Load(object sender, EventArgs e)
         {
             KullanicilarRepo.veritabanisorgulama();
+        }
+
+        private void TxtKullaniciAdi_TextChanged(object sender, EventArgs e) //Tüm harfler Büyük
+        {
+            TextBox txBox = (TextBox)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
+        }
+
+        private void TxtParola_KeyPress(object sender, KeyPressEventArgs e) //Harf Gitremez
+        {
+            e.Handled = Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar);
         }
     }
 }

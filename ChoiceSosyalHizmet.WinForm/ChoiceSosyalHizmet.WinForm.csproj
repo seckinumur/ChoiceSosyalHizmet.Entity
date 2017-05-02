@@ -168,7 +168,9 @@
     <Content Include="Pic\Aspb.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Pic\choice corporation.png" />
+    <Content Include="Pic\choice corporation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pic\shm.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

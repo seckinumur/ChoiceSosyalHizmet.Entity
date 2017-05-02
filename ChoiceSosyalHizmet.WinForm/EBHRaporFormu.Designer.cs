@@ -116,7 +116,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label10.Location = new System.Drawing.Point(429, 41);
+            this.label10.Location = new System.Drawing.Point(483, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(174, 19);
             this.label10.TabIndex = 12;
@@ -151,6 +151,7 @@
             this.EbhBtc.TabIndex = 5;
             this.EbhBtc.TabStop = false;
             this.EbhBtc.UseSystemPasswordChar = false;
+            this.EbhBtc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EbhTC_KeyPress);
             // 
             // label15
             // 
@@ -181,6 +182,7 @@
             this.EbhBad.TabIndex = 2;
             this.EbhBad.TabStop = false;
             this.EbhBad.UseSystemPasswordChar = false;
+            this.EbhBad.TextChanged += new System.EventHandler(this.EbhAd_TextChanged);
             // 
             // label16
             // 
@@ -247,7 +249,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label25.Location = new System.Drawing.Point(550, 137);
+            this.label25.Location = new System.Drawing.Point(549, 126);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(112, 22);
@@ -258,7 +260,7 @@
             // 
             this.EbhBTTT.EditValue = null;
             this.EbhBTTT.Enabled = false;
-            this.EbhBTTT.Location = new System.Drawing.Point(662, 134);
+            this.EbhBTTT.Location = new System.Drawing.Point(661, 123);
             this.EbhBTTT.Margin = new System.Windows.Forms.Padding(4);
             this.EbhBTTT.Name = "EbhBTTT";
             this.EbhBTTT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -300,7 +302,7 @@
             // EbhRSU
             // 
             this.EbhRSU.Enabled = false;
-            this.EbhRSU.Location = new System.Drawing.Point(148, 135);
+            this.EbhRSU.Location = new System.Drawing.Point(148, 134);
             this.EbhRSU.Margin = new System.Windows.Forms.Padding(4);
             this.EbhRSU.Name = "EbhRSU";
             this.EbhRSU.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -324,7 +326,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(11, 137);
+            this.label7.Location = new System.Drawing.Point(11, 136);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 22);
@@ -336,7 +338,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(51, 55);
+            this.label13.Location = new System.Drawing.Point(11, 54);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 22);
@@ -348,7 +350,7 @@
             this.RDE2.AutoSize = true;
             this.RDE2.Depth = 0;
             this.RDE2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.RDE2.Location = new System.Drawing.Point(95, 89);
+            this.RDE2.Location = new System.Drawing.Point(96, 89);
             this.RDE2.Margin = new System.Windows.Forms.Padding(0);
             this.RDE2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.RDE2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -365,7 +367,7 @@
             this.RDE.AutoSize = true;
             this.RDE.Depth = 0;
             this.RDE.Font = new System.Drawing.Font("Roboto", 10F);
-            this.RDE.Location = new System.Drawing.Point(14, 88);
+            this.RDE.Location = new System.Drawing.Point(15, 88);
             this.RDE.Margin = new System.Windows.Forms.Padding(0);
             this.RDE.MouseLocation = new System.Drawing.Point(-1, -1);
             this.RDE.MouseState = MaterialSkin.MouseState.HOVER;
@@ -394,7 +396,7 @@
             // EbhBTA
             // 
             this.EbhBTA.EditValue = null;
-            this.EbhBTA.Location = new System.Drawing.Point(391, 52);
+            this.EbhBTA.Location = new System.Drawing.Point(365, 54);
             this.EbhBTA.Margin = new System.Windows.Forms.Padding(4);
             this.EbhBTA.Name = "EbhBTA";
             this.EbhBTA.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -455,6 +457,7 @@
             this.EbhARN.TabIndex = 17;
             this.EbhARN.TabStop = false;
             this.EbhARN.UseSystemPasswordChar = false;
+            this.EbhARN.TextChanged += new System.EventHandler(this.EbhAd_TextChanged);
             // 
             // label19
             // 
@@ -496,13 +499,14 @@
             this.EbhYBS.TabIndex = 9;
             this.EbhYBS.TabStop = false;
             this.EbhYBS.UseSystemPasswordChar = false;
+            this.EbhYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EbhTC_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(230, 55);
+            this.label9.Location = new System.Drawing.Point(204, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 19);
             this.label9.TabIndex = 6;
@@ -535,11 +539,12 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label11.Location = new System.Drawing.Point(279, 72);
+            this.label11.Location = new System.Drawing.Point(511, 72);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 19);
             this.label11.TabIndex = 10;
             this.label11.Text = "DOĞUM TARİHİ:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label24
             // 
@@ -704,7 +709,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(515, 76);
+            this.label6.Location = new System.Drawing.Point(486, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 19);
             this.label6.TabIndex = 10;
@@ -739,6 +744,7 @@
             this.EbhAdres.TabIndex = 9;
             this.EbhAdres.TabStop = false;
             this.EbhAdres.UseSystemPasswordChar = false;
+            this.EbhAdres.TextChanged += new System.EventHandler(this.EbhAd_TextChanged);
             // 
             // label8
             // 
@@ -760,150 +766,9 @@
             this.EbhMK.Properties.Appearance.Options.UseFont = true;
             this.EbhMK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EbhMK.Properties.Items.AddRange(new object[] {
-            "GÖLBAŞI",
-            "KALA",
-            "KIŞLA",
-            "TEKKE",
-            "YENİ",
-            "ALAKONAK",
-            "AKÇATAŞ",
-            "ALTINBAŞAK",
-            "AYAKLI",
-            "BURÇ",
-            "BEĞRÜK",
-            "BÜYÜKBARDACIK",
-            "BALLICA",
-            "BOZCA",
-            "BAKIMLI",
-            "BAŞARAN",
-            "ÇAMURLU",
-            "DEDE",
-            "DİNÇKÖK",
-            "DEMİRCİ",
-            "ELĞÜN",
-            "EKİNDÖVER",
-            "ESKİKALE",
-            "ESER",
-            "EYYÜPNEBİ",
-            "ELBEĞENDİ",
-            "MALTA",
-            "EŞKİN",
-            "EVCİMEN",
-            "GÜZLEK",
-            "GÖZELİ",
-            "GERMEN",
-            "GÖLCÜK",
-            "GÖMÜLLÜ",
-            "GÜLERYÜZ",
-            "IŞILDAR",
-            "KURTULMUŞ",
-            "KARINCA",
-            "KADIKÖY",
-            "KIRBALI",
-            "KONAKYERİ",
-            "KINALITEPE",
-            "BUÜYÜK GÖRÜMLÜ",
-            "NERGİZLİ",
-            "OĞLAKÇI",
-            "TANYELİ",
-            "YÜCELER",
-            "YOLBİLEN",
-            "YEŞİLALIÇ",
-            "YOLLARBAŞI",
-            "YABAN",
-            "ATATÜRK",
-            "BAHÇELİEVLER",
-            "AZADİ",
-            "ŞARKPINAR",
-            "BÜYÜKMUTLU",
-            "GÜRPINAR",
-            "ABALAR",
-            "KAVURGA",
-            "TUNÇBİLEK",
-            "YUKARIBAĞ",
-            "SÖZERİ",
-            "YILDIZ",
-            "AKKESE",
-            "KARATAŞ",
-            "KIRKGÖZ",
-            "KARAKUZU",
-            "TOKLU",
-            "ADAKÖYÜ",
-            "YARPUZ",
-            "PINARLAR",
-            "KUCAK",
-            "SATICIK",
-            "CUMHURİYET",
-            "HÜRRİYET",
-            "ÖZAL",
-            "ŞIRNAK",
-            "YENİŞEHİR",
-            "KOLAĞASI",
-            "TÜKELİ",
-            "MEHMETÇİK",
-            "ASLANBABA",
-            "TEPEDÜZÜ",
-            "GÖZLER",
-            "GÖNÜLLÜ",
-            "KARGALI",
-            "ÖVÜNCÜK",
-            "YAYIK",
-            "TAŞÖNÜ",
-            "YAĞIZLAR",
-            "SAĞIRTAŞ",
-            "KERVANSARAY",
-            "GÖKTEPE",
-            "KÜÇÜKMUTLU",
-            "AŞAĞITINAZ",
-            "ÇİFTEKUYU",
-            "KUMÇEŞME",
-            "ÇİFTÇİLER",
-            "DİKİLİ",
-            "DİNÇER",
-            "ÜÇGÜL",
-            "YAZGÜNEŞİ",
-            "KEMERLİ",
-            "BİNEKLİ",
-            "TAŞKAYA",
-            "YAŞİLDURAK",
-            "ŞAHİNLİ",
-            "DEFTERDAR",
-            "ARISU",
-            "İNCİRLİ",
-            "ÇOKRAN",
-            "KEÇELİ",
-            "SÜLEYMANİYE",
-            "ENGELLİ",
-            "KOŞULLU",
-            "SELAHATTİN-İ EYYÜBİ",
-            "DEĞİM",
-            "GÜLTEPE",
-            "GÖĞERLİ",
-            "SAYOBA",
-            "REYHANLI",
-            "ULAKLI",
-            "KÜÇÜKTOPÇA",
-            "EMİROĞLU",
-            "ARITIR",
-            "SAMANLI",
-            "EKİNCİLER",
-            "SARIBAL",
-            "TEKNELİ",
-            "UĞURLU",
-            "SEPETLİ",
-            "BÜYÜKÇAVUŞ",
-            "YUKARIŞÖLENLİ",
-            "YUKARUDİLİMLİ",
-            "ÇALICIK",
-            "KARATEPE",
-            "SAKALAR",
-            "ANIT",
-            "BAŞKÖY",
-            "ŞEHİT",
-            "KIZLARSARAYI"});
             this.EbhMK.Size = new System.Drawing.Size(154, 26);
             this.EbhMK.TabIndex = 24;
+            this.EbhMK.TextChanged += new System.EventHandler(this.EbhMK_TextChanged);
             // 
             // bunifuCards1
             // 
@@ -937,7 +802,7 @@
             // EbhDT
             // 
             this.EbhDT.EditValue = null;
-            this.EbhDT.Location = new System.Drawing.Point(662, 72);
+            this.EbhDT.Location = new System.Drawing.Point(629, 72);
             this.EbhDT.Margin = new System.Windows.Forms.Padding(4);
             this.EbhDT.Name = "EbhDT";
             this.EbhDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -946,7 +811,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EbhDT.Size = new System.Drawing.Size(121, 26);
+            this.EbhDT.Size = new System.Drawing.Size(154, 26);
             this.EbhDT.TabIndex = 21;
             // 
             // label5
@@ -954,7 +819,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(274, 76);
+            this.label5.Location = new System.Drawing.Point(258, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 19);
             this.label5.TabIndex = 6;
@@ -965,7 +830,7 @@
             this.EbhTel.Depth = 0;
             this.EbhTel.Font = new System.Drawing.Font("Tahoma", 12F);
             this.EbhTel.Hint = "";
-            this.EbhTel.Location = new System.Drawing.Point(369, 72);
+            this.EbhTel.Location = new System.Drawing.Point(353, 72);
             this.EbhTel.Margin = new System.Windows.Forms.Padding(4);
             this.EbhTel.MaxLength = 32767;
             this.EbhTel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -974,10 +839,11 @@
             this.EbhTel.SelectedText = "";
             this.EbhTel.SelectionLength = 0;
             this.EbhTel.SelectionStart = 0;
-            this.EbhTel.Size = new System.Drawing.Size(139, 23);
+            this.EbhTel.Size = new System.Drawing.Size(132, 23);
             this.EbhTel.TabIndex = 7;
             this.EbhTel.TabStop = false;
             this.EbhTel.UseSystemPasswordChar = false;
+            this.EbhTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EbhTC_KeyPress);
             // 
             // label2
             // 
@@ -1004,10 +870,11 @@
             this.EbhTC.SelectedText = "";
             this.EbhTC.SelectionLength = 0;
             this.EbhTC.SelectionStart = 0;
-            this.EbhTC.Size = new System.Drawing.Size(150, 23);
+            this.EbhTC.Size = new System.Drawing.Size(135, 23);
             this.EbhTC.TabIndex = 5;
             this.EbhTC.TabStop = false;
             this.EbhTC.UseSystemPasswordChar = false;
+            this.EbhTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EbhTC_KeyPress);
             // 
             // label1
             // 
@@ -1038,6 +905,7 @@
             this.EbhAd.TabIndex = 2;
             this.EbhAd.TabStop = false;
             this.EbhAd.UseSystemPasswordChar = false;
+            this.EbhAd.TextChanged += new System.EventHandler(this.EbhAd_TextChanged);
             // 
             // label3
             // 
@@ -1097,7 +965,7 @@
             // 
             // EbhBYD
             // 
-            this.EbhBYD.Location = new System.Drawing.Point(607, 38);
+            this.EbhBYD.Location = new System.Drawing.Point(661, 38);
             this.EbhBYD.Margin = new System.Windows.Forms.Padding(4);
             this.EbhBYD.Name = "EbhBYD";
             this.EbhBYD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -1147,7 +1015,7 @@
             // EbhBDT
             // 
             this.EbhBDT.EditValue = null;
-            this.EbhBDT.Location = new System.Drawing.Point(424, 69);
+            this.EbhBDT.Location = new System.Drawing.Point(661, 69);
             this.EbhBDT.Margin = new System.Windows.Forms.Padding(4);
             this.EbhBDT.Name = "EbhBDT";
             this.EbhBDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -1156,7 +1024,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhBDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EbhBDT.Size = new System.Drawing.Size(121, 26);
+            this.EbhBDT.Size = new System.Drawing.Size(123, 26);
             this.EbhBDT.TabIndex = 28;
             // 
             // PersonelIDsi

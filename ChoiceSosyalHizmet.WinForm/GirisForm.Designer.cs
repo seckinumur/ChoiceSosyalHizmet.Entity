@@ -71,6 +71,7 @@
             this.TxtKullaniciAdi.TabIndex = 4;
             this.TxtKullaniciAdi.TabStop = false;
             this.TxtKullaniciAdi.UseSystemPasswordChar = false;
+            this.TxtKullaniciAdi.TextChanged += new System.EventHandler(this.TxtKullaniciAdi_TextChanged);
             // 
             // panel1
             // 
@@ -112,6 +113,7 @@
             this.TxtParola.TabStop = false;
             this.TxtParola.UseSystemPasswordChar = true;
             this.TxtParola.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtParola_KeyDown);
+            this.TxtParola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtParola_KeyPress);
             // 
             // BtnGiris
             // 
@@ -168,7 +170,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 640);
             this.Name = "GirisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.4 Sisteme Giriş";
+            this.Text = "Choice SHM V.1.5 Sisteme Giriş";
             this.Load += new System.EventHandler(this.GirisForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

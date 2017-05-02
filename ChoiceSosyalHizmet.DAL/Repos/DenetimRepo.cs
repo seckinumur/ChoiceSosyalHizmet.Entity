@@ -16,7 +16,6 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             using (DBSosyal db = new DBSosyal())
             {
                 DateTime tarih = DateTime.Now.Date;
-
                 var ara = db.BasvuraninBilgileri.Where(p => p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
                 foreach (var item in ara)
                 {

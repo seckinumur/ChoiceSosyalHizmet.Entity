@@ -24,6 +24,11 @@ namespace ChoiceSosyalHizmet.WinForm
 
         public void EBHRaporFormu_Load(object sender, EventArgs e)
         {
+            var almahalle = MahalleKoyRepo.MahalleKarsila();
+            foreach (var a in almahalle)
+            {
+                EbhMK.Properties.Items.Add(a);
+            }
             ZAT.Text = "";
             var al = EBHRepo.EBHBul(idtut.Text);
             EbhAd.Text = al.AdiSoyadi;
@@ -70,6 +75,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetkontrol = true;
             }
             DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolEBH(idtut.Text);
+            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -88,9 +94,9 @@ namespace ChoiceSosyalHizmet.WinForm
                 else if (RDE2.Checked == true && EbhBTT.Text != "")
                 {
                     ChekDt = RDE2.Text;
-                    baslangict = EbhBTT.DateTime.ToShortDateString();
-                    bitistt = EbhBTTT.DateTime.ToShortDateString();
-                    RaporSuresi = EbhRSU.SelectedItem.ToString();
+                    baslangict = EbhBTT.Text;
+                    bitistt = EbhBTTT.Text;
+                    RaporSuresi = EbhRSU.Text;
                 }
                 else
                 {
@@ -106,11 +112,11 @@ namespace ChoiceSosyalHizmet.WinForm
                         Adres = EbhAdres.Text,
                         ArsivNo = EbhARN.Text,
                         BasvuruTarihi = EbhBTA.DateTime.ToShortDateString(),
-                        DogumTarihi = EbhDT.DateTime.ToShortDateString(),
+                        DogumTarihi = EbhDT.Text,
                         DosyaTarihi = DateTime.Now.ToShortDateString(),
                         Durum = EbhDurum.SelectedItem.ToString(),
                         mahalleKoy = EbhMK.SelectedItem.ToString(),
-                        OdemeBaslangici = EbhOBT.DateTime.ToShortDateString(),
+                        OdemeBaslangici = EbhOBT.Text,
                         Tarih = DateTime.Now.ToShortDateString(),
                         TC = EbhTC.Text,
                         Telefon = EbhTel.Text,
@@ -259,6 +265,39 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             DenetimRepo.DenetimYapEBH(idtut.Text);
             EBHRaporFormu_Load(sender, e);
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EbhTC_KeyPress(object sender, KeyPressEventArgs e) //harf giremez
+        {
+            e.Handled = Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void EbhAd_TextChanged(object sender, EventArgs e)//büyük harf
+        {
+            TextBox txBox = (TextBox)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
+        }
+
+        private void EbhMK_TextChanged(object sender, EventArgs e)
+        {
+
+            DevExpress.XtraEditors.ComboBoxEdit txBox = (DevExpress.XtraEditors.ComboBoxEdit)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
         }
     }
 }

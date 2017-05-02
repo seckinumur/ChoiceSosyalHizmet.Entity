@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -190,7 +189,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(this.components);
             this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -275,7 +273,6 @@
             this.bunifuCards11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -909,6 +906,7 @@
             this.TxtYBS.TabIndex = 22;
             this.TxtYBS.TabStop = false;
             this.TxtYBS.UseSystemPasswordChar = false;
+            this.TxtYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // TxtANo
             // 
@@ -927,6 +925,7 @@
             this.TxtANo.TabIndex = 23;
             this.TxtANo.TabStop = false;
             this.TxtANo.UseSystemPasswordChar = false;
+            this.TxtANo.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label8
             // 
@@ -1149,6 +1148,7 @@
             this.TxtTcY.TabIndex = 4;
             this.TxtTcY.TabStop = false;
             this.TxtTcY.UseSystemPasswordChar = false;
+            this.TxtTcY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // TxtAdY
             // 
@@ -1168,6 +1168,7 @@
             this.TxtAdY.TabIndex = 2;
             this.TxtAdY.TabStop = false;
             this.TxtAdY.UseSystemPasswordChar = false;
+            this.TxtAdY.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label4
             // 
@@ -1216,150 +1217,9 @@
             this.CboxMa.Properties.Appearance.Options.UseFont = true;
             this.CboxMa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CboxMa.Properties.Items.AddRange(new object[] {
-            "ABALAR",
-            "ADAKÖYÜ",
-            "AKÇATAŞ",
-            "AKKESE",
-            "ALAKONAK",
-            "ALTINBAŞAK",
-            "ANIT",
-            "ARISU",
-            "ARITIR",
-            "ASLANBABA",
-            "AŞAĞITINAZ",
-            "ATATÜRK",
-            "AYAKLI",
-            "AZADİ",
-            "BAHÇELİEVLER",
-            "BAKIMLI",
-            "BALLICA",
-            "BAŞARAN",
-            "BAŞKÖY",
-            "BEĞRÜK",
-            "BİNEKLİ",
-            "BOZCA",
-            "BURÇ",
-            "BUÜYÜK GÖRÜMLÜ",
-            "BÜYÜKBARDACIK",
-            "BÜYÜKÇAVUŞ",
-            "BÜYÜKMUTLU",
-            "CUMHURİYET",
-            "ÇALICIK",
-            "ÇAMURLU",
-            "ÇİFTÇİLER",
-            "ÇİFTEKUYU",
-            "ÇOKRAN",
-            "DEDE",
-            "DEFTERDAR",
-            "DEĞİM",
-            "DEMİRCİ",
-            "DİKİLİ",
-            "DİNÇER",
-            "DİNÇKÖK",
-            "EKİNCİLER",
-            "EKİNDÖVER",
-            "ELBEĞENDİ",
-            "ELĞÜN",
-            "EMİROĞLU",
-            "ENGELLİ",
-            "ESER",
-            "ESKİKALE",
-            "EŞKİN",
-            "EVCİMEN",
-            "EYYÜPNEBİ",
-            "GERMEN",
-            "GÖĞERLİ",
-            "GÖKTEPE",
-            "GÖLBAŞI",
-            "GÖLCÜK",
-            "GÖMÜLLÜ",
-            "GÖNÜLLÜ",
-            "GÖZELİ",
-            "GÖZLER",
-            "GÜLERYÜZ",
-            "GÜLTEPE",
-            "GÜRPINAR",
-            "GÜZLEK",
-            "HÜRRİYET",
-            "IŞILDAR",
-            "İNCİRLİ",
-            "KADIKÖY",
-            "KALA",
-            "KARAKUZU",
-            "KARATAŞ",
-            "KARATEPE",
-            "KARGALI",
-            "KARINCA",
-            "KAVURGA",
-            "KEÇELİ",
-            "KEMERLİ",
-            "KERVANSARAY",
-            "KINALITEPE",
-            "KIRBALI",
-            "KIRKGÖZ",
-            "KIŞLA",
-            "KIZLARSARAYI",
-            "KOLAĞASI",
-            "KONAKYERİ",
-            "KOŞULLU",
-            "KUCAK",
-            "KUMÇEŞME",
-            "KURTULMUŞ",
-            "KÜÇÜKMUTLU",
-            "KÜÇÜKTOPÇA",
-            "MALTA",
-            "MEHMETÇİK",
-            "NERGİZLİ",
-            "OĞLAKÇI",
-            "ÖVÜNCÜK",
-            "ÖZAL",
-            "PINARLAR",
-            "REYHANLI",
-            "SAĞIRTAŞ",
-            "SAKALAR",
-            "SAMANLI",
-            "SARIBAL",
-            "SATICIK",
-            "SAYOBA",
-            "SELAHATTİN-İ EYYÜBİ",
-            "SEPETLİ",
-            "SÖZERİ",
-            "SÜLEYMANİYE",
-            "ŞAHİNLİ",
-            "ŞARKPINAR",
-            "ŞEHİT",
-            "ŞIRNAK",
-            "TANYELİ",
-            "TAŞKAYA",
-            "TAŞÖNÜ",
-            "TEKKE",
-            "TEKNELİ",
-            "TEPEDÜZÜ",
-            "TOKLU",
-            "TUNÇBİLEK",
-            "TÜKELİ",
-            "UĞURLU",
-            "ULAKLI",
-            "ÜÇGÜL",
-            "YABAN",
-            "YAĞIZLAR",
-            "YARPUZ",
-            "YAŞİLDURAK",
-            "YAYIK",
-            "YAZGÜNEŞİ",
-            "YENİ",
-            "YENİŞEHİR",
-            "YEŞİLALIÇ",
-            "YILDIZ",
-            "YOLBİLEN",
-            "YOLLARBAŞI",
-            "YUKARIBAĞ",
-            "YUKARIŞÖLENLİ",
-            "YUKARUDİLİMLİ",
-            "YÜCELER"});
             this.CboxMa.Size = new System.Drawing.Size(154, 26);
             this.CboxMa.TabIndex = 19;
+            this.CboxMa.TextChanged += new System.EventHandler(this.CboxMa_TextChanged);
             // 
             // label27
             // 
@@ -1446,6 +1306,7 @@
             this.TxtAdres.TabIndex = 6;
             this.TxtAdres.TabStop = false;
             this.TxtAdres.UseSystemPasswordChar = false;
+            this.TxtAdres.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // TxtTel
             // 
@@ -1464,6 +1325,7 @@
             this.TxtTel.TabIndex = 5;
             this.TxtTel.TabStop = false;
             this.TxtTel.UseSystemPasswordChar = false;
+            this.TxtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // TxtTc
             // 
@@ -1482,6 +1344,7 @@
             this.TxtTc.TabIndex = 4;
             this.TxtTc.TabStop = false;
             this.TxtTc.UseSystemPasswordChar = false;
+            this.TxtTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // TxtBasvuranAd
             // 
@@ -1501,6 +1364,7 @@
             this.TxtBasvuranAd.TabIndex = 2;
             this.TxtBasvuranAd.TabStop = false;
             this.TxtBasvuranAd.UseSystemPasswordChar = false;
+            this.TxtBasvuranAd.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label1
             // 
@@ -1729,6 +1593,7 @@
             this.EbhARN.TabIndex = 17;
             this.EbhARN.TabStop = false;
             this.EbhARN.UseSystemPasswordChar = false;
+            this.EbhARN.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // RDE2
             // 
@@ -1764,6 +1629,7 @@
             this.EbhYBS.TabIndex = 16;
             this.EbhYBS.TabStop = false;
             this.EbhYBS.UseSystemPasswordChar = false;
+            this.EbhYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // RDE
             // 
@@ -2041,6 +1907,7 @@
             this.EbhBtc.TabIndex = 29;
             this.EbhBtc.TabStop = false;
             this.EbhBtc.UseSystemPasswordChar = false;
+            this.EbhBtc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // EbhBad
             // 
@@ -2060,6 +1927,7 @@
             this.EbhBad.TabIndex = 28;
             this.EbhBad.TabStop = false;
             this.EbhBad.UseSystemPasswordChar = false;
+            this.EbhBad.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label22
             // 
@@ -2106,150 +1974,9 @@
             this.EbhMK.Properties.Appearance.Options.UseFont = true;
             this.EbhMK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EbhMK.Properties.Items.AddRange(new object[] {
-            "GÖLBAŞI",
-            "KALA",
-            "KIŞLA",
-            "TEKKE",
-            "YENİ",
-            "ALAKONAK",
-            "AKÇATAŞ",
-            "ALTINBAŞAK",
-            "AYAKLI",
-            "BURÇ",
-            "BEĞRÜK",
-            "BÜYÜKBARDACIK",
-            "BALLICA",
-            "BOZCA",
-            "BAKIMLI",
-            "BAŞARAN",
-            "ÇAMURLU",
-            "DEDE",
-            "DİNÇKÖK",
-            "DEMİRCİ",
-            "ELĞÜN",
-            "EKİNDÖVER",
-            "ESKİKALE",
-            "ESER",
-            "EYYÜPNEBİ",
-            "ELBEĞENDİ",
-            "MALTA",
-            "EŞKİN",
-            "EVCİMEN",
-            "GÜZLEK",
-            "GÖZELİ",
-            "GERMEN",
-            "GÖLCÜK",
-            "GÖMÜLLÜ",
-            "GÜLERYÜZ",
-            "IŞILDAR",
-            "KURTULMUŞ",
-            "KARINCA",
-            "KADIKÖY",
-            "KIRBALI",
-            "KONAKYERİ",
-            "KINALITEPE",
-            "BUÜYÜK GÖRÜMLÜ",
-            "NERGİZLİ",
-            "OĞLAKÇI",
-            "TANYELİ",
-            "YÜCELER",
-            "YOLBİLEN",
-            "YEŞİLALIÇ",
-            "YOLLARBAŞI",
-            "YABAN",
-            "ATATÜRK",
-            "BAHÇELİEVLER",
-            "AZADİ",
-            "ŞARKPINAR",
-            "BÜYÜKMUTLU",
-            "GÜRPINAR",
-            "ABALAR",
-            "KAVURGA",
-            "TUNÇBİLEK",
-            "YUKARIBAĞ",
-            "SÖZERİ",
-            "YILDIZ",
-            "AKKESE",
-            "KARATAŞ",
-            "KIRKGÖZ",
-            "KARAKUZU",
-            "TOKLU",
-            "ADAKÖYÜ",
-            "YARPUZ",
-            "PINARLAR",
-            "KUCAK",
-            "SATICIK",
-            "CUMHURİYET",
-            "HÜRRİYET",
-            "ÖZAL",
-            "ŞIRNAK",
-            "YENİŞEHİR",
-            "KOLAĞASI",
-            "TÜKELİ",
-            "MEHMETÇİK",
-            "ASLANBABA",
-            "TEPEDÜZÜ",
-            "GÖZLER",
-            "GÖNÜLLÜ",
-            "KARGALI",
-            "ÖVÜNCÜK",
-            "YAYIK",
-            "TAŞÖNÜ",
-            "YAĞIZLAR",
-            "SAĞIRTAŞ",
-            "KERVANSARAY",
-            "GÖKTEPE",
-            "KÜÇÜKMUTLU",
-            "AŞAĞITINAZ",
-            "ÇİFTEKUYU",
-            "KUMÇEŞME",
-            "ÇİFTÇİLER",
-            "DİKİLİ",
-            "DİNÇER",
-            "ÜÇGÜL",
-            "YAZGÜNEŞİ",
-            "KEMERLİ",
-            "BİNEKLİ",
-            "TAŞKAYA",
-            "YAŞİLDURAK",
-            "ŞAHİNLİ",
-            "DEFTERDAR",
-            "ARISU",
-            "İNCİRLİ",
-            "ÇOKRAN",
-            "KEÇELİ",
-            "SÜLEYMANİYE",
-            "ENGELLİ",
-            "KOŞULLU",
-            "SELAHATTİN-İ EYYÜBİ",
-            "DEĞİM",
-            "GÜLTEPE",
-            "GÖĞERLİ",
-            "SAYOBA",
-            "REYHANLI",
-            "ULAKLI",
-            "KÜÇÜKTOPÇA",
-            "EMİROĞLU",
-            "ARITIR",
-            "SAMANLI",
-            "EKİNCİLER",
-            "SARIBAL",
-            "TEKNELİ",
-            "UĞURLU",
-            "SEPETLİ",
-            "BÜYÜKÇAVUŞ",
-            "YUKARIŞÖLENLİ",
-            "YUKARUDİLİMLİ",
-            "ÇALICIK",
-            "KARATEPE",
-            "SAKALAR",
-            "ANIT",
-            "BAŞKÖY",
-            "ŞEHİT",
-            "KIZLARSARAYI"});
             this.EbhMK.Size = new System.Drawing.Size(149, 26);
             this.EbhMK.TabIndex = 26;
+            this.EbhMK.TextChanged += new System.EventHandler(this.CboxMa_TextChanged);
             // 
             // label29
             // 
@@ -2305,6 +2032,7 @@
             this.EbhAdres.TabIndex = 6;
             this.EbhAdres.TabStop = false;
             this.EbhAdres.UseSystemPasswordChar = false;
+            this.EbhAdres.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // EbhTel
             // 
@@ -2323,6 +2051,7 @@
             this.EbhTel.TabIndex = 5;
             this.EbhTel.TabStop = false;
             this.EbhTel.UseSystemPasswordChar = false;
+            this.EbhTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // EbhTC
             // 
@@ -2341,6 +2070,7 @@
             this.EbhTC.TabIndex = 4;
             this.EbhTC.TabStop = false;
             this.EbhTC.UseSystemPasswordChar = false;
+            this.EbhTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // EbhAd
             // 
@@ -2360,6 +2090,7 @@
             this.EbhAd.TabIndex = 2;
             this.EbhAd.TabStop = false;
             this.EbhAd.UseSystemPasswordChar = false;
+            this.EbhAd.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label24
             // 
@@ -2703,6 +2434,7 @@
             this.Pertc.TabIndex = 16;
             this.Pertc.TabStop = false;
             this.Pertc.UseSystemPasswordChar = false;
+            this.Pertc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // Perad
             // 
@@ -2722,6 +2454,7 @@
             this.Perad.TabIndex = 14;
             this.Perad.TabStop = false;
             this.Perad.UseSystemPasswordChar = false;
+            this.Perad.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label31
             // 
@@ -2847,6 +2580,7 @@
             this.SifreKullanici.TabIndex = 16;
             this.SifreKullanici.TabStop = false;
             this.SifreKullanici.UseSystemPasswordChar = false;
+            this.SifreKullanici.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // KullaniciAdi
             // 
@@ -2866,6 +2600,7 @@
             this.KullaniciAdi.TabIndex = 14;
             this.KullaniciAdi.TabStop = false;
             this.KullaniciAdi.UseSystemPasswordChar = false;
+            this.KullaniciAdi.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label32
             // 
@@ -3010,6 +2745,7 @@
             this.MahalleKoyText.TabIndex = 14;
             this.MahalleKoyText.TabStop = false;
             this.MahalleKoyText.UseSystemPasswordChar = false;
+            this.MahalleKoyText.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label28
             // 
@@ -3052,13 +2788,6 @@
             this.gridView6.OptionsFind.ShowFindButton = false;
             this.gridView6.DoubleClick += new System.EventHandler(this.gridView6_DoubleClick);
             // 
-            // toastNotificationsManager1
-            // 
-            this.toastNotificationsManager1.ApplicationId = "46f089bf-4bf0-4b5d-b062-89c8ae88fcc0";
-            this.toastNotificationsManager1.ApplicationName = "ChoiceSosyalHizmet.WinForm";
-            this.toastNotificationsManager1.Notifications.AddRange(new DevExpress.XtraBars.ToastNotifications.IToastNotificationProperties[] {
-            new DevExpress.XtraBars.ToastNotifications.ToastNotification("9c0a99d9-93dd-4141-844f-82aa26c0cf9a", global::ChoiceSosyalHizmet.WinForm.Properties.Resources.shm, "Choice SHM ETO V.1.4", "Beta Uyarısı!", "©2017 Choice Corp. www.seckinumur.com", DevExpress.XtraBars.ToastNotifications.ToastNotificationTemplate.ImageAndText04)});
-            // 
             // materialRaisedButton4
             // 
             this.materialRaisedButton4.AutoSize = true;
@@ -3090,7 +2819,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.4 Evrak Takip Otomasyonu";
+            this.Text = "Choice SHM V.1.5 Evrak Takip Otomasyonu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -3190,7 +2919,6 @@
             this.bunifuCards11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toastNotificationsManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3201,7 +2929,6 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-        private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
         private DevExpress.XtraGrid.GridControl SEDRaporGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;

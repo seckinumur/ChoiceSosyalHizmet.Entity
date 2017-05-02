@@ -71,12 +71,10 @@ namespace ChoiceSosyalHizmet.WinForm
             EbhBTTT.Text = "";
             EbhYBS.Clear();
         }
-       
+
 
         public void MainForm_Load(object sender, EventArgs e) // MainForm Load İşlemi
         {
-            toastNotificationsManager1.ShowNotification(toastNotificationsManager1.Notifications[0]);
-
             SEDRaporGrid.DataSource = SEDRepo.RaporListe();
             EBHRaporGrid.DataSource = EBHRepo.RaporListe();
             PersonelGrid.DataSource = PersonelRepo.PersonelRaporla();
@@ -89,12 +87,14 @@ namespace ChoiceSosyalHizmet.WinForm
             gridView1.GroupPanelText = "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView1.RowCount.ToString();
             gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView2.RowCount.ToString();
             var almahalle = MahalleKoyRepo.MahalleKarsila();
+            CboxMa.Properties.Items.Clear();
+            EbhMK.Properties.Items.Clear();
             foreach (var a in almahalle)
             {
                 CboxMa.Properties.Items.Add(a);
                 EbhMK.Properties.Items.Add(a);
             }
-            
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) // MainForm Kapatılırsa Uygulamadan Çıkma
@@ -159,7 +159,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 {
                     MessageBox.Show(Sonuc);
                     SEDButonTemizle();
-                    SEDRaporGrid.DataSource = SEDRepo.RaporListe();
+                    MainForm_Load(sender, e);
                 }
             }
             catch
@@ -225,26 +225,27 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void EbhKaydet_Click(object sender, EventArgs e) //EBH Kaydet Butonu
         {
-            string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
-            if (RDE.Checked == true && EbhBTT.Text != "")
-            {
-                ChekDt = RDE.Text;
-                baslangict = EbhBTT.Text;
-            }
-            else if (RDE2.Checked == true && EbhBTT.Text != "")
-            {
-                ChekDt = RDE2.Text;
-                baslangict = EbhBTT.Text;
-                bitistt = EbhBTTT.Text;
-                RaporSuresi = EbhRSU.SelectedItem.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Rapor Bilgileri Boş Bırakılamaz!");
-                return;
-            }
             try
             {
+                string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
+                if (RDE.Checked == true && EbhBTT.Text != "")
+                {
+                    ChekDt = RDE.Text;
+                    baslangict = EbhBTT.Text;
+                }
+                else if (RDE2.Checked == true && EbhBTT.Text != "")
+                {
+                    ChekDt = RDE2.Text;
+                    baslangict = EbhBTT.Text;
+                    bitistt = EbhBTTT.Text;
+                    RaporSuresi = EbhRSU.SelectedItem.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Rapor Bilgileri Boş Bırakılamaz!");
+                    return;
+                }
+
                 VMEBH Kyd = new VMEBH()
                 {
                     AdiSoyadi = EbhAd.Text,
@@ -271,21 +272,14 @@ namespace ChoiceSosyalHizmet.WinForm
                     RaporTipi = ChekDt,
                 };
                 Sonuc = EBHRepo.Kaydet(Kyd);
-                if (Sonuc != "Kayıt Başarıyla Kaydedildi!")
-                {
-                    MessageBox.Show(Sonuc);
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show(Sonuc);
-                    EBHButonTemizle();
-                    EBHRaporGrid.DataSource = EBHRepo.RaporListe();
-                }
+                MessageBox.Show(Sonuc);
+                EBHButonTemizle();
+                MainForm_Load(sender, e);
+
             }
             catch
             {
-                Sonuc = "Tüm Alanlar Doldurulmadan Kayıt Yapılamaz!";
+                MessageBox.Show("Tüm Alanlar Doldurulmadan Kayıt Yapılamaz!");
             }
         }
 
@@ -675,7 +669,7 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void materialFlatButton12_Click(object sender, EventArgs e) //Kullanici Ekle
         {
-            if(KullaniciAdi.Text=="" && SifreKullanici.Text == "")
+            if (KullaniciAdi.Text == "" && SifreKullanici.Text == "")
             {
                 MessageBox.Show("Boş Olmaz");
             }
@@ -689,6 +683,7 @@ namespace ChoiceSosyalHizmet.WinForm
                         Sifre = SifreKullanici.Text
                     };
                     MessageBox.Show(KullanicilarRepo.KullaniciEkle(ekle));
+                    gridControl2.DataSource = KullanicilarRepo.KullaniciListele();
                 }
                 catch
                 {
@@ -728,13 +723,41 @@ namespace ChoiceSosyalHizmet.WinForm
                         Sifre = SifreKullanici.Text
                     };
                     MessageBox.Show(KullanicilarRepo.KullaniciSil(sil));
+                    gridControl2.DataSource = KullanicilarRepo.KullaniciListele();
                 }
             }
             catch
             {
                 MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
             }
-            
+
+        }
+
+        private void TxtTc_KeyPress(object sender, KeyPressEventArgs e) // Rakamla Girmek
+        {
+            e.Handled = Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void TxtBasvuranAd_TextChanged(object sender, EventArgs e) //Büyük Harf
+        {
+            TextBox txBox = (TextBox)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
+        }
+
+        private void CboxMa_TextChanged(object sender, EventArgs e) //combobox büyük harf
+        {
+            DevExpress.XtraEditors.ComboBoxEdit txBox = (DevExpress.XtraEditors.ComboBoxEdit)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
         }
     }
 }

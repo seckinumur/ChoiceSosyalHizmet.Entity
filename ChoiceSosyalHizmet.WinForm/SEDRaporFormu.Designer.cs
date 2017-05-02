@@ -159,154 +159,13 @@
             this.CboxMa.Properties.Appearance.Options.UseFont = true;
             this.CboxMa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CboxMa.Properties.Items.AddRange(new object[] {
-            "GÖLBAŞI",
-            "KALA",
-            "KIŞLA",
-            "TEKKE",
-            "YENİ",
-            "ALAKONAK",
-            "AKÇATAŞ",
-            "ALTINBAŞAK",
-            "AYAKLI",
-            "BURÇ",
-            "BEĞRÜK",
-            "BÜYÜKBARDACIK",
-            "BALLICA",
-            "BOZCA",
-            "BAKIMLI",
-            "BAŞARAN",
-            "ÇAMURLU",
-            "DEDE",
-            "DİNÇKÖK",
-            "DEMİRCİ",
-            "ELĞÜN",
-            "EKİNDÖVER",
-            "ESKİKALE",
-            "ESER",
-            "EYYÜPNEBİ",
-            "ELBEĞENDİ",
-            "MALTA",
-            "EŞKİN",
-            "EVCİMEN",
-            "GÜZLEK",
-            "GÖZELİ",
-            "GERMEN",
-            "GÖLCÜK",
-            "GÖMÜLLÜ",
-            "GÜLERYÜZ",
-            "IŞILDAR",
-            "KURTULMUŞ",
-            "KARINCA",
-            "KADIKÖY",
-            "KIRBALI",
-            "KONAKYERİ",
-            "KINALITEPE",
-            "BUÜYÜK GÖRÜMLÜ",
-            "NERGİZLİ",
-            "OĞLAKÇI",
-            "TANYELİ",
-            "YÜCELER",
-            "YOLBİLEN",
-            "YEŞİLALIÇ",
-            "YOLLARBAŞI",
-            "YABAN",
-            "ATATÜRK",
-            "BAHÇELİEVLER",
-            "AZADİ",
-            "ŞARKPINAR",
-            "BÜYÜKMUTLU",
-            "GÜRPINAR",
-            "ABALAR",
-            "KAVURGA",
-            "TUNÇBİLEK",
-            "YUKARIBAĞ",
-            "SÖZERİ",
-            "YILDIZ",
-            "AKKESE",
-            "KARATAŞ",
-            "KIRKGÖZ",
-            "KARAKUZU",
-            "TOKLU",
-            "ADAKÖYÜ",
-            "YARPUZ",
-            "PINARLAR",
-            "KUCAK",
-            "SATICIK",
-            "CUMHURİYET",
-            "HÜRRİYET",
-            "ÖZAL",
-            "ŞIRNAK",
-            "YENİŞEHİR",
-            "KOLAĞASI",
-            "TÜKELİ",
-            "MEHMETÇİK",
-            "ASLANBABA",
-            "TEPEDÜZÜ",
-            "GÖZLER",
-            "GÖNÜLLÜ",
-            "KARGALI",
-            "ÖVÜNCÜK",
-            "YAYIK",
-            "TAŞÖNÜ",
-            "YAĞIZLAR",
-            "SAĞIRTAŞ",
-            "KERVANSARAY",
-            "GÖKTEPE",
-            "KÜÇÜKMUTLU",
-            "AŞAĞITINAZ",
-            "ÇİFTEKUYU",
-            "KUMÇEŞME",
-            "ÇİFTÇİLER",
-            "DİKİLİ",
-            "DİNÇER",
-            "ÜÇGÜL",
-            "YAZGÜNEŞİ",
-            "KEMERLİ",
-            "BİNEKLİ",
-            "TAŞKAYA",
-            "YAŞİLDURAK",
-            "ŞAHİNLİ",
-            "DEFTERDAR",
-            "ARISU",
-            "İNCİRLİ",
-            "ÇOKRAN",
-            "KEÇELİ",
-            "SÜLEYMANİYE",
-            "ENGELLİ",
-            "KOŞULLU",
-            "SELAHATTİN-İ EYYÜBİ",
-            "DEĞİM",
-            "GÜLTEPE",
-            "GÖĞERLİ",
-            "SAYOBA",
-            "REYHANLI",
-            "ULAKLI",
-            "KÜÇÜKTOPÇA",
-            "EMİROĞLU",
-            "ARITIR",
-            "SAMANLI",
-            "EKİNCİLER",
-            "SARIBAL",
-            "TEKNELİ",
-            "UĞURLU",
-            "SEPETLİ",
-            "BÜYÜKÇAVUŞ",
-            "YUKARIŞÖLENLİ",
-            "YUKARUDİLİMLİ",
-            "ÇALICIK",
-            "KARATEPE",
-            "SAKALAR",
-            "ANIT",
-            "BAŞKÖY",
-            "ŞEHİT",
-            "KIZLARSARAYI"});
             this.CboxMa.Size = new System.Drawing.Size(154, 26);
             this.CboxMa.TabIndex = 24;
+            this.CboxMa.TextChanged += new System.EventHandler(this.CboxMa_TextChanged);
             // 
             // CBoxN
             // 
-            this.CBoxN.Location = new System.Drawing.Point(620, 48);
+            this.CBoxN.Location = new System.Drawing.Point(629, 48);
             this.CBoxN.Margin = new System.Windows.Forms.Padding(4);
             this.CBoxN.Name = "CBoxN";
             this.CBoxN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -321,13 +180,13 @@
             "KMÇ",
             "DİĞER"});
             this.CBoxN.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.CBoxN.Size = new System.Drawing.Size(163, 26);
+            this.CBoxN.Size = new System.Drawing.Size(154, 26);
             this.CBoxN.TabIndex = 23;
             // 
             // DateDogumT
             // 
             this.DateDogumT.EditValue = null;
-            this.DateDogumT.Location = new System.Drawing.Point(662, 82);
+            this.DateDogumT.Location = new System.Drawing.Point(629, 82);
             this.DateDogumT.Margin = new System.Windows.Forms.Padding(4);
             this.DateDogumT.Name = "DateDogumT";
             this.DateDogumT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -336,7 +195,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDogumT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateDogumT.Size = new System.Drawing.Size(121, 26);
+            this.DateDogumT.Size = new System.Drawing.Size(154, 26);
             this.DateDogumT.TabIndex = 21;
             // 
             // label8
@@ -355,7 +214,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(429, 55);
+            this.label7.Location = new System.Drawing.Point(459, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 19);
             this.label7.TabIndex = 12;
@@ -366,7 +225,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DarkRed;
-            this.label6.Location = new System.Drawing.Point(515, 86);
+            this.label6.Location = new System.Drawing.Point(479, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 19);
             this.label6.TabIndex = 10;
@@ -401,13 +260,14 @@
             this.TxtAdres.TabIndex = 9;
             this.TxtAdres.TabStop = false;
             this.TxtAdres.UseSystemPasswordChar = false;
+            this.TxtAdres.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(274, 86);
+            this.label5.Location = new System.Drawing.Point(254, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 19);
             this.label5.TabIndex = 6;
@@ -418,7 +278,7 @@
             this.TxtTel.Depth = 0;
             this.TxtTel.Font = new System.Drawing.Font("Tahoma", 12F);
             this.TxtTel.Hint = "";
-            this.TxtTel.Location = new System.Drawing.Point(369, 82);
+            this.TxtTel.Location = new System.Drawing.Point(349, 82);
             this.TxtTel.Margin = new System.Windows.Forms.Padding(4);
             this.TxtTel.MaxLength = 32767;
             this.TxtTel.MouseState = MaterialSkin.MouseState.HOVER;
@@ -427,10 +287,11 @@
             this.TxtTel.SelectedText = "";
             this.TxtTel.SelectionLength = 0;
             this.TxtTel.SelectionStart = 0;
-            this.TxtTel.Size = new System.Drawing.Size(139, 23);
+            this.TxtTel.Size = new System.Drawing.Size(132, 23);
             this.TxtTel.TabIndex = 7;
             this.TxtTel.TabStop = false;
             this.TxtTel.UseSystemPasswordChar = false;
+            this.TxtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // label2
             // 
@@ -457,10 +318,11 @@
             this.TxtTc.SelectedText = "";
             this.TxtTc.SelectionLength = 0;
             this.TxtTc.SelectionStart = 0;
-            this.TxtTc.Size = new System.Drawing.Size(150, 23);
+            this.TxtTc.Size = new System.Drawing.Size(135, 23);
             this.TxtTc.TabIndex = 5;
             this.TxtTc.TabStop = false;
             this.TxtTc.UseSystemPasswordChar = false;
+            this.TxtTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // TxtBasvuranAd
             // 
@@ -480,6 +342,7 @@
             this.TxtBasvuranAd.TabIndex = 2;
             this.TxtBasvuranAd.TabStop = false;
             this.TxtBasvuranAd.UseSystemPasswordChar = false;
+            this.TxtBasvuranAd.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label3
             // 
@@ -520,7 +383,7 @@
             // DateDY
             // 
             this.DateDY.EditValue = null;
-            this.DateDY.Location = new System.Drawing.Point(424, 83);
+            this.DateDY.Location = new System.Drawing.Point(661, 79);
             this.DateDY.Margin = new System.Windows.Forms.Padding(4);
             this.DateDY.Name = "DateDY";
             this.DateDY.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -534,7 +397,7 @@
             // 
             // CboxYD
             // 
-            this.CboxYD.Location = new System.Drawing.Point(607, 52);
+            this.CboxYD.Location = new System.Drawing.Point(661, 48);
             this.CboxYD.Margin = new System.Windows.Forms.Padding(4);
             this.CboxYD.Name = "CboxYD";
             this.CboxYD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -561,7 +424,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label10.Location = new System.Drawing.Point(429, 55);
+            this.label10.Location = new System.Drawing.Point(483, 51);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(174, 19);
             this.label10.TabIndex = 12;
@@ -572,7 +435,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label11.Location = new System.Drawing.Point(279, 86);
+            this.label11.Location = new System.Drawing.Point(486, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 19);
             this.label11.TabIndex = 10;
@@ -607,6 +470,7 @@
             this.TxtTcY.TabIndex = 5;
             this.TxtTcY.TabStop = false;
             this.TxtTcY.UseSystemPasswordChar = false;
+            this.TxtTcY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // label15
             // 
@@ -637,6 +501,7 @@
             this.TxtAdY.TabIndex = 2;
             this.TxtAdY.TabStop = false;
             this.TxtAdY.UseSystemPasswordChar = false;
+            this.TxtAdY.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label16
             // 
@@ -749,7 +614,7 @@
             // DateBT
             // 
             this.DateBT.EditValue = null;
-            this.DateBT.Location = new System.Drawing.Point(391, 52);
+            this.DateBT.Location = new System.Drawing.Point(424, 52);
             this.DateBT.Margin = new System.Windows.Forms.Padding(4);
             this.DateBT.Name = "DateBT";
             this.DateBT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -827,6 +692,7 @@
             this.TxtANo.TabIndex = 17;
             this.TxtANo.TabStop = false;
             this.TxtANo.UseSystemPasswordChar = false;
+            this.TxtANo.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
             // 
             // label20
             // 
@@ -855,7 +721,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(42, 55);
+            this.label13.Location = new System.Drawing.Point(11, 55);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(133, 19);
             this.label13.TabIndex = 10;
@@ -866,7 +732,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(524, 55);
+            this.label12.Location = new System.Drawing.Point(548, 55);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 19);
             this.label12.TabIndex = 8;
@@ -890,13 +756,14 @@
             this.TxtYBS.TabIndex = 9;
             this.TxtYBS.TabStop = false;
             this.TxtYBS.UseSystemPasswordChar = false;
+            this.TxtYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(230, 55);
+            this.label9.Location = new System.Drawing.Point(257, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 19);
             this.label9.TabIndex = 6;

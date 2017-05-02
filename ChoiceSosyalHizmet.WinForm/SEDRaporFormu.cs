@@ -24,6 +24,11 @@ namespace ChoiceSosyalHizmet.WinForm
         private bool zimmetkontrol;
         public void SEDRaporFormu_Load(object sender, EventArgs e)
         {
+            var almahalle = MahalleKoyRepo.MahalleKarsila();
+            foreach (var a in almahalle)
+            {
+                CboxMa.Properties.Items.Add(a);
+            }
             ZAT.Text = "";
             ZCT.Text = "";
             var al = SEDRepo.SEDBul(idtut.Text);
@@ -74,6 +79,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetkontrol = true;
             }
             DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolSED(idtut.Text);
+           
         }
 
         private void RBT_CheckedChanged(object sender, EventArgs e)
@@ -169,20 +175,20 @@ namespace ChoiceSosyalHizmet.WinForm
                         Adres = TxtAdres.Text,
                         ArsivNo = TxtANo.Text,
                         BasvuruNedeni = CBoxN.SelectedItem.ToString(),
-                        BasvuruTarihi = DateBT.DateTime.ToShortDateString(),
-                        DogumTarihi = DateDogumT.DateTime.ToShortDateString(),
+                        BasvuruTarihi = DateBT.Text,
+                        DogumTarihi = DateDogumT.Text,
                         DosyaTarihi = DateTime.Now.ToShortDateString(),
                         Durum = CboxDurum.SelectedItem.ToString(),
                         mahalleKoy = CboxMa.SelectedItem.ToString(),
-                        OdemeBaslangici = DateOB.DateTime.ToShortDateString(),
-                        OdemeBitisi = DateOBi.DateTime.ToShortDateString(),
+                        OdemeBaslangici = DateOB.Text,
+                        OdemeBitisi = DateOBi.Text,
                         OdemeSuresi = ChekDt,
                         Tarih = DateTime.Now.ToShortDateString(),
                         TC = TxtTc.Text,
                         Telefon = TxtTel.Text,
                         YakinlikDurumu = CboxYD.SelectedItem.ToString(),
                         YardimAlaninAdiSoyadi = TxtAdY.Text,
-                        YardimAlaninDogumTarihi = DateDY.DateTime.ToShortDateString(),
+                        YardimAlaninDogumTarihi = DateDY.Text,
                         YardimAlaninTC = TxtTcY.Text,
                         YBSNo = TxtYBS.Text,
                         not = SEDNot.Text
@@ -216,6 +222,34 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             DenetimRepo.DenetimYapSED(idtut.Text);
             SEDRaporFormu_Load(sender, e);
+        }
+
+        private void TxtTc_KeyPress(object sender, KeyPressEventArgs e) //Harf Giremez
+        {
+            e.Handled = Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void TxtBasvuranAd_TextChanged(object sender, EventArgs e) //büyük harf
+        {
+            TextBox txBox = (TextBox)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
+        }
+
+        private void CboxMa_TextChanged(object sender, EventArgs e)
+        {
+
+            DevExpress.XtraEditors.ComboBoxEdit txBox = (DevExpress.XtraEditors.ComboBoxEdit)sender;
+            int pos = txBox.SelectionStart;
+            int slen = txBox.SelectionLength;
+            txBox.Text = txBox.Text.ToUpper();
+            txBox.SelectionStart = pos;
+            txBox.SelectionLength = slen;
+            txBox.Focus();
         }
     }
 }
