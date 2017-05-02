@@ -423,7 +423,8 @@
             "İPTAL",
             "VEFAT",
             "DENETİM",
-            "SONLANAN"});
+            "SONLANAN",
+            "İNCELEME EKİBİNDE"});
             this.EbhDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhDurum.Size = new System.Drawing.Size(121, 26);
             this.EbhDurum.TabIndex = 18;

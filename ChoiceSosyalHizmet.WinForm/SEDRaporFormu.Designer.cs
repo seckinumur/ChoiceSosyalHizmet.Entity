@@ -658,7 +658,8 @@
             "İPTAL",
             "VEFAT",
             "DENETİM",
-            "SONLANAN"});
+            "SONLANAN",
+            "İNCELEME EKİBİNDE"});
             this.CboxDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CboxDurum.Size = new System.Drawing.Size(121, 26);
             this.CboxDurum.TabIndex = 18;

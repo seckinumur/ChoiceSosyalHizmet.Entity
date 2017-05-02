@@ -968,7 +968,8 @@
             "İPTAL",
             "VEFAT",
             "DENETİM",
-            "SONLANAN"});
+            "SONLANAN",
+            "İNCELEME EKİBİNDE"});
             this.CboxDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CboxDurum.Size = new System.Drawing.Size(121, 26);
             this.CboxDurum.TabIndex = 1;
@@ -1714,7 +1715,8 @@
             "İPTAL",
             "VEFAT",
             "DENETİM",
-            "NAKİL EDİLDİ"});
+            "NAKİL EDİLDİ",
+            "İNCELEME EKİBİNDE"});
             this.EbhDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhDurum.Size = new System.Drawing.Size(121, 26);
             this.EbhDurum.TabIndex = 1;
