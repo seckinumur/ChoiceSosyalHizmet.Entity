@@ -13,90 +13,118 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static void DenetimSEDAI()
         {
-            using (DBSosyal db = new DBSosyal())
+            try
             {
-                DateTime tarih = DateTime.Now.Date;
-                var ara = db.BasvuraninBilgileri.Where(p => p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
-                foreach (var item in ara)
+                using (DBSosyal db = new DBSosyal())
                 {
-                    bool bak = db.DenetimSED.Any(p => p.BasvuraninBilgileriID == item.BasvuraninBilgileriID);
-                    DateTime karsila = Convert.ToDateTime(item.SEDDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                    if (karsila >= tarih && bak == false)
+                    DateTime tarih = DateTime.Now.Date;
+                    var ara = db.BasvuraninBilgileri.Where(p => p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
+                    foreach (var item in ara)
                     {
-                        DenetimSED yap = new DenetimSED()
+                        bool bak = db.DenetimSED.Any(p => p.BasvuraninBilgileriID == item.BasvuraninBilgileriID);
+                        DateTime karsila = Convert.ToDateTime(item.SEDDosyaBilgileri.OdemeBaslangici).AddMonths(6);
+                        if (karsila >= tarih && bak == false)
                         {
-                            BasvuraninBilgileriID = item.BasvuraninBilgileriID,
-                            DenetimeGidildimi = false,
-                            DenetimTarihi = item.SEDDosyaBilgileri.OdemeBaslangici
-                        };
-                        db.DenetimSED.Add(yap);
-                        db.SaveChanges();
+                            DenetimSED yap = new DenetimSED()
+                            {
+                                BasvuraninBilgileriID = item.BasvuraninBilgileriID,
+                                DenetimTarihi = item.SEDDosyaBilgileri.OdemeBaslangici
+                            };
+                            db.DenetimSED.Add(yap);
+                            db.SaveChanges();
+                        }
                     }
                 }
             }
+            catch
+            {
+
+            }
+            
         }
         public static void DenetimEBHAI()
         {
-            using (DBSosyal db = new DBSosyal())
+            try
             {
-                DateTime tarih = DateTime.Now.Date;
-
-                var ara = db.EngelliBilgileri.ToList();
-                foreach (var item in ara)
+                using (DBSosyal db = new DBSosyal())
                 {
-                    bool bak = db.DenetimEBH.Any(p => p.EngelliBilgileriID == item.EngelliBilgileriID);
-                    DateTime karsila = Convert.ToDateTime(item.EBHDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                    if (karsila >= tarih && bak == false)
+                    DateTime tarih = DateTime.Now.Date;
+
+                    var ara = db.EngelliBilgileri.ToList();
+                    foreach (var item in ara)
                     {
-                        DenetimEBH yap = new DenetimEBH()
+                        bool bak = db.DenetimEBH.Any(p => p.EngelliBilgileriID == item.EngelliBilgileriID);
+                        DateTime karsila = Convert.ToDateTime(item.EBHDosyaBilgileri.OdemeBaslangici).AddMonths(6);
+                        if (karsila >= tarih && bak == false)
                         {
-                            EngelliBilgileriID = item.EngelliBilgileriID,
-                            DenetimeGidildimi = false,
-                            DenetimTarihi = item.EBHDosyaBilgileri.OdemeBaslangici
-                        };
-                        db.DenetimEBH.Add(yap);
-                        db.SaveChanges();
+                            DenetimEBH yap = new DenetimEBH()
+                            {
+                                EngelliBilgileriID = item.EngelliBilgileriID,
+                                DenetimTarihi = item.EBHDosyaBilgileri.OdemeBaslangici
+                            };
+                            db.DenetimEBH.Add(yap);
+                            db.SaveChanges();
+                        }
                     }
                 }
             }
+            catch
+            {
+
+            }
+            
         }
         public static bool DenetimKontrolSED(string ID)
         {
-            DateTime tarih = DateTime.Now.Date;
-            int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            try
             {
-                var varsa = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
-                bool bul = db.DenetimSED.Any(p => p.BasvuraninBilgileriID == id && p.DenetimeGidildimi == false);
-                DateTime karsila = Convert.ToDateTime(varsa.SEDDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                if (karsila >= tarih && bul == false)
+                DateTime tarih = DateTime.Now.Date;
+                int id = int.Parse(ID);
+                using (DBSosyal db = new DBSosyal())
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    var varsa = db.DenetimSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
+                    DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
+                    if (karsila >= tarih)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
+            catch
+            {
+                return false;
+            }
+           
         }
         public static bool DenetimKontrolEBH(string ID)
         {
-            DateTime tarih = DateTime.Now.Date;
-            int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            try
             {
-                var varsa = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
-                bool bul = db.DenetimEBH.Any(p => p.EngelliBilgileriID == id && p.DenetimeGidildimi == false);
-                DateTime karsila = Convert.ToDateTime(varsa.EBHDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                if (karsila >= tarih && bul == false)
+                DateTime tarih = DateTime.Now.Date;
+                int id = int.Parse(ID);
+                using (DBSosyal db = new DBSosyal())
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    var varsa = db.DenetimEBH.FirstOrDefault(p => p.EngelliBilgileriID == id);
+                    DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
+                    if (karsila >= tarih)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
+            catch
+            {
+                return false;
+            }
+           
         }
         public static List<VMSEDRapor> DenetimGidilmemisSED()
         {
@@ -196,9 +224,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             int id = int.Parse(ID);
             using (DBSosyal db = new DBSosyal())
             {
-                var bul = db.DenetimSED.Where(p => p.BasvuraninBilgileriID == id && p.DenetimeGidildimi == false).FirstOrDefault();
+                var bul = db.DenetimSED.Where(p => p.BasvuraninBilgileriID == id ).FirstOrDefault();
                 bul.DenetimTarihi = tarih.ToShortDateString();
-                bul.DenetimeGidildimi = true;
                 db.SaveChanges();
             }
         }
@@ -208,9 +235,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             int id = int.Parse(ID);
             using (DBSosyal db = new DBSosyal())
             {
-                var bul = db.DenetimEBH.Where(p => p.EngelliBilgileriID == id && p.DenetimeGidildimi == false).FirstOrDefault();
+                var bul = db.DenetimEBH.Where(p => p.EngelliBilgileriID == id ).FirstOrDefault();
                 bul.DenetimTarihi = tarih.ToShortDateString();
-                bul.DenetimeGidildimi = true;
                 db.SaveChanges();
             }
         }
@@ -221,7 +247,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             using (DBSosyal db = new DBSosyal())
             {
 
-                var abul = db.BasvuraninBilgileri.ToList();
+                var abul = db.BasvuraninBilgileri.Where(p=> p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.SEDDosyaBilgileri.OdemeBitisi).AddMonths(-1);
@@ -265,7 +291,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             List<VMEBHRapor> liste = new List<VMEBHRapor>();
             using (DBSosyal db = new DBSosyal())
             {
-                var abul = db.EngelliBilgileri.ToList();
+                var abul = db.EngelliBilgileri.Where(p=> p.EBHDosyaBilgileri.RaporTipi !="Sürekli").ToList();
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.EBHDosyaBilgileri.BitisTarihi).AddMonths(-3);

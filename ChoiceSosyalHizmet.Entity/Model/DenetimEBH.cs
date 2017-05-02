@@ -11,7 +11,6 @@ namespace ChoiceSosyalHizmet.Entity.Model
         public int DenetimEBHID { get; set; }
         public int EngelliBilgileriID { get; set; }
         public string DenetimTarihi { get; set; }
-        public bool DenetimeGidildimi { get; set; }
 
         public virtual EngelliBilgileri EngelliBilgileri { get; set; }
     }
