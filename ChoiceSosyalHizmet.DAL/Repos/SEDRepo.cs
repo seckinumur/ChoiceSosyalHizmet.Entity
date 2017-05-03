@@ -18,7 +18,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 bool Bak = db.BasvuraninBilgileri.Any(p => p.TC == Al.TC);
                 if (Bak == true)
                 {
-                    return "Bu Kayıt Daha Önce Kaydedilmiş! Güncellemek İçin Güncelle Butonuna Basınız.";
+                    return "Bu Kayıt Daha Önce Kaydedilmiş!";
                 }
                 else
                 {
@@ -91,8 +91,18 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 
                     db.SEDDosyaTakip.Add(SDT);
                     db.SaveChanges();
+
+                    DenetimSED yap = new DenetimSED()
+                    {
+                        BasvuraninBilgileriID = BBI.BasvuraninBilgileriID,
+                        DenetimTarihi = BBI.SEDDosyaBilgileri.OdemeBaslangici
+                    };
+                    db.DenetimSED.Add(yap);
+                    db.SaveChanges();
+
                     return "Kayıt Başarıyla Kaydedildi!";
                 }
+               
             }
         }
         public static string Guncelle(VMSED Al)
@@ -133,8 +143,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         Durum = Al.Durum,
                         Tarih = Al.Tarih
                     };
-
                     db.SEDDosyaTakip.Add(SDT);
+                    var denetimgun = db.DenetimSED.FirstOrDefault(p => p.BasvuraninBilgileriID == Bul.BasvuraninBilgileriID);
+                    denetimgun.DenetimTarihi = Al.OdemeBaslangici;
                     db.SaveChanges();
                     return "Kayıt Başarıyla Güncellendi!";
                 }

@@ -11,69 +11,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 {
     public class DenetimRepo
     {
-        public static void DenetimSEDAI()
-        {
-            try
-            {
-                using (DBSosyal db = new DBSosyal())
-                {
-                    DateTime tarih = DateTime.Now.Date;
-                    var ara = db.BasvuraninBilgileri.Where(p => p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
-                    foreach (var item in ara)
-                    {
-                        bool bak = db.DenetimSED.Any(p => p.BasvuraninBilgileriID == item.BasvuraninBilgileriID);
-                        DateTime karsila = Convert.ToDateTime(item.SEDDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                        if (karsila >= tarih && bak == false)
-                        {
-                            DenetimSED yap = new DenetimSED()
-                            {
-                                BasvuraninBilgileriID = item.BasvuraninBilgileriID,
-                                DenetimTarihi = item.SEDDosyaBilgileri.OdemeBaslangici
-                            };
-                            db.DenetimSED.Add(yap);
-                            db.SaveChanges();
-                        }
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-            
-        }
-        public static void DenetimEBHAI()
-        {
-            try
-            {
-                using (DBSosyal db = new DBSosyal())
-                {
-                    DateTime tarih = DateTime.Now.Date;
-
-                    var ara = db.EngelliBilgileri.ToList();
-                    foreach (var item in ara)
-                    {
-                        bool bak = db.DenetimEBH.Any(p => p.EngelliBilgileriID == item.EngelliBilgileriID);
-                        DateTime karsila = Convert.ToDateTime(item.EBHDosyaBilgileri.OdemeBaslangici).AddMonths(6);
-                        if (karsila >= tarih && bak == false)
-                        {
-                            DenetimEBH yap = new DenetimEBH()
-                            {
-                                EngelliBilgileriID = item.EngelliBilgileriID,
-                                DenetimTarihi = item.EBHDosyaBilgileri.OdemeBaslangici
-                            };
-                            db.DenetimEBH.Add(yap);
-                            db.SaveChanges();
-                        }
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-            
-        }
+        
         public static bool DenetimKontrolSED(string ID)
         {
             try

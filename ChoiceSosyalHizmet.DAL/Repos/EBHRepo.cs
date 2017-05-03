@@ -92,6 +92,15 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 
                     db.EBHDosyaTakip.Add(SDT);
                     db.SaveChanges();
+
+                    DenetimEBH yap = new DenetimEBH()
+                    {
+                        EngelliBilgileriID = BBI.EngelliBilgileriID,
+                        DenetimTarihi = BBI.EBHDosyaBilgileri.OdemeBaslangici
+                    };
+                    db.DenetimEBH.Add(yap);
+                    db.SaveChanges();
+
                     return "Kayıt Başarıyla Kaydedildi!";
                 }    
             }
@@ -136,8 +145,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         Durum = Al.Durum,
                         Tarih = Al.Tarih
                     };
-
                     db.EBHDosyaTakip.Add(SDT);
+                    var denetimgun = db.DenetimEBH.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID);
+                    denetimgun.DenetimTarihi = Al.OdemeBaslangici;
                     db.SaveChanges();
                     return "Kayıt Başarıyla Güncellendi!";
                 }

@@ -82,8 +82,6 @@ namespace ChoiceSosyalHizmet.WinForm
             EvrakZimmetEBHGrid.DataSource = ZimmetEBHRepo.ZimmetListele();
             gridControl1.DataSource = MahalleKoyRepo.MaahalleKoyRaporla();
             gridControl2.DataSource = KullanicilarRepo.KullaniciListele();
-            DenetimRepo.DenetimSEDAI();
-            DenetimRepo.DenetimEBHAI();
             gridView1.GroupPanelText = "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView1.RowCount.ToString();
             gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView2.RowCount.ToString();
             var almahalle = MahalleKoyRepo.MahalleKarsila();
