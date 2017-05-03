@@ -22,7 +22,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 {
                     var varsa = db.DenetimSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
-                    if (karsila >= tarih)
+                    if (tarih >= karsila)
                     {
                         return true;
                     }
@@ -48,7 +48,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 {
                     var varsa = db.DenetimEBH.FirstOrDefault(p => p.EngelliBilgileriID == id);
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
-                    if (karsila >= tarih)
+                    if (tarih >= karsila)
                     {
                         return true;
                     }
@@ -76,7 +76,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 {
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
                     var a = db.BasvuraninBilgileri.Where(p => p.BasvuraninBilgileriID == item.BasvuraninBilgileriID).FirstOrDefault();
-                    if (karsila >= tarih)
+                    if (tarih >= karsila)
                     {
                         VMSEDRapor albakim = new VMSEDRapor()
                         {
@@ -121,7 +121,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 {
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
                     var a = db.EngelliBilgileri.Where(p => p.EngelliBilgileriID == item.EngelliBilgileriID).FirstOrDefault();
-                    if (karsila >= tarih)
+                    if (tarih >= karsila)
                     {
                         VMEBHRapor albakim = new VMEBHRapor()
                         {
