@@ -170,7 +170,7 @@
             this.MinimumSize = new System.Drawing.Size(480, 640);
             this.Name = "GirisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.7 Sisteme Giriş";
+            this.Text = "Choice SHM V.1.8 Sisteme Giriş";
             this.Load += new System.EventHandler(this.GirisForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

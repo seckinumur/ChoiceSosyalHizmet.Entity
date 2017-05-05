@@ -40,7 +40,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var Bul = db.Kullanicilar.FirstOrDefault(p => p.KullaniciAdi == kullanici.KullaniciAdi&& p.Sifre== kullanici.Sifre);
+                var Bul = db.Kullanicilar.FirstOrDefault(p => p.KullaniciAdi == kullanici.KullaniciAdi&& p.Sifre== kullanici.Sifre && p.KullanicilarID!=1);
                 db.Kullanicilar.Remove(Bul);
                 db.SaveChanges();
                 return "İşlem Başarılı";
@@ -89,10 +89,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 {
                     Kullanicilar Ekle = new Kullanicilar()
                     {
-                        KullaniciAdi = "Demo",
+                        KullaniciAdi = "DEMO",
                         Sifre = "1234",
                     };
-
                     db.Kullanicilar.Add(Ekle);
                     db.SaveChanges();
                 }

@@ -541,7 +541,7 @@
             // 
             // SEDNot
             // 
-            this.SEDNot.BackColor = System.Drawing.Color.OliveDrab;
+            this.SEDNot.BackColor = System.Drawing.Color.Olive;
             this.SEDNot.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SEDNot.Font = new System.Drawing.Font("Tahoma", 16F);
             this.SEDNot.ForeColor = System.Drawing.Color.White;
@@ -829,7 +829,7 @@
             this.BtnTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.BtnTemizle.ActiveForecolor = System.Drawing.Color.White;
             this.BtnTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnTemizle.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnTemizle.BackColor = System.Drawing.Color.Transparent;
             this.BtnTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.BackgroundImage")));
             this.BtnTemizle.ButtonText = "TEMİZLE";
             this.BtnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -855,7 +855,7 @@
             this.BtnKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.BtnKaydet.ActiveForecolor = System.Drawing.Color.White;
             this.BtnKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnKaydet.BackColor = System.Drawing.Color.Transparent;
             this.BtnKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.BackgroundImage")));
             this.BtnKaydet.ButtonText = "KAYDET";
             this.BtnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1260,7 +1260,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.OliveDrab;
+            this.richTextBox1.BackColor = System.Drawing.Color.Olive;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 16F);
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
@@ -1574,7 +1574,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 80658;
+            this.bunifuSeparator1.LineThickness = 65535;
             this.bunifuSeparator1.Location = new System.Drawing.Point(15, 239);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -1590,7 +1590,7 @@
             this.EbhTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.EbhTemizle.ActiveForecolor = System.Drawing.Color.White;
             this.EbhTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhTemizle.BackColor = System.Drawing.SystemColors.Control;
+            this.EbhTemizle.BackColor = System.Drawing.Color.Transparent;
             this.EbhTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhTemizle.BackgroundImage")));
             this.EbhTemizle.ButtonText = "TEMİZLE";
             this.EbhTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1616,7 +1616,7 @@
             this.EbhKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.EbhKaydet.ActiveForecolor = System.Drawing.Color.White;
             this.EbhKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.BackColor = System.Drawing.SystemColors.Control;
+            this.EbhKaydet.BackColor = System.Drawing.Color.Transparent;
             this.EbhKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhKaydet.BackgroundImage")));
             this.EbhKaydet.ButtonText = "KAYDET";
             this.EbhKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -2200,7 +2200,7 @@
             this.materialRaisedButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton18.Depth = 0;
             this.materialRaisedButton18.Icon = null;
-            this.materialRaisedButton18.Location = new System.Drawing.Point(886, 566);
+            this.materialRaisedButton18.Location = new System.Drawing.Point(886, 564);
             this.materialRaisedButton18.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton18.Name = "materialRaisedButton18";
@@ -2869,7 +2869,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.7 Evrak Takip Otomasyonu";
+            this.Text = "Choice SHM V.1.8 Evrak Takip Otomasyonu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();

@@ -72,7 +72,6 @@ namespace ChoiceSosyalHizmet.WinForm
             EbhYBS.Clear();
         }
 
-
         public void MainForm_Load(object sender, EventArgs e) // MainForm Load İşlemi
         {
             SEDRaporGrid.DataSource = SEDRepo.RaporListe();
@@ -102,7 +101,7 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void BtnKaydet_Click(object sender, EventArgs e)  // SED Kaydet Butonu
         {
-            string ChekDt, Sonuc;
+            string ChekDt = "";
             if (RBT.Checked == true)
             {
                 ChekDt = RBT.Text;
@@ -117,8 +116,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             else
             {
-                MessageBox.Show("Ödeme Süresi Seçmediniz!");
-                return;
+                MessageBox.Show("Ödeme Süresi Seçmediniz! \nÖdeme Süresi Seçmedende Kayıt Gerçekleşecek Ancak Denetim Sistemi \rBu dosya İçin Çalışmayacaktır.", "Uyarı!");
             }
             try
             {
@@ -146,23 +144,13 @@ namespace ChoiceSosyalHizmet.WinForm
                     YBSNo = TxtYBS.Text,
                     not = SEDNot.Text
                 };
-
-                Sonuc = SEDRepo.Kaydet(Kyd);
-                if (Sonuc != "Kayıt Başarıyla Kaydedildi!")
-                {
-                    MessageBox.Show(Sonuc);
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show(Sonuc);
-                    SEDButonTemizle();
-                    MainForm_Load(sender, e);
-                }
+                MessageBox.Show(SEDRepo.Kaydet(Kyd));
+                SEDButonTemizle();
+                MainForm_Load(sender, e);
             }
             catch
             {
-                Sonuc = "Tüm Alanlar Doldurulmadan Kayıt Yapılamaz!";
+                MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Yapılamaz!");
             }
         }
 
@@ -201,9 +189,6 @@ namespace ChoiceSosyalHizmet.WinForm
             DateOBi.Enabled = false;
             DateOBi.Text = "";
         }
-
-
-
         private void BtnTemizle_Click(object sender, EventArgs e) // SED Temizle Butonu
         {
             SEDButonTemizle();
@@ -273,11 +258,10 @@ namespace ChoiceSosyalHizmet.WinForm
                 MessageBox.Show(Sonuc);
                 EBHButonTemizle();
                 MainForm_Load(sender, e);
-
             }
             catch
             {
-                MessageBox.Show("Tüm Alanlar Doldurulmadan Kayıt Yapılamaz!");
+                MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Yapılamaz!");
             }
         }
 
@@ -367,7 +351,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 SEDRaporFormu ac = new SEDRaporFormu();
                 ac.idtut.Text = ID;
                 ac.Show();
-                this.Enabled=false;
+                this.Enabled = false;
             }
             catch
             {
@@ -392,7 +376,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 }
                 catch
                 {
-                    MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                    MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
                 }
             }
             else
@@ -425,7 +409,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
             }
         }
 
@@ -463,7 +447,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Personel Sisteminde Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
             }
 
         }
@@ -476,7 +460,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 EBHRaporFormu ac = new EBHRaporFormu();
                 ac.idtut.Text = ID;
                 ac.Show();
-                this.Enabled=false;
+                this.Enabled = false;
             }
             catch
             {
@@ -572,7 +556,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 }
                 catch
                 {
-                    MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                    MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
                 }
             }
             else
@@ -604,7 +588,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
             }
         }
 
@@ -626,7 +610,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
             }
         }
 
@@ -685,7 +669,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 }
                 catch
                 {
-                    MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                    MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
                 }
             }
         }
@@ -701,7 +685,7 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!", "Çekirdek Hatası!");
             }
         }
 
@@ -726,9 +710,8 @@ namespace ChoiceSosyalHizmet.WinForm
             }
             catch
             {
-                MessageBox.Show("Öngörülemeyen Hata Oluştu. Sistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!");
+                MessageBox.Show("Öngörülemeyen Bir Hata Oluştu.\nSistem Bu hata Nedeniyle Çökmekten Başarıyla Kurtarıldı!","Çekirdek Hatası!");
             }
-
         }
 
         private void TxtTc_KeyPress(object sender, KeyPressEventArgs e) // Rakamla Girmek
@@ -766,7 +749,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 SEDRaporFormu ac = new SEDRaporFormu();
                 ac.idtut.Text = ID;
                 ac.Show();
-                this.Enabled=false;
+                this.Enabled = false;
             }
             catch
             {

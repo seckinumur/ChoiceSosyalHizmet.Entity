@@ -183,7 +183,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
 
-                var abul = db.BasvuraninBilgileri.Where(p=> p.OdemeSuresi != "Tek Seferlik").ToList();
+                var abul = db.BasvuraninBilgileri.Where(p=> p.OdemeSuresi != "Tek Seferlik" && p.OdemeBitisi !="").ToList();
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.OdemeBitisi).AddMonths(-1);
