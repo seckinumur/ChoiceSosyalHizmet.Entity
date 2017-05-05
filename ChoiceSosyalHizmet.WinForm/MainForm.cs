@@ -128,12 +128,12 @@ namespace ChoiceSosyalHizmet.WinForm
                     Adres = TxtAdres.Text,
                     ArsivNo = TxtANo.Text,
                     BasvuruNedeni = CBoxN.SelectedItem.ToString(),
-                    BasvuruTarihi = DateBT.SelectedText,
-                    DogumTarihi = DateDogumT.SelectedText,
+                    BasvuruTarihi = DateBT.Text,
+                    DogumTarihi = DateDogumT.Text,
                     DosyaTarihi = DateTime.Now.ToShortDateString(),
                     Durum = CboxDurum.SelectedItem.ToString(),
                     mahalleKoy = CboxMa.Text,
-                    OdemeBaslangici = DateOB.SelectedText,
+                    OdemeBaslangici = DateOB.Text,
                     OdemeBitisi = DateOBi.Text,
                     OdemeSuresi = ChekDt,
                     Tarih = DateTime.Now.ToShortDateString(),
@@ -141,7 +141,7 @@ namespace ChoiceSosyalHizmet.WinForm
                     Telefon = TxtTel.Text,
                     YakinlikDurumu = CboxYD.SelectedItem.ToString(),
                     YardimAlaninAdiSoyadi = TxtAdY.Text,
-                    YardimAlaninDogumTarihi = DateDY.SelectedText,
+                    YardimAlaninDogumTarihi = DateDY.Text,
                     YardimAlaninTC = TxtTcY.Text,
                     YBSNo = TxtYBS.Text,
                     not = SEDNot.Text
@@ -249,12 +249,12 @@ namespace ChoiceSosyalHizmet.WinForm
                     AdiSoyadi = EbhAd.Text,
                     Adres = EbhAdres.Text,
                     ArsivNo = EbhARN.Text,
-                    BasvuruTarihi = EbhBTA.SelectedText,
-                    DogumTarihi = EbhDT.SelectedText,
+                    BasvuruTarihi = EbhBTA.Text,
+                    DogumTarihi = EbhDT.Text,
                     DosyaTarihi = DateTime.Now.ToShortDateString(),
                     Durum = EbhDurum.SelectedItem.ToString(),
                     mahalleKoy = EbhMK.Text,
-                    OdemeBaslangici = EbhOBT.SelectedText,
+                    OdemeBaslangici = EbhOBT.Text,
                     Tarih = DateTime.Now.ToShortDateString(),
                     TC = EbhTC.Text,
                     Telefon = EbhTel.Text,
@@ -262,7 +262,7 @@ namespace ChoiceSosyalHizmet.WinForm
                     YBSNo = EbhYBS.Text,
                     Not = richTextBox1.Text,
                     BakiciBilgileriAdiSoyadi = EbhBad.Text,
-                    BakiciBilgileriDogumTarihi = EbhBDT.SelectedText,
+                    BakiciBilgileriDogumTarihi = EbhBDT.Text,
                     BakiciBilgileriTC = EbhBtc.Text,
                     BaslangicTarihi = baslangict,
                     BitisTarihi = bitistt,
@@ -367,7 +367,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 SEDRaporFormu ac = new SEDRaporFormu();
                 ac.idtut.Text = ID;
                 ac.Show();
-                this.Hide();
+                this.Enabled=false;
             }
             catch
             {
@@ -476,7 +476,7 @@ namespace ChoiceSosyalHizmet.WinForm
                 EBHRaporFormu ac = new EBHRaporFormu();
                 ac.idtut.Text = ID;
                 ac.Show();
-                this.Hide();
+                this.Enabled=false;
             }
             catch
             {
@@ -636,7 +636,7 @@ namespace ChoiceSosyalHizmet.WinForm
             {
                 string ID = gridView6.GetRowCellValue(gridView6.FocusedRowHandle, "MahalleKoyID").ToString();
                 var a = MahalleKoyRepo.MahalleKoyBul(ID);
-                MahalleIDAlma.Text = a.Isim;
+                MahalleKoyText.Text = a.Isim;
                 MahalleIDAlma.Text = a.MahalleKoyID.ToString();
                 materialFlatButton7.Enabled = true;
             }
@@ -756,6 +756,36 @@ namespace ChoiceSosyalHizmet.WinForm
             txBox.SelectionStart = pos;
             txBox.SelectionLength = slen;
             txBox.Focus();
+        }
+
+        private void gridView3_DoubleClick(object sender, EventArgs e) //Sed Evrak Zimmet Çift tıklama
+        {
+            try
+            {
+                string ID = gridView3.GetRowCellValue(gridView3.FocusedRowHandle, "ID").ToString();
+                SEDRaporFormu ac = new SEDRaporFormu();
+                ac.idtut.Text = ID;
+                ac.Show();
+                this.Enabled=false;
+            }
+            catch
+            {
+            }
+        }
+
+        private void gridView5_DoubleClick(object sender, EventArgs e) //EBH Evrak Zimmet Çift Tıklama
+        {
+            try
+            {
+                string ID = gridView5.GetRowCellValue(gridView5.FocusedRowHandle, "ID").ToString();
+                EBHRaporFormu ac = new EBHRaporFormu();
+                ac.idtut.Text = ID;
+                ac.Show();
+                this.Enabled = false;
+            }
+            catch
+            {
+            }
         }
     }
 }

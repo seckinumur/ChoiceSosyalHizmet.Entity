@@ -10,7 +10,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 {
     public class DenetimRepo
     {
-        
+
         public static bool DenetimKontrolSED(string ID)
         {
             try
@@ -19,7 +19,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 int id = int.Parse(ID);
                 using (DBChoiceEntities db = new DBChoiceEntities())
                 {
-                    var varsa = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
+                    var varsa = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id && p.OdemeBaslangici !="");
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
                     if (tarih >= karsila)
                     {
@@ -35,7 +35,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             {
                 return false;
             }
-           
+
         }
         public static bool DenetimKontrolEBH(string ID)
         {
@@ -45,7 +45,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 int id = int.Parse(ID);
                 using (DBChoiceEntities db = new DBChoiceEntities())
                 {
-                    var varsa = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
+                    var varsa = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id && p.OdemeBaslangici != "" && p.RaporSuresi != "6 AY");
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
                     if (tarih >= karsila)
                     {
@@ -61,7 +61,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             {
                 return false;
             }
-           
+
         }
         public static List<VMSEDRapor> DenetimGidilmemisSED()
         {
@@ -70,7 +70,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
 
-                var bul = db.BasvuraninBilgileri.ToList();
+                var bul = db.BasvuraninBilgileri.Where(p => p.OdemeSuresi != "Tek Seferlik" && p.DenetimTarihi!="").ToList();
                 foreach (var item in bul)
                 {
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
@@ -105,9 +105,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     }
 
                 }
-
+                return liste;
             }
-            return liste;
         }
         public static List<VMEBHRapor> DenetimGidilmemisEBH()
         {
@@ -115,9 +114,10 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             List<VMEBHRapor> liste = new List<VMEBHRapor>();
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.EngelliBilgileri.ToList();
+                var bul = db.EngelliBilgileri.Where(p=> p.DenetimTarihi!="").ToList();
                 foreach (var item in bul)
                 {
+
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
                     var a = db.EngelliBilgileri.Where(p => p.EngelliBilgileriID == item.EngelliBilgileriID).FirstOrDefault();
                     if (tarih >= karsila)
@@ -149,11 +149,10 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         };
                         liste.Add(albakim);
                     }
-
                 }
-
+                return liste;
             }
-            return liste;
+
         }
         public static void DenetimYapSED(string ID)
         {

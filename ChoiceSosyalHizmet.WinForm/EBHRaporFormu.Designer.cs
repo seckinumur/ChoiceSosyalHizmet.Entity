@@ -84,11 +84,11 @@
             this.EbhAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuCards4 = new ns1.BunifuCards();
-            this.DenetimYapBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.EbhBYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.EbhBDT = new DevExpress.XtraEditors.DateEdit();
             this.PersonelIDsi = new System.Windows.Forms.Label();
+            this.DenetimYapBtn = new System.Windows.Forms.Button();
             this.bunifuCards3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EbhBTTT.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhBTTT.Properties)).BeginInit();
@@ -613,7 +613,7 @@
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(118, 78);
+            this.materialFlatButton2.Location = new System.Drawing.Point(135, 78);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -630,7 +630,7 @@
             this.zimmetbuton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.zimmetbuton.Depth = 0;
             this.zimmetbuton.Icon = null;
-            this.zimmetbuton.Location = new System.Drawing.Point(17, 78);
+            this.zimmetbuton.Location = new System.Drawing.Point(6, 78);
             this.zimmetbuton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.zimmetbuton.MouseState = MaterialSkin.MouseState.HOVER;
             this.zimmetbuton.Name = "zimmetbuton";
@@ -946,24 +946,6 @@
             this.bunifuCards4.Size = new System.Drawing.Size(515, 117);
             this.bunifuCards4.TabIndex = 44;
             // 
-            // DenetimYapBtn
-            // 
-            this.DenetimYapBtn.AutoSize = true;
-            this.DenetimYapBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.DenetimYapBtn.Depth = 0;
-            this.DenetimYapBtn.Icon = null;
-            this.DenetimYapBtn.Location = new System.Drawing.Point(266, 78);
-            this.DenetimYapBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.DenetimYapBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DenetimYapBtn.Name = "DenetimYapBtn";
-            this.DenetimYapBtn.Primary = false;
-            this.DenetimYapBtn.Size = new System.Drawing.Size(109, 36);
-            this.DenetimYapBtn.TabIndex = 46;
-            this.DenetimYapBtn.Text = "Denetim Yap";
-            this.DenetimYapBtn.UseVisualStyleBackColor = true;
-            this.DenetimYapBtn.Visible = false;
-            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
-            // 
             // EbhBYD
             // 
             this.EbhBYD.Location = new System.Drawing.Point(661, 38);
@@ -1039,6 +1021,16 @@
             this.PersonelIDsi.TabIndex = 47;
             this.PersonelIDsi.Text = "ZİMMET:";
             this.PersonelIDsi.Visible = false;
+            // 
+            // DenetimYapBtn
+            // 
+            this.DenetimYapBtn.Location = new System.Drawing.Point(260, 80);
+            this.DenetimYapBtn.Name = "DenetimYapBtn";
+            this.DenetimYapBtn.Size = new System.Drawing.Size(117, 32);
+            this.DenetimYapBtn.TabIndex = 47;
+            this.DenetimYapBtn.Text = "Denetim Yap";
+            this.DenetimYapBtn.UseVisualStyleBackColor = true;
+            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
             // 
             // EBHRaporFormu
             // 
@@ -1153,6 +1145,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit EbhRSU;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label PersonelIDsi;
-        private MaterialSkin.Controls.MaterialFlatButton DenetimYapBtn;
+        private System.Windows.Forms.Button DenetimYapBtn;
     }
 }

@@ -228,7 +228,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     string tarih = ilktarih.AddDays(i).ToShortDateString();
                     try
                     {
-                        var a = db.EngelliBilgileri.Where(p => p.BasvuruTarihi == tarih).FirstOrDefault();
+                        var a = db.EngelliBilgileri.Where(p => p.DosyaTarihi == tarih).FirstOrDefault();
 
                         VMEBHRapor eklemece = new VMEBHRapor()
                         {
@@ -293,6 +293,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YBSNo = a.YBSNo,
                     DosyaTarihi = a.DosyaTarihi,
                     Not = a.Not,
+                    EngelliBilgileriID=a.EngelliBilgileriID
                 }).FirstOrDefault();
                 return Bul;
             }

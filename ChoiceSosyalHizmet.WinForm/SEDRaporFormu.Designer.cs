@@ -75,7 +75,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.SEDNot = new System.Windows.Forms.RichTextBox();
             this.bunifuCards4 = new ns1.BunifuCards();
-            this.DenetimYapBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.label24 = new System.Windows.Forms.Label();
             this.ZCT = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label23 = new System.Windows.Forms.Label();
@@ -88,6 +87,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.idtut = new System.Windows.Forms.Label();
             this.PersonelIDsi = new System.Windows.Forms.Label();
+            this.DenetimYapBtn = new System.Windows.Forms.Button();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CboxMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBoxN.Properties)).BeginInit();
@@ -832,24 +832,6 @@
             this.bunifuCards4.Size = new System.Drawing.Size(515, 117);
             this.bunifuCards4.TabIndex = 25;
             // 
-            // DenetimYapBtn
-            // 
-            this.DenetimYapBtn.AutoSize = true;
-            this.DenetimYapBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.DenetimYapBtn.Depth = 0;
-            this.DenetimYapBtn.Icon = null;
-            this.DenetimYapBtn.Location = new System.Drawing.Point(265, 75);
-            this.DenetimYapBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.DenetimYapBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DenetimYapBtn.Name = "DenetimYapBtn";
-            this.DenetimYapBtn.Primary = false;
-            this.DenetimYapBtn.Size = new System.Drawing.Size(109, 36);
-            this.DenetimYapBtn.TabIndex = 45;
-            this.DenetimYapBtn.Text = "Denetim Yap";
-            this.DenetimYapBtn.UseVisualStyleBackColor = true;
-            this.DenetimYapBtn.Visible = false;
-            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -1020,6 +1002,16 @@
             this.PersonelIDsi.Text = "ZİMMET:";
             this.PersonelIDsi.Visible = false;
             // 
+            // DenetimYapBtn
+            // 
+            this.DenetimYapBtn.Location = new System.Drawing.Point(258, 77);
+            this.DenetimYapBtn.Name = "DenetimYapBtn";
+            this.DenetimYapBtn.Size = new System.Drawing.Size(117, 32);
+            this.DenetimYapBtn.TabIndex = 45;
+            this.DenetimYapBtn.Text = "Denetim Yap";
+            this.DenetimYapBtn.UseVisualStyleBackColor = true;
+            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
+            // 
             // SEDRaporFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1130,6 +1122,6 @@
         private System.Windows.Forms.Label label23;
         public MaterialSkin.Controls.MaterialSingleLineTextField ZAT;
         private System.Windows.Forms.Label PersonelIDsi;
-        private MaterialSkin.Controls.MaterialFlatButton DenetimYapBtn;
+        private System.Windows.Forms.Button DenetimYapBtn;
     }
 }

@@ -74,8 +74,16 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetbuton.Text = "ZİMMETLE";
                 zimmetkontrol = true;
             }
-            DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolEBH(idtut.Text);
-            
+            if (DenetimRepo.DenetimKontrolEBH(idtut.Text) == false)
+            {
+                DenetimYapBtn.BackColor = Color.DarkRed;
+                DenetimYapBtn.ForeColor = Color.White;
+            }
+            else
+            {
+                DenetimYapBtn.BackColor = Color.ForestGreen;
+                DenetimYapBtn.ForeColor = Color.White;
+            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -249,7 +257,7 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void EBHRaporFormu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AnaEkran.Visible = true;
+            AnaEkran.Enabled = true;
             AnaEkran.MainForm_Load(sender, e);
         }
 
@@ -263,8 +271,13 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void DenetimYapBtn_Click(object sender, EventArgs e)
         {
-            DenetimRepo.DenetimYapEBH(idtut.Text);
-            EBHRaporFormu_Load(sender, e);
+            DialogResult Uyari = new DialogResult();
+            Uyari = MessageBox.Show("Bu Dosyaya Denetim Yapmak Üzerisiniz, Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
+            if (Uyari == DialogResult.Yes)
+            {
+                DenetimRepo.DenetimYapEBH(idtut.Text);
+                EBHRaporFormu_Load(sender, e);
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)

@@ -42,18 +42,6 @@
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SEDRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.Tarih2EBH = new DevExpress.XtraEditors.DateEdit();
-            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.Tarih1EBH = new DevExpress.XtraEditors.DateEdit();
-            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.EBHRaporGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -143,6 +131,18 @@
             this.EbhTC = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.EbhAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label24 = new System.Windows.Forms.Label();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.Tarih2EBH = new DevExpress.XtraEditors.DateEdit();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.Tarih1EBH = new DevExpress.XtraEditors.DateEdit();
+            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.EBHRaporGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton14 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -154,8 +154,6 @@
             this.EvrakZimmetEBHGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.PersonelGrid = new DevExpress.XtraGrid.GridControl();
@@ -170,6 +168,11 @@
             this.Perad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label31 = new System.Windows.Forms.Label();
             this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.bunifuCards13 = new ns1.BunifuCards();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bunifuCards12 = new ns1.BunifuCards();
@@ -199,13 +202,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -251,6 +247,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.EbhMK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhDT.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhDT.Properties)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EvrakGrid)).BeginInit();
@@ -260,13 +263,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.EvrakZimmetEBHGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.xtraTabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonelGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.bunifuCards8.SuspendLayout();
             this.xtraTabPage7.SuspendLayout();
+            this.bunifuCards13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             this.bunifuCards12.SuspendLayout();
@@ -288,10 +292,10 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(1269, 643);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2,
             this.xtraTabPage3,
             this.xtraTabPage4,
+            this.xtraTabPage1,
+            this.xtraTabPage2,
             this.xtraTabPage5,
             this.xtraTabPage8,
             this.xtraTabPage6,
@@ -480,185 +484,6 @@
             this.gridView1.OptionsFind.SearchInPreview = true;
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Controls.Add(this.materialRaisedButton11);
-            this.xtraTabPage2.Controls.Add(this.materialRaisedButton7);
-            this.xtraTabPage2.Controls.Add(this.materialRaisedButton8);
-            this.xtraTabPage2.Controls.Add(this.labelControl3);
-            this.xtraTabPage2.Controls.Add(this.Tarih2EBH);
-            this.xtraTabPage2.Controls.Add(this.materialRaisedButton9);
-            this.xtraTabPage2.Controls.Add(this.labelControl4);
-            this.xtraTabPage2.Controls.Add(this.Tarih1EBH);
-            this.xtraTabPage2.Controls.Add(this.materialRaisedButton10);
-            this.xtraTabPage2.Controls.Add(this.EBHRaporGrid);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1263, 604);
-            this.xtraTabPage2.Text = "EBH Rapor";
-            // 
-            // materialRaisedButton11
-            // 
-            this.materialRaisedButton11.AutoSize = true;
-            this.materialRaisedButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton11.Depth = 0;
-            this.materialRaisedButton11.Icon = null;
-            this.materialRaisedButton11.Location = new System.Drawing.Point(633, 565);
-            this.materialRaisedButton11.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton11.Name = "materialRaisedButton11";
-            this.materialRaisedButton11.Primary = true;
-            this.materialRaisedButton11.Size = new System.Drawing.Size(181, 36);
-            this.materialRaisedButton11.TabIndex = 41;
-            this.materialRaisedButton11.Text = "Denetime Gidilecekler";
-            this.materialRaisedButton11.UseVisualStyleBackColor = true;
-            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
-            // 
-            // materialRaisedButton7
-            // 
-            this.materialRaisedButton7.AutoSize = true;
-            this.materialRaisedButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Icon = null;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(822, 565);
-            this.materialRaisedButton7.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(223, 36);
-            this.materialRaisedButton7.TabIndex = 40;
-            this.materialRaisedButton7.Text = "Bitiş Tarihine 3 Ay Kalanlar";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
-            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
-            // 
-            // materialRaisedButton8
-            // 
-            this.materialRaisedButton8.AutoSize = true;
-            this.materialRaisedButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Icon = null;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(1053, 565);
-            this.materialRaisedButton8.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(76, 36);
-            this.materialRaisedButton8.TabIndex = 38;
-            this.materialRaisedButton8.Text = "Temizle";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
-            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(231, 572);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(79, 19);
-            this.labelControl3.TabIndex = 37;
-            this.labelControl3.Text = "Bu Tarihe";
-            // 
-            // Tarih2EBH
-            // 
-            this.Tarih2EBH.EditValue = null;
-            this.Tarih2EBH.Location = new System.Drawing.Point(318, 569);
-            this.Tarih2EBH.Margin = new System.Windows.Forms.Padding(4);
-            this.Tarih2EBH.Name = "Tarih2EBH";
-            this.Tarih2EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.Tarih2EBH.Properties.Appearance.Options.UseFont = true;
-            this.Tarih2EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Tarih2EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Tarih2EBH.Size = new System.Drawing.Size(116, 26);
-            this.Tarih2EBH.TabIndex = 36;
-            // 
-            // materialRaisedButton9
-            // 
-            this.materialRaisedButton9.AutoSize = true;
-            this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Icon = null;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(466, 565);
-            this.materialRaisedButton9.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton9.Name = "materialRaisedButton9";
-            this.materialRaisedButton9.Primary = true;
-            this.materialRaisedButton9.Size = new System.Drawing.Size(159, 36);
-            this.materialRaisedButton9.TabIndex = 35;
-            this.materialRaisedButton9.Text = "Tarih\'e Göre Sırala";
-            this.materialRaisedButton9.UseVisualStyleBackColor = true;
-            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(5, 572);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(96, 19);
-            this.labelControl4.TabIndex = 34;
-            this.labelControl4.Text = "Bu Tarihten";
-            // 
-            // Tarih1EBH
-            // 
-            this.Tarih1EBH.EditValue = null;
-            this.Tarih1EBH.Location = new System.Drawing.Point(109, 569);
-            this.Tarih1EBH.Margin = new System.Windows.Forms.Padding(4);
-            this.Tarih1EBH.Name = "Tarih1EBH";
-            this.Tarih1EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.Tarih1EBH.Properties.Appearance.Options.UseFont = true;
-            this.Tarih1EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Tarih1EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Tarih1EBH.Size = new System.Drawing.Size(116, 26);
-            this.Tarih1EBH.TabIndex = 33;
-            // 
-            // materialRaisedButton10
-            // 
-            this.materialRaisedButton10.AutoSize = true;
-            this.materialRaisedButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialRaisedButton10.Depth = 0;
-            this.materialRaisedButton10.Icon = null;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(1137, 565);
-            this.materialRaisedButton10.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton10.Name = "materialRaisedButton10";
-            this.materialRaisedButton10.Primary = true;
-            this.materialRaisedButton10.Size = new System.Drawing.Size(119, 36);
-            this.materialRaisedButton10.TabIndex = 32;
-            this.materialRaisedButton10.Text = "EXCEL\'e Aktar";
-            this.materialRaisedButton10.UseVisualStyleBackColor = true;
-            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
-            // 
-            // EBHRaporGrid
-            // 
-            this.EBHRaporGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.EBHRaporGrid.Location = new System.Drawing.Point(4, 4);
-            this.EBHRaporGrid.MainView = this.gridView2;
-            this.EBHRaporGrid.Margin = new System.Windows.Forms.Padding(4);
-            this.EBHRaporGrid.Name = "EBHRaporGrid";
-            this.EBHRaporGrid.Size = new System.Drawing.Size(1254, 546);
-            this.EBHRaporGrid.TabIndex = 13;
-            this.EBHRaporGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.EBHRaporGrid;
-            this.gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 ";
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsBehavior.Editable = false;
-            this.gridView2.OptionsFind.AlwaysVisible = true;
-            this.gridView2.OptionsFind.FindDelay = 100;
-            this.gridView2.OptionsFind.FindNullPrompt = "Her Hangi Bir Şey Arayın...";
-            this.gridView2.OptionsFind.SearchInPreview = true;
-            this.gridView2.OptionsFind.ShowFindButton = false;
-            this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
             // xtraTabPage3
             // 
@@ -969,7 +794,8 @@
             "VEFAT",
             "DENETİM",
             "SONLANAN",
-            "İNCELEME EKİBİNDE"});
+            "İNCELEME EKİBİNDE",
+            "TEK SEFERLİK"});
             this.CboxDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CboxDurum.Size = new System.Drawing.Size(121, 26);
             this.CboxDurum.TabIndex = 1;
@@ -1716,7 +1542,8 @@
             "VEFAT",
             "DENETİM",
             "NAKİL EDİLDİ",
-            "İNCELEME EKİBİNDE"});
+            "İNCELEME EKİBİNDE",
+            "TEK SEFERLİK"});
             this.EbhDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhDurum.Size = new System.Drawing.Size(121, 26);
             this.EbhDurum.TabIndex = 1;
@@ -1747,7 +1574,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 99271;
+            this.bunifuSeparator1.LineThickness = 80658;
             this.bunifuSeparator1.Location = new System.Drawing.Point(15, 239);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -2105,6 +1932,185 @@
             this.label24.TabIndex = 3;
             this.label24.Text = "Engelli Bilgileri";
             // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton11);
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton7);
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton8);
+            this.xtraTabPage2.Controls.Add(this.labelControl3);
+            this.xtraTabPage2.Controls.Add(this.Tarih2EBH);
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton9);
+            this.xtraTabPage2.Controls.Add(this.labelControl4);
+            this.xtraTabPage2.Controls.Add(this.Tarih1EBH);
+            this.xtraTabPage2.Controls.Add(this.materialRaisedButton10);
+            this.xtraTabPage2.Controls.Add(this.EBHRaporGrid);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1263, 604);
+            this.xtraTabPage2.Text = "EBH Rapor";
+            // 
+            // materialRaisedButton11
+            // 
+            this.materialRaisedButton11.AutoSize = true;
+            this.materialRaisedButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton11.Depth = 0;
+            this.materialRaisedButton11.Icon = null;
+            this.materialRaisedButton11.Location = new System.Drawing.Point(633, 565);
+            this.materialRaisedButton11.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton11.Name = "materialRaisedButton11";
+            this.materialRaisedButton11.Primary = true;
+            this.materialRaisedButton11.Size = new System.Drawing.Size(181, 36);
+            this.materialRaisedButton11.TabIndex = 41;
+            this.materialRaisedButton11.Text = "Denetime Gidilecekler";
+            this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
+            // 
+            // materialRaisedButton7
+            // 
+            this.materialRaisedButton7.AutoSize = true;
+            this.materialRaisedButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton7.Depth = 0;
+            this.materialRaisedButton7.Icon = null;
+            this.materialRaisedButton7.Location = new System.Drawing.Point(822, 565);
+            this.materialRaisedButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton7.Name = "materialRaisedButton7";
+            this.materialRaisedButton7.Primary = true;
+            this.materialRaisedButton7.Size = new System.Drawing.Size(223, 36);
+            this.materialRaisedButton7.TabIndex = 40;
+            this.materialRaisedButton7.Text = "Bitiş Tarihine 3 Ay Kalanlar";
+            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
+            // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.AutoSize = true;
+            this.materialRaisedButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Icon = null;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(1053, 565);
+            this.materialRaisedButton8.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(76, 36);
+            this.materialRaisedButton8.TabIndex = 38;
+            this.materialRaisedButton8.Text = "Temizle";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(231, 572);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(79, 19);
+            this.labelControl3.TabIndex = 37;
+            this.labelControl3.Text = "Bu Tarihe";
+            // 
+            // Tarih2EBH
+            // 
+            this.Tarih2EBH.EditValue = null;
+            this.Tarih2EBH.Location = new System.Drawing.Point(318, 569);
+            this.Tarih2EBH.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih2EBH.Name = "Tarih2EBH";
+            this.Tarih2EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih2EBH.Properties.Appearance.Options.UseFont = true;
+            this.Tarih2EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Tarih2EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Tarih2EBH.Size = new System.Drawing.Size(116, 26);
+            this.Tarih2EBH.TabIndex = 36;
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.AutoSize = true;
+            this.materialRaisedButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Icon = null;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(466, 565);
+            this.materialRaisedButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(159, 36);
+            this.materialRaisedButton9.TabIndex = 35;
+            this.materialRaisedButton9.Text = "Tarih\'e Göre Sırala";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(5, 572);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(96, 19);
+            this.labelControl4.TabIndex = 34;
+            this.labelControl4.Text = "Bu Tarihten";
+            // 
+            // Tarih1EBH
+            // 
+            this.Tarih1EBH.EditValue = null;
+            this.Tarih1EBH.Location = new System.Drawing.Point(109, 569);
+            this.Tarih1EBH.Margin = new System.Windows.Forms.Padding(4);
+            this.Tarih1EBH.Name = "Tarih1EBH";
+            this.Tarih1EBH.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.Tarih1EBH.Properties.Appearance.Options.UseFont = true;
+            this.Tarih1EBH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Tarih1EBH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Tarih1EBH.Size = new System.Drawing.Size(116, 26);
+            this.Tarih1EBH.TabIndex = 33;
+            // 
+            // materialRaisedButton10
+            // 
+            this.materialRaisedButton10.AutoSize = true;
+            this.materialRaisedButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton10.Depth = 0;
+            this.materialRaisedButton10.Icon = null;
+            this.materialRaisedButton10.Location = new System.Drawing.Point(1137, 565);
+            this.materialRaisedButton10.Margin = new System.Windows.Forms.Padding(4);
+            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton10.Name = "materialRaisedButton10";
+            this.materialRaisedButton10.Primary = true;
+            this.materialRaisedButton10.Size = new System.Drawing.Size(119, 36);
+            this.materialRaisedButton10.TabIndex = 32;
+            this.materialRaisedButton10.Text = "EXCEL\'e Aktar";
+            this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
+            // 
+            // EBHRaporGrid
+            // 
+            this.EBHRaporGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.EBHRaporGrid.Location = new System.Drawing.Point(4, 4);
+            this.EBHRaporGrid.MainView = this.gridView2;
+            this.EBHRaporGrid.Margin = new System.Windows.Forms.Padding(4);
+            this.EBHRaporGrid.Name = "EBHRaporGrid";
+            this.EBHRaporGrid.Size = new System.Drawing.Size(1254, 546);
+            this.EBHRaporGrid.TabIndex = 13;
+            this.EBHRaporGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.EBHRaporGrid;
+            this.gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 ";
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsFind.AlwaysVisible = true;
+            this.gridView2.OptionsFind.FindDelay = 100;
+            this.gridView2.OptionsFind.FindNullPrompt = "Her Hangi Bir Şey Arayın...";
+            this.gridView2.OptionsFind.SearchInPreview = true;
+            this.gridView2.OptionsFind.ShowFindButton = false;
+            this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
+            // 
             // xtraTabPage5
             // 
             this.xtraTabPage5.Controls.Add(this.pictureBox7);
@@ -2166,6 +2172,7 @@
             this.gridView3.OptionsFind.FindDelay = 100;
             this.gridView3.OptionsFind.FindNullPrompt = "Personel Adı veya TC Kimlik Ara...";
             this.gridView3.OptionsFind.ShowFindButton = false;
+            this.gridView3.DoubleClick += new System.EventHandler(this.gridView3_DoubleClick);
             // 
             // xtraTabPage8
             // 
@@ -2227,11 +2234,10 @@
             this.gridView5.OptionsFind.FindDelay = 100;
             this.gridView5.OptionsFind.FindNullPrompt = "Personel Adı veya TC Kimlik Ara...";
             this.gridView5.OptionsFind.ShowFindButton = false;
+            this.gridView5.DoubleClick += new System.EventHandler(this.gridView5_DoubleClick);
             // 
             // xtraTabPage6
             // 
-            this.xtraTabPage6.Controls.Add(this.richTextBox4);
-            this.xtraTabPage6.Controls.Add(this.pictureBox12);
             this.xtraTabPage6.Controls.Add(this.pictureBox8);
             this.xtraTabPage6.Controls.Add(this.pictureBox9);
             this.xtraTabPage6.Controls.Add(this.PersonelGrid);
@@ -2240,29 +2246,6 @@
             this.xtraTabPage6.Name = "xtraTabPage6";
             this.xtraTabPage6.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage6.Text = "Personel İşlemleri";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox4.ForeColor = System.Drawing.Color.Olive;
-            this.richTextBox4.Location = new System.Drawing.Point(943, 541);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(316, 61);
-            this.richTextBox4.TabIndex = 21;
-            this.richTextBox4.Text = "©2017 Choice Corp. All Rights Reserved.\nBu Program GNU Açık Kaynak Kod Desteğine " +
-    "Sahiptir.\nwww.seckinumur.com";
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(941, 459);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(318, 75);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 20;
-            this.pictureBox12.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -2471,6 +2454,7 @@
             // 
             // xtraTabPage7
             // 
+            this.xtraTabPage7.Controls.Add(this.bunifuCards13);
             this.xtraTabPage7.Controls.Add(this.gridControl2);
             this.xtraTabPage7.Controls.Add(this.bunifuCards12);
             this.xtraTabPage7.Controls.Add(this.bunifuCards11);
@@ -2479,6 +2463,70 @@
             this.xtraTabPage7.Name = "xtraTabPage7";
             this.xtraTabPage7.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage7.Text = "Ayarlar";
+            // 
+            // bunifuCards13
+            // 
+            this.bunifuCards13.BackColor = System.Drawing.Color.White;
+            this.bunifuCards13.BorderRadius = 5;
+            this.bunifuCards13.BottomSahddow = false;
+            this.bunifuCards13.color = System.Drawing.Color.Tomato;
+            this.bunifuCards13.Controls.Add(this.richTextBox4);
+            this.bunifuCards13.Controls.Add(this.pictureBox12);
+            this.bunifuCards13.Controls.Add(this.label30);
+            this.bunifuCards13.Controls.Add(this.label33);
+            this.bunifuCards13.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.bunifuCards13.LeftSahddow = false;
+            this.bunifuCards13.Location = new System.Drawing.Point(309, 305);
+            this.bunifuCards13.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuCards13.Name = "bunifuCards13";
+            this.bunifuCards13.RightSahddow = false;
+            this.bunifuCards13.ShadowDepth = 20;
+            this.bunifuCards13.Size = new System.Drawing.Size(657, 293);
+            this.bunifuCards13.TabIndex = 23;
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.richTextBox4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.richTextBox4.Location = new System.Drawing.Point(14, 160);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(626, 130);
+            this.richTextBox4.TabIndex = 23;
+            this.richTextBox4.Text = resources.GetString("richTextBox4.Text");
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(626, 137);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 22;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label30.Location = new System.Drawing.Point(208, 7);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 23);
+            this.label30.TabIndex = 22;
+            this.label30.Visible = false;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label33.Location = new System.Drawing.Point(28, 270);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(0, 23);
+            this.label33.TabIndex = 21;
+            this.label33.Visible = false;
             // 
             // gridControl2
             // 
@@ -2821,7 +2869,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.6 Evrak Takip Otomasyonu";
+            this.Text = "Choice SHM V.1.7 Evrak Takip Otomasyonu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -2834,14 +2882,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tarih1SED.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SEDRaporGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.xtraTabPage2.ResumeLayout(false);
-            this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -2894,6 +2934,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.EbhMK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhDT.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhDT.Properties)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih2EBH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tarih1EBH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             this.xtraTabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2905,7 +2953,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EvrakZimmetEBHGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.xtraTabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonelGrid)).EndInit();
@@ -2913,6 +2960,9 @@
             this.bunifuCards8.ResumeLayout(false);
             this.bunifuCards8.PerformLayout();
             this.xtraTabPage7.ResumeLayout(false);
+            this.bunifuCards13.ResumeLayout(false);
+            this.bunifuCards13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             this.bunifuCards12.ResumeLayout(false);
@@ -3059,8 +3109,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField Pertc;
         private MaterialSkin.Controls.MaterialSingleLineTextField Perad;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private System.Windows.Forms.Label personelidalma;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage8;
@@ -3089,5 +3137,10 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField SifreKullanici;
         private MaterialSkin.Controls.MaterialSingleLineTextField KullaniciAdi;
         private System.Windows.Forms.Label label32;
+        private ns1.BunifuCards bunifuCards13;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label33;
     }
 }

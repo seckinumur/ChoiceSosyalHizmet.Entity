@@ -78,8 +78,16 @@ namespace ChoiceSosyalHizmet.WinForm
                 zimmetbuton.Text = "ZİMMETLE";  
                 zimmetkontrol = true;
             }
-            DenetimYapBtn.Visible = DenetimRepo.DenetimKontrolSED(idtut.Text);
-           
+            if (DenetimRepo.DenetimKontrolSED(idtut.Text) == false)
+            {
+                DenetimYapBtn.BackColor = Color.DarkRed;
+                DenetimYapBtn.ForeColor = Color.White;
+            }
+            else
+            {
+                DenetimYapBtn.BackColor = Color.ForestGreen;
+                DenetimYapBtn.ForeColor = Color.White;
+            }
         }
 
         private void RBT_CheckedChanged(object sender, EventArgs e)
@@ -120,7 +128,7 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void SEDRaporFormu_FormClosed(object sender, FormClosedEventArgs e) //Form Kapanınca Ana Ekrana Geri Dönücek.
         {
-            Anaekran1.Visible = true;
+            Anaekran1.Enabled=true;
             Anaekran1.MainForm_Load(sender, e);
         }
 
@@ -220,8 +228,13 @@ namespace ChoiceSosyalHizmet.WinForm
 
         private void DenetimYapBtn_Click(object sender, EventArgs e)
         {
-            DenetimRepo.DenetimYapSED(idtut.Text);
-            SEDRaporFormu_Load(sender, e);
+            DialogResult Uyari = new DialogResult();
+            Uyari = MessageBox.Show("Bu Dosyaya Denetim Yapmak Üzerisiniz, Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
+            if (Uyari == DialogResult.Yes)
+            {
+                DenetimRepo.DenetimYapSED(idtut.Text);
+                SEDRaporFormu_Load(sender, e);
+            }
         }
 
         private void TxtTc_KeyPress(object sender, KeyPressEventArgs e) //Harf Giremez

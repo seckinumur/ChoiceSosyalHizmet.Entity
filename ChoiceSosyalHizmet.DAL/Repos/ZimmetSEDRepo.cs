@@ -21,7 +21,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     BasvuraninBilgileriID = bul.BasvuraninBilgileriID,
                     PersonelID = perbul.PersonelID,
                     ZimmeteAlisTarihi = DateTime.Now.ToShortDateString(),
-                    Zimmettemi = "true"
+                    Zimmettemi = "Evet"
                 };
                 db.EvrakZimmetSED.Add(ekle);
                 db.SaveChanges();
@@ -33,11 +33,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             int perid = int.Parse(AS);
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var perbul = db.Personel.FirstOrDefault(p => p.PersonelID == perid);
-
                 var ekle = db.EvrakZimmetSED.FirstOrDefault(p => p.EvrakZimmetSEDID == perid);
                 ekle.ZimmettenCikisTarihi = DateTime.Now.ToShortDateString();
-                ekle.Zimmettemi = "false";
+                ekle.Zimmettemi = "Hayır";
                 db.SaveChanges();
             }
         }
@@ -45,7 +43,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.EvrakZimmetSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id && p.Zimmettemi == "true");
+                var bul = db.EvrakZimmetSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id && p.Zimmettemi == "Evet");
                 var pers = db.Personel.FirstOrDefault(p => p.PersonelID == bul.PersonelID);
                 var kisi = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
                 VMZimmetList bul1 = new VMZimmetList()
@@ -79,7 +77,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         DosyaSahibiMahalleKöy = kisi.MahalleKoy,
                         DosyaSahibiTC = kisi.TC,
                         PersonelAdı = pers.AdiSoyadi,
-                        ID = bul.EvrakZimmetSEDID,
+                        ID = bul.BasvuraninBilgileriID,
                         ZimmeteAlişTarihi = bul.ZimmeteAlisTarihi,
                         Zimmettemi = bul.Zimmettemi,
                         ZimmettenÇıkışTarihi = bul.ZimmettenCikisTarihi,

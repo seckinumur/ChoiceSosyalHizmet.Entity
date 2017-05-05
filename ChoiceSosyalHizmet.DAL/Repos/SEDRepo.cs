@@ -230,7 +230,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     string tarih = ilktarih.AddDays(i).ToShortDateString();
                     try
                     {
-                        var a = db.BasvuraninBilgileri.Where(p => p.BasvuruTarihi == tarih).FirstOrDefault();
+                        var a = db.BasvuraninBilgileri.Where(p => p.DosyaTarihi == tarih).FirstOrDefault();
 
                         VMSEDRapor eklemece = new VMSEDRapor()
                         {

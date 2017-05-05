@@ -21,7 +21,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     EngelliBilgileriID = bul.EngelliBilgileriID,
                     PersonelID = perbul.PersonelID,
                     ZimmeteAlisTarihi = DateTime.Now.ToShortDateString(),
-                    Zimmettemi = "true"
+                    Zimmettemi = "Evet"
                 };
                 db.EvrakZimmetEBH.Add(ekle);
                 db.SaveChanges();
@@ -37,7 +37,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
 
                 var ekle = db.EvrakZimmetEBH.FirstOrDefault(p => p.EvrakZimmetEBHID == perid);
                 ekle.ZimmettenCikisTarihi = DateTime.Now.ToShortDateString();
-                ekle.Zimmettemi = "false";
+                ekle.Zimmettemi = "Hayır";
                 db.SaveChanges();
             }
         }
@@ -45,7 +45,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.EvrakZimmetEBH.FirstOrDefault(p => p.EngelliBilgileriID == id && p.Zimmettemi == "true");
+                var bul = db.EvrakZimmetEBH.FirstOrDefault(p => p.EngelliBilgileriID == id && p.Zimmettemi == "Evet");
                 var pers = db.Personel.FirstOrDefault(p => p.PersonelID == bul.PersonelID);
                 var kisi = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
                 VMZimmetList bul1= new VMZimmetList()
@@ -79,7 +79,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         DosyaSahibiMahalleKöy = kisi.MahalleKoy,
                         DosyaSahibiTC = kisi.TC,
                         PersonelAdı = pers.AdiSoyadi,
-                        ID = bul.EvrakZimmetEBHID,
+                        ID = bul.EngelliBilgileriID,
                         ZimmeteAlişTarihi = bul.ZimmeteAlisTarihi,
                         Zimmettemi = bul.Zimmettemi,
                         ZimmettenÇıkışTarihi = bul.ZimmettenCikisTarihi,
