@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static string Kaydet(VMEBH Al)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool Bak = db.EngelliBilgileri.Any(p => p.TC == Al.TC);
                 if (Bak == true)
@@ -22,19 +21,17 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 }
                 else
                 {
-                    BakiciBilgileri YAB = new BakiciBilgileri()
+                    EngelliBilgileri BB = new EngelliBilgileri()
                     {
-                        AdiSoyadi = Al.BakiciBilgileriAdiSoyadi,
-                        TC = Al.BakiciBilgileriTC,
-                        DogumTarihi = Al.BakiciBilgileriDogumTarihi,
-                        YakinlikDurumu = Al.YakinlikDurumu
-                    };
-
-                    db.BakiciBilgileri.Add(YAB);
-                    db.SaveChanges();
-
-                    EBHDosyaBilgileri SDB = new EBHDosyaBilgileri()
-                    {
+                        AdiSoyadi = Al.AdiSoyadi,
+                        Adres = Al.Adres,
+                        DogumTarihi = Al.DogumTarihi,
+                        TC = Al.TC,
+                        Telefon = Al.Telefon,
+                        BakiciBilgileriAdiSoyadi = Al.BakiciBilgileriAdiSoyadi,
+                        BakiciBilgileriTC = Al.BakiciBilgileriTC,
+                        BakiciBilgileriDogumTarihi = Al.BakiciBilgileriDogumTarihi,
+                        BakiciBilgileriYakinlikDurumu = Al.YakinlikDurumu,
                         ArsivNo = Al.ArsivNo,
                         BasvuruTarihi = Al.BasvuruTarihi,
                         DosyaTarihi = Al.DosyaTarihi,
@@ -46,7 +43,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         RaporSuresi = Al.RaporSuresi,
                         RaporTipi = Al.RaporTipi,
                         YBSNo = Al.YBSNo,
-                        Not = Al.Not
+                        Not = Al.Not,
+                        DenetimTarihi=DateTime.Now.ToShortDateString()
                     };
 
                     bool varmi = db.MahalleKoy.Any(p => p.Isim == Al.mahalleKoy);
@@ -60,54 +58,25 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         db.MahalleKoy.Add(Ekle);
                         db.SaveChanges();
                     }
-
-                    db.EBHDosyaBilgileri.Add(SDB);
-                    db.SaveChanges();
-
-                    var YABBul = db.BakiciBilgileri.FirstOrDefault(p => p.TC == Al.BakiciBilgileriTC);
-                    var SDBBul = db.EBHDosyaBilgileri.FirstOrDefault(p => p.ArsivNo == Al.ArsivNo);
-
-                    EngelliBilgileri BB = new EngelliBilgileri()
-                    {
-                        AdiSoyadi = Al.AdiSoyadi,
-                        Adres = Al.Adres,
-                        DogumTarihi = Al.DogumTarihi,
-                        BakiciBilgileriID = YABBul.BakiciBilgileriID,
-                        TC = Al.TC,
-                        EBHDosyaBilgileriID = SDBBul.EBHDosyaBilgileriID,
-                        Telefon = Al.Telefon
-                    };
-
                     db.EngelliBilgileri.Add(BB);
                     db.SaveChanges();
 
-                    var BBI = db.EngelliBilgileri.FirstOrDefault(p => p.TC == Al.TC);
-
+                    var BBI = db.EngelliBilgileri.FirstOrDefault(P => P.TC == Al.TC);
                     EBHDosyaTakip SDT = new EBHDosyaTakip()
                     {
                         EngelliBilgileriID = BBI.EngelliBilgileriID,
                         Durum = Al.Durum,
                         Tarih = Al.Tarih
                     };
-
                     db.EBHDosyaTakip.Add(SDT);
                     db.SaveChanges();
-
-                    DenetimEBH yap = new DenetimEBH()
-                    {
-                        EngelliBilgileriID = BBI.EngelliBilgileriID,
-                        DenetimTarihi = BBI.EBHDosyaBilgileri.OdemeBaslangici
-                    };
-                    db.DenetimEBH.Add(yap);
-                    db.SaveChanges();
-
                     return "Kayıt Başarıyla Kaydedildi!";
                 }    
             }
         }
         public static string Guncelle(VMEBH Al)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool Bak = db.EngelliBilgileri.Any(p => p.EngelliBilgileriID == Al.EngelliBilgileriID);
                 if (Bak == false)
@@ -117,28 +86,28 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 else
                 {
                     var Bul = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == Al.EngelliBilgileriID);
-                    Bul.BakiciBilgileri.AdiSoyadi = Al.BakiciBilgileriAdiSoyadi;
-                    Bul.BakiciBilgileri.DogumTarihi = Al.BakiciBilgileriDogumTarihi;
-                    Bul.BakiciBilgileri.TC = Al.BakiciBilgileriTC;
-                    Bul.BakiciBilgileri.YakinlikDurumu = Al.YakinlikDurumu;
-                    Bul.EBHDosyaBilgileri.ArsivNo = Al.ArsivNo;
-                    Bul.EBHDosyaBilgileri.BasvuruTarihi = Al.BasvuruTarihi;
-                    Bul.EBHDosyaBilgileri.DosyaTarihi = Al.DosyaTarihi;
-                    Bul.EBHDosyaBilgileri.Durum = Al.Durum;
-                    Bul.EBHDosyaBilgileri.MahalleKoy = Al.mahalleKoy;
-                    Bul.EBHDosyaBilgileri.OdemeBaslangici = Al.OdemeBaslangici;
-                    Bul.EBHDosyaBilgileri.BaslangicTarihi = Al.BaslangicTarihi;
-                    Bul.EBHDosyaBilgileri.BitisTarihi = Al.BitisTarihi;
-                    Bul.EBHDosyaBilgileri.YBSNo = Al.YBSNo;
-                    Bul.EBHDosyaBilgileri.RaporSuresi = Al.RaporSuresi;
-                    Bul.EBHDosyaBilgileri.RaporTipi = Al.RaporTipi;
-                    Bul.EBHDosyaBilgileri.Not = Al.Not;
                     Bul.AdiSoyadi = Al.AdiSoyadi;
                     Bul.Adres = Al.Adres;
                     Bul.DogumTarihi = Al.DogumTarihi;
-                    Bul.TC = Al.TC;
+                    Bul. TC = Al.TC;
                     Bul.Telefon = Al.Telefon;
-
+                    Bul.BakiciBilgileriAdiSoyadi = Al.BakiciBilgileriAdiSoyadi;
+                    Bul.BakiciBilgileriTC = Al.BakiciBilgileriTC;
+                    Bul.BakiciBilgileriDogumTarihi = Al.BakiciBilgileriDogumTarihi;
+                    Bul.BakiciBilgileriYakinlikDurumu = Al.YakinlikDurumu;
+                    Bul.ArsivNo = Al.ArsivNo;
+                    Bul.BasvuruTarihi = Al.BasvuruTarihi;
+                    Bul.DosyaTarihi = Al.DosyaTarihi;
+                    Bul.Durum = Al.Durum;
+                    Bul.MahalleKoy = Al.mahalleKoy;
+                    Bul.OdemeBaslangici = Al.OdemeBaslangici;
+                    Bul.BaslangicTarihi = Al.BaslangicTarihi;
+                    Bul.BitisTarihi = Al.BitisTarihi;
+                    Bul.RaporSuresi = Al.RaporSuresi;
+                    Bul.RaporTipi = Al.RaporTipi;
+                    Bul.YBSNo = Al.YBSNo;
+                    Bul.Not = Al.Not;
+                    Bul.DenetimTarihi = Al.OdemeBaslangici;
                     EBHDosyaTakip SDT = new EBHDosyaTakip()
                     {
                         EngelliBilgileriID = Bul.EngelliBilgileriID,
@@ -146,8 +115,6 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         Tarih = Al.Tarih
                     };
                     db.EBHDosyaTakip.Add(SDT);
-                    var denetimgun = db.DenetimEBH.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID);
-                    denetimgun.DenetimTarihi = Al.OdemeBaslangici;
                     db.SaveChanges();
                     return "Kayıt Başarıyla Güncellendi!";
                 }
@@ -156,7 +123,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static string Sil(string Al)
         {
             int id = int.Parse(Al);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool Bak = db.EngelliBilgileri.Any(p => p.EngelliBilgileriID == id);
                 if (Bak == false)
@@ -166,12 +133,6 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 else
                 {
                     var Bul = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
-                    var Bul2 = db.EBHDosyaBilgileri.FirstOrDefault(p => p.EBHDosyaBilgileriID == Bul.EBHDosyaBilgileriID);
-                    var Bul3 = db.BakiciBilgileri.FirstOrDefault(p => p.BakiciBilgileriID == Bul.BakiciBilgileriID);
-
-                    db.EBHDosyaBilgileri.Remove(Bul2);
-                    db.BakiciBilgileri.Remove(Bul3);
-
                     var BBI = db.EBHDosyaTakip.Where(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID).ToList();
 
                     foreach (var item in BBI)
@@ -180,7 +141,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     }
                     try
                     {
-                        var EZ = db.EvrakZimmetEBH.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EBHDosyaBilgileriID);
+                        var EZ = db.EvrakZimmetEBH.FirstOrDefault(p => p.EngelliBilgileriID == Bul.EngelliBilgileriID);
                         db.EvrakZimmetEBH.Remove(EZ);
                     }
                     catch
@@ -194,66 +155,63 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static List<VMEBHRapor> RaporListe()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.EngelliBilgileri.Select(a => new VMEBHRapor
                 {
                     EngelliAdıSoyadı = a.AdiSoyadi,
                     EngelliAdres = a.Adres,
-                    ArşivNo = a.EBHDosyaBilgileri.ArsivNo,
-                    BakıcıBilgileriAdıSoyadı = a.BakiciBilgileri.AdiSoyadi,
-                    BakıcıBilgileriDoğumTarihi = a.BakiciBilgileri.DogumTarihi,
-                    BakıcıBilgileriTC = a.BakiciBilgileri.TC,
-                    BaşlangıcTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                    BaşvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                    BitişTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                    ArşivNo = a.ArsivNo,
+                    BakıcıBilgileriAdıSoyadı = a.BakiciBilgileriAdiSoyadi,
+                    BakıcıBilgileriDoğumTarihi = a.BakiciBilgileriDogumTarihi,
+                    BakıcıBilgileriTC = a.BakiciBilgileriTC,
+                    BaşlangıcTarihi = a.BaslangicTarihi,
+                    BaşvuruTarihi = a.BasvuruTarihi,
+                    BitişTarihi = a.BitisTarihi,
                     EngelliDoğumTarihi = a.DogumTarihi,
-                    ID=a.EngelliBilgileriID,
-                    Durum=a.EBHDosyaBilgileri.Durum,
-                    mahalleKöy=a.EBHDosyaBilgileri.MahalleKoy,
-                    ÖdemeBaşlangıcı=a.EBHDosyaBilgileri.OdemeBaslangici,
-                    RaporSüresi=a.EBHDosyaBilgileri.RaporSuresi,
-                    RaporTipi=a.EBHDosyaBilgileri.RaporTipi,
-                    EngelliTC=a.TC,
-                    EngelliTelefon=a.Telefon,
-                    YakınlıkDurumu=a.BakiciBilgileri.YakinlikDurumu,
-                    YBSNo=a.EBHDosyaBilgileri.YBSNo,
-                    DosyaKayıtTarihi=a.EBHDosyaBilgileri.DosyaTarihi,
-                    Not = a.EBHDosyaBilgileri.Not
+                    ID = a.EngelliBilgileriID,
+                    Durum = a.Durum,
+                    mahalleKöy = a.MahalleKoy,
+                    ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                    RaporSüresi = a.RaporSuresi,
+                    RaporTipi = a.RaporTipi,
+                    EngelliTC = a.TC,
+                    EngelliTelefon = a.Telefon,
+                    YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
+                    YBSNo = a.YBSNo,
+                    DosyaKayıtTarihi = a.DosyaTarihi,
+                    Not = a.Not
                 }).ToList();
                 return Bul;
             }
         }
         public static List<VMEBH> TumRaporListe()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.EngelliBilgileri.Select(a => new VMEBH
                 {
                     AdiSoyadi = a.AdiSoyadi,
                     Adres = a.Adres,
-                    ArsivNo = a.EBHDosyaBilgileri.ArsivNo,
-                    BakiciBilgileriAdiSoyadi = a.BakiciBilgileri.AdiSoyadi,
-                    BakiciBilgileriDogumTarihi = a.BakiciBilgileri.DogumTarihi,
-                    BakiciBilgileriID = a.BakiciBilgileriID,
-                    BakiciBilgileriTC = a.BakiciBilgileri.TC,
-                    BaslangicTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                    BasvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                    BitisTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                    ArsivNo = a.ArsivNo,
+                    BakiciBilgileriAdiSoyadi = a.BakiciBilgileriAdiSoyadi,
+                    BakiciBilgileriDogumTarihi = a.BakiciBilgileriDogumTarihi,
+                    BakiciBilgileriTC = a.BakiciBilgileriTC,
+                    BaslangicTarihi = a.BaslangicTarihi,
+                    BasvuruTarihi = a.BasvuruTarihi,
+                    BitisTarihi = a.BitisTarihi,
                     DogumTarihi = a.DogumTarihi,
-                    DosyaTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
-                    Durum = a.EBHDosyaBilgileri.Durum,
-                    EBHDosyaBilgileriID = a.EBHDosyaBilgileriID,
-                    EngelliBilgileriID = a.EngelliBilgileriID,
-                    mahalleKoy = a.EBHDosyaBilgileri.MahalleKoy,
-                    OdemeBaslangici = a.EBHDosyaBilgileri.OdemeBaslangici,
-                    RaporSuresi = a.EBHDosyaBilgileri.RaporSuresi,
-                    RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                    Durum = a.Durum,
+                    mahalleKoy = a.MahalleKoy,
+                    OdemeBaslangici = a.OdemeBaslangici,
+                    RaporSuresi = a.RaporSuresi,
+                    RaporTipi = a.RaporTipi,
                     TC = a.TC,
                     Telefon = a.Telefon,
-                    YakinlikDurumu = a.BakiciBilgileri.YakinlikDurumu,
-                    Not= a.EBHDosyaBilgileri.Not,
-                    YBSNo = a.EBHDosyaBilgileri.YBSNo
+                    YakinlikDurumu = a.BakiciBilgileriYakinlikDurumu,
+                    YBSNo = a.YBSNo,
+                    DosyaTarihi = a.DosyaTarihi,
+                    Not = a.Not,
                 }).ToList();
                 return Bul;
             }
@@ -263,39 +221,39 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             DateTime ilktarih = Convert.ToDateTime(al1);
             DateTime sontarih = Convert.ToDateTime(al2);
             List<VMEBHRapor> Yeni = new List<VMEBHRapor>();
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 for (int i = 0; i <= (sontarih - ilktarih).Days; i++)
                 {
                     string tarih = ilktarih.AddDays(i).ToShortDateString();
                     try
                     {
-                        var a = db.EngelliBilgileri.Where(p => p.EBHDosyaBilgileri.BasvuruTarihi == tarih).FirstOrDefault();
+                        var a = db.EngelliBilgileri.Where(p => p.BasvuruTarihi == tarih).FirstOrDefault();
 
                         VMEBHRapor eklemece = new VMEBHRapor()
                         {
                             EngelliAdıSoyadı = a.AdiSoyadi,
                             EngelliAdres = a.Adres,
-                            ArşivNo = a.EBHDosyaBilgileri.ArsivNo,
-                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileri.AdiSoyadi,
-                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileri.DogumTarihi,
-                            BakıcıBilgileriTC = a.BakiciBilgileri.TC,
-                            BaşlangıcTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                            BaşvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                            BitişTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                            ArşivNo = a.ArsivNo,
+                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileriAdiSoyadi,
+                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileriDogumTarihi,
+                            BakıcıBilgileriTC = a.BakiciBilgileriTC,
+                            BaşlangıcTarihi = a.BaslangicTarihi,
+                            BaşvuruTarihi = a.BasvuruTarihi,
+                            BitişTarihi = a.BitisTarihi,
                             EngelliDoğumTarihi = a.DogumTarihi,
                             ID = a.EngelliBilgileriID,
-                            Durum = a.EBHDosyaBilgileri.Durum,
-                            mahalleKöy = a.EBHDosyaBilgileri.MahalleKoy,
-                            ÖdemeBaşlangıcı = a.EBHDosyaBilgileri.OdemeBaslangici,
-                            RaporSüresi = a.EBHDosyaBilgileri.RaporSuresi,
-                            RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                            Durum = a.Durum,
+                            mahalleKöy = a.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                            RaporSüresi = a.RaporSuresi,
+                            RaporTipi = a.RaporTipi,
                             EngelliTC = a.TC,
                             EngelliTelefon = a.Telefon,
-                            YakınlıkDurumu = a.BakiciBilgileri.YakinlikDurumu,
-                            YBSNo = a.EBHDosyaBilgileri.YBSNo,
-                            DosyaKayıtTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
-                            Not=a.EBHDosyaBilgileri.Not
+                            YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
+                            YBSNo = a.YBSNo,
+                            DosyaKayıtTarihi = a.DosyaTarihi,
+                            Not = a.Not
                         };
                         Yeni.Add(eklemece);
                     }
@@ -310,34 +268,31 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static VMEBH EBHBul(string Id)
         {
             int id = int.Parse(Id);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.EngelliBilgileri.Where(p => p.EngelliBilgileriID == id).Select(a => new VMEBH
                 {
                     AdiSoyadi = a.AdiSoyadi,
                     Adres = a.Adres,
-                    ArsivNo = a.EBHDosyaBilgileri.ArsivNo,
-                    BakiciBilgileriAdiSoyadi = a.BakiciBilgileri.AdiSoyadi,
-                    BakiciBilgileriDogumTarihi = a.BakiciBilgileri.DogumTarihi,
-                    BakiciBilgileriID = a.BakiciBilgileriID,
-                    BakiciBilgileriTC = a.BakiciBilgileri.TC,
-                    BaslangicTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                    BasvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                    BitisTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                    ArsivNo = a.ArsivNo,
+                    BakiciBilgileriAdiSoyadi = a.BakiciBilgileriAdiSoyadi,
+                    BakiciBilgileriDogumTarihi = a.BakiciBilgileriDogumTarihi,
+                    BakiciBilgileriTC = a.BakiciBilgileriTC,
+                    BaslangicTarihi = a.BaslangicTarihi,
+                    BasvuruTarihi = a.BasvuruTarihi,
+                    BitisTarihi = a.BitisTarihi,
                     DogumTarihi = a.DogumTarihi,
-                    DosyaTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
-                    Durum = a.EBHDosyaBilgileri.Durum,
-                    EBHDosyaBilgileriID = a.EBHDosyaBilgileriID,
-                    EngelliBilgileriID = a.EngelliBilgileriID,
-                    mahalleKoy = a.EBHDosyaBilgileri.MahalleKoy,
-                    OdemeBaslangici = a.EBHDosyaBilgileri.OdemeBaslangici,
-                    RaporSuresi = a.EBHDosyaBilgileri.RaporSuresi,
-                    RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                    Durum = a.Durum,
+                    mahalleKoy = a.MahalleKoy,
+                    OdemeBaslangici = a.OdemeBaslangici,
+                    RaporSuresi = a.RaporSuresi,
+                    RaporTipi = a.RaporTipi,
                     TC = a.TC,
                     Telefon = a.Telefon,
-                    Not=a.EBHDosyaBilgileri.Not,
-                    YakinlikDurumu = a.BakiciBilgileri.YakinlikDurumu,
-                    YBSNo = a.EBHDosyaBilgileri.YBSNo
+                    YakinlikDurumu = a.BakiciBilgileriYakinlikDurumu,
+                    YBSNo = a.YBSNo,
+                    DosyaTarihi = a.DosyaTarihi,
+                    Not = a.Not,
                 }).FirstOrDefault();
                 return Bul;
             }
@@ -345,12 +300,12 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static List<VMDosyaTakip> DosyaTakipBul(string Id)
         {
             int id = int.Parse(Id);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var bul = db.EBHDosyaTakip.Where(p => p.EngelliBilgileriID == id).Select(a => new VMDosyaTakip
                 {
                     Durum = a.Durum,
-                    ID = a.EBHDosyaTakipID,
+                    ID = a.EngelliBilgileriID,
                     Tarih = a.Tarih
                 }).ToList();
                 return bul;

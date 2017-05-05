@@ -8,7 +8,7 @@ namespace ChoiceSosyalHizmet.DAL.VM
 {
    public class VMMahalleKoy
     {
-        public int MahalleKoyID { get; set; }
+        public long MahalleKoyID { get; set; }
         public string Isim { get; set; }
     }
 }

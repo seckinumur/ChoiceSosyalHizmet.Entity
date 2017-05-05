@@ -8,10 +8,10 @@ namespace ChoiceSosyalHizmet.DAL.VM
 {
    public class VMZimmetList
     {
-        public int ID { get; set; }
-        public int PersonelID { get; set; }
+        public long ID { get; set; }
+        public long PersonelID { get; set; }
         public string PersonelAdı { get; set; }
-        public bool Zimmettemi { get; set; }
+        public string Zimmettemi { get; set; }
         public string ZimmeteAlişTarihi { get; set; }
         public string ZimmettenÇıkışTarihi { get; set; }
         public string DosyaAdı { get; set; }

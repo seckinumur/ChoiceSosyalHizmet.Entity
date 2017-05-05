@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceSosyalHizmet.Entity", "ChoiceSosyalHizmet.Entity\ChoiceSosyalHizmet.Entity.csproj", "{F8F82593-E2EA-4721-99CC-CCAA43AB6036}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceSosyalHizmet.DAL", "ChoiceSosyalHizmet.DAL\ChoiceSosyalHizmet.DAL.csproj", "{30A689B2-B656-4963-8192-257F8CF38B3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceSosyalHizmet.WinForm", "ChoiceSosyalHizmet.WinForm\ChoiceSosyalHizmet.WinForm.csproj", "{7D1DEDFA-E7AF-460B-9A79-FA787E56E774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceSosyalHizmetTest", "ChoiceSosyalHizmetTest\ChoiceSosyalHizmetTest.csproj", "{4058845E-2580-4026-99DD-D24B6B138D6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceSosyalHizmet.Entity", "ChoiceSosyalHizmet.Entity\ChoiceSosyalHizmet.Entity.csproj", "{CB515F53-0DEB-4794-8109-6E4CA879E5D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F8F82593-E2EA-4721-99CC-CCAA43AB6036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8F82593-E2EA-4721-99CC-CCAA43AB6036}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8F82593-E2EA-4721-99CC-CCAA43AB6036}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8F82593-E2EA-4721-99CC-CCAA43AB6036}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30A689B2-B656-4963-8192-257F8CF38B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30A689B2-B656-4963-8192-257F8CF38B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30A689B2-B656-4963-8192-257F8CF38B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,10 +23,10 @@ Global
 		{7D1DEDFA-E7AF-460B-9A79-FA787E56E774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D1DEDFA-E7AF-460B-9A79-FA787E56E774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D1DEDFA-E7AF-460B-9A79-FA787E56E774}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4058845E-2580-4026-99DD-D24B6B138D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4058845E-2580-4026-99DD-D24B6B138D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4058845E-2580-4026-99DD-D24B6B138D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4058845E-2580-4026-99DD-D24B6B138D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB515F53-0DEB-4794-8109-6E4CA879E5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB515F53-0DEB-4794-8109-6E4CA879E5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB515F53-0DEB-4794-8109-6E4CA879E5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB515F53-0DEB-4794-8109-6E4CA879E5D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

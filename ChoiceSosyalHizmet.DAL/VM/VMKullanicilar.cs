@@ -8,7 +8,7 @@ namespace ChoiceSosyalHizmet.DAL.VM
 {
   public class VMKullanicilar
     {
-        public int KullanicilarID { get; set; }
+        public long KullanicilarID { get; set; }
         public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
     }

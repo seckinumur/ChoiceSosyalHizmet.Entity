@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static string MahalleKoyEkle(VMMahalleKoy mkoy)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool varmi = db.MahalleKoy.Any(p => p.MahalleKoyID == mkoy.MahalleKoyID);
                 if (varmi == true)
@@ -35,7 +34,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static string MahalleKoyGuncelle(VMMahalleKoy mkoy)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 try
                 {
@@ -54,7 +53,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static string MahalleKoySil(string ID)
         {
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 try
                 {
@@ -71,7 +70,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static List<VMMahalleKoy> MaahalleKoyRaporla()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.MahalleKoy.Select(p => new VMMahalleKoy
                 {
@@ -84,7 +83,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static VMMahalleKoy MahalleKoyBul(string ID)
         {
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.MahalleKoy.Where(p => p.MahalleKoyID == id).Select(a => new VMMahalleKoy
                 {
@@ -96,7 +95,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static List<string> MahalleKarsila()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.MahalleKoy.Select(p=> p.Isim).ToList();
                 return Bul;

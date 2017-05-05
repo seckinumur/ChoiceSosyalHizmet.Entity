@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static string KullaniciEkle(VMKullanicilar kullanici)
         {
-            using(DBSosyal db = new DBSosyal())
+            using(DBChoiceEntities db = new DBChoiceEntities())
             {
                 Kullanicilar Ekle = new Kullanicilar()
                 {
@@ -28,7 +27,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static string KullaniciDuzenle(VMKullanicilar kullanici)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.Kullanicilar.FirstOrDefault(p => p.KullanicilarID == kullanici.KullanicilarID);
                 Bul.KullaniciAdi = kullanici.KullaniciAdi;
@@ -39,7 +38,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static string KullaniciSil(VMKullanicilar kullanici)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.Kullanicilar.FirstOrDefault(p => p.KullaniciAdi == kullanici.KullaniciAdi&& p.Sifre== kullanici.Sifre);
                 db.Kullanicilar.Remove(Bul);
@@ -49,7 +48,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static List<VMKullanicilar> KullaniciListele()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
               var bu=  db.Kullanicilar.Select(p => new VMKullanicilar
                 {
@@ -63,7 +62,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static VMKullanicilar KullaniciBul(string ID)
         {
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.Kullanicilar.Where(p => p.KullanicilarID == id).Select(n=> new VMKullanicilar
                 {
@@ -75,7 +74,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static bool SistemeGiris(VMKullanicilar al)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool pass = db.Kullanicilar.Any(p => p.KullaniciAdi == al.KullaniciAdi && p.Sifre == al.Sifre);
                 return pass;
@@ -83,7 +82,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static void veritabanisorgulama()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool pass = db.Kullanicilar.Any();
                 if (pass == false)

@@ -8,7 +8,7 @@ namespace ChoiceSosyalHizmet.DAL.VM
 {
    public class VMSEDRapor
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string BaşvuranınAdıSoyadı { get; set; }
         public string BaşvuranınTC { get; set; }
         public string BaşvuranınDoğumTarihi { get; set; }

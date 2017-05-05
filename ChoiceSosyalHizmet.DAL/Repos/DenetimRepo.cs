@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +17,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             {
                 DateTime tarih = DateTime.Now.Date;
                 int id = int.Parse(ID);
-                using (DBSosyal db = new DBSosyal())
+                using (DBChoiceEntities db = new DBChoiceEntities())
                 {
-                    var varsa = db.DenetimSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
+                    var varsa = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
                     if (tarih >= karsila)
                     {
@@ -44,9 +43,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             {
                 DateTime tarih = DateTime.Now.Date;
                 int id = int.Parse(ID);
-                using (DBSosyal db = new DBSosyal())
+                using (DBChoiceEntities db = new DBChoiceEntities())
                 {
-                    var varsa = db.DenetimEBH.FirstOrDefault(p => p.EngelliBilgileriID == id);
+                    var varsa = db.EngelliBilgileri.FirstOrDefault(p => p.EngelliBilgileriID == id);
                     DateTime karsila = Convert.ToDateTime(varsa.DenetimTarihi).AddMonths(6);
                     if (tarih >= karsila)
                     {
@@ -68,10 +67,10 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             List<VMSEDRapor> liste = new List<VMSEDRapor>();
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
 
-                var bul = db.DenetimSED.ToList();
+                var bul = db.BasvuraninBilgileri.ToList();
                 foreach (var item in bul)
                 {
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
@@ -80,27 +79,27 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     {
                         VMSEDRapor albakim = new VMSEDRapor()
                         {
-                            DosyaKayıtTarihi = a.SEDDosyaBilgileri.DosyaTarihi,
+                            DosyaKayıtTarihi = a.DosyaTarihi,
                             ID = a.BasvuraninBilgileriID,
                             BaşvuranınAdıSoyadı = a.AdiSoyadi,
                             BaşvuranınAdres = a.Adres,
-                            ArşivNo = a.SEDDosyaBilgileri.ArsivNo,
+                            ArşivNo = a.ArsivNo,
                             BaşvuruNedeni = a.BasvuruNedeni,
-                            BaşvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
+                            BaşvuruTarihi = a.BasvuruTarihi,
                             BaşvuranınDoğumTarihi = a.DogumTarihi,
-                            Durum = a.SEDDosyaBilgileri.Durum,
-                            mahalleKöy = a.SEDDosyaBilgileri.MahalleKoy,
-                            ÖdemeBaşlangıcı = a.SEDDosyaBilgileri.OdemeBaslangici,
-                            ÖdemeBitişi = a.SEDDosyaBilgileri.OdemeBitisi,
-                            ÖdemeSüresi = a.SEDDosyaBilgileri.OdemeSuresi,
+                            Durum = a.Durum,
+                            mahalleKöy = a.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                            ÖdemeBitişi = a.OdemeBitisi,
+                            ÖdemeSüresi = a.OdemeSuresi,
                             BaşvuranınTC = a.TC,
                             BaşvuranınTelefon = a.Telefon,
-                            YakınlıkDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
-                            YardımAlanınAdıSoyadı = a.YardimAlaninBilgileri.AdiSoyadi,
-                            YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
-                            YardımAlanınTC = a.YardimAlaninBilgileri.TC,
-                            YBSNo = a.SEDDosyaBilgileri.YBSNo,
-                            Not = a.SEDDosyaBilgileri.Not
+                            YakınlıkDurumu = a.YardimAlaninYakinlikDurumu,
+                            YardımAlanınAdıSoyadı = a.YardimAlaninAdiSoyadi,
+                            YardımAlanınDoğumTarihi = a.YardimAlaninDogumTarihi,
+                            YardımAlanınTC = a.YardimAlaninTC,
+                            YBSNo = a.YBSNo,
+                            Not = a.Not
                         };
                         liste.Add(albakim);
                     }
@@ -114,9 +113,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             List<VMEBHRapor> liste = new List<VMEBHRapor>();
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.DenetimEBH.ToList();
+                var bul = db.EngelliBilgileri.ToList();
                 foreach (var item in bul)
                 {
                     DateTime karsila = Convert.ToDateTime(item.DenetimTarihi).AddMonths(6);
@@ -127,26 +126,26 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         {
                             EngelliAdıSoyadı = a.AdiSoyadi,
                             EngelliAdres = a.Adres,
-                            ArşivNo = a.EBHDosyaBilgileri.ArsivNo,
-                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileri.AdiSoyadi,
-                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileri.DogumTarihi,
-                            BakıcıBilgileriTC = a.BakiciBilgileri.TC,
-                            BaşlangıcTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                            BaşvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                            BitişTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                            ArşivNo = a.ArsivNo,
+                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileriAdiSoyadi,
+                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileriDogumTarihi,
+                            BakıcıBilgileriTC = a.BakiciBilgileriTC,
+                            BaşlangıcTarihi = a.BaslangicTarihi,
+                            BaşvuruTarihi = a.BasvuruTarihi,
+                            BitişTarihi = a.BitisTarihi,
                             EngelliDoğumTarihi = a.DogumTarihi,
                             ID = a.EngelliBilgileriID,
-                            Durum = a.EBHDosyaBilgileri.Durum,
-                            mahalleKöy = a.EBHDosyaBilgileri.MahalleKoy,
-                            ÖdemeBaşlangıcı = a.EBHDosyaBilgileri.OdemeBaslangici,
-                            RaporSüresi = a.EBHDosyaBilgileri.RaporSuresi,
-                            RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                            Durum = a.Durum,
+                            mahalleKöy = a.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                            RaporSüresi = a.RaporSuresi,
+                            RaporTipi = a.RaporTipi,
                             EngelliTC = a.TC,
                             EngelliTelefon = a.Telefon,
-                            YakınlıkDurumu = a.BakiciBilgileri.YakinlikDurumu,
-                            YBSNo = a.EBHDosyaBilgileri.YBSNo,
-                            DosyaKayıtTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
-                            Not = a.EBHDosyaBilgileri.Not
+                            YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
+                            YBSNo = a.YBSNo,
+                            DosyaKayıtTarihi = a.DosyaTarihi,
+                            Not = a.Not
                         };
                         liste.Add(albakim);
                     }
@@ -160,9 +159,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.DenetimSED.Where(p => p.BasvuraninBilgileriID == id ).FirstOrDefault();
+                var bul = db.BasvuraninBilgileri.Where(p => p.BasvuraninBilgileriID == id ).FirstOrDefault();
                 bul.DenetimTarihi = tarih.ToShortDateString();
                 db.SaveChanges();
             }
@@ -171,9 +170,9 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.DenetimEBH.Where(p => p.EngelliBilgileriID == id ).FirstOrDefault();
+                var bul = db.EngelliBilgileri.Where(p => p.EngelliBilgileriID == id ).FirstOrDefault();
                 bul.DenetimTarihi = tarih.ToShortDateString();
                 db.SaveChanges();
             }
@@ -182,38 +181,38 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             List<VMSEDRapor> liste = new List<VMSEDRapor>();
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
 
-                var abul = db.BasvuraninBilgileri.Where(p=> p.SEDDosyaBilgileri.OdemeSuresi != "Tek Seferlik").ToList();
+                var abul = db.BasvuraninBilgileri.Where(p=> p.OdemeSuresi != "Tek Seferlik").ToList();
                 foreach (var a in abul)
                 {
-                    DateTime karsila = Convert.ToDateTime(a.SEDDosyaBilgileri.OdemeBitisi).AddMonths(-1);
+                    DateTime karsila = Convert.ToDateTime(a.OdemeBitisi).AddMonths(-1);
                     if (karsila == tarih)
                     {
                         VMSEDRapor albakim = new VMSEDRapor()
                         {
-                            DosyaKayıtTarihi = a.SEDDosyaBilgileri.DosyaTarihi,
+                            DosyaKayıtTarihi = a.DosyaTarihi,
                             ID = a.BasvuraninBilgileriID,
                             BaşvuranınAdıSoyadı = a.AdiSoyadi,
                             BaşvuranınAdres = a.Adres,
-                            ArşivNo = a.SEDDosyaBilgileri.ArsivNo,
+                            ArşivNo = a.ArsivNo,
                             BaşvuruNedeni = a.BasvuruNedeni,
-                            BaşvuruTarihi = a.SEDDosyaBilgileri.BasvuruTarihi,
+                            BaşvuruTarihi = a.BasvuruTarihi,
                             BaşvuranınDoğumTarihi = a.DogumTarihi,
-                            Durum = a.SEDDosyaBilgileri.Durum,
-                            mahalleKöy = a.SEDDosyaBilgileri.MahalleKoy,
-                            ÖdemeBaşlangıcı = a.SEDDosyaBilgileri.OdemeBaslangici,
-                            ÖdemeBitişi = a.SEDDosyaBilgileri.OdemeBitisi,
-                            ÖdemeSüresi = a.SEDDosyaBilgileri.OdemeSuresi,
+                            Durum = a.Durum,
+                            mahalleKöy = a.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                            ÖdemeBitişi = a.OdemeBitisi,
+                            ÖdemeSüresi = a.OdemeSuresi,
                             BaşvuranınTC = a.TC,
                             BaşvuranınTelefon = a.Telefon,
-                            YakınlıkDurumu = a.YardimAlaninBilgileri.YakinlikDurumu,
-                            YardımAlanınAdıSoyadı = a.YardimAlaninBilgileri.AdiSoyadi,
-                            YardımAlanınDoğumTarihi = a.YardimAlaninBilgileri.DogumTarihi,
-                            YardımAlanınTC = a.YardimAlaninBilgileri.TC,
-                            YBSNo = a.SEDDosyaBilgileri.YBSNo,
-                            Not = a.SEDDosyaBilgileri.Not
+                            YakınlıkDurumu = a.YardimAlaninYakinlikDurumu,
+                            YardımAlanınAdıSoyadı = a.YardimAlaninAdiSoyadi,
+                            YardımAlanınDoğumTarihi = a.YardimAlaninDogumTarihi,
+                            YardımAlanınTC = a.YardimAlaninTC,
+                            YBSNo = a.YBSNo,
+                            Not = a.Not
                         };
                         liste.Add(albakim);
                     }
@@ -227,38 +226,38 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         {
             DateTime tarih = DateTime.Now.Date;
             List<VMEBHRapor> liste = new List<VMEBHRapor>();
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var abul = db.EngelliBilgileri.Where(p=> p.EBHDosyaBilgileri.RaporTipi !="Sürekli").ToList();
+                var abul = db.EngelliBilgileri.Where(p=> p.RaporTipi !="Sürekli").ToList();
                 foreach (var a in abul)
                 {
-                    DateTime karsila = Convert.ToDateTime(a.EBHDosyaBilgileri.BitisTarihi).AddMonths(-3);
+                    DateTime karsila = Convert.ToDateTime(a.BitisTarihi).AddMonths(-3);
                     if (karsila == tarih)
                     {
                         VMEBHRapor albakim = new VMEBHRapor()
                         {
                             EngelliAdıSoyadı = a.AdiSoyadi,
                             EngelliAdres = a.Adres,
-                            ArşivNo = a.EBHDosyaBilgileri.ArsivNo,
-                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileri.AdiSoyadi,
-                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileri.DogumTarihi,
-                            BakıcıBilgileriTC = a.BakiciBilgileri.TC,
-                            BaşlangıcTarihi = a.EBHDosyaBilgileri.BaslangicTarihi,
-                            BaşvuruTarihi = a.EBHDosyaBilgileri.BasvuruTarihi,
-                            BitişTarihi = a.EBHDosyaBilgileri.BitisTarihi,
+                            ArşivNo = a.ArsivNo,
+                            BakıcıBilgileriAdıSoyadı = a.BakiciBilgileriAdiSoyadi,
+                            BakıcıBilgileriDoğumTarihi = a.BakiciBilgileriDogumTarihi,
+                            BakıcıBilgileriTC = a.BakiciBilgileriTC,
+                            BaşlangıcTarihi = a.BaslangicTarihi,
+                            BaşvuruTarihi = a.BasvuruTarihi,
+                            BitişTarihi = a.BitisTarihi,
                             EngelliDoğumTarihi = a.DogumTarihi,
                             ID = a.EngelliBilgileriID,
-                            Durum = a.EBHDosyaBilgileri.Durum,
-                            mahalleKöy = a.EBHDosyaBilgileri.MahalleKoy,
-                            ÖdemeBaşlangıcı = a.EBHDosyaBilgileri.OdemeBaslangici,
-                            RaporSüresi = a.EBHDosyaBilgileri.RaporSuresi,
-                            RaporTipi = a.EBHDosyaBilgileri.RaporTipi,
+                            Durum = a.Durum,
+                            mahalleKöy = a.MahalleKoy,
+                            ÖdemeBaşlangıcı = a.OdemeBaslangici,
+                            RaporSüresi = a.RaporSuresi,
+                            RaporTipi = a.RaporTipi,
                             EngelliTC = a.TC,
                             EngelliTelefon = a.Telefon,
-                            YakınlıkDurumu = a.BakiciBilgileri.YakinlikDurumu,
-                            YBSNo = a.EBHDosyaBilgileri.YBSNo,
-                            DosyaKayıtTarihi = a.EBHDosyaBilgileri.DosyaTarihi,
-                            Not = a.EBHDosyaBilgileri.Not
+                            YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
+                            YBSNo = a.YBSNo,
+                            DosyaKayıtTarihi = a.DosyaTarihi,
+                            Not = a.Not
                         };
                         liste.Add(albakim);
                     }

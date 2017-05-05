@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static string PersonelEkle(VMPersonel personel)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 bool varmi = db.Personel.Any(p => p.TC == personel.TC);
                 if (varmi == true)
@@ -36,7 +35,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static string PersonelGuncelle(VMPersonel personel)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 try
                 {
@@ -56,7 +55,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static string PersonelSil(string ID)
         {
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 try
                 {
@@ -73,7 +72,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         }
         public static List<VMPersonel> PersonelRaporla()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.Personel.Select(p => new VMPersonel
                 {
@@ -87,7 +86,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static VMPersonel PersonelBul(string ID)
         {
             int id = int.Parse(ID);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var Bul = db.Personel.Where(p => p.PersonelID == id).Select(a => new VMPersonel
                 {

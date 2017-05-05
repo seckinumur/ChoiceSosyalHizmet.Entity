@@ -1,6 +1,5 @@
 ﻿using ChoiceSosyalHizmet.DAL.VM;
-using ChoiceSosyalHizmet.Entity.Context;
-using ChoiceSosyalHizmet.Entity.Model;
+using ChoiceSosyalHizmet.Entity.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
     {
         public static string ZimmeteEkle(int perid, int id)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var perbul = db.Personel.FirstOrDefault(p => p.PersonelID == perid);
                 var bul = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
@@ -22,7 +21,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     BasvuraninBilgileriID = bul.BasvuraninBilgileriID,
                     PersonelID = perbul.PersonelID,
                     ZimmeteAlisTarihi = DateTime.Now.ToShortDateString(),
-                    Zimmettemi = true
+                    Zimmettemi = "true"
                 };
                 db.EvrakZimmetSED.Add(ekle);
                 db.SaveChanges();
@@ -32,51 +31,64 @@ namespace ChoiceSosyalHizmet.DAL.Repos
         public static void ZimmetKaldır(string AS)
         {
             int perid = int.Parse(AS);
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
                 var perbul = db.Personel.FirstOrDefault(p => p.PersonelID == perid);
 
                 var ekle = db.EvrakZimmetSED.FirstOrDefault(p => p.EvrakZimmetSEDID == perid);
                 ekle.ZimmettenCikisTarihi = DateTime.Now.ToShortDateString();
-                ekle.Zimmettemi = false;
+                ekle.Zimmettemi = "false";
                 db.SaveChanges();
             }
         }
-        public static VMZimmetList ZimmetBul(int id)
+        public static VMZimmetList ZimmetBul(long id)
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.EvrakZimmetSED.Where(p => p.BasvuraninBilgileriID == id && p.Zimmettemi == true).Select(a => new VMZimmetList
+                var bul = db.EvrakZimmetSED.FirstOrDefault(p => p.BasvuraninBilgileriID == id && p.Zimmettemi == "true");
+                var pers = db.Personel.FirstOrDefault(p => p.PersonelID == bul.PersonelID);
+                var kisi = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == id);
+                VMZimmetList bul1 = new VMZimmetList()
                 {
-                    DosyaAdı = a.BasvuraninBilgileri.AdiSoyadi,
-                    DosyaSahibiMahalleKöy = a.BasvuraninBilgileri.SEDDosyaBilgileri.MahalleKoy,
-                    DosyaSahibiTC = a.BasvuraninBilgileri.TC,
-                    PersonelAdı = a.Personel.AdiSoyadi,
-                    ID = a.EvrakZimmetSEDID,
-                    ZimmeteAlişTarihi = a.ZimmeteAlisTarihi,
-                    Zimmettemi = a.Zimmettemi,
-                    ZimmettenÇıkışTarihi = a.ZimmettenCikisTarihi,
-                    PersonelID = a.PersonelID
-                }).FirstOrDefault();
-                return bul;
+                    DosyaAdı = kisi.AdiSoyadi,
+                    DosyaSahibiMahalleKöy = kisi.MahalleKoy,
+                    DosyaSahibiTC = kisi.TC,
+                    PersonelAdı = pers.AdiSoyadi,
+                    ID = bul.EvrakZimmetSEDID,
+                    ZimmeteAlişTarihi = bul.ZimmeteAlisTarihi,
+                    Zimmettemi = bul.Zimmettemi,
+                    ZimmettenÇıkışTarihi = bul.ZimmettenCikisTarihi,
+                    PersonelID = pers.PersonelID
+                };
+                return bul1;
             }
         }
         public static List<VMZimmetList> ZimmetListele()
         {
-            using (DBSosyal db = new DBSosyal())
+            using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var bul = db.EvrakZimmetSED.Select(a => new VMZimmetList
+                List<VMZimmetList> bul11 = new List<VMZimmetList>();
+                var item = db.EvrakZimmetSED.ToList();
+                foreach (var bul in item)
                 {
-                    DosyaAdı = a.BasvuraninBilgileri.AdiSoyadi,
-                    DosyaSahibiMahalleKöy = a.BasvuraninBilgileri.SEDDosyaBilgileri.MahalleKoy,
-                    DosyaSahibiTC = a.BasvuraninBilgileri.TC,
-                    PersonelAdı = a.Personel.AdiSoyadi,
-                    ID = a.EvrakZimmetSEDID,
-                    ZimmeteAlişTarihi = a.ZimmeteAlisTarihi,
-                    Zimmettemi = a.Zimmettemi,
-                    ZimmettenÇıkışTarihi = a.ZimmettenCikisTarihi
-                }).ToList();
-                return bul;
+                    var pers = db.Personel.FirstOrDefault(p => p.PersonelID == bul.PersonelID);
+                    var kisi = db.BasvuraninBilgileri.FirstOrDefault(p => p.BasvuraninBilgileriID == bul.BasvuraninBilgileriID);
+                    VMZimmetList bul1 = new VMZimmetList()
+                    {
+                        DosyaAdı = kisi.AdiSoyadi,
+                        DosyaSahibiMahalleKöy = kisi.MahalleKoy,
+                        DosyaSahibiTC = kisi.TC,
+                        PersonelAdı = pers.AdiSoyadi,
+                        ID = bul.EvrakZimmetSEDID,
+                        ZimmeteAlişTarihi = bul.ZimmeteAlisTarihi,
+                        Zimmettemi = bul.Zimmettemi,
+                        ZimmettenÇıkışTarihi = bul.ZimmettenCikisTarihi,
+                        PersonelID = pers.PersonelID
+                    };
+                    bul11.Add(bul1);
+                }
+
+                return bul11;
             }
         }
     }

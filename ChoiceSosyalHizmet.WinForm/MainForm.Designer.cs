@@ -1747,7 +1747,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 80658;
+            this.bunifuSeparator1.LineThickness = 99271;
             this.bunifuSeparator1.Location = new System.Drawing.Point(15, 239);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -2821,7 +2821,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.5 Evrak Takip Otomasyonu";
+            this.Text = "Choice SHM V.1.6 Evrak Takip Otomasyonu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();

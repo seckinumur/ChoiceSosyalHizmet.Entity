@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBChoiceModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=&quot;C:\Sosyal Hizmet\Data\DBChoice.db&quot;" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BasvuraninBilgileri">
+          <Key>
+            <PropertyRef Name="BasvuraninBilgileriID" />
+          </Key>
+          <Property Name="BasvuraninBilgileriID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DogumTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BasvuruNedeni" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YardimAlaninAdiSoyadi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YardimAlaninTC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YardimAlaninDogumTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YardimAlaninYakinlikDurumu" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="MahalleKoy" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BasvuruTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="OdemeSuresi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="OdemeBaslangici" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="OdemeBitisi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YBSNo" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ArsivNo" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DosyaTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Not" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DenetimTarihi" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="EBHDosyaTakip">
+          <Key>
+            <PropertyRef Name="EBHDosyaTakipID" />
+          </Key>
+          <Property Name="EBHDosyaTakipID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EngelliBilgileriID" Type="integer" Nullable="false" />
+          <Property Name="Tarih" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="EngelliBilgileri">
+          <Key>
+            <PropertyRef Name="EngelliBilgileriID" />
+          </Key>
+          <Property Name="EngelliBilgileriID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DogumTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BakiciBilgileriAdiSoyadi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BakiciBilgileriTC" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BakiciBilgileriDogumTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BakiciBilgileriYakinlikDurumu" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="MahalleKoy" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BasvuruTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="RaporTipi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="OdemeBaslangici" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="RaporSuresi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BaslangicTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="BitisTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="YBSNo" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ArsivNo" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DosyaTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Not" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DenetimTarihi" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="EvrakZimmetEBH">
+          <Key>
+            <PropertyRef Name="EvrakZimmetEBHID" />
+          </Key>
+          <Property Name="EvrakZimmetEBHID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelID" Type="integer" Nullable="false" />
+          <Property Name="EngelliBilgileriID" Type="integer" Nullable="false" />
+          <Property Name="Zimmettemi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ZimmeteAlisTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ZimmettenCikisTarihi" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="EvrakZimmetSED">
+          <Key>
+            <PropertyRef Name="EvrakZimmetSEDID" />
+          </Key>
+          <Property Name="EvrakZimmetSEDID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelID" Type="integer" Nullable="false" />
+          <Property Name="BasvuraninBilgileriID" Type="integer" Nullable="false" />
+          <Property Name="Zimmettemi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ZimmeteAlisTarihi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ZimmettenCikisTarihi" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="KullanicilarID" />
+          </Key>
+          <Property Name="KullanicilarID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="MahalleKoy">
+          <Key>
+            <PropertyRef Name="MahalleKoyID" />
+          </Key>
+          <Property Name="MahalleKoyID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Isim" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="PersonelID" />
+          </Key>
+          <Property Name="PersonelID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdiSoyadi" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TC" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="SEDDosyaTakip">
+          <Key>
+            <PropertyRef Name="SEDDosyaTakipID" />
+          </Key>
+          <Property Name="SEDDosyaTakipID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BasvuraninBilgileriID" Type="integer" Nullable="false" />
+          <Property Name="Tarih" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityContainer Name="DBChoiceModelStoreContainer">
+          <EntitySet Name="BasvuraninBilgileri" EntityType="Self.BasvuraninBilgileri" store:Type="Tables" />
+          <EntitySet Name="EBHDosyaTakip" EntityType="Self.EBHDosyaTakip" store:Type="Tables" />
+          <EntitySet Name="EngelliBilgileri" EntityType="Self.EngelliBilgileri" store:Type="Tables" />
+          <EntitySet Name="EvrakZimmetEBH" EntityType="Self.EvrakZimmetEBH" store:Type="Tables" />
+          <EntitySet Name="EvrakZimmetSED" EntityType="Self.EvrakZimmetSED" store:Type="Tables" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" store:Type="Tables" />
+          <EntitySet Name="MahalleKoy" EntityType="Self.MahalleKoy" store:Type="Tables" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" store:Type="Tables" />
+          <EntitySet Name="SEDDosyaTakip" EntityType="Self.SEDDosyaTakip" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBChoiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BasvuraninBilgileri">
+          <Key>
+            <PropertyRef Name="BasvuraninBilgileriID" />
+          </Key>
+          <Property Name="BasvuraninBilgileriID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DogumTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BasvuruNedeni" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YardimAlaninAdiSoyadi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YardimAlaninTC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YardimAlaninDogumTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YardimAlaninYakinlikDurumu" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="MahalleKoy" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BasvuruTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="OdemeSuresi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="OdemeBaslangici" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="OdemeBitisi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YBSNo" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ArsivNo" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DosyaTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Not" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DenetimTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EBHDosyaTakip">
+          <Key>
+            <PropertyRef Name="EBHDosyaTakipID" />
+          </Key>
+          <Property Name="EBHDosyaTakipID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EngelliBilgileriID" Type="Int64" Nullable="false" />
+          <Property Name="Tarih" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EngelliBilgileri">
+          <Key>
+            <PropertyRef Name="EngelliBilgileriID" />
+          </Key>
+          <Property Name="EngelliBilgileriID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DogumTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BakiciBilgileriAdiSoyadi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BakiciBilgileriTC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BakiciBilgileriDogumTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BakiciBilgileriYakinlikDurumu" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="MahalleKoy" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BasvuruTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="RaporTipi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="OdemeBaslangici" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="RaporSuresi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BaslangicTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="BitisTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="YBSNo" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ArsivNo" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DosyaTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Not" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DenetimTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EvrakZimmetEBH">
+          <Key>
+            <PropertyRef Name="EvrakZimmetEBHID" />
+          </Key>
+          <Property Name="EvrakZimmetEBHID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelID" Type="Int64" Nullable="false" />
+          <Property Name="EngelliBilgileriID" Type="Int64" Nullable="false" />
+          <Property Name="Zimmettemi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ZimmeteAlisTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ZimmettenCikisTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EvrakZimmetSED">
+          <Key>
+            <PropertyRef Name="EvrakZimmetSEDID" />
+          </Key>
+          <Property Name="EvrakZimmetSEDID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelID" Type="Int64" Nullable="false" />
+          <Property Name="BasvuraninBilgileriID" Type="Int64" Nullable="false" />
+          <Property Name="Zimmettemi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ZimmeteAlisTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ZimmettenCikisTarihi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="KullanicilarID" />
+          </Key>
+          <Property Name="KullanicilarID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MahalleKoy">
+          <Key>
+            <PropertyRef Name="MahalleKoyID" />
+          </Key>
+          <Property Name="MahalleKoyID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Isim" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="PersonelID" />
+          </Key>
+          <Property Name="PersonelID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdiSoyadi" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SEDDosyaTakip">
+          <Key>
+            <PropertyRef Name="SEDDosyaTakipID" />
+          </Key>
+          <Property Name="SEDDosyaTakipID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BasvuraninBilgileriID" Type="Int64" Nullable="false" />
+          <Property Name="Tarih" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DBChoiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BasvuraninBilgileri" EntityType="Self.BasvuraninBilgileri" />
+          <EntitySet Name="EBHDosyaTakip" EntityType="Self.EBHDosyaTakip" />
+          <EntitySet Name="EngelliBilgileri" EntityType="Self.EngelliBilgileri" />
+          <EntitySet Name="EvrakZimmetEBH" EntityType="Self.EvrakZimmetEBH" />
+          <EntitySet Name="EvrakZimmetSED" EntityType="Self.EvrakZimmetSED" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" />
+          <EntitySet Name="MahalleKoy" EntityType="Self.MahalleKoy" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" />
+          <EntitySet Name="SEDDosyaTakip" EntityType="Self.SEDDosyaTakip" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBChoiceModelStoreContainer" CdmEntityContainer="DBChoiceEntities">
+          <EntitySetMapping Name="BasvuraninBilgileri">
+            <EntityTypeMapping TypeName="DBChoiceModel.BasvuraninBilgileri">
+              <MappingFragment StoreEntitySet="BasvuraninBilgileri">
+                <ScalarProperty Name="BasvuraninBilgileriID" ColumnName="BasvuraninBilgileriID" />
+                <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="BasvuruNedeni" ColumnName="BasvuruNedeni" />
+                <ScalarProperty Name="YardimAlaninAdiSoyadi" ColumnName="YardimAlaninAdiSoyadi" />
+                <ScalarProperty Name="YardimAlaninTC" ColumnName="YardimAlaninTC" />
+                <ScalarProperty Name="YardimAlaninDogumTarihi" ColumnName="YardimAlaninDogumTarihi" />
+                <ScalarProperty Name="YardimAlaninYakinlikDurumu" ColumnName="YardimAlaninYakinlikDurumu" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="MahalleKoy" ColumnName="MahalleKoy" />
+                <ScalarProperty Name="BasvuruTarihi" ColumnName="BasvuruTarihi" />
+                <ScalarProperty Name="OdemeSuresi" ColumnName="OdemeSuresi" />
+                <ScalarProperty Name="OdemeBaslangici" ColumnName="OdemeBaslangici" />
+                <ScalarProperty Name="OdemeBitisi" ColumnName="OdemeBitisi" />
+                <ScalarProperty Name="YBSNo" ColumnName="YBSNo" />
+                <ScalarProperty Name="ArsivNo" ColumnName="ArsivNo" />
+                <ScalarProperty Name="DosyaTarihi" ColumnName="DosyaTarihi" />
+                <ScalarProperty Name="Not" ColumnName="Not" />
+                <ScalarProperty Name="DenetimTarihi" ColumnName="DenetimTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EBHDosyaTakip">
+            <EntityTypeMapping TypeName="DBChoiceModel.EBHDosyaTakip">
+              <MappingFragment StoreEntitySet="EBHDosyaTakip">
+                <ScalarProperty Name="EBHDosyaTakipID" ColumnName="EBHDosyaTakipID" />
+                <ScalarProperty Name="EngelliBilgileriID" ColumnName="EngelliBilgileriID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EngelliBilgileri">
+            <EntityTypeMapping TypeName="DBChoiceModel.EngelliBilgileri">
+              <MappingFragment StoreEntitySet="EngelliBilgileri">
+                <ScalarProperty Name="EngelliBilgileriID" ColumnName="EngelliBilgileriID" />
+                <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="BakiciBilgileriAdiSoyadi" ColumnName="BakiciBilgileriAdiSoyadi" />
+                <ScalarProperty Name="BakiciBilgileriTC" ColumnName="BakiciBilgileriTC" />
+                <ScalarProperty Name="BakiciBilgileriDogumTarihi" ColumnName="BakiciBilgileriDogumTarihi" />
+                <ScalarProperty Name="BakiciBilgileriYakinlikDurumu" ColumnName="BakiciBilgileriYakinlikDurumu" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="MahalleKoy" ColumnName="MahalleKoy" />
+                <ScalarProperty Name="BasvuruTarihi" ColumnName="BasvuruTarihi" />
+                <ScalarProperty Name="RaporTipi" ColumnName="RaporTipi" />
+                <ScalarProperty Name="OdemeBaslangici" ColumnName="OdemeBaslangici" />
+                <ScalarProperty Name="RaporSuresi" ColumnName="RaporSuresi" />
+                <ScalarProperty Name="BaslangicTarihi" ColumnName="BaslangicTarihi" />
+                <ScalarProperty Name="BitisTarihi" ColumnName="BitisTarihi" />
+                <ScalarProperty Name="YBSNo" ColumnName="YBSNo" />
+                <ScalarProperty Name="ArsivNo" ColumnName="ArsivNo" />
+                <ScalarProperty Name="DosyaTarihi" ColumnName="DosyaTarihi" />
+                <ScalarProperty Name="Not" ColumnName="Not" />
+                <ScalarProperty Name="DenetimTarihi" ColumnName="DenetimTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EvrakZimmetEBH">
+            <EntityTypeMapping TypeName="DBChoiceModel.EvrakZimmetEBH">
+              <MappingFragment StoreEntitySet="EvrakZimmetEBH">
+                <ScalarProperty Name="EvrakZimmetEBHID" ColumnName="EvrakZimmetEBHID" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="EngelliBilgileriID" ColumnName="EngelliBilgileriID" />
+                <ScalarProperty Name="Zimmettemi" ColumnName="Zimmettemi" />
+                <ScalarProperty Name="ZimmeteAlisTarihi" ColumnName="ZimmeteAlisTarihi" />
+                <ScalarProperty Name="ZimmettenCikisTarihi" ColumnName="ZimmettenCikisTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EvrakZimmetSED">
+            <EntityTypeMapping TypeName="DBChoiceModel.EvrakZimmetSED">
+              <MappingFragment StoreEntitySet="EvrakZimmetSED">
+                <ScalarProperty Name="EvrakZimmetSEDID" ColumnName="EvrakZimmetSEDID" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="BasvuraninBilgileriID" ColumnName="BasvuraninBilgileriID" />
+                <ScalarProperty Name="Zimmettemi" ColumnName="Zimmettemi" />
+                <ScalarProperty Name="ZimmeteAlisTarihi" ColumnName="ZimmeteAlisTarihi" />
+                <ScalarProperty Name="ZimmettenCikisTarihi" ColumnName="ZimmettenCikisTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanicilar">
+            <EntityTypeMapping TypeName="DBChoiceModel.Kullanicilar">
+              <MappingFragment StoreEntitySet="Kullanicilar">
+                <ScalarProperty Name="KullanicilarID" ColumnName="KullanicilarID" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MahalleKoy">
+            <EntityTypeMapping TypeName="DBChoiceModel.MahalleKoy">
+              <MappingFragment StoreEntitySet="MahalleKoy">
+                <ScalarProperty Name="MahalleKoyID" ColumnName="MahalleKoyID" />
+                <ScalarProperty Name="Isim" ColumnName="Isim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personel">
+            <EntityTypeMapping TypeName="DBChoiceModel.Personel">
+              <MappingFragment StoreEntitySet="Personel">
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SEDDosyaTakip">
+            <EntityTypeMapping TypeName="DBChoiceModel.SEDDosyaTakip">
+              <MappingFragment StoreEntitySet="SEDDosyaTakip">
+                <ScalarProperty Name="SEDDosyaTakipID" ColumnName="SEDDosyaTakipID" />
+                <ScalarProperty Name="BasvuraninBilgileriID" ColumnName="BasvuraninBilgileriID" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

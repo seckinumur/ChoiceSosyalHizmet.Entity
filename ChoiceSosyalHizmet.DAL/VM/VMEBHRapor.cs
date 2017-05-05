@@ -8,7 +8,7 @@ namespace ChoiceSosyalHizmet.DAL.VM
 {
    public class VMEBHRapor
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
         public string EngelliAdıSoyadı { get; set; }
         public string EngelliTC { get; set; }
         public string EngelliDoğumTarihi { get; set; }
