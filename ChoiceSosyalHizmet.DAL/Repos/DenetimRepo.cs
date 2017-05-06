@@ -187,7 +187,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.OdemeBitisi).AddMonths(-1);
-                    if (karsila == tarih)
+                    if (karsila <= tarih)
                     {
                         VMSEDRapor albakim = new VMSEDRapor()
                         {
@@ -231,7 +231,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.BitisTarihi).AddMonths(-3);
-                    if (karsila == tarih)
+                    if (karsila <= tarih)
                     {
                         VMEBHRapor albakim = new VMEBHRapor()
                         {

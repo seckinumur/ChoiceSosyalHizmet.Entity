@@ -44,7 +44,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                         RaporTipi = Al.RaporTipi,
                         YBSNo = Al.YBSNo,
                         Not = Al.Not,
-                        DenetimTarihi=DateTime.Now.ToShortDateString()
+                        DenetimTarihi=Al.OdemeBaslangici
                     };
 
                     bool varmi = db.MahalleKoy.Any(p => p.Isim == Al.mahalleKoy);
