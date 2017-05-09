@@ -93,7 +93,7 @@ namespace ChoiceSosyalHizmet.WinForm
             Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
             if (Uyari == DialogResult.Yes)
             {
-                string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
+                string ChekDt = "", baslangict = "", bitistt = "", RaporSuresi = "";
                 if (RDE.Checked == true && EbhBTT.Text != "")
                 {
                     ChekDt = RDE.Text;
@@ -104,12 +104,7 @@ namespace ChoiceSosyalHizmet.WinForm
                     ChekDt = RDE2.Text;
                     baslangict = EbhBTT.Text;
                     bitistt = EbhBTTT.Text;
-                    RaporSuresi = EbhRSU.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Rapor Bilgileri Boş Bırakılamaz!");
-                    return;
+                    RaporSuresi = EbhRSU.SelectedItem.ToString();
                 }
                 try
                 {
@@ -139,20 +134,12 @@ namespace ChoiceSosyalHizmet.WinForm
                         RaporSuresi = RaporSuresi,
                         RaporTipi = ChekDt,
                     };
-                    Sonuc = EBHRepo.Guncelle(Kyd);
-                    if (Sonuc != "Kayıt Başarıyla Güncellendi!")
-                    {
-                        MessageBox.Show(Sonuc);
-                    }
-                    else
-                    {
-                        MessageBox.Show(Sonuc);
-                    }
+                    MessageBox.Show(EBHRepo.Guncelle(Kyd));
                     EBHRaporFormu_Load(sender, e);
                 }
                 catch
                 {
-                    Sonuc = "Tüm Alanlar Doldurulmadan Kayıt Yapılamaz!";
+                    MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Güncellenemez!");
                 }
             }
         }
@@ -172,62 +159,60 @@ namespace ChoiceSosyalHizmet.WinForm
                 EbhRSU.SelectedIndex = -1;
             }
         }
-        private bool ac;
+
         private void EbhRSU_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (EbhBTT.Text == "" && ac == false)
+            try
             {
-                ac = true;
-                MessageBox.Show("Önce Başlangıç Tarihi Seçin");
+                DateTime Baslangictarihi = EbhBTT.DateTime, bitistar;
+                if (EbhRSU.SelectedItem.ToString() == "6 AY" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddMonths(6);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "1 YIL" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddYears(1);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "2 YIL" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddYears(2);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "3 YIL" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddYears(3);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "4 YIL" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddYears(4);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "5 YIL" && EbhBTT.Text != "")
+                {
+                    bitistar = Baslangictarihi.AddYears(5);
+                    EbhBTTT.Text = bitistar.ToShortDateString();
+                    return;
+                }
+                else if (EbhRSU.SelectedItem.ToString() == "YOK")
+                {
+                    EbhBTTT.Text = "";
+                    EbhRSU.Enabled = true;
+                    return;
+                }
+                EbhRSU.SelectedIndex = -1;
             }
-            else
+            catch
             {
-                try
-                {
-                    DateTime Baslangictarihi = EbhBTT.DateTime, bitistar;
-                    if (EbhRSU.SelectedItem.ToString() == "6 AY")
-                    {
-                        bitistar = Baslangictarihi.AddMonths(6);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                    else if (EbhRSU.SelectedItem.ToString() == "1 YIL")
-                    {
-                        bitistar = Baslangictarihi.AddYears(1);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                    else if (EbhRSU.SelectedItem.ToString() == "2 YIL")
-                    {
-                        bitistar = Baslangictarihi.AddYears(2);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                    else if (EbhRSU.SelectedItem.ToString() == "3 YIL")
-                    {
-                        bitistar = Baslangictarihi.AddYears(3);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                    else if (EbhRSU.SelectedItem.ToString() == "4 YIL")
-                    {
-                        bitistar = Baslangictarihi.AddYears(4);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                    else if (EbhRSU.SelectedItem.ToString() == "5 YIL")
-                    {
-                        bitistar = Baslangictarihi.AddYears(5);
-                        EbhBTTT.Text = bitistar.ToShortDateString();
-                        return;
-                    }
-                }
-                catch
-                {
-                }
+                EbhRSU.SelectedIndex = -1;
             }
-            EbhRSU.SelectedIndex = -1;
-            ac = false;
         }
 
         private void zimmetbuton_Click(object sender, EventArgs e)

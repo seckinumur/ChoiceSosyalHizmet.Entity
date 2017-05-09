@@ -84,11 +84,11 @@
             this.EbhAd = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuCards4 = new ns1.BunifuCards();
+            this.DenetimYapBtn = new System.Windows.Forms.Button();
             this.EbhBYD = new DevExpress.XtraEditors.ComboBoxEdit();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.EbhBDT = new DevExpress.XtraEditors.DateEdit();
             this.PersonelIDsi = new System.Windows.Forms.Label();
-            this.DenetimYapBtn = new System.Windows.Forms.Button();
             this.bunifuCards3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EbhBTTT.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EbhBTTT.Properties)).BeginInit();
@@ -310,6 +310,7 @@
             this.EbhRSU.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhRSU.Properties.Items.AddRange(new object[] {
+            "YOK",
             "6 AY",
             "1 YIL",
             "2 YIL",
@@ -424,7 +425,8 @@
             "VEFAT",
             "DENETİM",
             "SONLANAN",
-            "İNCELEME EKİBİNDE"});
+            "İNCELEME EKİBİNDE",
+            "TEK SEFERLİK"});
             this.EbhDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhDurum.Size = new System.Drawing.Size(121, 26);
             this.EbhDurum.TabIndex = 18;
@@ -946,6 +948,16 @@
             this.bunifuCards4.Size = new System.Drawing.Size(515, 117);
             this.bunifuCards4.TabIndex = 44;
             // 
+            // DenetimYapBtn
+            // 
+            this.DenetimYapBtn.Location = new System.Drawing.Point(260, 80);
+            this.DenetimYapBtn.Name = "DenetimYapBtn";
+            this.DenetimYapBtn.Size = new System.Drawing.Size(117, 32);
+            this.DenetimYapBtn.TabIndex = 47;
+            this.DenetimYapBtn.Text = "Denetim Yap";
+            this.DenetimYapBtn.UseVisualStyleBackColor = true;
+            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
+            // 
             // EbhBYD
             // 
             this.EbhBYD.Location = new System.Drawing.Point(661, 38);
@@ -1021,16 +1033,6 @@
             this.PersonelIDsi.TabIndex = 47;
             this.PersonelIDsi.Text = "ZİMMET:";
             this.PersonelIDsi.Visible = false;
-            // 
-            // DenetimYapBtn
-            // 
-            this.DenetimYapBtn.Location = new System.Drawing.Point(260, 80);
-            this.DenetimYapBtn.Name = "DenetimYapBtn";
-            this.DenetimYapBtn.Size = new System.Drawing.Size(117, 32);
-            this.DenetimYapBtn.TabIndex = 47;
-            this.DenetimYapBtn.Text = "Denetim Yap";
-            this.DenetimYapBtn.UseVisualStyleBackColor = true;
-            this.DenetimYapBtn.Click += new System.EventHandler(this.DenetimYapBtn_Click);
             // 
             // EBHRaporFormu
             // 

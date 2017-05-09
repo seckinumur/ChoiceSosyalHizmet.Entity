@@ -230,9 +230,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     string tarih = ilktarih.AddDays(i).ToShortDateString();
                     try
                     {
-                        var a = db.BasvuraninBilgileri.Where(p => p.DosyaTarihi == tarih).FirstOrDefault();
-
-                        VMSEDRapor eklemece = new VMSEDRapor()
+                        var b = db.BasvuraninBilgileri.Where(p => p.DosyaTarihi == tarih).Select(a=> new VMSEDRapor
                         {
                             DosyaKayıtTarihi = a.DosyaTarihi,
                             ID = a.BasvuraninBilgileriID,
@@ -255,8 +253,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                             YardımAlanınTC = a.YardimAlaninTC,
                             YBSNo = a.YBSNo,
                             Not = a.Not
-                        };
-                        Yeni.Add(eklemece);
+                        }).ToList();
+                        Yeni.AddRange(b);
                     }
                     catch
                     {

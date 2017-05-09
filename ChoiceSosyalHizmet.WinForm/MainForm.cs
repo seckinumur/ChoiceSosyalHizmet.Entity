@@ -210,7 +210,7 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             try
             {
-                string ChekDt, baslangict, bitistt = "", Sonuc, RaporSuresi = "";
+                string ChekDt="", baslangict="", bitistt = "", Sonuc, RaporSuresi = "";
                 if (RDE.Checked == true && EbhBTT.Text != "")
                 {
                     ChekDt = RDE.Text;
@@ -223,10 +223,9 @@ namespace ChoiceSosyalHizmet.WinForm
                     bitistt = EbhBTTT.Text;
                     RaporSuresi = EbhRSU.SelectedItem.ToString();
                 }
-                else
+                else if (EbhRSU.SelectedItem == null)
                 {
-                    MessageBox.Show("Rapor Bilgileri Boş Bırakılamaz!");
-                    return;
+                    RaporSuresi = "YOK";
                 }
 
                 VMEBH Kyd = new VMEBH()
@@ -327,6 +326,11 @@ namespace ChoiceSosyalHizmet.WinForm
                     {
                         bitistar = Baslangictarihi.AddYears(5);
                         EbhBTTT.Text = bitistar.ToShortDateString();
+                        return;
+                    }
+                    else if (EbhRSU.SelectedItem.ToString() == "YOK")
+                    {
+                        EbhBTTT.Text = "";
                         return;
                     }
                 }

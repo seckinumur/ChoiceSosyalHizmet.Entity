@@ -24,6 +24,7 @@ namespace ChoiceSosyalHizmet.WinForm
         private bool zimmetkontrol;
         public void SEDRaporFormu_Load(object sender, EventArgs e)
         {
+            kontrol = true;
             var almahalle = MahalleKoyRepo.MahalleKarsila();
             foreach (var a in almahalle)
             {
@@ -62,7 +63,6 @@ namespace ChoiceSosyalHizmet.WinForm
             TxtTcY.Text = al.YardimAlaninTC;
             TxtYBS.Text = al.YBSNo;
             SEDNot.Text = al.not;
-            kontrol = true;
             try
             {
                 var zimmet = ZimmetSEDRepo.ZimmetBul(al.BasvuraninBilgileriID);
@@ -156,7 +156,7 @@ namespace ChoiceSosyalHizmet.WinForm
             Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
             if (Uyari == DialogResult.Yes)
             {
-                string ChekDt, sonuc;
+                string ChekDt="";
                 if (RBT.Checked == true)
                 {
                     ChekDt = RBT.Text;
@@ -168,10 +168,6 @@ namespace ChoiceSosyalHizmet.WinForm
                 else if (RB2.Checked == true)
                 {
                     ChekDt = RB2.Text;
-                }
-                else
-                {
-                    return;
                 }
                 try
                 {
@@ -201,14 +197,12 @@ namespace ChoiceSosyalHizmet.WinForm
                         YBSNo = TxtYBS.Text,
                         not = SEDNot.Text
                     };
-
-                    sonuc = SEDRepo.Guncelle(Kyd);
-                    MessageBox.Show(sonuc);
+                    MessageBox.Show(SEDRepo.Guncelle(Kyd));
                     SEDRaporFormu_Load(sender, e);
                 }
                 catch
                 {
-                    MessageBox.Show("Tüm Alanlar Doldurulmadan Güncelleme Yapılamaz!");
+                    MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Güncellenemez!");
                 }
             }
         }

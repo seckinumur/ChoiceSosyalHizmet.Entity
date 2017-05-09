@@ -574,7 +574,7 @@
             this.bunifuCards3.RightSahddow = false;
             this.bunifuCards3.ShadowDepth = 20;
             this.bunifuCards3.Size = new System.Drawing.Size(368, 516);
-            this.bunifuCards3.TabIndex = 11;
+            this.bunifuCards3.TabIndex = 2;
             // 
             // bunifuCards4
             // 
@@ -598,7 +598,7 @@
             this.bunifuCards4.RightSahddow = false;
             this.bunifuCards4.ShadowDepth = 20;
             this.bunifuCards4.Size = new System.Drawing.Size(366, 255);
-            this.bunifuCards4.TabIndex = 12;
+            this.bunifuCards4.TabIndex = 4;
             // 
             // label14
             // 
@@ -635,7 +635,7 @@
             this.DateOBi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateOBi.Size = new System.Drawing.Size(121, 26);
-            this.DateOBi.TabIndex = 20;
+            this.DateOBi.TabIndex = 4;
             // 
             // label9
             // 
@@ -661,7 +661,7 @@
             this.DateOB.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateOB.Size = new System.Drawing.Size(121, 26);
-            this.DateOB.TabIndex = 18;
+            this.DateOB.TabIndex = 3;
             // 
             // RB2
             // 
@@ -675,7 +675,7 @@
             this.RB2.Name = "RB2";
             this.RB2.Ripple = true;
             this.RB2.Size = new System.Drawing.Size(70, 30);
-            this.RB2.TabIndex = 14;
+            this.RB2.TabIndex = 2;
             this.RB2.Text = "2 Yıllık";
             this.RB2.UseVisualStyleBackColor = true;
             this.RB2.CheckedChanged += new System.EventHandler(this.RB2_CheckedChanged);
@@ -692,7 +692,7 @@
             this.RB1.Name = "RB1";
             this.RB1.Ripple = true;
             this.RB1.Size = new System.Drawing.Size(70, 30);
-            this.RB1.TabIndex = 13;
+            this.RB1.TabIndex = 1;
             this.RB1.Text = "1 Yıllık";
             this.RB1.UseVisualStyleBackColor = true;
             this.RB1.CheckedChanged += new System.EventHandler(this.RB1_CheckedChanged);
@@ -709,7 +709,7 @@
             this.RBT.Name = "RBT";
             this.RBT.Ripple = true;
             this.RBT.Size = new System.Drawing.Size(102, 30);
-            this.RBT.TabIndex = 12;
+            this.RBT.TabIndex = 0;
             this.RBT.Text = "Tek Seferlik";
             this.RBT.UseVisualStyleBackColor = true;
             this.RBT.CheckedChanged += new System.EventHandler(this.RBT_CheckedChanged);
@@ -728,7 +728,7 @@
             this.TxtYBS.SelectionLength = 0;
             this.TxtYBS.SelectionStart = 0;
             this.TxtYBS.Size = new System.Drawing.Size(318, 23);
-            this.TxtYBS.TabIndex = 22;
+            this.TxtYBS.TabIndex = 2;
             this.TxtYBS.TabStop = false;
             this.TxtYBS.UseSystemPasswordChar = false;
             this.TxtYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -747,7 +747,7 @@
             this.TxtANo.SelectionLength = 0;
             this.TxtANo.SelectionStart = 0;
             this.TxtANo.Size = new System.Drawing.Size(319, 23);
-            this.TxtANo.TabIndex = 23;
+            this.TxtANo.TabIndex = 3;
             this.TxtANo.TabStop = false;
             this.TxtANo.UseSystemPasswordChar = false;
             this.TxtANo.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -776,7 +776,7 @@
             this.DateBT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateBT.Size = new System.Drawing.Size(121, 26);
-            this.DateBT.TabIndex = 10;
+            this.DateBT.TabIndex = 1;
             // 
             // CboxDurum
             // 
@@ -798,7 +798,7 @@
             "TEK SEFERLİK"});
             this.CboxDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CboxDurum.Size = new System.Drawing.Size(121, 26);
-            this.CboxDurum.TabIndex = 1;
+            this.CboxDurum.TabIndex = 0;
             // 
             // label5
             // 
@@ -829,7 +829,7 @@
             this.BtnTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.BtnTemizle.ActiveForecolor = System.Drawing.Color.White;
             this.BtnTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnTemizle.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnTemizle.BackColor = System.Drawing.Color.Transparent;
             this.BtnTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnTemizle.BackgroundImage")));
             this.BtnTemizle.ButtonText = "TEMİZLE";
             this.BtnTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -855,7 +855,7 @@
             this.BtnKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.BtnKaydet.ActiveForecolor = System.Drawing.Color.White;
             this.BtnKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.BtnKaydet.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnKaydet.BackColor = System.Drawing.Color.Transparent;
             this.BtnKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.BackgroundImage")));
             this.BtnKaydet.ButtonText = "KAYDET";
             this.BtnKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -870,7 +870,7 @@
             this.BtnKaydet.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(311, 57);
-            this.BtnKaydet.TabIndex = 16;
+            this.BtnKaydet.TabIndex = 3;
             this.BtnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
@@ -895,7 +895,7 @@
             this.bunifuCards2.RightSahddow = false;
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(543, 230);
-            this.bunifuCards2.TabIndex = 11;
+            this.bunifuCards2.TabIndex = 1;
             // 
             // CboxYD
             // 
@@ -919,7 +919,7 @@
             "DİĞER"});
             this.CboxYD.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CboxYD.Size = new System.Drawing.Size(121, 26);
-            this.CboxYD.TabIndex = 26;
+            this.CboxYD.TabIndex = 4;
             // 
             // label3
             // 
@@ -956,7 +956,7 @@
             this.DateDY.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDY.Size = new System.Drawing.Size(121, 26);
-            this.DateDY.TabIndex = 24;
+            this.DateDY.TabIndex = 3;
             // 
             // TxtTcY
             // 
@@ -972,7 +972,7 @@
             this.TxtTcY.SelectionLength = 0;
             this.TxtTcY.SelectionStart = 0;
             this.TxtTcY.Size = new System.Drawing.Size(231, 23);
-            this.TxtTcY.TabIndex = 4;
+            this.TxtTcY.TabIndex = 2;
             this.TxtTcY.TabStop = false;
             this.TxtTcY.UseSystemPasswordChar = false;
             this.TxtTcY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -992,7 +992,7 @@
             this.TxtAdY.SelectionLength = 0;
             this.TxtAdY.SelectionStart = 0;
             this.TxtAdY.Size = new System.Drawing.Size(340, 23);
-            this.TxtAdY.TabIndex = 2;
+            this.TxtAdY.TabIndex = 1;
             this.TxtAdY.TabStop = false;
             this.TxtAdY.UseSystemPasswordChar = false;
             this.TxtAdY.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1033,7 +1033,7 @@
             this.bunifuCards1.RightSahddow = false;
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(543, 317);
-            this.bunifuCards1.TabIndex = 9;
+            this.bunifuCards1.TabIndex = 0;
             // 
             // CboxMa
             // 
@@ -1045,7 +1045,7 @@
             this.CboxMa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CboxMa.Size = new System.Drawing.Size(154, 26);
-            this.CboxMa.TabIndex = 19;
+            this.CboxMa.TabIndex = 6;
             this.CboxMa.TextChanged += new System.EventHandler(this.CboxMa_TextChanged);
             // 
             // label27
@@ -1077,7 +1077,7 @@
             "DİĞER"});
             this.CBoxN.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CBoxN.Size = new System.Drawing.Size(163, 26);
-            this.CBoxN.TabIndex = 22;
+            this.CBoxN.TabIndex = 5;
             // 
             // label2
             // 
@@ -1114,7 +1114,7 @@
             this.DateDogumT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateDogumT.Size = new System.Drawing.Size(121, 26);
-            this.DateDogumT.TabIndex = 20;
+            this.DateDogumT.TabIndex = 4;
             // 
             // TxtAdres
             // 
@@ -1130,7 +1130,7 @@
             this.TxtAdres.SelectionLength = 0;
             this.TxtAdres.SelectionStart = 0;
             this.TxtAdres.Size = new System.Drawing.Size(512, 23);
-            this.TxtAdres.TabIndex = 6;
+            this.TxtAdres.TabIndex = 3;
             this.TxtAdres.TabStop = false;
             this.TxtAdres.UseSystemPasswordChar = false;
             this.TxtAdres.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1149,7 +1149,7 @@
             this.TxtTel.SelectionLength = 0;
             this.TxtTel.SelectionStart = 0;
             this.TxtTel.Size = new System.Drawing.Size(340, 23);
-            this.TxtTel.TabIndex = 5;
+            this.TxtTel.TabIndex = 2;
             this.TxtTel.TabStop = false;
             this.TxtTel.UseSystemPasswordChar = false;
             this.TxtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1168,7 +1168,7 @@
             this.TxtTc.SelectionLength = 0;
             this.TxtTc.SelectionStart = 0;
             this.TxtTc.Size = new System.Drawing.Size(340, 23);
-            this.TxtTc.TabIndex = 4;
+            this.TxtTc.TabIndex = 1;
             this.TxtTc.TabStop = false;
             this.TxtTc.UseSystemPasswordChar = false;
             this.TxtTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1188,7 +1188,7 @@
             this.TxtBasvuranAd.SelectionLength = 0;
             this.TxtBasvuranAd.SelectionStart = 0;
             this.TxtBasvuranAd.Size = new System.Drawing.Size(340, 23);
-            this.TxtBasvuranAd.TabIndex = 2;
+            this.TxtBasvuranAd.TabIndex = 0;
             this.TxtBasvuranAd.TabStop = false;
             this.TxtBasvuranAd.UseSystemPasswordChar = false;
             this.TxtBasvuranAd.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1304,7 +1304,7 @@
             this.bunifuCards7.RightSahddow = false;
             this.bunifuCards7.ShadowDepth = 20;
             this.bunifuCards7.Size = new System.Drawing.Size(367, 516);
-            this.bunifuCards7.TabIndex = 21;
+            this.bunifuCards7.TabIndex = 3;
             // 
             // label13
             // 
@@ -1342,7 +1342,7 @@
             this.EbhBTTT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhBTTT.Size = new System.Drawing.Size(121, 26);
-            this.EbhBTTT.TabIndex = 23;
+            this.EbhBTTT.TabIndex = 9;
             // 
             // label26
             // 
@@ -1368,7 +1368,7 @@
             this.EbhBTT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhBTT.Size = new System.Drawing.Size(121, 26);
-            this.EbhBTT.TabIndex = 21;
+            this.EbhBTT.TabIndex = 8;
             // 
             // EbhRSU
             // 
@@ -1381,6 +1381,7 @@
             this.EbhRSU.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhRSU.Properties.Items.AddRange(new object[] {
+            "YOK",
             "6 AY",
             "1 YIL",
             "2 YIL",
@@ -1389,7 +1390,7 @@
             "5 YIL"});
             this.EbhRSU.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhRSU.Size = new System.Drawing.Size(121, 26);
-            this.EbhRSU.TabIndex = 20;
+            this.EbhRSU.TabIndex = 7;
             this.EbhRSU.SelectedIndexChanged += new System.EventHandler(this.EbhRSU_SelectedIndexChanged);
             // 
             // label15
@@ -1417,7 +1418,7 @@
             this.EbhARN.SelectionLength = 0;
             this.EbhARN.SelectionStart = 0;
             this.EbhARN.Size = new System.Drawing.Size(309, 23);
-            this.EbhARN.TabIndex = 17;
+            this.EbhARN.TabIndex = 4;
             this.EbhARN.TabStop = false;
             this.EbhARN.UseSystemPasswordChar = false;
             this.EbhARN.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1434,7 +1435,7 @@
             this.RDE2.Name = "RDE2";
             this.RDE2.Ripple = true;
             this.RDE2.Size = new System.Drawing.Size(82, 30);
-            this.RDE2.TabIndex = 14;
+            this.RDE2.TabIndex = 6;
             this.RDE2.Text = "Süreksiz";
             this.RDE2.UseVisualStyleBackColor = true;
             this.RDE2.CheckedChanged += new System.EventHandler(this.RDE2_CheckedChanged);
@@ -1453,7 +1454,7 @@
             this.EbhYBS.SelectionLength = 0;
             this.EbhYBS.SelectionStart = 0;
             this.EbhYBS.Size = new System.Drawing.Size(309, 23);
-            this.EbhYBS.TabIndex = 16;
+            this.EbhYBS.TabIndex = 3;
             this.EbhYBS.TabStop = false;
             this.EbhYBS.UseSystemPasswordChar = false;
             this.EbhYBS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1470,7 +1471,7 @@
             this.RDE.Name = "RDE";
             this.RDE.Ripple = true;
             this.RDE.Size = new System.Drawing.Size(71, 30);
-            this.RDE.TabIndex = 12;
+            this.RDE.TabIndex = 5;
             this.RDE.Text = "Sürekli";
             this.RDE.UseVisualStyleBackColor = true;
             // 
@@ -1498,7 +1499,7 @@
             this.EbhOBT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhOBT.Size = new System.Drawing.Size(121, 26);
-            this.EbhOBT.TabIndex = 12;
+            this.EbhOBT.TabIndex = 2;
             // 
             // label17
             // 
@@ -1524,7 +1525,7 @@
             this.EbhBTA.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhBTA.Size = new System.Drawing.Size(121, 26);
-            this.EbhBTA.TabIndex = 10;
+            this.EbhBTA.TabIndex = 1;
             // 
             // EbhDurum
             // 
@@ -1546,7 +1547,7 @@
             "TEK SEFERLİK"});
             this.EbhDurum.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhDurum.Size = new System.Drawing.Size(121, 26);
-            this.EbhDurum.TabIndex = 1;
+            this.EbhDurum.TabIndex = 0;
             // 
             // label19
             // 
@@ -1574,7 +1575,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 80658;
+            this.bunifuSeparator1.LineThickness = 65535;
             this.bunifuSeparator1.Location = new System.Drawing.Point(15, 239);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -1590,7 +1591,7 @@
             this.EbhTemizle.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.EbhTemizle.ActiveForecolor = System.Drawing.Color.White;
             this.EbhTemizle.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhTemizle.BackColor = System.Drawing.SystemColors.Control;
+            this.EbhTemizle.BackColor = System.Drawing.Color.Transparent;
             this.EbhTemizle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhTemizle.BackgroundImage")));
             this.EbhTemizle.ButtonText = "TEMİZLE";
             this.EbhTemizle.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1616,7 +1617,7 @@
             this.EbhKaydet.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.EbhKaydet.ActiveForecolor = System.Drawing.Color.White;
             this.EbhKaydet.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.EbhKaydet.BackColor = System.Drawing.SystemColors.Control;
+            this.EbhKaydet.BackColor = System.Drawing.Color.Transparent;
             this.EbhKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EbhKaydet.BackgroundImage")));
             this.EbhKaydet.ButtonText = "KAYDET";
             this.EbhKaydet.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1656,7 +1657,7 @@
             this.bunifuCards9.RightSahddow = false;
             this.bunifuCards9.ShadowDepth = 20;
             this.bunifuCards9.Size = new System.Drawing.Size(543, 238);
-            this.bunifuCards9.TabIndex = 22;
+            this.bunifuCards9.TabIndex = 1;
             // 
             // EbhBYD
             // 
@@ -1680,7 +1681,7 @@
             "DİĞER"});
             this.EbhBYD.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.EbhBYD.Size = new System.Drawing.Size(121, 26);
-            this.EbhBYD.TabIndex = 32;
+            this.EbhBYD.TabIndex = 3;
             // 
             // label11
             // 
@@ -1717,7 +1718,7 @@
             this.EbhBDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhBDT.Size = new System.Drawing.Size(121, 26);
-            this.EbhBDT.TabIndex = 30;
+            this.EbhBDT.TabIndex = 2;
             // 
             // EbhBtc
             // 
@@ -1733,7 +1734,7 @@
             this.EbhBtc.SelectionLength = 0;
             this.EbhBtc.SelectionStart = 0;
             this.EbhBtc.Size = new System.Drawing.Size(231, 23);
-            this.EbhBtc.TabIndex = 29;
+            this.EbhBtc.TabIndex = 1;
             this.EbhBtc.TabStop = false;
             this.EbhBtc.UseSystemPasswordChar = false;
             this.EbhBtc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1753,7 +1754,7 @@
             this.EbhBad.SelectionLength = 0;
             this.EbhBad.SelectionStart = 0;
             this.EbhBad.Size = new System.Drawing.Size(340, 23);
-            this.EbhBad.TabIndex = 28;
+            this.EbhBad.TabIndex = 0;
             this.EbhBad.TabStop = false;
             this.EbhBad.UseSystemPasswordChar = false;
             this.EbhBad.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1792,7 +1793,7 @@
             this.bunifuCards10.RightSahddow = false;
             this.bunifuCards10.ShadowDepth = 20;
             this.bunifuCards10.Size = new System.Drawing.Size(543, 335);
-            this.bunifuCards10.TabIndex = 20;
+            this.bunifuCards10.TabIndex = 0;
             // 
             // EbhMK
             // 
@@ -1804,7 +1805,7 @@
             this.EbhMK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhMK.Size = new System.Drawing.Size(149, 26);
-            this.EbhMK.TabIndex = 26;
+            this.EbhMK.TabIndex = 5;
             this.EbhMK.TextChanged += new System.EventHandler(this.CboxMa_TextChanged);
             // 
             // label29
@@ -1842,7 +1843,7 @@
             this.EbhDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EbhDT.Size = new System.Drawing.Size(105, 26);
-            this.EbhDT.TabIndex = 22;
+            this.EbhDT.TabIndex = 4;
             // 
             // EbhAdres
             // 
@@ -1858,7 +1859,7 @@
             this.EbhAdres.SelectionLength = 0;
             this.EbhAdres.SelectionStart = 0;
             this.EbhAdres.Size = new System.Drawing.Size(512, 23);
-            this.EbhAdres.TabIndex = 6;
+            this.EbhAdres.TabIndex = 3;
             this.EbhAdres.TabStop = false;
             this.EbhAdres.UseSystemPasswordChar = false;
             this.EbhAdres.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
@@ -1877,7 +1878,7 @@
             this.EbhTel.SelectionLength = 0;
             this.EbhTel.SelectionStart = 0;
             this.EbhTel.Size = new System.Drawing.Size(340, 23);
-            this.EbhTel.TabIndex = 5;
+            this.EbhTel.TabIndex = 2;
             this.EbhTel.TabStop = false;
             this.EbhTel.UseSystemPasswordChar = false;
             this.EbhTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1896,7 +1897,7 @@
             this.EbhTC.SelectionLength = 0;
             this.EbhTC.SelectionStart = 0;
             this.EbhTC.Size = new System.Drawing.Size(340, 23);
-            this.EbhTC.TabIndex = 4;
+            this.EbhTC.TabIndex = 1;
             this.EbhTC.TabStop = false;
             this.EbhTC.UseSystemPasswordChar = false;
             this.EbhTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTc_KeyPress);
@@ -1916,7 +1917,7 @@
             this.EbhAd.SelectionLength = 0;
             this.EbhAd.SelectionStart = 0;
             this.EbhAd.Size = new System.Drawing.Size(340, 23);
-            this.EbhAd.TabIndex = 2;
+            this.EbhAd.TabIndex = 0;
             this.EbhAd.TabStop = false;
             this.EbhAd.UseSystemPasswordChar = false;
             this.EbhAd.TextChanged += new System.EventHandler(this.TxtBasvuranAd_TextChanged);
