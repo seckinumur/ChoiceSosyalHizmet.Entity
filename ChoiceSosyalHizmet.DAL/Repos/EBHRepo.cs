@@ -180,7 +180,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
                     YBSNo = a.YBSNo,
                     DosyaKayıtTarihi = a.DosyaTarihi,
-                    Not = a.Not
+                    Not = a.Not,
+                    DenetimTarihi=a.DenetimTarihi
                 }).ToList();
                 return Bul;
             }

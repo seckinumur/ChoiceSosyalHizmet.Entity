@@ -99,7 +99,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                             YardımAlanınDoğumTarihi = a.YardimAlaninDogumTarihi,
                             YardımAlanınTC = a.YardimAlaninTC,
                             YBSNo = a.YBSNo,
-                            Not = a.Not
+                            Not = a.Not,
+                            DenetimTarihi= a.DenetimTarihi
                         };
                         liste.Add(albakim);
                     }
@@ -145,7 +146,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                             YakınlıkDurumu = a.BakiciBilgileriYakinlikDurumu,
                             YBSNo = a.YBSNo,
                             DosyaKayıtTarihi = a.DosyaTarihi,
-                            Not = a.Not
+                            Not = a.Not,
+                            DenetimTarihi= a.DenetimTarihi
                         };
                         liste.Add(albakim);
                     }

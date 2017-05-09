@@ -213,7 +213,8 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     YardımAlanınDoğumTarihi = a.YardimAlaninDogumTarihi,
                     YardımAlanınTC = a.YardimAlaninTC,
                     YBSNo = a.YBSNo,
-                    Not = a.Not
+                    Not = a.Not,
+                    DenetimTarihi=a.DenetimTarihi
                 }).ToList();
                 return Bul;
             }
