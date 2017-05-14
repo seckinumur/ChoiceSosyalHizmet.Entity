@@ -90,7 +90,7 @@ namespace ChoiceSosyalHizmet.WinForm
         {
             int idalma = int.Parse(idtut.Text);
             DialogResult Uyari = new DialogResult();
-            Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
+            Uyari = MessageBox.Show("Bu Dosyayı Güncellenecek! Mevcut Denetim Tarihi Değiştirilsin mi?", "DİKKAT!", MessageBoxButtons.YesNoCancel);
             if (Uyari == DialogResult.Yes)
             {
                 string ChekDt = "", baslangict = "", bitistt = "", RaporSuresi = "";
@@ -133,6 +133,58 @@ namespace ChoiceSosyalHizmet.WinForm
                         BitisTarihi = bitistt,
                         RaporSuresi = RaporSuresi,
                         RaporTipi = ChekDt,
+                    };
+                    MessageBox.Show(EBHRepo.Guncelle(Kyd));
+                    EBHRaporFormu_Load(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Güncellenemez!");
+                }
+            }
+            else if(Uyari == DialogResult.No)
+            {
+                string ChekDt = "", baslangict = "", bitistt = "", RaporSuresi = "";
+                if (RDE.Checked == true && EbhBTT.Text != "")
+                {
+                    ChekDt = RDE.Text;
+                    baslangict = EbhBTT.Text;
+                }
+                else if (RDE2.Checked == true && EbhBTT.Text != "")
+                {
+                    ChekDt = RDE2.Text;
+                    baslangict = EbhBTT.Text;
+                    bitistt = EbhBTTT.Text;
+                    RaporSuresi = EbhRSU.SelectedItem.ToString();
+                }
+                try
+                {
+                    VMEBH Kyd = new VMEBH()
+                    {
+                        EngelliBilgileriID = idalma,
+                        AdiSoyadi = EbhAd.Text,
+                        Adres = EbhAdres.Text,
+                        ArsivNo = EbhARN.Text,
+                        BasvuruTarihi = EbhBTA.DateTime.ToShortDateString(),
+                        DogumTarihi = EbhDT.Text,
+                        DosyaTarihi = DateTime.Now.ToShortDateString(),
+                        Durum = EbhDurum.SelectedItem.ToString(),
+                        mahalleKoy = EbhMK.SelectedItem.ToString(),
+                        OdemeBaslangici = EbhOBT.Text,
+                        Tarih = DateTime.Now.ToShortDateString(),
+                        TC = EbhTC.Text,
+                        Telefon = EbhTel.Text,
+                        YakinlikDurumu = EbhBYD.SelectedItem.ToString(),
+                        YBSNo = EbhYBS.Text,
+                        Not = SEDNot.Text,
+                        BakiciBilgileriAdiSoyadi = EbhBad.Text,
+                        BakiciBilgileriDogumTarihi = EbhBDT.DateTime.ToShortDateString(),
+                        BakiciBilgileriTC = EbhBtc.Text,
+                        BaslangicTarihi = baslangict,
+                        BitisTarihi = bitistt,
+                        RaporSuresi = RaporSuresi,
+                        RaporTipi = ChekDt,
+                        DenetimKoru=true
                     };
                     MessageBox.Show(EBHRepo.Guncelle(Kyd));
                     EBHRaporFormu_Load(sender, e);

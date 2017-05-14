@@ -153,7 +153,7 @@ namespace ChoiceSosyalHizmet.WinForm
         private void simpleButton1_Click(object sender, EventArgs e) //Sed güncelleme
         {
             DialogResult Uyari = new DialogResult();
-            Uyari = MessageBox.Show("Güncellenecek Devam Edilsin mi?", "DİKKAT!", MessageBoxButtons.YesNo);
+            Uyari = MessageBox.Show("Bu Dosyayı Güncellenecek! Mevcut Denetim Tarihi Değiştirilsin mi?", "DİKKAT!", MessageBoxButtons.YesNoCancel);
             if (Uyari == DialogResult.Yes)
             {
                 string ChekDt="";
@@ -196,6 +196,58 @@ namespace ChoiceSosyalHizmet.WinForm
                         YardimAlaninTC = TxtTcY.Text,
                         YBSNo = TxtYBS.Text,
                         not = SEDNot.Text
+                    };
+                    MessageBox.Show(SEDRepo.Guncelle(Kyd));
+                    SEDRaporFormu_Load(sender, e);
+                }
+                catch
+                {
+                    MessageBox.Show("Gerekli Alanlar Doldurulmadan Kayıt Güncellenemez!");
+                }
+            }
+            else if(Uyari == DialogResult.No)
+            {
+                string ChekDt = "";
+                if (RBT.Checked == true)
+                {
+                    ChekDt = RBT.Text;
+                }
+                else if (RB1.Checked == true)
+                {
+                    ChekDt = RB1.Text;
+                }
+                else if (RB2.Checked == true)
+                {
+                    ChekDt = RB2.Text;
+                }
+                try
+                {
+                    int id = int.Parse(idtut.Text);
+                    VMSED Kyd = new VMSED()
+                    {
+                        BasvuraninBilgileriID = id,
+                        AdiSoyadi = TxtBasvuranAd.Text,
+                        Adres = TxtAdres.Text,
+                        ArsivNo = TxtANo.Text,
+                        BasvuruNedeni = CBoxN.SelectedItem.ToString(),
+                        BasvuruTarihi = DateBT.Text,
+                        DogumTarihi = DateDogumT.Text,
+                        DosyaTarihi = DateTime.Now.ToShortDateString(),
+                        Durum = CboxDurum.SelectedItem.ToString(),
+                        mahalleKoy = CboxMa.SelectedItem.ToString(),
+                        OdemeBaslangici = DateOB.Text,
+                        OdemeBitisi = DateOBi.Text,
+                        OdemeSuresi = ChekDt,
+                        Tarih = DateTime.Now.ToShortDateString(),
+                        TC = TxtTc.Text,
+                        Telefon = TxtTel.Text,
+                        YakinlikDurumu = CboxYD.SelectedItem.ToString(),
+                        YardimAlaninAdiSoyadi = TxtAdY.Text,
+                        YardimAlaninDogumTarihi = DateDY.Text,
+                        YardimAlaninTC = TxtTcY.Text,
+                        YBSNo = TxtYBS.Text,
+                        not = SEDNot.Text,
+                        DenetimKoru=true
                     };
                     MessageBox.Show(SEDRepo.Guncelle(Kyd));
                     SEDRaporFormu_Load(sender, e);

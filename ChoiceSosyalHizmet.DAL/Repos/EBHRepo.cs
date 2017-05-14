@@ -107,7 +107,10 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     Bul.RaporTipi = Al.RaporTipi;
                     Bul.YBSNo = Al.YBSNo;
                     Bul.Not = Al.Not;
-                    Bul.DenetimTarihi = Al.OdemeBaslangici;
+                    if(Al.DenetimKoru != true)
+                    {
+                        Bul.DenetimTarihi = Al.OdemeBaslangici;
+                    }
                     EBHDosyaTakip SDT = new EBHDosyaTakip()
                     {
                         EngelliBilgileriID = Bul.EngelliBilgileriID,

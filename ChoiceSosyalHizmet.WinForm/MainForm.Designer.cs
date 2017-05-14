@@ -144,12 +144,10 @@
             this.EBHRaporGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton14 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.EvrakGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton18 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.EvrakZimmetEBHGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -255,11 +253,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.EBHRaporGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EvrakGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.xtraTabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EvrakZimmetEBHGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.xtraTabPage6.SuspendLayout();
@@ -2114,7 +2110,6 @@
             // 
             // xtraTabPage5
             // 
-            this.xtraTabPage5.Controls.Add(this.pictureBox7);
             this.xtraTabPage5.Controls.Add(this.materialRaisedButton14);
             this.xtraTabPage5.Controls.Add(this.EvrakGrid);
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(4);
@@ -2122,31 +2117,20 @@
             this.xtraTabPage5.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage5.Text = "Evrak Zimmet SED Rapor";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1128, 557);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(132, 43);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 39;
-            this.pictureBox7.TabStop = false;
-            // 
             // materialRaisedButton14
             // 
             this.materialRaisedButton14.AutoSize = true;
             this.materialRaisedButton14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton14.Depth = 0;
             this.materialRaisedButton14.Icon = null;
-            this.materialRaisedButton14.Location = new System.Drawing.Point(885, 562);
+            this.materialRaisedButton14.Location = new System.Drawing.Point(1136, 9);
             this.materialRaisedButton14.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton14.Name = "materialRaisedButton14";
             this.materialRaisedButton14.Primary = true;
-            this.materialRaisedButton14.Size = new System.Drawing.Size(235, 36);
+            this.materialRaisedButton14.Size = new System.Drawing.Size(119, 36);
             this.materialRaisedButton14.TabIndex = 32;
-            this.materialRaisedButton14.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton14.Text = "EXCEL\'e Aktar";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
             this.materialRaisedButton14.Click += new System.EventHandler(this.materialRaisedButton14_Click);
             // 
@@ -2157,7 +2141,7 @@
             this.EvrakGrid.MainView = this.gridView3;
             this.EvrakGrid.Margin = new System.Windows.Forms.Padding(4);
             this.EvrakGrid.Name = "EvrakGrid";
-            this.EvrakGrid.Size = new System.Drawing.Size(1255, 552);
+            this.EvrakGrid.Size = new System.Drawing.Size(1255, 594);
             this.EvrakGrid.TabIndex = 1;
             this.EvrakGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -2177,23 +2161,11 @@
             // 
             // xtraTabPage8
             // 
-            this.xtraTabPage8.Controls.Add(this.pictureBox13);
             this.xtraTabPage8.Controls.Add(this.materialRaisedButton18);
             this.xtraTabPage8.Controls.Add(this.EvrakZimmetEBHGrid);
             this.xtraTabPage8.Name = "xtraTabPage8";
             this.xtraTabPage8.Size = new System.Drawing.Size(1263, 604);
             this.xtraTabPage8.Text = "Evrak Zimmet EBH Rapor";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(1129, 559);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(132, 43);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 48;
-            this.pictureBox13.TabStop = false;
             // 
             // materialRaisedButton18
             // 
@@ -2201,14 +2173,14 @@
             this.materialRaisedButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton18.Depth = 0;
             this.materialRaisedButton18.Icon = null;
-            this.materialRaisedButton18.Location = new System.Drawing.Point(886, 564);
+            this.materialRaisedButton18.Location = new System.Drawing.Point(1137, 8);
             this.materialRaisedButton18.Margin = new System.Windows.Forms.Padding(4);
             this.materialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton18.Name = "materialRaisedButton18";
             this.materialRaisedButton18.Primary = true;
-            this.materialRaisedButton18.Size = new System.Drawing.Size(235, 36);
+            this.materialRaisedButton18.Size = new System.Drawing.Size(119, 36);
             this.materialRaisedButton18.TabIndex = 41;
-            this.materialRaisedButton18.Text = "Mevcut Sayfayı EXCEL\'e Aktar";
+            this.materialRaisedButton18.Text = "EXCEL\'e Aktar";
             this.materialRaisedButton18.UseVisualStyleBackColor = true;
             this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
             // 
@@ -2219,7 +2191,7 @@
             this.EvrakZimmetEBHGrid.MainView = this.gridView5;
             this.EvrakZimmetEBHGrid.Margin = new System.Windows.Forms.Padding(4);
             this.EvrakZimmetEBHGrid.Name = "EvrakZimmetEBHGrid";
-            this.EvrakZimmetEBHGrid.Size = new System.Drawing.Size(1255, 552);
+            this.EvrakZimmetEBHGrid.Size = new System.Drawing.Size(1255, 596);
             this.EvrakZimmetEBHGrid.TabIndex = 2;
             this.EvrakZimmetEBHGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -2870,7 +2842,7 @@
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Choice SHM V.1.9 Evrak Takip Otomasyonu";
+            this.Text = "Choice SHM V.2.1 Evrak Takip Otomasyonu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -2945,12 +2917,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage5.ResumeLayout(false);
             this.xtraTabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EvrakGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.xtraTabPage8.ResumeLayout(false);
             this.xtraTabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EvrakZimmetEBHGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.xtraTabPage6.ResumeLayout(false);
@@ -3095,7 +3065,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.DateEdit Tarih1EBH;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton10;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -3113,7 +3082,6 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
         private System.Windows.Forms.Label personelidalma;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage8;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton18;
         private DevExpress.XtraGrid.GridControl EvrakZimmetEBHGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;

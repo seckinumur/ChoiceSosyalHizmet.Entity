@@ -110,7 +110,10 @@ namespace ChoiceSosyalHizmet.DAL.Repos
                     Bul.TC = Al.TC;
                     Bul.Telefon = Al.Telefon;
                     Bul.Not = Al.not;
-                    Bul.DenetimTarihi = Al.OdemeBaslangici;
+                    if(Al.DenetimKoru != true)
+                    {
+                        Bul.DenetimTarihi = Al.OdemeBaslangici;
+                    }
                     SEDDosyaTakip SDT = new SEDDosyaTakip()
                     {
                         BasvuraninBilgileriID = Bul.BasvuraninBilgileriID,

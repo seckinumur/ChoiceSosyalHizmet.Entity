@@ -229,7 +229,7 @@ namespace ChoiceSosyalHizmet.DAL.Repos
             List<VMEBHRapor> liste = new List<VMEBHRapor>();
             using (DBChoiceEntities db = new DBChoiceEntities())
             {
-                var abul = db.EngelliBilgileri.Where(p=> p.RaporTipi !="Sürekli").ToList();
+                var abul = db.EngelliBilgileri.Where(p=> p.RaporTipi !="Sürekli" && p.BitisTarihi != "").ToList();
                 foreach (var a in abul)
                 {
                     DateTime karsila = Convert.ToDateTime(a.BitisTarihi).AddMonths(-3);

@@ -31,5 +31,6 @@ namespace ChoiceSosyalHizmet.DAL.VM
         public string DosyaTarihi { get; set; }
         public string Not { get; set; }
         public string Tarih { get; set; }
+        public bool DenetimKoru { get; set; }
     }
 }

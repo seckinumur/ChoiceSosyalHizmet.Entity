@@ -83,6 +83,8 @@ namespace ChoiceSosyalHizmet.WinForm
             gridControl2.DataSource = KullanicilarRepo.KullaniciListele();
             gridView1.GroupPanelText = "Choice SHM SED  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView1.RowCount.ToString();
             gridView2.GroupPanelText = "Choice SHM EBH  Arama Motoru V.0.7 | Toplam Kayıt Sayısı: " + gridView2.RowCount.ToString();
+            gridView3.GroupPanelText = "Choice SHM Evrak Arama Motoru V.0.7  | Toplam Kayıt Sayısı: " + gridView3.RowCount.ToString();
+            gridView5.GroupPanelText = "Choice SHM Evrak Arama Motoru V.0.7   | Toplam Kayıt Sayısı: " + gridView5.RowCount.ToString();
             var almahalle = MahalleKoyRepo.MahalleKarsila();
             CboxMa.Properties.Items.Clear();
             EbhMK.Properties.Items.Clear();
