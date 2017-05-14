@@ -13,10 +13,10 @@ Platform: Microsoft Windows (winform) .NET 4.6
 Mimari: C# Katmanlı Mimari ASP.NET - .NET - Mobil
 Veritabanı: Codefirst Nesne Tabanlı Programlama / Sqlite Database First Nesne Tabanlı Programlama
 Yazılımcı:Seçkin Umur
-https://github.com/seckinumur/ChoiceSosyalHizmet.Entity
+http://www.seckinumur.com/choicecorp/index.html
 
 
-***************Sürüm Notları***************************************************************
+Sürüm Notları
 
 Sürüm: 1.4.0 ETA: 01.05.2017 Frist Release (Alpha Build)
 
